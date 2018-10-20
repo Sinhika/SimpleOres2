@@ -16,8 +16,8 @@ item.tin_ingot.name=Lingot d'Étain
 item.mythril_ingot.name=Lingot de Mythril
 item.adamantium_ingot.name=Lingot d'Adamantium
 item.onyx_gem.name=Onyx
-item.copper_bucket.name=Sceau en Cuivre
-item.copper_bucket_water.name=Sceau d'eau en Cuivre
+item.copper_bucket.name=Seau en Cuivre
+item.copper_bucket_water.name=Seau d'eau en Cuivre
 item.mythril_rod.name=Batton de Mythril
 item.onyx_rod.name=Batton d'Onyx
 
@@ -49,7 +49,9 @@ item.onyx_sword.name=Épée en Onyx
 item.onyx_hoe.name=Houe en Onyx
 item.mythril_bow.name=Arc en Mythril
 item.onyx_bow.name=Arc en Onyx
+item.copper_shears.name=Cisailles en Cuivre
 item.tin_shears.name=Cisailles en Étain
+item.mythril_shears.name=Cisailles en Mythril
 item.adamantium_shears.name=Cisailles en Adamantium
 item.onyx_shears.name=Cisailles en Onyx
 
@@ -76,41 +78,42 @@ item.onyx_leggings.name=Jambière en Onyx
 item.onyx_boots.name=Bottes en Onyx
 
 //Achievements
-advancements.copperAch=Bienvenu dans SimpleOres!
-advancements.copperAch.desc=Commence ton aventure SimpleOres en ramassant du Cuivre
+advancements.welcome=Bienvenu dans SimpleOres!
+advancements.copperAch=Ni de l'Or ni du Fer
+advancements.copperAch.desc=Commences ton aventure SimpleOres en ramassant du Cuivre
 advancements.tinAch=Pas de l'Argent
-advancements.tinAch.desc=Ça ne devrai pas être trop dur d'en trouver
+advancements.tinAch.desc=Mines du minerai d'Étain.
 advancements.mythrilAch=Ooh, c'est joli!
-advancements.mythrilAch.desc=Creuse profondément pour trouver du Mythril
+advancements.mythrilAch.desc=Creuses profondément pour trouver du Mythril
 advancements.adamantiumAch=Le vert c'est bien
-advancements.adamantiumAch.desc=C'est rapide comme l'éclair!
+advancements.adamantiumAch.desc=Creuses aussi profond pour miner de l'Adamantium
 advancements.onyxAch=Minerai ninja
 advancements.onyxAch.desc=Bonne chance pour en trouver
 
 advancements.copperPickAch=Amélioration II?
 advancements.copperPickAch.desc=Je suppose que c'est mieux que de la Pierre...
-advancements.copperBucketAch=Attention: Ne pas utiliser avec de la Lave
-advancements.copperBucketAch.desc=Économise ton Fer, fais un seau en Cuivre!
-advancements.tinChestplateAch.desc=Ça n'a pas l'air pratique, mais essaie quand même
+advancements.copperBucketAch=Attention : Ne pas utiliser avec de la Lave
+advancements.copperBucketAch.desc=Économises ton Fer, fais un seau en Cuivre!
+advancements.tinChestplateAch.desc=Ça n'a pas l'air pratique, mais essaies quand même
 advancements.tinShearsAch=Qui peut bien utiliser ça?
-advancements.tinShearsAch.desc=Parcque des cisailles normal tient trop longtemps
-advancements.mythrilAxeAch=Ça en jette!
+advancements.tinShearsAch.desc=Parcque les cisailles normales tiennent trop longtemps
+advancements.mythrilAxeAch=C'est une hache Durandil!
 advancements.mythrilAxeAch.desc=Fabrique une Hache en Mythril pour une amélioration significative au Fer
-advancements.mythrilBowAch=Un Arc mythic
-advancements.mythrilBowAch.desc=Forge un nouvel Arc avec des propriétées magique
-advancements.adamantium_legs_ach=Enfile
-advancements.adamantium_legs_ach.desc=Démarque-toi de la foule avec une paire de jambières stylées en Adamantium!
+advancements.mythrilBowAch=Un Arc mystique
+advancements.mythrilBowAch.desc=Forges un nouvel Arc avec des propriétées magique
+advancements.adamantium_legs_ach=Enfiles
+advancements.adamantium_legs_ach.desc=Démarques-toi de la foule avec une paire de jambières stylées en Adamantium!
 advancements.adamantiumShearsAch=Tonte de Moutons sans fin
 advancements.adamantiumShearsAch.desc=Enfin, des cisailles qui ne se cassent pas instantannément!
 advancements.onyxSwordAch=Poutrage absolu
-advancements.onyxSwordAch.desc=Fabrique une Épée en Onyx. Tes ennemis trembleront de peur
+advancements.onyxSwordAch.desc=Fabriques une Épée en Onyx. Tes ennemis trembleront de peur
 advancements.onyxBowAch=Pyromane
-advancements.onyxBowAch.desc=Brûle tes ennemis avec cet Arc tout droit sorti des enfers
+advancements.onyxBowAch.desc=Brûles tes ennemis avec cet Arc tout droit sorti des enfers
 
 
 //Bow Tooltips
-tips.damageTooltip=+Damage
-tips.flameTooltip=+Flame
-tips.knockbackTooltip=+Knockback
+tips.damageTooltip=+Puissance
+tips.flameTooltip=+Flamme
+tips.knockbackTooltip=+Recul
 tips.zoomTooltip=+Zoom
-tips.efficiencyTooltip=+Efficiency
+tips.efficiencyTooltip=+Efficacité
