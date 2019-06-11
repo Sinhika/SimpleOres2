@@ -107,9 +107,9 @@
     "advancements.onyx_bow_ach": "Firebug",
     "advancements.onyx_bow_ach.desc": "Scorch your enemies with this onyx bow straight from the Hells",
 
-    "tips.damageTooltip": "+Damage",
-    "tips.flameTooltip": "+Flame",
-    "tips.knockbackTooltip": "+Knockback",
-    "tips.zoomTooltip": "+Zoom",
-    "tips.efficiencyTooltip": "+Efficiency"
+    "tips.damage_tooltip": "+Damage",
+    "tips.flame_tooltip": "+Flame",
+    "tips.knockback_tooltip": "+Knockback",
+    "tips.zoom_tooltip": "+Zoom",
+    "tips.efficiency_tooltip": "+Efficiency"
 }
