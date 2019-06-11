@@ -4,10 +4,10 @@
             "item": "simpleores:onyx_ore"
         },
         "title": {
-            "translate": "advancements.onyxAch"
+            "translate": "advancements.onyx_ach"
         },
         "description": {
-            "translate": "advancements.onyxAch.desc"
+            "translate": "advancements.onyx_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

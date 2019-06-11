@@ -4,10 +4,10 @@
             "item": "simpleores:copper_pickaxe"
         },
         "title": {
-            "translate": "advancements.copperPickAch"
+            "translate": "advancements.copper_pick_ach"
         },
         "description": {
-            "translate": "advancements.copperPickAch.desc"
+            "translate": "advancements.copper_pick_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

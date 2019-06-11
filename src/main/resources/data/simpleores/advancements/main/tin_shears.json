@@ -4,10 +4,10 @@
             "item": "simpleores:tin_shears"
         },
         "title": {
-            "translate": "advancements.tinShearsAch"
+            "translate": "advancements.tin_shears_ach"
         },
         "description": {
-            "translate": "advancements.tinShearsAch.desc"
+            "translate": "advancements.tin_shears_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

@@ -4,10 +4,10 @@
             "item": "simpleores:tin_chestplate"
         },
         "title": {
-            "translate": "advancements.tinChestplateAch"
+            "translate": "advancements.tin_chestplate_ach"
         },
         "description": {
-            "translate": "advancements.tinChestplateAch.desc"
+            "translate": "advancements.tin_chestplate_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

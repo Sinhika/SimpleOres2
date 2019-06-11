@@ -4,10 +4,10 @@
             "item": "simpleores:adamantium_ore"
         },
         "title": {
-            "translate": "advancements.adamantiumAch"
+            "translate": "advancements.adamantium_ach"
         },
         "description": {
-            "translate": "advancements.adamantiumAch.desc"
+            "translate": "advancements.adamantium_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

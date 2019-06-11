@@ -4,10 +4,10 @@
             "item": "simpleores:onyx_sword"
         },
         "title": {
-            "translate": "advancements.onyxSwordAch"
+            "translate": "advancements.onyx_sword_ach"
         },
         "description": {
-            "translate": "advancements.onyxSwordAch.desc"
+            "translate": "advancements.onyx_sword_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

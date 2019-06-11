@@ -4,10 +4,10 @@
             "item": "simpleores:copper_bucket"
         },
         "title": {
-            "translate": "advancements.copperBucketAch"
+            "translate": "advancements.copper_bucket_ach"
         },
         "description": {
-            "translate": "advancements.copperBucketAch.desc"
+            "translate": "advancements.copper_bucket_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

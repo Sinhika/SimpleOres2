@@ -4,10 +4,10 @@
             "item": "simpleores:mythril_axe"
         },
         "title": {
-            "translate": "advancements.mythrilAxeAch"
+            "translate": "advancements.mythril_axe_ach"
         },
         "description": {
-            "translate": "advancements.mythrilAxeAch.desc"
+            "translate": "advancements.mythril_axe_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

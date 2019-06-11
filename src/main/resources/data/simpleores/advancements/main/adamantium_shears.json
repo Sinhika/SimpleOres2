@@ -4,10 +4,10 @@
             "item": "simpleores:adamantium_shears"
         },
         "title": {
-            "translate": "advancements.adamantiumShearsAch"
+            "translate": "advancements.adamantium_shears_ach"
         },
         "description": {
-            "translate": "advancements.adamantiumShearsAch.desc"
+            "translate": "advancements.adamantium_shears_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true

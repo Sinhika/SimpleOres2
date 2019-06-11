@@ -4,10 +4,10 @@
             "item": "simpleores:tin_ore"
         },
         "title": {
-            "translate": "advancements.tinAch"
+            "translate": "advancements.tin_ach"
         },
         "description": {
-            "translate": "advancements.tinAch.desc"
+            "translate": "advancements.tin_ach.desc"
         },
         "show_toast": true,
         "announce_to_chat": true
