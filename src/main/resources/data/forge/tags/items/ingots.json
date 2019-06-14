@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/copper",
+    "#forge:ingots/tin",
+    "#forge:ingots/mithril",
+    "#forge:ingots/mythril",
+    "#forge:ingots/adamantium"
+  ]
+}
