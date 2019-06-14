@@ -4,15 +4,15 @@
 			"type" : "simpleores:adamantium_armor_enabled",
 			"value" : true
 		} ],
-	"result" : {
-		"item" : "simpleores:adamantium_helmet"
-	},
+	"type" : "minecraft:crafting_shaped",
 	"pattern" : [
 		"SSS",
 		"S S"
 	],
-	"type" : "forge:ore_shaped",
 	"key" : {
-		"S" : { "item" : "#INGOTADAMANTIUM"}
+		"S" : { "item" : "forge:ingots/adamantium"}
+	},
+	"result" : {
+		"item" : "simpleores:adamantium_helmet"
 	}
 }
