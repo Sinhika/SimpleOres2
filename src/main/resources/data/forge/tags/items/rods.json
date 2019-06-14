@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:rods/onyx",
+    "#forge:rods/mithril",
+    "#forge:rods/mythril"
+  ]
+}
