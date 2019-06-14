@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "simpleores:block/tin_ore"
+	}
+}
