@@ -4,6 +4,8 @@
     "#forge:storage_blocks/copper",
     "#forge:storage_blocks/tin",
     "#forge:storage_blocks/adamantium",
+    "#forge:storage_blocks/adamantite",
+    "#forge:storage_blocks/adamantine",
     "#forge:storage_blocks/mithril",
     "#forge:storage_blocks/mythril",
     "#forge:storage_blocks/onyx",
