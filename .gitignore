@@ -14,3 +14,4 @@ gradlew.bat
 build.number
 bin/
 .gradle/
+.idea/
