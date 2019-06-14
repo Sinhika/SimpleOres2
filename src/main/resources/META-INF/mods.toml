@@ -9,8 +9,8 @@ issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 
 [[mods]]
 modId="simpleores"
-version="${version}
-displayName="SimpleOres2"
+version="${version}"
+displayName="Simple Ores"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.14/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
 logoFile="simple_ores.png"
@@ -18,7 +18,7 @@ credits="Thanks to AleXndrTheGr8st for creating the original mod and to Sinhika 
 authors="AleXndrTheGr8st, Sinhika"
 description='''
 A simple ore mod, featuring 5 balanced ores: Copper, Tin, Mythril, Adamantium and Onyx. 
-All except Onyx can be found in the overworld, while Onyx can be found only in the Nether. 
+All except Onyx can be found in the overworld, while Onyx can be found only in the Nether.
 Each ore has its own unique properties, armor and tool sets, and more.
 '''
 
