@@ -4,15 +4,15 @@
 			"type" : "simpleores:adamantium_tools_enabled",
 			"value" : true
 		} ],
-	"result" : {
-		"item" : "simpleores:adamantium_shears"
-	},
+	"type" : "minecraft:crafting_shaped",
 	"pattern" : [
 		"S ",
 		" S"
 	],
-	"type" : "forge:ore_shaped",
 	"key" : {
-		"S" : { "item" : "#INGOTADAMANTIUM"}
+		"S" : { "item" : "forge:ingot/adamantium"}
+	},
+	"result" : {
+		"item" : "simpleores:adamantium_shears"
 	}
 }
