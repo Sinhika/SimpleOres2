@@ -3,7 +3,10 @@
 	"ingredient": {
 		"item": "simpleores:copper_bucket"
 	},
-	"result": "simpleores:copper_ingot",
+	"result": {
+		"item" : "simpleores:copper_ingot",
+		"count" : 3
+	},
 	"experience": 0.0,
 	"cookingtime": 200
 }
