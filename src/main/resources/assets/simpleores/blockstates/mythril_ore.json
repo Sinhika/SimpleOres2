@@ -1,7 +1,7 @@
 {
 	"forge_marker" : 1,
 	"defaults": {
-		"textures": { "all": "simpleores:blocks/mythril_ore" }
+		"textures": { "all": "simpleores:block/mythril_ore" }
 	},
 	"variants": {
 		"normal": { "model" : "cube_all" },
