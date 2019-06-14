@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "simpleores:items/adamantium_axe"
+        "layer0": "simpleores:item/adamantium_axe"
     }
 }

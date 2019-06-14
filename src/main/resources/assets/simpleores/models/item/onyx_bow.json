@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simpleores:items/onyx_bow_standby"
+        "layer0": "simpleores:item/onyx_bow_standby"
     },
     "display": {
         "thirdperson_righthand": {

@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "simpleores:items/tin_shears"
+		"layer0": "simpleores:item/tin_shears"
 	}
 }

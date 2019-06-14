@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "simpleores:items/mythril_ingot"
+		"layer0": "simpleores:item/mythril_ingot"
 	}
 }

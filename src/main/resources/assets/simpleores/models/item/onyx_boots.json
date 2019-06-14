@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simpleores:items/onyx_boots"
+        "layer0": "simpleores:item/onyx_boots"
     }
 }

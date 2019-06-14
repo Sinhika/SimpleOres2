@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "simpleores:items/copper_ingot"
+		"layer0": "simpleores:item/copper_ingot"
 	}
 }

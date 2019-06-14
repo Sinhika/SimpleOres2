@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "simpleores:items/mythril_rod"
+		"layer0": "simpleores:item/mythril_rod"
 	}
 }
