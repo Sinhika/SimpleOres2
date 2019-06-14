@@ -11,7 +11,7 @@
 		" T "
 	],
 	"key" : {
-		"S" : { "item" : "forge:ingots/adamantium},
+		"S" : { "item" : "forge:ingots/adamantium"},
 		"T" : { "item" : "forge:rods/wooden"}
 	},
 	"result" : {
