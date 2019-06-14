@@ -3,6 +3,8 @@ SimpleOres2
 
 Repository for SimpleOres 2 by AleXndrTheGr8st
 
+WARNING: 1.14 is a Work-in-Progress, Do Not Use.
+
 License
 -------
 
