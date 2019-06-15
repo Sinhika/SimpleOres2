@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mythril_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "simpleores:mythril_nugget"
+    }
+  },
+  "result": {
+    "item": "simpleores:mythril_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpleores:mythril_ingot"
+    }
+  ],
+  "result": {
+    "item": "simpleores:mythril_nugget",
+    "count": 9
+  }
+}

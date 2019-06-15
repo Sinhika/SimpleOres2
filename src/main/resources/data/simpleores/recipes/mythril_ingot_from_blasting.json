@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": {
+		"item": "simpleores:mythril_ore"
+	},
+	"result": "simpleores:mythril_ingot",
+	"experience": 0.7,
+	"cookingtime": 100
+}

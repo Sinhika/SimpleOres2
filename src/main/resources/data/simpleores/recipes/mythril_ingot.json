@@ -5,6 +5,7 @@
 			"value" : true
 		} ],
 	"type" : "minecraft:crafting_shapeless",
+	"group": "mythril_ingot",
 	"ingredients" : [
 		{ "item" : "simpleores:mythril_block" }
 	],

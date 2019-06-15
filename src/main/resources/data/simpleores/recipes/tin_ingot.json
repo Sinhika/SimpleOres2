@@ -5,6 +5,7 @@
 			"value" : true
 		} ],
 	"type" : "minecraft:crafting_shapeless",
+	"group": "tin_ingot",
 	"ingredients" : [
 		{ "item" : "simpleores:tin_block" }
 	],

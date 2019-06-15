@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "simpleores:tin_pickaxe"
+    },
+    {
+      "item": "simpleores:tin_shovel"
+    },
+    {
+      "item": "simpleores:tin_axe"
+    },
+    {
+      "item": "simpleores:tin_hoe"
+    },
+    {
+      "item": "simpleores:tin_sword"
+    },
+    {
+      "item": "simpleores:tin_helmet"
+    },
+    {
+      "item": "simpleores:tin_chestplate"
+    },
+    {
+      "item": "simpleores:tin_leggings"
+    },
+    {
+      "item": "simpleores:tin_boots"
+    }
+  ],
+  "result": "simpleores:tin_nugget",
+  "experience": 0.2,
+  "cookingtime": 200
+}

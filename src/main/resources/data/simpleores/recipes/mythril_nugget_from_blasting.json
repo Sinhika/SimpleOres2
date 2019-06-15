@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "simpleores:mythril_pickaxe"
+    },
+    {
+      "item": "simpleores:mythril_shovel"
+    },
+    {
+      "item": "simpleores:mythril_axe"
+    },
+    {
+      "item": "simpleores:mythril_hoe"
+    },
+    {
+      "item": "simpleores:mythril_sword"
+    },
+    {
+      "item": "simpleores:mythril_helmet"
+    },
+    {
+      "item": "simpleores:mythril_chestplate"
+    },
+    {
+      "item": "simpleores:mythril_leggings"
+    },
+    {
+      "item": "simpleores:mythril_boots"
+    }
+  ],
+  "result": "simpleores:mythril_nugget",
+  "experience": 0.4,
+  "cookingtime": 100
+}
