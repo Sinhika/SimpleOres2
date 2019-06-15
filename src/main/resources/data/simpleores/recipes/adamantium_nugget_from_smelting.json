@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "simpleores:adamantium_pickaxe"
+    },
+    {
+      "item": "simpleores:adamantium_shovel"
+    },
+    {
+      "item": "simpleores:adamantium_axe"
+    },
+    {
+      "item": "simpleores:adamantium_hoe"
+    },
+    {
+      "item": "simpleores:adamantium_sword"
+    },
+    {
+      "item": "simpleores:adamantium_helmet"
+    },
+    {
+      "item": "simpleores:adamantium_chestplate"
+    },
+    {
+      "item": "simpleores:adamantium_leggings"
+    },
+    {
+      "item": "simpleores:adamantium_boots"
+    },
+    {
+      "item": "simpleores:adamantium_horse_armor"
+    }
+  ],
+  "result": "simpleores:adamantium_nugget",
+  "experience": 0.1,
+  "cookingtime": 200
+}
