@@ -5,6 +5,7 @@
 			"value" : true
 		} ],
 	"type" : "minecraft:crafting_shapeless",
+	"group": "adamantium_ingot",
 	"ingredients" : [
 		{ "item" : "simpleores:adamantium_block" }
 	],

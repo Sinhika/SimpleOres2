@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "adamantium_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "simpleores:adamantium_nugget"
+    }
+  },
+  "result": {
+    "item": "simpleores:adamantium_ingot"
+  }
+}
