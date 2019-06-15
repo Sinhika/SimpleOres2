@@ -11,8 +11,8 @@
 		"SSS",
 		"S S"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "item" : "#INGOTCOPPER"}
+		"S" : { "item" : "forge:ingots/copper"}
 	}
 }

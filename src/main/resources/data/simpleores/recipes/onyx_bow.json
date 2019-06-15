@@ -14,7 +14,7 @@
 		" XY"
 	],
 	"key" : {
-		"X" : { "item" : "simpleores:onyx_rod"},
+		"X" : { "item" : "forge:rods/onyx"},
 		"Y" : { "item" : "minecraft:string"},
 		"Z" : { "item" : "minecraft:iron_ingot"}
 	}

@@ -12,8 +12,8 @@
 		"SSS",
 		"SSS"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "item" : "#INGOTTIN"}
+		"S" : { "item" : "forge:ingots/tin"}
 	}
 }

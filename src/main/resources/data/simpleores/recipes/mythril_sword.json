@@ -12,9 +12,9 @@
 		" S ",
 		" T "
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "item" : "#INGOTMYTHRIL"},
-		"T" : { "item" : "#STICKWOOD"}
+		"S" : { "item" : "forge:ingots/mythril"},
+		"T" : { "item" : "forge:rods/wooden"}
 	}
 }
