@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets/copper",
+    "#forge:nuggets/tin",
+    "#forge:nuggets/mithril",
+    "#forge:nuggets/mythril",
+    "#forge:nuggets/adamantite",
+    "#forge:nuggets/adamantine",
+    "#forge:nuggets/adamantium"
+  ]
+}
