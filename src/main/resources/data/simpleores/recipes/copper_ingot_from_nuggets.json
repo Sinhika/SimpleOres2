@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "copper_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "simpleores:copper_nugget"
+    }
+  },
+  "result": {
+    "item": "simpleores:copper_ingot"
+  }
+}

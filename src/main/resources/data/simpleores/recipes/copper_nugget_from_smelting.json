@@ -1,0 +1,38 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": [
+		{
+			"item": "simpleores:copper_pickaxe"
+		},
+		{
+			"item": "simpleores:copper_shovel"
+		},
+		{
+			"item": "simpleores:copper_axe"
+		},
+		{
+			"item": "simpleores:copper_hoe"
+		},
+		{
+			"item": "simpleores:copper_sword"
+		},
+		{
+			"item": "simpleores:copper_helmet"
+		},
+		{
+			"item": "simpleores:copper_chestplate"
+		},
+		{
+			"item": "simpleores:copper_leggings"
+		},
+		{
+			"item": "simpleores:copper_boots"
+		},
+		{
+			"item": "simpleores:copper_bucket"
+		}
+	],
+	"result": "simpleores:copper_nugget",
+	"experience": 0.2,
+	"cookingtime": 200
+}

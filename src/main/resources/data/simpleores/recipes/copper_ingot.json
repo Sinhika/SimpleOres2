@@ -5,6 +5,7 @@
 			"value" : true
 		} ],
 	"type" : "minecraft:crafting_shapeless",
+	"group": "copper_ingot",
 	"ingredients" : [
 		{ "item" : "simpleores:copper_block" }
 	],

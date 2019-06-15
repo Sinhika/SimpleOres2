@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpleores:copper_ingot"
+    }
+  ],
+  "result": {
+    "item": "simpleores:copper_nugget",
+    "count": 9
+  }
+}
