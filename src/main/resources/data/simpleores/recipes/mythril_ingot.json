@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:mythril_block_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shapeless",
 	"group": "mythril_ingot",
 	"ingredients" : [

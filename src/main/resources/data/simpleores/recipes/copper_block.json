@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:copper_ingot_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shaped",
 	"result" : {
 		"item" : "simpleores:copper_block"

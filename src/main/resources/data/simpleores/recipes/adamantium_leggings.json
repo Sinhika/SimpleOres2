@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:adamantium_armor_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shaped",
 	"pattern" : [
 		"SSS",

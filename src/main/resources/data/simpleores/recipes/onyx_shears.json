@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:onyx_tools_enabled",
-			"value" : true
-		} ],
 	"result" : {
 		"item" : "simpleores:onyx_shears"
 	},

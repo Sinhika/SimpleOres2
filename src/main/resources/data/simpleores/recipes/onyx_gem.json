@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:onyx_block_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shapeless",
 	"ingredients" : [
 		{ "item" : "simpleores:onyx_block" }

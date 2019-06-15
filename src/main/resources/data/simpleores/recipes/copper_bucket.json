@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:copper_bucket_enabled",
-			"value" : true
-		} ],
 	"result" : {
 		"item" : "simpleores:copper_bucket"
 	},

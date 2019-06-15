@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:mythril_armor_enabled",
-			"value" : true
-		} ],
 	"result" : {
 		"item" : "simpleores:mythril_helmet"
 	},

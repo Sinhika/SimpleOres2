@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:onyx_armor_enabled",
-			"value" : true
-		} ],
 	"result" : {
 		"item" : "simpleores:onyx_leggings"
 	},

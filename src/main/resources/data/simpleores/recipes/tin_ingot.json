@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:tin_block_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shapeless",
 	"group": "tin_ingot",
 	"ingredients" : [

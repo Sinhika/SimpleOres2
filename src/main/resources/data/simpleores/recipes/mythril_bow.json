@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:mythril_bow_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shaped",
 	"result" : {
 		"item" : "simpleores:mythril_bow"

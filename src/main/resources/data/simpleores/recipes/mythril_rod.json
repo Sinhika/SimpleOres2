@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:mythril_rod_enabled",
-			"value" : true
-		} ],
 	"result" : {
 		"item" : "simpleores:mythril_rod"
 	},

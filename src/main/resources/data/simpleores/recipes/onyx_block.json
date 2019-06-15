@@ -1,9 +1,4 @@
 {
-	"conditions" : [
-		{
-			"type" : "simpleores:onyx_gem_enabled",
-			"value" : true
-		} ],
 	"type" : "minecraft:crafting_shaped",
 	"result" : {
 		"item" : "simpleores:onyx_block"
