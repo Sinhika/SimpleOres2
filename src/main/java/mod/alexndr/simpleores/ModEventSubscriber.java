@@ -1,8 +1,10 @@
 package mod.alexndr.simpleores;
 
 import com.google.common.base.Preconditions;
+import mod.alexndr.simpleores.config.ConfigHelper;
+import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -32,17 +34,24 @@ public final class ModEventSubscriber
 	public static void onRegisterBlocks(final RegistryEvent.Register<Block> event)
 	{
 		// Register all your blocks inside this registerAll call
+		// TODO
 		event.getRegistry().registerAll( );
 		LOGGER.debug("Registered Blocks");
-		// TODO
 	}
 
 	@SubscribeEvent
 	public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
 	{
 		final ModConfig config = event.getConfig();
-		// TODO
-	}
+
+		// Rebake the configs when they change
+		if (config.getSpec() == ConfigHolder.CLIENT_SPEC) {
+			ConfigHelper.bakeClient(config);
+		}
+		else if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
+			ConfigHelper.bakeServer(config);
+		}
+	} // onModConfigEvent
 
 	/**
 	 * This method will be called by Forge when it is time for the mod to register its Items.
@@ -52,6 +61,7 @@ public final class ModEventSubscriber
 	public static void onRegisterItems(final RegistryEvent.Register<Item> event)
 	{
 		final IForgeRegistry<Item> registry = event.getRegistry();
+		// TODO
 		registry.registerAll( );
 
 		// We need to go over the entire registry so that we include any potential Registry Overrides
@@ -64,14 +74,8 @@ public final class ModEventSubscriber
 			if (!blockRegistryName.getNamespace().equals(SimpleOres.MODID)) {
 				continue;
 			}
-
-			// If you have blocks that don't have a corresponding ItemBlock, uncomment this code and create an Interface - or even better an Annotation - called NoAutomaticItemBlock with no methods and implement it on your blocks that shouldn't have ItemBlocks
-//			if (!(block instanceof NoAutomaticItemBlock)) {
-//				continue;
-//			}
-
 			// Make the properties, and make it so that the item will be on our ItemGroup (CreativeTab)
-			// final Item.Properties properties = new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP);
+			final Item.Properties properties = new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP);
 
 			// Create the new BlockItem with the block and it's properties
 			final BlockItem blockItem = new BlockItem(block, properties);

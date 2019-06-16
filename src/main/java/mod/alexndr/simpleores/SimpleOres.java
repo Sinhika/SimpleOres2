@@ -1,5 +1,8 @@
 package mod.alexndr.simpleores;
 
+import mod.alexndr.simpleores.config.ConfigHolder;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,5 +21,10 @@ public class SimpleOres
     public SimpleOres()
     {
     	LOGGER.info("Hello from Simple Ores!");
+        final ModLoadingContext modLoadingContext = ModLoadingContext.get();
+
+        // Register Configs
+        modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
+        modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
     } // end SimpleOres()
 } // end class SimpleOres
