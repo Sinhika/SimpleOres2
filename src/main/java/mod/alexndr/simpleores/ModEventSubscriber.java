@@ -7,7 +7,9 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -37,13 +39,23 @@ public final class ModEventSubscriber
 	public static void onRegisterBlocks(final RegistryEvent.Register<Block> event)
 	{
 		// Register all your blocks inside this registerAll call
-		// TODO
-		if (SimpleOresConfig.enableCopperOre)
-		{
-			event.getRegistry().register(
-					setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 1.7F, 3.0F)), "copper_ore")
-			);
-		}
+        event.getRegistry().registerAll(
+                setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 1.7F, 3.0F)), "copper_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 3.0F, 3.0F)), "tin_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 4.0F, 3.0F)), "adamantium_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 5.0F, 3.0F)), "mythril_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 7.0F, 3.0F)), "onyx_ore"),
+				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA)
+									.hardnessAndResistance(3.0F, 6.0F).sound( SoundType.METAL)), "copper_block"),
+				setup(new Block(Block.Properties.create(Material.IRON)
+									.hardnessAndResistance(4.0F, 6.0F).sound( SoundType.METAL)), "tin_block"),
+				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
+												.hardnessAndResistance(7.0F, 6.0F).sound( SoundType.METAL)), "mythril_block"),
+				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
+												.hardnessAndResistance(7.0F, 12.0F).sound( SoundType.METAL)), "adamantium_block"),
+				setup(new Block(Block.Properties.create(Material.ROCK, MaterialColor.OBSIDIAN)
+												.hardnessAndResistance(20.0F, 100.0F)), "onyx_block")
+        );
 		LOGGER.debug("Registered Blocks");
 	}
 
@@ -69,10 +81,20 @@ public final class ModEventSubscriber
 	public static void onRegisterItems(final RegistryEvent.Register<Item> event)
 	{
 		final IForgeRegistry<Item> registry = event.getRegistry();
-		// TODO
+
+		// ingots, nuggets, gems, parts
 		registry.registerAll(
-				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)),
-					  "copper_ingot")
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_ingot"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_ingot"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_ingot"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_ingot"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_gem"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_nugget"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_nugget"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_nugget"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_nugget"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_rod"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_rod")
 		);
 
 		// We need to go over the entire registry so that we include any potential Registry Overrides
