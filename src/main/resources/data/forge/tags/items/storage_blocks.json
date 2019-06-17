@@ -8,6 +8,6 @@
     "#forge:storage_blocks/adamantine",
     "#forge:storage_blocks/mithril",
     "#forge:storage_blocks/mythril",
-    "#forge:storage_blocks/onyx",
+    "#forge:storage_blocks/onyx"
   ]
 }
