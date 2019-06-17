@@ -71,7 +71,8 @@ public final class ModEventSubscriber
 		final IForgeRegistry<Item> registry = event.getRegistry();
 		// TODO
 		registry.registerAll(
-				setup(new Item(new Item.Properties()), "copper_ingot")
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)),
+					  "copper_ingot")
 		);
 
 		// We need to go over the entire registry so that we include any potential Registry Overrides
