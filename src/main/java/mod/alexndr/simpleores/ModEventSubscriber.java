@@ -3,8 +3,11 @@ package mod.alexndr.simpleores;
 import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
+import net.minecraft.block.OreBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -35,7 +38,12 @@ public final class ModEventSubscriber
 	{
 		// Register all your blocks inside this registerAll call
 		// TODO
-		event.getRegistry().registerAll( );
+		if (SimpleOresConfig.enableCopperOre)
+		{
+			event.getRegistry().register(
+					setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 1.7F, 3.0F)), "copper_ore")
+			);
+		}
 		LOGGER.debug("Registered Blocks");
 	}
 
@@ -62,7 +70,9 @@ public final class ModEventSubscriber
 	{
 		final IForgeRegistry<Item> registry = event.getRegistry();
 		// TODO
-		registry.registerAll( );
+		registry.registerAll(
+				setup(new Item(new Item.Properties()), "copper_ingot")
+		);
 
 		// We need to go over the entire registry so that we include any potential Registry Overrides
 		for (final Block block : ForgeRegistries.BLOCKS.getValues()) {
