@@ -15,6 +15,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -156,18 +157,30 @@ public final class ModEventSubscriber
 		registry.registerAll(
 				// axes
 				setup(new SimpleAxe(SimpleOresItemTier.COPPER, 7.0F, -3.1F,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_axe"),
+						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_axe"),
 				setup(new SimpleAxe(SimpleOresItemTier.TIN, 6.0F, -3.0F,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_axe"),
+						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_axe"),
 				setup(new SimpleAxe(SimpleOresItemTier.MYTHRIL, 8.0F, -3.2F,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_axe"),
+						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_axe"),
 				setup(new SimpleAxe(SimpleOresItemTier.ADAMANTIUM, 6.0F, -3.0F,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_axe"),
+						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_axe"),
 				setup(new SimpleAxe(SimpleOresItemTier.ONYX, 9.0F, -3.0F,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe")
+						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe"),
 
 				// bows
+
 				// hoes
+				setup(new HoeItem(SimpleOresItemTier.COPPER,-2.0F,
+						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_hoe"),
+				setup(new HoeItem(SimpleOresItemTier.TIN,-3.0F,
+								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_hoe"),
+				setup(new HoeItem(SimpleOresItemTier.MYTHRIL,-1.0F,
+								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_hoe"),
+				setup(new HoeItem(SimpleOresItemTier.ADAMANTIUM,-1.0F,
+								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_hoe"),
+				setup(new HoeItem(SimpleOresItemTier.ONYX, 0.0F,
+								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_hoe")
+
                 // pickaxes
                 // shears
 				// shovels
