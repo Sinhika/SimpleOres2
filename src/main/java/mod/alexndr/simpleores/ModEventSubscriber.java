@@ -93,11 +93,8 @@ public final class ModEventSubscriber
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_nugget"),
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_nugget"),
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_rod"),
-				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_rod")
-		);
-
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_rod"),
 		// armors
-		registry.registerAll(
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.LEGS,
@@ -128,13 +125,13 @@ public final class ModEventSubscriber
 		LOGGER.debug("Registered Items");
 	}
 
-	private static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
+	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
 													   final String name)
 	{
 		return setup(entry, new ResourceLocation(SimpleOres.MODID, name));
 	}
 
-	private static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
+	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
 													   final ResourceLocation registryName)
 	{
 		entry.setRegistryName(registryName);

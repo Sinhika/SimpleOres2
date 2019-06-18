@@ -9,7 +9,7 @@
 	],
 	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "item" : "forge:ingots/copper"},
-		"T" : { "item" : "forge:rods/wooden"}
+		"S" : { "tag" : forge:ingots/copper"},
+		"T" : { "tag" : forge:rods/wooden"}
 	}
 }

@@ -5,7 +5,7 @@
 		" S"
 	],
 	"key" : {
-		"S" : { "item" : "forge:ingot/adamantium"}
+		"S" : { "tag" : forge:ingot/adamantium"}
 	},
 	"result" : {
 		"item" : "simpleores:adamantium_shears"

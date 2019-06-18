@@ -6,8 +6,8 @@
 		" T "
 	],
 	"key" : {
-		"S" : { "item" : "forge:ingots/adamantium"},
-		"T" : { "item" : "forge:rods/wooden"}
+		"S" : { "tag" : forge:ingots/adamantium"},
+		"T" : { "tag" : forge:rods/wooden"}
 	},
 	"result" : {
 		"item" : "simpleores:adamantium_sword"

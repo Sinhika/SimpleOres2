@@ -9,7 +9,7 @@
 	],
 	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "item" : "forge:gems/onyx"},
-		"T" : { "item" : "forge:rods/wooden"}
+		"S" : { "tag" : forge:gems/onyx"},
+		"T" : { "tag" : forge:rods/wooden"}
 	}
 }

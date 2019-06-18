@@ -9,7 +9,7 @@
 		" XY"
 	],
 	"key" : {
-		"X" : { "item" : "forge:rods/mythril"},
+		"X" : { "tag" : forge:rods/mythril"},
 		"Y" : { "item" : "minecraft:string"},
 		"Z" : { "item" : "minecraft:iron_ingot"}
 	}
