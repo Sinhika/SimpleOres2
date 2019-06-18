@@ -6,6 +6,7 @@ import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.content.SimpleAxe;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresItemTier;
+import mod.alexndr.simpleores.content.SimplePickaxe;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -179,9 +180,20 @@ public final class ModEventSubscriber
 				setup(new HoeItem(SimpleOresItemTier.ADAMANTIUM,-1.0F,
 								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_hoe"),
 				setup(new HoeItem(SimpleOresItemTier.ONYX, 0.0F,
-								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_hoe")
+								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_hoe"),
 
                 // pickaxes
+				setup(new SimplePickaxe(SimpleOresItemTier.COPPER, 1, -2.8F,
+										new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_pickaxe"),
+				setup(new SimplePickaxe(SimpleOresItemTier.TIN, 1, -2.8F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_pickaxe"),
+				setup(new SimplePickaxe(SimpleOresItemTier.MYTHRIL, 1, -2.8F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_pickaxe"),
+				setup(new SimplePickaxe(SimpleOresItemTier.ADAMANTIUM, 1, -2.8F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_pickaxe"),
+				setup(new SimplePickaxe(SimpleOresItemTier.ONYX, 1, -2.8F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_pickaxe")
+
                 // shears
 				// shovels
 				// swords
