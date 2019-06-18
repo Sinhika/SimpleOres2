@@ -93,8 +93,11 @@ public final class ModEventSubscriber
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_nugget"),
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_nugget"),
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_rod"),
-				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_rod"),
+				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_rod")
+		);
+
 		// armors
+		registry.registerAll(
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.LEGS,
@@ -102,7 +105,44 @@ public final class ModEventSubscriber
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.CHEST,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_chestplate"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.FEET,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_boots")
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_boots"),
+
+				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.HEAD,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_helmet"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.LEGS,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_leggings"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.CHEST,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_chestplate"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.FEET,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_boots"),
+
+				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_helmet"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.LEGS,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_leggings"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.CHEST,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_chestplate"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.FEET,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_boots"),
+
+				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.HEAD,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_helmet"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.LEGS,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_leggings"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.CHEST,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_chestplate"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.FEET,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_boots"),
+
+				setup(new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.HEAD,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_helmet"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.LEGS,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_leggings"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.CHEST,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_chestplate"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.FEET,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_boots")
+
 		);
 		// We need to go over the entire registry so that we include any potential Registry Overrides
 		for (final Block block : ForgeRegistries.BLOCKS.getValues()) {
