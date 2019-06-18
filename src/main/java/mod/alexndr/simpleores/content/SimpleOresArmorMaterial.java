@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
-public enum ModArmorMaterial implements IArmorMaterial
+public enum SimpleOresArmorMaterial implements IArmorMaterial
 {
     COPPER ("copper", 8, new int [] {1,2,3,2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN , 0.0F,
             ()-> { return Ingredient.fromItems(ModItems.copper_ingot);} ),
@@ -34,10 +34,10 @@ public enum ModArmorMaterial implements IArmorMaterial
     private final float toughness;
     private final LazyLoadBase<Ingredient> repairMaterial;
 
-    private ModArmorMaterial(String nameIn, int maxDamageIn, int[] drAmtArray,
-                            int enchantabilityIn, SoundEvent soundIn,
-                            float toughnessIn,
-                            Supplier<Ingredient> repairMatIn)
+    private SimpleOresArmorMaterial(String nameIn, int maxDamageIn, int[] drAmtArray,
+                                    int enchantabilityIn, SoundEvent soundIn,
+                                    float toughnessIn,
+                                    Supplier<Ingredient> repairMatIn)
     {
         name = nameIn;
         maxDamageFactor = maxDamageIn;
@@ -83,4 +83,4 @@ public enum ModArmorMaterial implements IArmorMaterial
     public float getToughness() {
         return this.toughness;
     }
-}  // end class ModArmorMaterial
+}  // end class SimpleOresArmorMaterial

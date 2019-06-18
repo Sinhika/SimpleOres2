@@ -3,13 +3,15 @@ package mod.alexndr.simpleores;
 import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
-import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -94,6 +96,17 @@ public final class ModEventSubscriber
 				setup(new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_rod")
 		);
 
+		// armors
+		registry.registerAll(
+				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.HEAD,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_helmet"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.LEGS,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_leggings"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.CHEST,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_chestplate"),
+				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.FEET,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_boots")
+		);
 		// We need to go over the entire registry so that we include any potential Registry Overrides
 		for (final Block block : ForgeRegistries.BLOCKS.getValues()) {
 
@@ -115,12 +128,14 @@ public final class ModEventSubscriber
 		LOGGER.debug("Registered Items");
 	}
 
-	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry, final String name)
+	private static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
+													   final String name)
 	{
 		return setup(entry, new ResourceLocation(SimpleOres.MODID, name));
 	}
 
-	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry, final ResourceLocation registryName) 
+	private static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
+													   final ResourceLocation registryName)
 	{
 		entry.setRegistryName(registryName);
 		return entry;
