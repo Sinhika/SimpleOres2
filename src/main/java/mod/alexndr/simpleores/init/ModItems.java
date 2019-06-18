@@ -24,8 +24,8 @@ public final class ModItems {
     public static final Item onyx_rod = ModUtil._null();
 
     // buckets
+    public static final Item copper_bucket_water = ModUtil._null();
     public static final Item copper_bucket = ModUtil._null();
-    public static final Item empty_copper_bucket = ModUtil._null();
 
     // TOOLS & WEAPONS
     // bows

@@ -172,9 +172,9 @@ public final class ModEventSubscriber
 
 				// bucket
 				setup(new BucketItem(Fluids.EMPTY, new Item.Properties().maxStackSize(16)
-									  .group(ModTabGroups.MOD_ITEM_GROUP)), "empty_copper_bucket"),
+									  .group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket"),
 				setup(new CopperBucket(new Item.Properties().maxStackSize(16)
-									.group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket"),
+									.group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket_water"),
 				// TODO - lots.
 
 				// hoes

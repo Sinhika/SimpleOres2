@@ -12,7 +12,7 @@ public class CopperBucket extends UniversalBucket
 {
     public CopperBucket(Properties properties)
     {
-        super(properties, Fluid.BUCKET_VOLUME, new ItemStack(ModItems.empty_copper_bucket), false);
+        super(properties, Fluid.BUCKET_VOLUME, new ItemStack(ModItems.copper_bucket), false);
     }
 
 }  // end class CopperBucket
