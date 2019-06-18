@@ -3,7 +3,9 @@ package mod.alexndr.simpleores;
 import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.content.SimpleAxe;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
+import mod.alexndr.simpleores.content.SimpleOresItemTier;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -98,6 +100,7 @@ public final class ModEventSubscriber
 
 		// armors
 		registry.registerAll(
+				// copper
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.LEGS,
@@ -107,6 +110,7 @@ public final class ModEventSubscriber
 				setup(new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.FEET,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_boots"),
 
+				// tin
 				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.LEGS,
@@ -116,6 +120,7 @@ public final class ModEventSubscriber
 				setup(new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.FEET,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_boots"),
 
+				// mythril
 				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.LEGS,
@@ -125,6 +130,7 @@ public final class ModEventSubscriber
 				setup(new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.FEET,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_boots"),
 
+				// adamantium
 				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.LEGS,
@@ -134,6 +140,7 @@ public final class ModEventSubscriber
 				setup(new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.FEET,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_boots"),
 
+				// onyx
 				setup(new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.HEAD,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_helmet"),
 				setup(new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.LEGS,
@@ -144,6 +151,29 @@ public final class ModEventSubscriber
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_boots")
 
 		);
+
+		// tools
+		registry.registerAll(
+				// axes
+				setup(new SimpleAxe(SimpleOresItemTier.COPPER, 7.0F, -3.1F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_axe"),
+				setup(new SimpleAxe(SimpleOresItemTier.TIN, 6.0F, -3.0F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_axe"),
+				setup(new SimpleAxe(SimpleOresItemTier.MYTHRIL, 8.0F, -3.2F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_axe"),
+				setup(new SimpleAxe(SimpleOresItemTier.ADAMANTIUM, 6.0F, -3.0F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_axe"),
+				setup(new SimpleAxe(SimpleOresItemTier.ONYX, 9.0F, -3.0F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe")
+
+				// bows
+				// hoes
+                // pickaxes
+                // shears
+				// shovels
+				// swords
+		);
+
 		// We need to go over the entire registry so that we include any potential Registry Overrides
 		for (final Block block : ForgeRegistries.BLOCKS.getValues()) {
 

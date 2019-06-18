@@ -1,36 +1,47 @@
 {
 	"type": "minecraft:smelting",
-	"ingredient": [
-		{
-			"item": "simpleores:copper_pickaxe"
-		},
-		{
-			"item": "simpleores:copper_shovel"
-		},
-		{
-			"item": "simpleores:copper_axe"
-		},
-		{
-			"item": "simpleores:copper_hoe"
-		},
-		{
-			"item": "simpleores:copper_sword"
-		},
-		{
-			"item": "simpleores:copper_helmet"
-		},
-		{
-			"item": "simpleores:copper_chestplate"
-		},
-		{
-			"item": "simpleores:copper_leggings"
-		},
-		{
-			"item": "simpleores:copper_boots"
-		},
-		{
-			"item": "simpleores:copper_bucket"
-		}
+	"ingredient":
+	[
+      {
+          "item": "simpleores:copper_pickaxe",
+          "count": 1
+      },
+      {
+          "item": "simpleores:copper_shovel",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_axe",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_hoe",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_sword",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_helmet",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_chestplate",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_leggings",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_boots",
+        "count": 1
+      },
+      {
+          "item": "simpleores:copper_bucket",
+        "count": 1
+      }
 	],
 	"result": "simpleores:copper_nugget",
 	"experience": 0.2,
