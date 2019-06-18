@@ -9,6 +9,6 @@
  	],
 	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "tag" : forge:gems/onyx"}
+		"S" : { "tag" :"forge:gems/onyx"}
 	}
 }

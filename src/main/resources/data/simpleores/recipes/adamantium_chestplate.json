@@ -6,7 +6,7 @@
 		"SSS"
 	],
 	"key" : {
-		"S" : { "tag" : forge:ingots/adamantium"}
+		"S" : { "tag" :"forge:ingots/adamantium"}
 	},
 	"result" : {
 		"item" : "simpleores:adamantium_chestplate"

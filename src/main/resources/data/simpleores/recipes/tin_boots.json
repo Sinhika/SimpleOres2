@@ -8,6 +8,6 @@
 	],
 	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"S" : { "tag" : forge:ingots/tin"}
+		"S" : { "tag" :"forge:ingots/tin"}
 	}
 }

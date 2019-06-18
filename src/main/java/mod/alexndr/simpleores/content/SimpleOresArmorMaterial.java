@@ -14,15 +14,18 @@ import java.util.function.Supplier;
 
 public enum SimpleOresArmorMaterial implements IArmorMaterial
 {
-    COPPER ("copper", 8, new int [] {1,2,3,2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN , 0.0F,
+    COPPER ("simpleores:copper", 8, new int [] {1,2,3,2}, 8,
+            SoundEvents.ITEM_ARMOR_EQUIP_CHAIN , 0.0F,
             ()-> { return Ingredient.fromItems(ModItems.copper_ingot);} ),
-    TIN ("tin", 9, new int [] {1,2,3,2}, 8, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN , 0.0F,
+    TIN ("simpleores:tin", 9, new int [] {1,2,3,2}, 8,
+         SoundEvents.ITEM_ARMOR_EQUIP_CHAIN , 0.0F,
             ()-> { return Ingredient.fromItems(ModItems.tin_ingot);} ),
-    MYTHRIL ("mythril", 22, new int [] {3,4,5,3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F,
+    MYTHRIL ("simpleores:mythril", 22, new int [] {3,4,5,3}, 12,
+             SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F,
             ()-> { return Ingredient.fromItems(ModItems.mythril_ingot);} ),
-    ADAMANTIUM("adamantium", 28, new int [] {2,6,8,3}, 3, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F,
+    ADAMANTIUM("simpleores:adamantium", 28, new int [] {2,6,8,3}, 3, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F,
             ()-> { return Ingredient.fromItems(ModItems.adamantium_ingot);} ),
-    ONYX("onyx", 45, new int [] {5,6,8,5}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2.0F,
+    ONYX("simpleores:onyx", 45, new int [] {5,6,8,5}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2.0F,
             ()-> { return Ingredient.fromItems(ModItems.onyx_gem);} );
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
