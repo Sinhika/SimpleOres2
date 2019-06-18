@@ -14,10 +14,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -169,6 +166,10 @@ public final class ModEventSubscriber
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe"),
 
 				// bows
+				// TODO
+
+				// bucket
+				// TODO
 
 				// hoes
 				setup(new HoeItem(SimpleOresItemTier.COPPER,-2.0F,
@@ -192,10 +193,23 @@ public final class ModEventSubscriber
 				setup(new SimplePickaxe(SimpleOresItemTier.ADAMANTIUM, 1, -2.8F,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_pickaxe"),
 				setup(new SimplePickaxe(SimpleOresItemTier.ONYX, 1, -2.8F,
-									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_pickaxe")
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_pickaxe"),
 
                 // shears
+				// TODO
+
 				// shovels
+				setup(new ShovelItem(SimpleOresItemTier.COPPER, 1.5F, -3.0F,
+									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_shovel"),
+				setup(new ShovelItem(SimpleOresItemTier.TIN, 1.5F, -3.0F,
+									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_shovel"),
+				setup(new ShovelItem(SimpleOresItemTier.MYTHRIL, 1.5F, -3.0F,
+									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_shovel"),
+				setup(new ShovelItem(SimpleOresItemTier.ADAMANTIUM, 1.5F, -3.0F,
+									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_shovel"),
+				setup(new ShovelItem(SimpleOresItemTier.ONYX, 1.5F, -3.0F,
+									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_shovel")
+
 				// swords
 		);
 
