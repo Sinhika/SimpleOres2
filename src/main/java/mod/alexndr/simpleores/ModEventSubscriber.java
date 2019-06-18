@@ -208,9 +208,19 @@ public final class ModEventSubscriber
 				setup(new ShovelItem(SimpleOresItemTier.ADAMANTIUM, 1.5F, -3.0F,
 									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_shovel"),
 				setup(new ShovelItem(SimpleOresItemTier.ONYX, 1.5F, -3.0F,
-									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_shovel")
+									 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_shovel"),
 
 				// swords
+				setup(new SwordItem(SimpleOresItemTier.COPPER, 3, -2.4F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_sword"),
+				setup(new SwordItem(SimpleOresItemTier.TIN, 3, -2.4F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_sword"),
+				setup(new SwordItem(SimpleOresItemTier.MYTHRIL, 3, -2.4F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_sword"),
+				setup(new SwordItem(SimpleOresItemTier.ADAMANTIUM, 3, -2.4F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_sword"),
+				setup(new SwordItem(SimpleOresItemTier.ONYX, 3, -2.4F,
+									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_sword")
 		);
 
 		// We need to go over the entire registry so that we include any potential Registry Overrides
