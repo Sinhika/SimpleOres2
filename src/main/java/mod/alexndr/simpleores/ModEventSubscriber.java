@@ -3,16 +3,14 @@ package mod.alexndr.simpleores;
 import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
-import mod.alexndr.simpleores.content.SimpleAxe;
-import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
-import mod.alexndr.simpleores.content.SimpleOresItemTier;
-import mod.alexndr.simpleores.content.SimplePickaxe;
+import mod.alexndr.simpleores.content.*;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -166,10 +164,18 @@ public final class ModEventSubscriber
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe"),
 
 				// bows
-				// TODO
+				// TODO actually implement these as more than a generic bow.
+				setup(new MythrilBow(new Item.Properties().maxDamage(750).group(ModTabGroups.MOD_ITEM_GROUP)),
+					  "mythril_bow"),
+				setup(new OnyxBow(new Item.Properties().maxDamage(1000).group(ModTabGroups.MOD_ITEM_GROUP)),
+					  "onyx_bow"),
 
 				// bucket
-				// TODO
+				setup(new BucketItem(Fluids.EMPTY, new Item.Properties().maxStackSize(16)
+									  .group(ModTabGroups.MOD_ITEM_GROUP)), "empty_copper_bucket"),
+				setup(new CopperBucket(new Item.Properties().maxStackSize(16)
+									.group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket"),
+				// TODO - lots.
 
 				// hoes
 				setup(new HoeItem(SimpleOresItemTier.COPPER,-2.0F,
@@ -196,6 +202,7 @@ public final class ModEventSubscriber
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_pickaxe"),
 
                 // shears
+				// TODO - won't shear leaves, grass.
 				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
 														  .group(ModTabGroups.MOD_ITEM_GROUP)), "copper_shears"),
 				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
