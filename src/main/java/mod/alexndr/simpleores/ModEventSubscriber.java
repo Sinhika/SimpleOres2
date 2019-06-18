@@ -65,10 +65,7 @@ public final class ModEventSubscriber
 		final ModConfig config = event.getConfig();
 
 		// Rebake the configs when they change
-		if (config.getSpec() == ConfigHolder.CLIENT_SPEC) {
-			ConfigHelper.bakeClient(config);
-		}
-		else if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
+		if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
 			ConfigHelper.bakeServer(config);
 		}
 	} // onModConfigEvent

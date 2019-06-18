@@ -24,7 +24,6 @@ public class SimpleOres
         final ModLoadingContext modLoadingContext = ModLoadingContext.get();
 
         // Register Configs
-        modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
         modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
     } // end SimpleOres()
 } // end class SimpleOres

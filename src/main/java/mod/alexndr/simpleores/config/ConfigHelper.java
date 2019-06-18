@@ -13,10 +13,9 @@ public final class ConfigHelper
 
 	// We store a reference to the ModConfigs here to be able to change the values in them from our code
 	// (For example from a config GUI)
-	private static ModConfig clientConfig;
 	private static ModConfig serverConfig;
 
-	public static void bakeClient(final ModConfig config) { }
+//	public static void bakeClient(final ModConfig config) { }
 
 	public static void bakeServer(final ModConfig config)
 	{
