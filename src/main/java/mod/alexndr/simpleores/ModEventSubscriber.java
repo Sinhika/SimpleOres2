@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.content.*;
+import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -17,6 +18,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
@@ -59,17 +61,6 @@ public final class ModEventSubscriber
         );
 		LOGGER.debug("Registered Blocks");
 	}
-
-	@SubscribeEvent
-	public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
-	{
-		final ModConfig config = event.getConfig();
-
-		// Rebake the configs when they change
-		if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
-			ConfigHelper.bakeServer(config);
-		}
-	} // onModConfigEvent
 
 	/**
 	 * This method will be called by Forge when it is time for the mod to register its Items.
@@ -258,7 +249,27 @@ public final class ModEventSubscriber
 			registry.register(setup(blockItem, blockRegistryName));
 		}
 		LOGGER.debug("Registered Items");
-	}
+	}  // end onRegisterItems()
+
+	@SubscribeEvent
+	public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
+	{
+		final ModConfig config = event.getConfig();
+
+		// Rebake the configs when they change
+		if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
+			ConfigHelper.bakeServer(config);
+		}
+	} // onModConfigEvent
+
+
+	@SubscribeEvent
+	public static void onCommonSetup(final FMLCommonSetupEvent event)
+	{
+        OreGeneration.setupOreGen();
+        OreGeneration.setupNetherOreGen();
+		LOGGER.debug("Common setup done");
+	} // end onCommonSetup
 
 	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
 													   final String name)
