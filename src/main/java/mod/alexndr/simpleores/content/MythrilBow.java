@@ -13,7 +13,8 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * TODO add customization that makes the mythril bow special.
+ *  A bow with some special features: Efficiency, which makes it act like an
+ *  INFINITY bow sometimes, and extra damage (equivalent to POWER 2).
  */
 public class MythrilBow extends BowItem
 {
