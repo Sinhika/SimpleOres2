@@ -1,14 +1,22 @@
 package mod.alexndr.simpleores.content;
 
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -60,4 +68,12 @@ public class OnyxBow extends BowItem
         return stack;
     } // end addMythrilEnchantments()
 
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    {
+        super.addInformation(stack, worldIn, tooltip, flagIn);
+        tooltip.add((new TranslationTextComponent("tips.damageTooltip")).applyTextStyle(TextFormatting.GREEN));
+        tooltip.add((new TranslationTextComponent("tips.flameTooltip")).applyTextStyle(TextFormatting.GREEN));
+    }
 }  // end class OnyxBow
