@@ -158,12 +158,10 @@ public final class ModEventSubscriber
 				setup(new OnyxBow(new Item.Properties().maxDamage(1000).group(ModTabGroups.MOD_ITEM_GROUP)),
 					  "onyx_bow"),
 
-				// bucket
-				setup(new BucketItem(Fluids.EMPTY, new Item.Properties().maxStackSize(16)
-									  .group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket"),
-				setup(new CopperBucket(new Item.Properties().maxStackSize(16)
-									.group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket_water"),
-				// TODO - lots.
+				// bucket - TODO needs work
+				setup(new CopperBucket(new Item.Properties().maxStackSize(16).group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket"),
+				setup(new CopperBucket(Fluids.WATER,
+                                       new Item.Properties().maxStackSize(1).group(ModTabGroups.MOD_ITEM_GROUP)), "copper_bucket_water"),
 
 				// hoes
 				setup(new HoeItem(SimpleOresItemTier.COPPER,-2.0F,
