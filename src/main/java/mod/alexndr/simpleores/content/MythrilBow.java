@@ -1,5 +1,6 @@
 package mod.alexndr.simpleores.content;
 
+import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -7,6 +8,7 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -40,8 +42,8 @@ public class MythrilBow extends BowItem
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add((new TranslationTextComponent("tips.damageTooltip")).applyTextStyle(TextFormatting.GREEN));
-        tooltip.add((new TranslationTextComponent("tips.efficiencyTooltip")).applyTextStyle(TextFormatting.GREEN));
+        tooltip.add((new TranslationTextComponent("tips.damage_tooltip")).applyTextStyle(TextFormatting.GREEN));
+        tooltip.add((new TranslationTextComponent("tips.efficiency_tooltip")).applyTextStyle(TextFormatting.GREEN));
     }
 
     @Override
