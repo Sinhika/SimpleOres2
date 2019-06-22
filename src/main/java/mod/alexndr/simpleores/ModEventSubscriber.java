@@ -262,16 +262,7 @@ public final class ModEventSubscriber
 		}
 	} // onModConfigEvent
 
-
-	@SubscribeEvent
-	public static void onCommonSetup(final FMLCommonSetupEvent event)
-	{
-        OreGeneration.setupOreGen();
-        OreGeneration.setupNetherOreGen();
-		LOGGER.debug("Common setup done");
-	} // end onCommonSetup
-
-	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
+    public static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
 													   final String name)
 	{
 		return setup(entry, new ResourceLocation(SimpleOres.MODID, name));
