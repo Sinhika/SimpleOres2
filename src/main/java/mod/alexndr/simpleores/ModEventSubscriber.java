@@ -4,7 +4,6 @@ import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.content.*;
-import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -18,7 +17,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
@@ -155,7 +153,6 @@ public final class ModEventSubscriber
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe"),
 
 				// bows
-				// TODO actually implement these as more than a generic bow.
 				setup(new MythrilBow(new Item.Properties().maxDamage(750).group(ModTabGroups.MOD_ITEM_GROUP)),
 					  "mythril_bow"),
 				setup(new OnyxBow(new Item.Properties().maxDamage(1000).group(ModTabGroups.MOD_ITEM_GROUP)),
