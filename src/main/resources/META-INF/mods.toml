@@ -29,7 +29,7 @@ Each ore has its own unique properties, armor and tool sets, and more.
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.simpleores]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.14.2]"
