@@ -2,9 +2,9 @@ package mod.alexndr.simpleores.config;
 
 public class SimpleOresConfig
 {
-    public static boolean enableCopperOre;
-    public static boolean enableTinOre;
-    public static boolean enableMythrilOre;
-    public static boolean enableAdamantiumOre;
-    public static boolean enableOnyxOre;
+    public static boolean enableCopperOre = true;
+    public static boolean enableTinOre = true;
+    public static boolean enableMythrilOre = true;
+    public static boolean enableAdamantiumOre = true;
+    public static boolean enableOnyxOre = true;
 }  // end class SimpleOresConfig
