@@ -42,41 +42,41 @@ public class OreGeneration
                     {
                         biomeEntry.biome.addFeature(
                             GenerationStage.Decoration.UNDERGROUND_ORES,
-                                Biome.func_222280_a(Feature.MINABLE,
+                                Biome.createDecoratedFeature(Feature.ORE,
                                                     new OreFeatureConfig(
                                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                                         ModBlocks.copper_ore.getDefaultState(), copper_veinsize),
-                                                    Placement.field_215028_n, copper_cfg));
+                                                    Placement.COUNT_RANGE, copper_cfg));
                     } // end if copper_ore
                     if (SimpleOresConfig.enableAdamantiumOre)
                     {
                         biomeEntry.biome.addFeature(
                                 GenerationStage.Decoration.UNDERGROUND_ORES,
-                                Biome.func_222280_a(Feature.MINABLE,
+                                Biome.createDecoratedFeature(Feature.ORE,
                                                     new OreFeatureConfig(
                                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                                         ModBlocks.adamantium_ore.getDefaultState(), adamantium_veinsize),
-                                                    Placement.field_215028_n, adamantium_cfg));
+                                                    Placement.COUNT_RANGE, adamantium_cfg));
                     } // end if adamantium ore
                     if (SimpleOresConfig.enableMythrilOre)
                     {
                         biomeEntry.biome.addFeature(
                                 GenerationStage.Decoration.UNDERGROUND_ORES,
-                                Biome.func_222280_a(Feature.MINABLE,
+                                Biome.createDecoratedFeature(Feature.ORE,
                                                     new OreFeatureConfig(
                                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                                         ModBlocks.mythril_ore.getDefaultState(), mythril_veinsize),
-                                                    Placement.field_215028_n, mythril_cfg));
+                                                    Placement.COUNT_RANGE, mythril_cfg));
                     } // end if mythril
                     if (SimpleOresConfig.enableTinOre)
                     {
                         biomeEntry.biome.addFeature(
                                 GenerationStage.Decoration.UNDERGROUND_ORES,
-                                Biome.func_222280_a(Feature.MINABLE,
+                                Biome.createDecoratedFeature(Feature.ORE,
                                                     new OreFeatureConfig(
                                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                                         ModBlocks.tin_ore.getDefaultState(), tin_veinsize),
-                                                    Placement.field_215028_n, tin_cfg));
+                                                    Placement.COUNT_RANGE, tin_cfg));
                     } // end if tin
                 } // end-for BiomeEntry
         } // end for BiomeType
@@ -90,10 +90,10 @@ public class OreGeneration
         if (SimpleOresConfig.enableOnyxOre)
         {
             Biomes.NETHER.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-                    Biome.func_222280_a(Feature.MINABLE,
+                    Biome.createDecoratedFeature(Feature.ORE,
                             new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,
                                      ModBlocks.onyx_ore.getDefaultState(), onyx_veinsize),
-                                     Placement.field_215028_n, onyx_cfg));
+                                     Placement.COUNT_RANGE, onyx_cfg));
         }
     } // end setupNetherOreGen()
 

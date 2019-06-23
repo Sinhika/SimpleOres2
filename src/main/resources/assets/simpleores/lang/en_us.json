@@ -112,5 +112,6 @@
     "tips.flame_tooltip": "+Flame",
     "tips.knockback_tooltip": "+Knockback",
     "tips.zoom_tooltip": "+Zoom",
-    "tips.efficiency_tooltip": "+Efficiency"
+    "tips.efficiency_tooltip": "+Efficiency",
+    "tips.copper_bucket" : "Not lava-safe"
 }
