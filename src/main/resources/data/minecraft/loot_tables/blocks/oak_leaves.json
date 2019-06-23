@@ -22,6 +22,36 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
+                        "item": "simpleores:copper_shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "item": "simpleores:tin_shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "item": "simpleores:mythril_shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "item": "simpleores:adamantium_shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "item": "simpleores:onyx_shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
                         "enchantments": [
                           {
                             "enchantment": "minecraft:silk_touch",
