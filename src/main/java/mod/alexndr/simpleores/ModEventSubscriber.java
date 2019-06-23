@@ -189,15 +189,15 @@ public final class ModEventSubscriber
 
                 // shears
 				// TODO - won't shear leaves, grass.
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
 														  .group(ModTabGroups.MOD_ITEM_GROUP)), "copper_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
 														  .group(ModTabGroups.MOD_ITEM_GROUP)), "tin_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.MYTHRIL.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.MYTHRIL.getMaxUses())
 														  .group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ADAMANTIUM.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.ADAMANTIUM.getMaxUses())
 														  .group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ONYX.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.ONYX.getMaxUses())
 														  .group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_shears"),
 
 				// shovels
