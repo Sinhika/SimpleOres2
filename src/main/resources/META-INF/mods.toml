@@ -4,8 +4,8 @@ modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
 loaderVersion="[27,)" #mandatory
-
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
+logoFile="simple_ores.png"
 
 [[mods]]
 modId="simpleores"
@@ -13,7 +13,6 @@ version="${version}"
 displayName="Simple Ores"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.14/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
-logoFile="simple_ores.png"
 credits="Thanks to AleXndrTheGr8st for creating the original mod and to Sinhika for porting and maintaining it."
 authors="AleXndrTheGr8st, Sinhika"
 description='''

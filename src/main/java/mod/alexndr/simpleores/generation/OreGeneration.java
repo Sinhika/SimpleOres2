@@ -17,16 +17,16 @@ import net.minecraftforge.common.BiomeManager;
 public class OreGeneration
 {
     // Vein/Chunk Count, MinHeight, MaxHeightBase, MaxHeight
-    private static final CountRangeConfig adamantium_cfg = new CountRangeConfig(6, 1, 1, 30);
-    private static final int adamantium_veinsize = 6;
-    private static final CountRangeConfig copper_cfg = new CountRangeConfig(30, 1, 1, 90);
-    private static final int copper_veinsize = 10;
-    private static final CountRangeConfig mythril_cfg = new CountRangeConfig(10, 1, 1, 40);
-    private static final int mythril_veinsize = 8;
-    private static final CountRangeConfig onyx_cfg = new CountRangeConfig(10, 1, 10, 128);
-    private static final int onyx_veinsize = 6;
-    private static final CountRangeConfig tin_cfg = new CountRangeConfig(25, 1, 1, 90);
-    private static final int tin_veinsize = 10;
+    private static final CountRangeConfig adamantium_cfg = new CountRangeConfig(4, 1, 1, 20);
+    private static final int adamantium_veinsize = 4;
+    private static final CountRangeConfig copper_cfg = new CountRangeConfig(20, 1, 1, 90);
+    private static final int copper_veinsize = 7;
+    private static final CountRangeConfig mythril_cfg = new CountRangeConfig(8, 1, 1, 35);
+    private static final int mythril_veinsize = 4;
+    private static final CountRangeConfig onyx_cfg = new CountRangeConfig(5, 1, 10, 128);
+    private static final int onyx_veinsize = 7;
+    private static final CountRangeConfig tin_cfg = new CountRangeConfig(15, 1, 1, 90);
+    private static final int tin_veinsize = 7;
 
     /**
      * called in setup to generate overworld ores; should respect config
