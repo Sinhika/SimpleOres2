@@ -13,6 +13,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -41,21 +42,36 @@ public final class ModEventSubscriber
 	{
 		// Register all your blocks inside this registerAll call
         event.getRegistry().registerAll(
-                setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 1.7F, 3.0F)), "copper_ore"),
-				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 3.0F, 3.0F)), "tin_ore"),
-				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 4.0F, 3.0F)), "adamantium_ore"),
-				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 5.0F, 3.0F)), "mythril_ore"),
-				setup(new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance( 7.0F, 3.0F)), "onyx_ore"),
+                setup(new OreBlock(Block.Properties.create(Material.ROCK)
+                             .hardnessAndResistance( 1.7F, 3.0F)
+                             .harvestTool(ToolType.PICKAXE).harvestLevel(1)), "copper_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK)
+                             .hardnessAndResistance( 3.0F, 3.0F)
+                             .harvestTool(ToolType.PICKAXE).harvestLevel(1)), "tin_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK)
+                             .hardnessAndResistance( 4.0F, 3.0F)
+                             .harvestTool(ToolType.PICKAXE).harvestLevel(2)), "adamantium_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK)
+                             .hardnessAndResistance( 5.0F, 3.0F)
+                             .harvestTool(ToolType.PICKAXE).harvestLevel(2)), "mythril_ore"),
+				setup(new OreBlock(Block.Properties.create(Material.ROCK)
+                             .hardnessAndResistance( 7.0F, 3.0F)
+                             .harvestTool(ToolType.PICKAXE).harvestLevel(3)), "onyx_ore"),
 				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA)
-									.hardnessAndResistance(3.0F, 6.0F).sound( SoundType.METAL)), "copper_block"),
+							.hardnessAndResistance(3.0F, 6.0F).sound( SoundType.METAL)
+                            .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "copper_block"),
 				setup(new Block(Block.Properties.create(Material.IRON)
-									.hardnessAndResistance(4.0F, 6.0F).sound( SoundType.METAL)), "tin_block"),
+							.hardnessAndResistance(4.0F, 6.0F).sound( SoundType.METAL)
+                            .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "tin_block"),
 				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-												.hardnessAndResistance(7.0F, 6.0F).sound( SoundType.METAL)), "mythril_block"),
+							.hardnessAndResistance(7.0F, 6.0F).sound( SoundType.METAL)
+                            .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "mythril_block"),
 				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
-												.hardnessAndResistance(7.0F, 12.0F).sound( SoundType.METAL)), "adamantium_block"),
+							.hardnessAndResistance(7.0F, 12.0F).sound( SoundType.METAL)
+                            .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "adamantium_block"),
 				setup(new Block(Block.Properties.create(Material.ROCK, MaterialColor.OBSIDIAN)
-												.hardnessAndResistance(20.0F, 100.0F)), "onyx_block")
+							.hardnessAndResistance(20.0F, 100.0F)
+                            .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "onyx_block")
         );
 		LOGGER.debug("Registered Blocks");
 	}
