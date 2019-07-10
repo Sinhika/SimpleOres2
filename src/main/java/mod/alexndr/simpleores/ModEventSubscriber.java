@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.content.*;
+import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -18,6 +19,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
@@ -32,6 +34,14 @@ import org.apache.logging.log4j.Logger;
 public final class ModEventSubscriber 
 {
 	private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Mod Event Subscriber");
+
+    @SubscribeEvent
+    public static void onCommonSetup(final FMLCommonSetupEvent event)
+    {
+        OreGeneration.setupOreGen();
+        OreGeneration.setupNetherOreGen();
+        LOGGER.debug("Common setup done");
+    } // end onCommonSetup
 
 	/**
 	 * This method will be called by Forge when it is time for the mod to register its Blocks.
