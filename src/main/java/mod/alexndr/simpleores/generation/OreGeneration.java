@@ -25,7 +25,7 @@ public class OreGeneration
     private static final int mythril_veinsize = 4;
     private static final CountRangeConfig adamantium_cfg = new CountRangeConfig(4, 1, 0, 20);
     private static final int adamantium_veinsize = 4;
-    private static final CountRangeConfig onyx_cfg = new CountRangeConfig(5, 10, 0, 128);
+    private static final CountRangeConfig onyx_cfg = new CountRangeConfig(7, 10, 0, 128);
     private static final int onyx_veinsize = 7;
 
     /**

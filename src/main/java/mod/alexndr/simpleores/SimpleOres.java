@@ -1,6 +1,7 @@
 package mod.alexndr.simpleores;
 
 import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.generation.OreGeneration;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
@@ -25,6 +26,7 @@ public class SimpleOres
 
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
+
     } // end SimpleOres()
 
 
