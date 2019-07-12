@@ -167,15 +167,15 @@ public final class ModEventSubscriber
 		// tools
 		registry.registerAll(
 				// axes
-				setup(new SimpleAxe(SimpleOresItemTier.COPPER, 7.0F, -3.1F,
+				setup(new AxeItem(SimpleOresItemTier.COPPER, 7.0F, -3.1F,
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_axe"),
-				setup(new SimpleAxe(SimpleOresItemTier.TIN, 6.0F, -3.0F,
+				setup(new AxeItem(SimpleOresItemTier.TIN, 6.0F, -3.0F,
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_axe"),
-				setup(new SimpleAxe(SimpleOresItemTier.MYTHRIL, 8.0F, -3.2F,
+				setup(new AxeItem(SimpleOresItemTier.MYTHRIL, 8.0F, -3.2F,
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_axe"),
-				setup(new SimpleAxe(SimpleOresItemTier.ADAMANTIUM, 6.0F, -3.0F,
+				setup(new AxeItem(SimpleOresItemTier.ADAMANTIUM, 6.0F, -3.0F,
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_axe"),
-				setup(new SimpleAxe(SimpleOresItemTier.ONYX, 9.0F, -3.0F,
+				setup(new AxeItem(SimpleOresItemTier.ONYX, 9.0F, -3.0F,
 						new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_axe"),
 
 				// bows
@@ -202,15 +202,15 @@ public final class ModEventSubscriber
 								  new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_hoe"),
 
                 // pickaxes
-				setup(new SimplePickaxe(SimpleOresItemTier.COPPER, 1, -2.8F,
+				setup(new PickaxeItem(SimpleOresItemTier.COPPER, 1, -2.8F,
 										new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "copper_pickaxe"),
-				setup(new SimplePickaxe(SimpleOresItemTier.TIN, 1, -2.8F,
+				setup(new PickaxeItem(SimpleOresItemTier.TIN, 1, -2.8F,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "tin_pickaxe"),
-				setup(new SimplePickaxe(SimpleOresItemTier.MYTHRIL, 1, -2.8F,
+				setup(new PickaxeItem(SimpleOresItemTier.MYTHRIL, 1, -2.8F,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_pickaxe"),
-				setup(new SimplePickaxe(SimpleOresItemTier.ADAMANTIUM, 1, -2.8F,
+				setup(new PickaxeItem(SimpleOresItemTier.ADAMANTIUM, 1, -2.8F,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_pickaxe"),
-				setup(new SimplePickaxe(SimpleOresItemTier.ONYX, 1, -2.8F,
+				setup(new PickaxeItem(SimpleOresItemTier.ONYX, 1, -2.8F,
 									new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_pickaxe"),
 
                 // shears
