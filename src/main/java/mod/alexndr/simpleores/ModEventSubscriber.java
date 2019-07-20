@@ -39,7 +39,6 @@ public final class ModEventSubscriber
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
         OreGeneration.setupOreGen();
-        OreGeneration.setupNetherOreGen();
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
