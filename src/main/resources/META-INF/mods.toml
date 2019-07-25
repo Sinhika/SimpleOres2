@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[27,)" #mandatory
+loaderVersion="[28,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 logoFile="simple_ores.png"
 
@@ -24,13 +24,13 @@ Each ore has its own unique properties, armor and tool sets, and more.
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[27.0.49,27.0.60)"
+    versionRange="[28,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.3]"
+    versionRange="[1.14.4]"
     ordering="NONE"
     side="BOTH"
