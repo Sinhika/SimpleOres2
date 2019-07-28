@@ -66,17 +66,18 @@ public final class ModEventSubscriber
 				setup(new OreBlock(Block.Properties.create(Material.ROCK)
                              .hardnessAndResistance( 7.0F, 3.0F)
                              .harvestTool(ToolType.PICKAXE).harvestLevel(3)), "onyx_ore"),
-				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA)
-							.hardnessAndResistance(3.0F, 6.0F).sound( SoundType.METAL)
+				setup(new SimpleMetalBlock(Block.Properties.create(Material.IRON,
+                                                         MaterialColor.ORANGE_TERRACOTTA)
+							.hardnessAndResistance(3.0F, 6.0F)
                             .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "copper_block"),
-				setup(new Block(Block.Properties.create(Material.IRON)
-							.hardnessAndResistance(4.0F, 6.0F).sound( SoundType.METAL)
+				setup(new SimpleMetalBlock(Block.Properties.create(Material.IRON)
+							.hardnessAndResistance(4.0F, 6.0F)
                             .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "tin_block"),
-				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-							.hardnessAndResistance(7.0F, 6.0F).sound( SoundType.METAL)
+				setup(new SimpleMetalBlock(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
+							.hardnessAndResistance(7.0F, 6.0F)
                             .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "mythril_block"),
-				setup(new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
-							.hardnessAndResistance(7.0F, 12.0F).sound( SoundType.METAL)
+				setup(new SimpleMetalBlock(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
+							.hardnessAndResistance(7.0F, 12.0F)
                             .harvestTool(ToolType.PICKAXE).harvestLevel(0)), "adamantium_block"),
 				setup(new Block(Block.Properties.create(Material.ROCK, MaterialColor.OBSIDIAN)
 							.hardnessAndResistance(20.0F, 100.0F)
