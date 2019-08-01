@@ -52,7 +52,6 @@ public class CopperBucket extends BucketItem
         // intercept result and correct bucket type.
         if (itemStackActionResult.getType() == ActionResultType.SUCCESS)
         {
-            Boolean doChange = false;
             ItemStack newItemStack = ItemStack.EMPTY;
 
             Item itemBucket = itemStackActionResult.getResult().getItem();

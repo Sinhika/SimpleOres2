@@ -1,6 +1,12 @@
 package mod.alexndr.simpleores.content;
 
-import mod.alexndr.simpleores.SimpleOres;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+
+import javax.annotation.Nullable;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -8,19 +14,12 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nullable;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
 
 /**
  *  A bow with some special features: Efficiency, which makes it act like an
@@ -75,7 +74,7 @@ public class MythrilBow extends BowItem
         // add intrinsic INFINITY enchantment if RNG <= EFFICIENCY.
         if (! enchMap.containsKey(Enchantments.INFINITY))
         {
-            if (rng.nextInt(100) < 50) enchMap.put(Enchantments.INFINITY, 1);
+            if (rng.nextInt(100) < EFFICIENCY) enchMap.put(Enchantments.INFINITY, 1);
         }
 
         // add intrinsic enchantments, if any.
