@@ -11,29 +11,27 @@ import net.minecraftforge.fml.config.ModConfig;
 public final class ConfigHelper
 {
 
-	// We store a reference to the ModConfigs here to be able to change the values in them from our code
-	// (For example from a config GUI)
-	@SuppressWarnings("unused")
-	private static ModConfig serverConfig;
+        // We store a reference to the ModConfigs here to be able to change the values in them from our code
+        // (For example from a config GUI)
+        private static ModConfig serverConfig;
 
-//	public static void bakeClient(final ModConfig config) { }
+//      public static void bakeClient(final ModConfig config) { }
 
-	public static void bakeServer(final ModConfig config)
-	{
-		serverConfig = config;
+        public static void bakeServer(final ModConfig config)
+        {
+                serverConfig = config;
 
-		SimpleOresConfig.enableCopperOre = ConfigHolder.SERVER.serverEnableCopperOre.get();
-		SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
-		SimpleOresConfig.enableMythrilOre = ConfigHolder.SERVER.serverEnableMythrilOre.get();
-		SimpleOresConfig.enableAdamantiumOre = ConfigHolder.SERVER.serverEnableAdamantiumOre.get();
-		SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
-	} // end bakeServer()
+                SimpleOresConfig.enableCopperOre = ConfigHolder.SERVER.serverEnableCopperOre.get();
+                SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
+                SimpleOresConfig.enableMythrilOre = ConfigHolder.SERVER.serverEnableMythrilOre.get();
+                SimpleOresConfig.enableAdamantiumOre = ConfigHolder.SERVER.serverEnableAdamantiumOre.get();
+                SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
+        } // end bakeServer()
 
-	@SuppressWarnings("unused")
-	private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
-	{
-		modConfig.getConfigData().set(path, newValue);
-		modConfig.save();
-	} // end setValueAndSave()
+        private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
+        {
+                modConfig.getConfigData().set(path, newValue);
+                modConfig.save();
+        } // end setValueAndSave()
 
 } // end class ConfigHelper
