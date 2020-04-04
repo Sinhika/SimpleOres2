@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.common.BiomeManager;
 
 /**
  * Ore generation master-class for SimpleOres.
@@ -33,85 +33,76 @@ public class OreGeneration
      */
     public static void setupOreGen()
     {
-        for (Biome biome: ForgeRegistries.BIOMES.getValues())
-        {
-            // we have no End ores, so skip those.
-            if (  biome.getCategory() == Biome.Category.THEEND)
-            {
-                continue;
-            }
-            // Nether Ore generation.
-            if ( biome.getCategory() == Biome.Category.NETHER )
-            {
-                if (SimpleOresConfig.enableOnyxOre)
-                {
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-                        Biome.createDecoratedFeature(Feature.ORE,
-                                                     new OreFeatureConfig(
-                                                            OreFeatureConfig.FillerBlockType.NETHERRACK,
-                                                            ModBlocks.onyx_ore.getDefaultState(),
-                                                            onyx_veinsize),
-                                                     Placement.COUNT_RANGE, onyx_cfg));
+        // for each biome type (cool, warm, icy, desert, etc...)
+        for (BiomeManager.BiomeType biomeType: BiomeManager.BiomeType.values()) {
+
+            // for each biome within that biome type
+            for (BiomeManager.BiomeEntry biomeEntry: BiomeManager.getBiomes(biomeType)) {
+                if (biomeEntry.biome.getCategory() == Biome.Category.THEEND) {
+                    // We have no ores for the End dimension, so this if statement is just so that we skip biomes in that dimension.
+                    continue;
+                } else if (biomeEntry.biome.getCategory() == Biome.Category.NETHER) {
+                    // Nether
+                    if (SimpleOresConfig.enableOnyxOre)
+                    {
+                        biomeEntry.biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                                Feature.ORE.withConfiguration(new OreFeatureConfig(
+                                        OreFeatureConfig.FillerBlockType.NETHERRACK,
+                                        ModBlocks.onyx_ore.getDefaultState(),
+                                        onyx_veinsize)
+                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(onyx_cfg))
+                        );
+                    }
+                } else {
+                    // Overworld
+                    if (SimpleOresConfig.enableCopperOre)
+                    {
+                        biomeEntry.biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                                Feature.ORE.withConfiguration(new OreFeatureConfig(
+                                        OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                        ModBlocks.copper_ore.getDefaultState(),
+                                        copper_veinsize)
+                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(copper_cfg))
+                        );
+                    }
+
+                    if (SimpleOresConfig.enableAdamantiumOre)
+                    {
+                        biomeEntry.biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                                Feature.ORE.withConfiguration(new OreFeatureConfig(
+                                        OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                        ModBlocks.adamantium_ore.getDefaultState(),
+                                        adamantium_veinsize)
+                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(adamantium_cfg))
+                        );
+                    }
+
+                    if (SimpleOresConfig.enableMythrilOre)
+                    {
+                        biomeEntry.biome.addFeature(
+                                GenerationStage.Decoration.UNDERGROUND_ORES,
+                                Feature.ORE.withConfiguration(new OreFeatureConfig(
+                                        OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                        ModBlocks.mythril_ore.getDefaultState(),
+                                        mythril_veinsize)
+                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(mythril_cfg))
+                        );
+                    }
+
+                    if (SimpleOresConfig.enableTinOre)
+                    {
+                        biomeEntry.biome.addFeature(
+                                GenerationStage.Decoration.UNDERGROUND_ORES,
+                                Feature.ORE.withConfiguration(new OreFeatureConfig(
+                                        OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                        ModBlocks.tin_ore.getDefaultState(),
+                                        tin_veinsize)
+                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(tin_cfg))
+                        );
+                    }
                 }
-
-                // skip overworld generation, obviously.
-                continue;
-            } // end-if biome Category.NETHER
-
-            // Overworld-type Ore generation
-            if (SimpleOresConfig.enableCopperOre)
-            {
-                biome.addFeature(
-                        GenerationStage.Decoration.UNDERGROUND_ORES,
-                        Biome.createDecoratedFeature(Feature.ORE,
-                                                     new OreFeatureConfig(
-                                                             OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                                             ModBlocks.copper_ore
-                                                                     .getDefaultState(),
-                                                             copper_veinsize),
-                                                     Placement.COUNT_RANGE,
-                                                     copper_cfg));
-            } // end if copper_ore
-            if (SimpleOresConfig.enableAdamantiumOre)
-            {
-                biome.addFeature(
-                        GenerationStage.Decoration.UNDERGROUND_ORES,
-                        Biome.createDecoratedFeature(Feature.ORE,
-                                                     new OreFeatureConfig(
-                                                             OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                                             ModBlocks.adamantium_ore
-                                                                     .getDefaultState(),
-                                                             adamantium_veinsize),
-                                                     Placement.COUNT_RANGE,
-                                                     adamantium_cfg));
-            } // end if adamantium ore
-            if (SimpleOresConfig.enableMythrilOre)
-            {
-                biome.addFeature(
-                        GenerationStage.Decoration.UNDERGROUND_ORES,
-                        Biome.createDecoratedFeature(Feature.ORE,
-                                                     new OreFeatureConfig(
-                                                             OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                                             ModBlocks.mythril_ore
-                                                                     .getDefaultState(),
-                                                             mythril_veinsize),
-                                                     Placement.COUNT_RANGE,
-                                                     mythril_cfg));
-            } // end if mythril
-            if (SimpleOresConfig.enableTinOre)
-            {
-                biome.addFeature(
-                        GenerationStage.Decoration.UNDERGROUND_ORES,
-                        Biome.createDecoratedFeature(Feature.ORE,
-                                                     new OreFeatureConfig(
-                                                             OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                                             ModBlocks.tin_ore
-                                                                     .getDefaultState(),
-                                                             tin_veinsize),
-                                                     Placement.COUNT_RANGE,
-                                                     tin_cfg));
-            } // end if tin
-        } // end-for biome in forge registry
+            }
+        }
     } // end setupOreGen()
 
 }  // end class OreGeneration
