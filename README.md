@@ -16,6 +16,12 @@ mods up from 1.12.2
 
 **WARNING: 1.15 is a Work-in-Progress; expect frequent changes!**
 
+TO-DO
+-----
+* Figure out where config files really should go.
+* fix copper buckets vis-a-vis fluids.
+* fix shears looting so it is other-mod-friendly.
+
 License
 -------
 
