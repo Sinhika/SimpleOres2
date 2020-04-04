@@ -1,13 +1,12 @@
 package mod.alexndr.simpleores;
 
-import mod.alexndr.simpleores.config.ConfigHolder;
-import mod.alexndr.simpleores.generation.OreGeneration;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.simpleores.config.ConfigHolder;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SimpleOres.MODID)

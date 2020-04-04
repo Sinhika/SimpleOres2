@@ -13,7 +13,8 @@ public final class ConfigHelper
 
         // We store a reference to the ModConfigs here to be able to change the values in them from our code
         // (For example from a config GUI)
-        private static ModConfig serverConfig;
+        @SuppressWarnings("unused")
+		private static ModConfig serverConfig;
 
 //      public static void bakeClient(final ModConfig config) { }
 
@@ -28,7 +29,8 @@ public final class ConfigHelper
                 SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
         } // end bakeServer()
 
-        private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
+        @SuppressWarnings("unused")
+		private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
         {
                 modConfig.getConfigData().set(path, newValue);
                 modConfig.save();
