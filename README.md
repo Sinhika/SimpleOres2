@@ -3,14 +3,18 @@ SimpleOres2
 
 Repository for SimpleOres2
 
-Created by AleXndrTheGr8st, maintained by Sinhika.
+Created by AleXndrTheGr8st, maintained by Sinhika, 1.15.2 port by Paint_Ninja.
 
-Forge 1.14.2 port enabled thanks to Cadiboo's LGPL-licensed example code 
+Forge 1.15.2 port enabled thanks to Cadiboo's LGPL-licensed example code 
 <https://github.com/Cadiboo/Example-Mod> that he made free to all to borrow, 
 in the hopes of encouraging good coding practices in
-Forge mods. I hope I did a good job with it.
+Forge mods. I hope I did a good job with it. 
 
-**WARNING: 1.14 is a Work-in-Progress, Do Not Use.**
+Thanks also to Paint_Ninja for doing the initial 1.15.2 port, which encourages
+me to get back to tackling all the messy issues involved in porting these
+mods up from 1.12.2
+
+**WARNING: 1.15 is a Work-in-Progress; expect frequent changes!**
 
 License
 -------
