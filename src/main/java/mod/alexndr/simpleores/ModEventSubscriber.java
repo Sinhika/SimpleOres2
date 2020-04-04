@@ -1,19 +1,38 @@
 package mod.alexndr.simpleores;
 
+import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.google.common.base.Preconditions;
+
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
-import mod.alexndr.simpleores.content.*;
+import mod.alexndr.simpleores.content.CopperBucket;
+import mod.alexndr.simpleores.content.MythrilBow;
+import mod.alexndr.simpleores.content.OnyxBow;
+import mod.alexndr.simpleores.content.SimpleMetalBlock;
+import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
+import mod.alexndr.simpleores.content.SimpleOresItemTier;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.HoeItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShearsItem;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SwordItem;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,12 +42,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
-
-import net.minecraft.util.ResourceLocation;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = MOD)
 public final class ModEventSubscriber 

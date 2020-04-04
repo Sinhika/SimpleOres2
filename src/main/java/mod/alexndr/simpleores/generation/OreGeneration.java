@@ -50,7 +50,7 @@ public class OreGeneration
                                         OreFeatureConfig.FillerBlockType.NETHERRACK,
                                         ModBlocks.onyx_ore.getDefaultState(),
                                         onyx_veinsize)
-                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(onyx_cfg))
+                                ).withPlacement(Placement.COUNT_RANGE.configure(onyx_cfg))
                         );
                     }
                 } else {
@@ -62,7 +62,7 @@ public class OreGeneration
                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                         ModBlocks.copper_ore.getDefaultState(),
                                         copper_veinsize)
-                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(copper_cfg))
+                                ).withPlacement(Placement.COUNT_RANGE.configure(copper_cfg))
                         );
                     }
 
@@ -73,7 +73,7 @@ public class OreGeneration
                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                         ModBlocks.adamantium_ore.getDefaultState(),
                                         adamantium_veinsize)
-                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(adamantium_cfg))
+                                ).withPlacement(Placement.COUNT_RANGE.configure(adamantium_cfg))
                         );
                     }
 
@@ -85,7 +85,7 @@ public class OreGeneration
                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                         ModBlocks.mythril_ore.getDefaultState(),
                                         mythril_veinsize)
-                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(mythril_cfg))
+                                ).withPlacement(Placement.COUNT_RANGE.configure(mythril_cfg))
                         );
                     }
 
@@ -97,7 +97,7 @@ public class OreGeneration
                                         OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                                         ModBlocks.tin_ore.getDefaultState(),
                                         tin_veinsize)
-                                ).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(tin_cfg))
+                                ).withPlacement(Placement.COUNT_RANGE.configure(tin_cfg))
                         );
                     }
                 }
