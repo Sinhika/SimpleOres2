@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[28,)" #mandatory
+loaderVersion="[31,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 logoFile="simple_ores.png"
 
@@ -13,8 +13,8 @@ version="${version}"
 displayName="Simple Ores"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.14/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
-credits="Thanks to AleXndrTheGr8st for creating the original mod and to Sinhika for porting and maintaining it."
-authors="AleXndrTheGr8st, Sinhika"
+credits="Thanks to AleXndrTheGr8st for creating the original mod and to Sinhika and Paint_Ninja for porting and maintaining it."
+authors="AleXndrTheGr8st, Sinhika, Paint_Ninja"
 description='''
 A simple ore mod, featuring 5 balanced ores: Copper, Tin, Mythril, Adamantium and Onyx. 
 All except Onyx can be found in the overworld, while Onyx can be found only in the Nether.
@@ -24,13 +24,13 @@ Each ore has its own unique properties, armor and tool sets, and more.
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[28,)"
+    versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[1.15.2,]"
     ordering="NONE"
     side="BOTH"
