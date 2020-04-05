@@ -2,6 +2,8 @@ package mod.alexndr.simpleores;
 
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
+import javax.annotation.Nonnull;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,6 +18,7 @@ import mod.alexndr.simpleores.content.SimpleMetalBlock;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresItemTier;
 import mod.alexndr.simpleores.generation.OreGeneration;
+import mod.alexndr.simpleores.helpers.ShearsLootModifier;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -34,6 +37,7 @@ import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -295,6 +299,17 @@ public final class ModEventSubscriber
 			ConfigHelper.bakeServer(config);
 		}
 	} // onModConfigEvent
+
+	
+	@SubscribeEvent
+	public static void onRegisterModifierSerializers(
+			@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event)
+	{
+		event.getRegistry().register(
+				new ShearsLootModifier.Serializer().setRegistryName(
+						new ResourceLocation(SimpleOres.MODID, "mod_shears_harvest")) );
+	} // end registerModifierSerializers
+	
 
     public static <T extends IForgeRegistryEntry<T>> T setup(final T entry,
 													   final String name)
