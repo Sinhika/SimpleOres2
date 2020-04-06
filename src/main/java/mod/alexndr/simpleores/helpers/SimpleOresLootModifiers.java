@@ -2,11 +2,13 @@ package mod.alexndr.simpleores.helpers;
 
 import java.util.List;
 
+import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.storage.loot.LootParameterSets;
 import net.minecraft.world.storage.loot.LootParameters;
@@ -28,14 +30,22 @@ public class SimpleOresLootModifiers {
 		 * loot table, then see what you get.
 		 */
 		@Override
-		protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+		protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) 
+		{
 			ItemStack fakeShears = new ItemStack(Items.SHEARS);
 			LootContext.Builder builder = new LootContext.Builder(context);
 			builder.withParameter(LootParameters.TOOL, fakeShears);
 			LootContext ctx = builder.build(LootParameterSets.BLOCK);
-			LootTable loottable = context.getWorld().getServer().getLootTableManager()
-					.getLootTableFromLocation(context.get(LootParameters.BLOCK_STATE).getBlock().getLootTable());
-			return loottable.generate(ctx);
+	        ServerWorld serverworld = context.getWorld();
+	        ResourceLocation resourcelocation = context.get(LootParameters.BLOCK_STATE).getBlock().getLootTable();
+	        LootTable loottable = serverworld.getServer().getLootTableManager()
+	        				.getLootTableFromLocation(resourcelocation);
+	        
+	        // we don't want ForgeHooks.modifyLoot() called AGAIN at this point.
+	        List<ItemStack> list = Lists.newArrayList();
+	        loottable.recursiveGenerate(ctx, LootTable.capStackSizes(list::add));
+	        return list;
+//			return loottable.generate(ctx);
 		} // end doApply()
 
 		public static class Serializer extends GlobalLootModifierSerializer<ShearsLootModifier> {

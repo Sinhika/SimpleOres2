@@ -17,6 +17,7 @@ import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleMetalBlock;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresItemTier;
+import mod.alexndr.simpleores.content.SimpleShears;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.helpers.SimpleOresLootModifiers;
 import mod.alexndr.simpleores.init.ModTabGroups;
@@ -32,7 +33,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShearsItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.ResourceLocation;
@@ -232,15 +232,15 @@ public final class ModEventSubscriber
 
                 // shears
 				// TODO - won't shear leaves, grass.
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
                                                          .group(ModTabGroups.MOD_ITEM_GROUP)), "copper_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
                                                          .group(ModTabGroups.MOD_ITEM_GROUP)), "tin_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.MYTHRIL.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.MYTHRIL.getMaxUses())
                                                          .group(ModTabGroups.MOD_ITEM_GROUP)), "mythril_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ADAMANTIUM.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.ADAMANTIUM.getMaxUses())
                                                          .group(ModTabGroups.MOD_ITEM_GROUP)), "adamantium_shears"),
-				setup(new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ONYX.getMaxUses())
+				setup(new SimpleShears(new Item.Properties().maxDamage(SimpleOresItemTier.ONYX.getMaxUses())
                                                          .group(ModTabGroups.MOD_ITEM_GROUP)), "onyx_shears"),
 
 				// shovels
