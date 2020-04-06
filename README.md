@@ -18,9 +18,9 @@ mods up from 1.12.2
 
 TO-DO
 -----
-* Figure out where config files really should go.
+* Implement graphical configuration from the menu.
 * fix copper buckets vis-a-vis fluids.
-* fix shears looting so it is other-mod-friendly.
+* <s>fix shears looting so it is other-mod-friendly.</s>
 
 License
 -------
