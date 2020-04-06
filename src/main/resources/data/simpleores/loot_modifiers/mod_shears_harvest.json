@@ -6,6 +6,5 @@
 				"item": "simpleores:copper_shears"
 			}
 		}
-	],
-	"function": "simpleores:mod_shears_harvest"
+	]
 }
