@@ -5,6 +5,8 @@ import java.util.List;
 import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
 
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
@@ -32,20 +34,24 @@ public class SimpleOresLootModifiers {
 		@Override
 		protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) 
 		{
-			ItemStack fakeShears = new ItemStack(Items.SHEARS);
+			// ItemStack fakeShears = new ItemStack(Items.SHEARS);
+			ItemStack ctxTool = context.get(LootParameters.TOOL);
+            //return early if silk-touch is already applied (otherwise we'll get stuck in an infinite loop).
+            if(EnchantmentHelper.getEnchantments(ctxTool).containsKey(Enchantments.SILK_TOUCH)) 
+            	return generatedLoot;
+            ItemStack fakeTool = ctxTool.copy();
+            fakeTool.addEnchantment(Enchantments.SILK_TOUCH, 1);
 			LootContext.Builder builder = new LootContext.Builder(context);
-			builder.withParameter(LootParameters.TOOL, fakeShears);
+			builder.withParameter(LootParameters.TOOL, fakeTool);
+			
 			LootContext ctx = builder.build(LootParameterSets.BLOCK);
+			
 	        ServerWorld serverworld = context.getWorld();
 	        ResourceLocation resourcelocation = context.get(LootParameters.BLOCK_STATE).getBlock().getLootTable();
 	        LootTable loottable = serverworld.getServer().getLootTableManager()
 	        				.getLootTableFromLocation(resourcelocation);
 	        
-	        // we don't want ForgeHooks.modifyLoot() called AGAIN at this point.
-	        List<ItemStack> list = Lists.newArrayList();
-	        loottable.recursiveGenerate(ctx, LootTable.capStackSizes(list::add));
-	        return list;
-//			return loottable.generate(ctx);
+			return loottable.generate(ctx);
 		} // end doApply()
 
 		public static class Serializer extends GlobalLootModifierSerializer<ShearsLootModifier> {
