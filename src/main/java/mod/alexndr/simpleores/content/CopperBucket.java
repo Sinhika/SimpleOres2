@@ -26,7 +26,8 @@ import java.util.function.Supplier;
 
 public class CopperBucket extends BucketItem
 {
-    public CopperBucket(Properties builder)
+    @SuppressWarnings("deprecation")
+	public CopperBucket(Properties builder)
     {
     	// ForgeRegistries.FLUIDS.?
         super(Fluids.EMPTY, builder);
@@ -36,6 +37,7 @@ public class CopperBucket extends BucketItem
 		super(supplier, builder);
 	}
 
+	@SuppressWarnings("deprecation")
 	public CopperBucket(net.minecraft.fluid.Fluid containedFluidIn, Properties builder)
     {
         super(containedFluidIn, builder);
