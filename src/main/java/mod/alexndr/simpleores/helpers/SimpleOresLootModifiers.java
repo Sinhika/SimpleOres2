@@ -5,9 +5,8 @@ import java.util.List;
 import com.google.gson.JsonObject;
 
 import mod.alexndr.simpleores.SimpleOres;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.storage.loot.LootContext;
@@ -35,12 +34,7 @@ public class SimpleOresLootModifiers {
 		{
 			SimpleOres.LOGGER.info("In ShearsLootModifier.doApply");
 			
-			ItemStack ctxTool = context.get(LootParameters.TOOL);
-            //return early if silk-touch is already applied (otherwise we'll get stuck in an infinite loop).
-            if(EnchantmentHelper.getEnchantments(ctxTool).containsKey(Enchantments.SILK_TOUCH)) 
-            	return generatedLoot;
-            ItemStack fakeTool = ctxTool.copy();
-            fakeTool.addEnchantment(Enchantments.SILK_TOUCH, 1);
+			ItemStack fakeTool = new ItemStack(Items.SHEARS);
 			LootContext.Builder builder = new LootContext.Builder(context);
 			builder.withParameter(LootParameters.TOOL, fakeTool);
 			
