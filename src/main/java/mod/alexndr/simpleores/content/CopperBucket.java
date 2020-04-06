@@ -3,6 +3,7 @@ package mod.alexndr.simpleores.content;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
@@ -21,15 +22,21 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class CopperBucket extends BucketItem
 {
     public CopperBucket(Properties builder)
     {
+    	// ForgeRegistries.FLUIDS.?
         super(Fluids.EMPTY, builder);
     }
 
-    public CopperBucket(net.minecraft.fluid.Fluid containedFluidIn, Properties builder)
+    public CopperBucket(Supplier<? extends Fluid> supplier, Properties builder) {
+		super(supplier, builder);
+	}
+
+	public CopperBucket(net.minecraft.fluid.Fluid containedFluidIn, Properties builder)
     {
         super(containedFluidIn, builder);
     }
