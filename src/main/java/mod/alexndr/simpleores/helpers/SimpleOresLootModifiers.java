@@ -2,13 +2,12 @@ package mod.alexndr.simpleores.helpers;
 
 import java.util.List;
 
-import com.google.common.collect.Lists;
 import com.google.gson.JsonObject;
 
+import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.storage.loot.LootContext;
@@ -34,7 +33,8 @@ public class SimpleOresLootModifiers {
 		@Override
 		protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) 
 		{
-			// ItemStack fakeShears = new ItemStack(Items.SHEARS);
+			SimpleOres.LOGGER.info("In ShearsLootModifier.doApply");
+			
 			ItemStack ctxTool = context.get(LootParameters.TOOL);
             //return early if silk-touch is already applied (otherwise we'll get stuck in an infinite loop).
             if(EnchantmentHelper.getEnchantments(ctxTool).containsKey(Enchantments.SILK_TOUCH)) 
@@ -54,14 +54,16 @@ public class SimpleOresLootModifiers {
 			return loottable.generate(ctx);
 		} // end doApply()
 
-		public static class Serializer extends GlobalLootModifierSerializer<ShearsLootModifier> {
+		public static class Serializer extends GlobalLootModifierSerializer<ShearsLootModifier> 
+		{
 			/**
 			 * No special serialization handling needed; just pass ILootCondition list to
 			 * constructor.
 			 */
 			@Override
 			public ShearsLootModifier read(ResourceLocation location, JsonObject object,
-					ILootCondition[] ailootcondition) {
+					ILootCondition[] ailootcondition) 
+			{
 				return new ShearsLootModifier(ailootcondition);
 			} // end read()
 		} // end class Serializer
