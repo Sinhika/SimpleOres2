@@ -18,8 +18,9 @@ mods up from 1.12.2
 
 TO-DO
 -----
-* Implement graphical configuration from the menu.
-* fix copper buckets vis-a-vis fluids.
+* re-add various things to configuration like ore spawn ranges. Possibly.
+* fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
+* Implement graphical configuration from the menu...when Forge re-implents it.
 * <s>fix shears looting so it is other-mod-friendly.</s>
 
 License
