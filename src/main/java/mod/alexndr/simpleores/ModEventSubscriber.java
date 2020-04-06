@@ -18,7 +18,7 @@ import mod.alexndr.simpleores.content.SimpleMetalBlock;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresItemTier;
 import mod.alexndr.simpleores.generation.OreGeneration;
-import mod.alexndr.simpleores.helpers.ShearsLootModifier;
+import mod.alexndr.simpleores.helpers.SimpleOresLootModifiers;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
@@ -306,7 +306,7 @@ public final class ModEventSubscriber
 			@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event)
 	{
 		event.getRegistry().register(
-				new ShearsLootModifier.Serializer().setRegistryName(
+				new SimpleOresLootModifiers.ShearsLootModifier.Serializer().setRegistryName(
 						new ResourceLocation(SimpleOres.MODID, "mod_shears_harvest")) );
 	} // end registerModifierSerializers
 	

@@ -73,7 +73,6 @@ public final class ModItems {
     public static final Item mythril_shears = ModUtil._null();
     public static final Item adamantium_shears = ModUtil._null();
     public static final Item onyx_shears = ModUtil._null();
-    // TODO - make leaves, grass harvestable by adding to vanilla loot_tables.
 
     // ARMOR
     // copper
