@@ -10,7 +10,8 @@ import java.util.function.Supplier;
 public final class ModTabGroups
 {
 
-    public static final ItemGroup MOD_ITEM_GROUP = new ModTabGroup(SimpleOres.MODID, () -> new ItemStack(ModItems.copper_ingot));
+    public static final ItemGroup MOD_ITEM_GROUP = 
+            new ModTabGroup(SimpleOres.MODID, () -> new ItemStack(ModItems.copper_ingot.get()));
 
     public static final class ModTabGroup extends ItemGroup
     {

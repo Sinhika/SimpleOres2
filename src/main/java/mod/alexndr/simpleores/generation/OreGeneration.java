@@ -48,7 +48,7 @@ public class OreGeneration
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                             Feature.ORE
                                     .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,
-                                            ModBlocks.onyx_ore.getDefaultState(), onyx_veinsize))
+                                            ModBlocks.onyx_ore.get().getDefaultState(), onyx_veinsize))
                                     .withPlacement(Placement.COUNT_RANGE.configure(onyx_cfg)));
                 }
             } // end-else NETHER
@@ -59,7 +59,7 @@ public class OreGeneration
                 {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                             .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.copper_ore.getDefaultState(), copper_veinsize))
+                                    ModBlocks.copper_ore.get().getDefaultState(), copper_veinsize))
                             .withPlacement(Placement.COUNT_RANGE.configure(copper_cfg)));
                 }
 
@@ -67,7 +67,7 @@ public class OreGeneration
                 {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                             .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.adamantium_ore.getDefaultState(), adamantium_veinsize))
+                                    ModBlocks.adamantium_ore.get().getDefaultState(), adamantium_veinsize))
                             .withPlacement(Placement.COUNT_RANGE.configure(adamantium_cfg)));
                 }
 
@@ -75,7 +75,7 @@ public class OreGeneration
                 {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                             .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.mythril_ore.getDefaultState(), mythril_veinsize))
+                                    ModBlocks.mythril_ore.get().getDefaultState(), mythril_veinsize))
                             .withPlacement(Placement.COUNT_RANGE.configure(mythril_cfg)));
                 }
 
@@ -83,7 +83,7 @@ public class OreGeneration
                 {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
                             .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.tin_ore.getDefaultState(), tin_veinsize))
+                                    ModBlocks.tin_ore.get().getDefaultState(), tin_veinsize))
                             .withPlacement(Placement.COUNT_RANGE.configure(tin_cfg)));
                 }
             } // end-else all others
