@@ -87,12 +87,12 @@ public class CopperBucket extends BucketItem
     {
         if (bucketIn == Items.WATER_BUCKET)
         {
-            return ModItems.copper_bucket_water;
+            return ModItems.copper_bucket_water.get();
         }
         if (bucketIn == Items.BUCKET)
         {
             // not sure how we would get here, but okay...
-            return ModItems.copper_bucket;
+            return ModItems.copper_bucket.get();
         }
         if (bucketIn == Items.LAVA_BUCKET)
         {
@@ -106,7 +106,7 @@ public class CopperBucket extends BucketItem
     protected ItemStack emptyBucket(ItemStack stack, PlayerEntity playerEntity)
     {
         return !playerEntity.isCreative()
-                ? new ItemStack(ModItems.copper_bucket)
+                ? new ItemStack(ModItems.copper_bucket.get())
                 : stack;
     }
 }  // end class CopperBucket

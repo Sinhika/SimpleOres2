@@ -32,7 +32,7 @@ public class SimpleOresLootModifiers {
 		@Override
 		protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) 
 		{
-			SimpleOres.LOGGER.info("In ShearsLootModifier.doApply");
+			SimpleOres.LOGGER.debug("In ShearsLootModifier.doApply");
 			
 			ItemStack fakeTool = new ItemStack(Items.SHEARS);
 			LootContext.Builder builder = new LootContext.Builder(context);
