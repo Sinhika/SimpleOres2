@@ -11,18 +11,10 @@ import net.minecraftforge.fml.config.ModConfig;
  */
 public final class ConfigHelper
 {
-
-        // We store a reference to the ModConfigs here to be able to change the values in them from our code
-        // (For example from a config GUI)
-        @SuppressWarnings("unused")
-		private static ModConfig serverConfig;
-
 //      public static void bakeClient(final ModConfig config) { }
 
         public static void bakeServer(final ModConfig config)
         {
-                serverConfig = config;
-
                 SimpleOresConfig.enableCopperOre = ConfigHolder.SERVER.serverEnableCopperOre.get();
                 SimpleOresConfig.copper_veinsize = ConfigHolder.SERVER.serverCopperVeinSize.get();
                 SimpleOresConfig.copper_cfg = new CountRangeConfig(  
