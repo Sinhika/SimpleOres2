@@ -31,7 +31,7 @@ public class SimpleOres
         ModItems.ITEMS.register(modEventBus);
 
         // Register Configs
-        modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
+        modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);
 
     } // end SimpleOres()
 
