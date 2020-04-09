@@ -18,11 +18,11 @@ mods up from 1.12.2
 
 TO-DO
 -----
-* re-add various things to configuration like ore spawn ranges, now that DeferredRegisters
-allow stuff to be initialized before and after config files are read.
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * Implement graphical configuration from the menu...when Forge re-implents it.
 * <s>fix shears looting so it is other-mod-friendly.</s>
+* <s>re-add various things to configuration like ore spawn ranges, now that DeferredRegisters
+allow stuff to be initialized before and after config files are read.</s>
 
 License
 -------
