@@ -24,7 +24,7 @@ Each ore has its own unique properties, armor and tool sets, and more.
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[31.1.34,)"
     ordering="NONE"
     side="BOTH"
 
