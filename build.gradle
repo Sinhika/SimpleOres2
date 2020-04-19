@@ -163,3 +163,11 @@ publishing {
         }
     }
 }
+
+task deobfJar(type: Jar, dependsOn: 'jar') {
+    from "build/source/main"
+    classifier "deobf"
+}
+artifacts {
+    archives deobfJar
+}
