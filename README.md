@@ -4,6 +4,7 @@ SimpleOres2
 Repository for SimpleOres2
 
 Created by AleXndrTheGr8st, maintained by Sinhika, 1.15.2 port by Paint_Ninja.
+Back-ported to 1.14.4 by Sinhika.
 
 Forge 1.15.2 port enabled thanks to Cadiboo's LGPL-licensed example code 
 <https://github.com/Cadiboo/Example-Mod> that he made free to all to borrow, 
@@ -14,12 +15,13 @@ Thanks also to Paint_Ninja for doing the initial 1.15.2 port, which encourages
 me to get back to tackling all the messy issues involved in porting these
 mods up from 1.12.2
 
-**WARNING: 1.15 is a Work-in-Progress; expect frequent changes!**
+**WARNING: 1.15/1.14 is a Work-in-Progress; expect frequent changes!**
 
 TO-DO
 -----
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * Implement graphical configuration from the menu...when Forge re-implents it.
+* <s>Backport to 1.14.4</s>
 * <s>fix shears looting so it is other-mod-friendly.</s>
 * <s>re-add various things to configuration like ore spawn ranges, now that DeferredRegisters
 allow stuff to be initialized before and after config files are read.</s>

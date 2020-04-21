@@ -1,4 +1,5 @@
 {
+    "type": "simpleores:mod_shears_harvest",
 	"conditions": [
 		{
 			"condition": "minecraft:alternative",
@@ -35,6 +36,5 @@
 				}
 			]
 		}
-	],
-	"function": "simpleores:mod_shears_harvest"
+	]
 }
