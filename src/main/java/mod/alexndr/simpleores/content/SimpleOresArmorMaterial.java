@@ -4,7 +4,7 @@ import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.util.LazyLoadBase;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,7 +35,7 @@ public enum SimpleOresArmorMaterial implements IArmorMaterial
     private final int enchantability;
     private final SoundEvent soundEvent;
     private final float toughness;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadBase<Ingredient> repairMaterial;
 
     private SimpleOresArmorMaterial(String nameIn, int maxDamageIn, int[] drAmtArray,
                                     int enchantabilityIn, SoundEvent soundIn,
@@ -48,7 +48,7 @@ public enum SimpleOresArmorMaterial implements IArmorMaterial
         enchantability = enchantabilityIn;
         soundEvent = soundIn;
         toughness = toughnessIn;
-        repairMaterial = new LazyValue<>(repairMatIn);
+        repairMaterial = new LazyLoadBase<>(repairMatIn);
     } // end ctor()
 
     @Override

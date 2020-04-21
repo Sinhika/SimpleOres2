@@ -34,10 +34,12 @@ public class OreGeneration
                 if (SimpleOresConfig.enableOnyxOre)
                 {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-                            Feature.ORE
-                                    .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,
-                                            ModBlocks.onyx_ore.get().getDefaultState(), SimpleOresConfig.onyx_veinsize))
-                                    .withPlacement(Placement.COUNT_RANGE.configure(SimpleOresConfig.onyx_cfg)));
+                            Biome.createDecoratedFeature(Feature.ORE,
+                                                         new OreFeatureConfig(
+                                                                OreFeatureConfig.FillerBlockType.NETHERRACK,
+                                                                ModBlocks.onyx_ore.get().getDefaultState(),
+                                                                SimpleOresConfig.onyx_veinsize),
+                                                         Placement.COUNT_RANGE, SimpleOresConfig.onyx_cfg));
                 }
             } // end-else NETHER
             else
@@ -45,34 +47,50 @@ public class OreGeneration
                 // Overworld
                 if (SimpleOresConfig.enableCopperOre)
                 {
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                            .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.copper_ore.get().getDefaultState(), SimpleOresConfig.copper_veinsize))
-                            .withPlacement(Placement.COUNT_RANGE.configure(SimpleOresConfig.copper_cfg)));
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                            Biome.createDecoratedFeature(Feature.ORE,
+                                                         new OreFeatureConfig(
+                                                                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                                                 ModBlocks.copper_ore.get().getDefaultState(),
+                                                                 SimpleOresConfig.copper_veinsize),
+                                                         Placement.COUNT_RANGE,
+                                                         SimpleOresConfig.copper_cfg));
                 }
 
                 if (SimpleOresConfig.enableAdamantiumOre)
                 {
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                            .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_veinsize))
-                            .withPlacement(Placement.COUNT_RANGE.configure(SimpleOresConfig.adamantium_cfg)));
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                            Biome.createDecoratedFeature(Feature.ORE,
+                                                         new OreFeatureConfig(
+                                                                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                                                 ModBlocks.adamantium_ore.get().getDefaultState(),
+                                                                 SimpleOresConfig.adamantium_veinsize),
+                                                         Placement.COUNT_RANGE,
+                                                         SimpleOresConfig.adamantium_cfg));
                 }
 
                 if (SimpleOresConfig.enableMythrilOre)
                 {
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                            .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.mythril_ore.get().getDefaultState(), SimpleOresConfig.mythril_veinsize))
-                            .withPlacement(Placement.COUNT_RANGE.configure(SimpleOresConfig.mythril_cfg)));
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                            Biome.createDecoratedFeature(Feature.ORE,
+                                                         new OreFeatureConfig(
+                                                                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                                                 ModBlocks.mythril_ore.get().getDefaultState(),
+                                                                 SimpleOresConfig.mythril_veinsize),
+                                                         Placement.COUNT_RANGE,
+                                                         SimpleOresConfig.mythril_cfg));
                 }
 
                 if (SimpleOresConfig.enableTinOre)
                 {
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                            .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.tin_ore.get().getDefaultState(), SimpleOresConfig.tin_veinsize))
-                            .withPlacement(Placement.COUNT_RANGE.configure(SimpleOresConfig.tin_cfg)));
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                            Biome.createDecoratedFeature(Feature.ORE,
+                                                         new OreFeatureConfig(
+                                                                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                                                 ModBlocks.tin_ore.get().getDefaultState(),
+                                                                 SimpleOresConfig.tin_veinsize),
+                                                         Placement.COUNT_RANGE,
+                                                         SimpleOresConfig.tin_cfg));
                 }
             } // end-else all others
         } // end-for Biome
