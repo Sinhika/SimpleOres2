@@ -1,7 +1,7 @@
 package mod.alexndr.simpleores.init;
 
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.content.SimpleMetalBlock;
+import mod.alexndr.simpleores.api.content.SimpleMetalBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.material.Material;

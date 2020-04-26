@@ -1,4 +1,4 @@
-package mod.alexndr.simpleores.content;
+package mod.alexndr.simpleores.api.content;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
