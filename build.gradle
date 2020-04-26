@@ -147,8 +147,9 @@ processResources {
 
 // Example configuration to allow publishing using the maven-publish task
 // This is the preferred method to reobfuscate your jar file
-jar.finalizedBy('reobfJar') 
-// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
+// jar.finalizedBy('reobfJar') 
+// However if you are in a multi-project build, dev time needs unobfed jar files, 
+// so you can delay the obfuscation until publishing by doing
 publish.dependsOn('reobfJar')
 
 publishing {
@@ -159,15 +160,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
+            url "file:///${project.projectDir}/../mcmodsrepo"
         }
     }
-}
-
-task deobfJar(type: Jar, dependsOn: 'jar') {
-    from "build/source/main"
-    classifier "deobf"
-}
-artifacts {
-    archives deobfJar
 }
