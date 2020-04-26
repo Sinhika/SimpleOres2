@@ -7,10 +7,10 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.simpleores.api.loot.SimpleOresLootModifiers;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.generation.OreGeneration;
-import mod.alexndr.simpleores.helpers.SimpleOresLootModifiers;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.item.BlockItem;

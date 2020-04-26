@@ -1,4 +1,4 @@
-package mod.alexndr.simpleores.helpers;
+package mod.alexndr.simpleores.api.loot;
 
 import java.util.List;
 
