@@ -5,6 +5,12 @@
 		" S ",
 		" T "
 	],
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "adamantium_tools"
+		}
+	],
 	"key" : {
 		"S" : { "tag" :"forge:ingots/adamantium"},
 		"T" : { "tag" :"forge:rods/wooden"}

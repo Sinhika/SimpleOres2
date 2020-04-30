@@ -3,6 +3,12 @@
 	"result" : {
 		"item" : "simpleores:mythril_bow"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "mod_bows"
+		}
+	],
 	"pattern" : [
 		" XY", 
 		"Z Y", 

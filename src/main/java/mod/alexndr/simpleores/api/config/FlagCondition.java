@@ -12,6 +12,16 @@ public class FlagCondition implements ICondition
     private final ResourceLocation resource;
     private final String name;
     
+    /**
+     * A new condition flag, used in recipes.
+     *  Use:   {
+                  "type": "simpleores:flag",
+                  "flag": "copper_tools"
+                }
+     * @param cfg - this module's config class.
+     * @param name - the flag name, e.g. "copper_tools"
+     * @param resource - the flag id, e.g. "simpleores:flag"
+     */
     public FlagCondition(ISimpleConfig cfg, String name, ResourceLocation resource)
     {
         this.config = cfg;
@@ -36,6 +46,11 @@ public class FlagCondition implements ICondition
         private final ISimpleConfig config;
         private final ResourceLocation resource;
         
+        /**
+         * constructor for the FlagCondition serializer.
+         * @param config - this module's config class.
+         * @param resource - same id as FlagCondition, e.g. "simpleores:flag"
+         */
         public Serializer(ISimpleConfig config, ResourceLocation resource)
         {
             this.config = config;

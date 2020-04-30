@@ -3,9 +3,13 @@ package mod.alexndr.simpleores;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.simpleores.api.config.FlagCondition;
 import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -29,10 +33,11 @@ public class SimpleOres
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-
+        
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);
-
+        CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
+                                                              new ResourceLocation(SimpleOres.MODID, "flag")));
     } // end SimpleOres()
 
 

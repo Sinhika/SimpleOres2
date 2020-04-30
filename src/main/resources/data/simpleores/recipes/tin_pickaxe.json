@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:tin_pickaxe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "tin_tools"
+		}
+	],
 	"pattern" : [
 		"SSS",
 		" T ",

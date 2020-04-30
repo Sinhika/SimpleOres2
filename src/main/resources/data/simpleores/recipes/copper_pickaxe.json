@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:copper_pickaxe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "copper_tools"
+		}
+	],
 	"pattern" : [
 		"SSS",
 		" T ",

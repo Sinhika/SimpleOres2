@@ -28,6 +28,7 @@ public class SimpleOresConfig implements ISimpleConfig
     public static  CountRangeConfig onyx_cfg;
     public static  int onyx_veinsize = 7;
     
+    public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
     
     @Override
     public boolean getFlag(String n)
@@ -35,7 +36,6 @@ public class SimpleOresConfig implements ISimpleConfig
         Boolean obj = flags.get(n);
         return obj != null && obj;
     }
-
 
     @Override
     public void clear() {

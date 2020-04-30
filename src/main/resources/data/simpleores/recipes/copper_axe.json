@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:copper_axe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "copper_tools"
+		}
+	],
 	"pattern" : [
 		"SS ",
 		"ST ",

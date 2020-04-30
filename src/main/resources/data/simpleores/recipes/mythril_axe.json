@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:mythril_axe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "mythril_tools"
+		}
+	],
 	"pattern" : [
 		"SS ",
 		"ST ",

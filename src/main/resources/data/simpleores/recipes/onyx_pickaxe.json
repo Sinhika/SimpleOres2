@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:onyx_pickaxe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "onyx_tools"
+		}
+	],
 	"pattern" : [
 		"SSS",
 		" T ",
