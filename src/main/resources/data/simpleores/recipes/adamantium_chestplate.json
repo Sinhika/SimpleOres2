@@ -5,6 +5,12 @@
 		"SSS",
 		"SSS"
 	],
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "adamantium_armor"
+		}
+	],
 	"key" : {
 		"S" : { "tag" :"forge:ingots/adamantium"}
 	},

@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:mythril_boots"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "mythril_armor"
+		}
+	],
 	"pattern" : [
 		"S S",
 		"S S"
