@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:onyx_boots"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "onyx_armor"
+		}
+	],
 	"pattern" : [
 		"S S",
 		"S S"

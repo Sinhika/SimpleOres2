@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:tin_boots"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "tin_armor"
+		}
+	],
 	"pattern" : [
 		"S S",
 		"S S"
