@@ -51,6 +51,12 @@ final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableCopperBucket;
     
     final ForgeConfigSpec.BooleanValue serverEnableModBows;
+
+    final ForgeConfigSpec.BooleanValue serverEnableCopperArmor;
+    final ForgeConfigSpec.BooleanValue serverEnableTinArmor;
+    final ForgeConfigSpec.BooleanValue serverEnableMythrilArmor;
+    final ForgeConfigSpec.BooleanValue serverEnableAdamantiumArmor;
+    final ForgeConfigSpec.BooleanValue serverEnableOnyxArmor;
     
 	ServerConfig(final ForgeConfigSpec.Builder builder)
 	{
@@ -194,6 +200,24 @@ final class ServerConfig
         serverEnableModBows = builder.comment("false disables recipes")
                 .translation(SimpleOres.MODID + ".config.enableCopperBucket")
                  .define("EnableModBows", true);
+        builder.pop();
+        
+        builder.push("Armor");
+        serverEnableCopperArmor = builder.comment("false disables recipes")
+                .translation(SimpleOres.MODID + ".config.enableCopperArmor")
+                .define("EnableCopperArmor", true);
+        serverEnableTinArmor = builder.comment("false disables recipes")
+                .translation(SimpleOres.MODID + ".config.enableTinArmor")
+                .define("EnableTinArmor", true);
+        serverEnableMythrilArmor = builder.comment("false disables recipes")
+                .translation(SimpleOres.MODID + ".config.enableMythrilArmor")
+                .define("EnableMythrilArmor", true);
+        serverEnableAdamantiumArmor = builder.comment("false disables recipes")
+                .translation(SimpleOres.MODID + ".config.enableAdamantiumArmor")
+                .define("EnableAdamantiumArmor", true);
+        serverEnableOnyxArmor = builder.comment("false disables recipes")
+                .translation(SimpleOres.MODID + ".config.enableOnyxArmor")
+                .define("EnableOnyxArmor", true);
         builder.pop();
         
 	} // end ctor

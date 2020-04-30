@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:copper_leggings"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "copper_armor"
+		}
+	],
 	"pattern" : [
 		"SSS",
 		"S S",
