@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:copper_bucket"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "copper_bucket"
+		}
+	],
 	"pattern" : [
 		"S S",
 		" S "

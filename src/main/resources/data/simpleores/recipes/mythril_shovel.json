@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:mythril_shovel"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "mythril_tools"
+		}
+	],
 	"pattern" : [
 		" S ",
 		" T ",
