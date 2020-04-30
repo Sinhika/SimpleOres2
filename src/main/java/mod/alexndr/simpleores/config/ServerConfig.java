@@ -12,7 +12,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
  */
 final class ServerConfig
 {
-	final ForgeConfigSpec.BooleanValue serverEnableCopperOre;
+        final ForgeConfigSpec.BooleanValue serverEnableCopperOre;
     final ForgeConfigSpec.IntValue serverCopperVeinSize;
     final ForgeConfigSpec.IntValue serverCopperVeinCount;
     final ForgeConfigSpec.IntValue serverCopperBottomHeight;
@@ -58,9 +58,9 @@ final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableAdamantiumArmor;
     final ForgeConfigSpec.BooleanValue serverEnableOnyxArmor;
     
-	ServerConfig(final ForgeConfigSpec.Builder builder)
-	{
-	    builder.push("OreGeneration");
+        ServerConfig(final ForgeConfigSpec.Builder builder)
+        {
+            builder.push("OreGeneration");
         serverEnableCopperOre = builder
                 .comment("Enable copper ore generation?")
                 .translation(SimpleOres.MODID + ".config.enableCopperOre")
@@ -82,26 +82,26 @@ final class ServerConfig
                 .translation(SimpleOres.MODID + ".config.enableOnyxOre")
                 .define("EnableOnyxOre", true);
         
-		builder.push("Copper");
-		serverCopperVeinSize = builder
-		        .comment("Copper ore vein size")
+                builder.push("Copper");
+                serverCopperVeinSize = builder
+                        .comment("Copper ore vein size")
                 .translation(SimpleOres.MODID + ".config.serverCopperVeinSize")
                 .defineInRange("CopperVeinSize", 7, 1, Integer.MAX_VALUE);
-		serverCopperVeinCount = builder
+                serverCopperVeinCount = builder
                 .comment("Copper ore vein count per chunk")
                 .translation(SimpleOres.MODID + ".config.serverCopperVeinCount")
                 .defineInRange("CopperVeinCount", 15, 1, Integer.MAX_VALUE);
-		serverCopperBottomHeight = builder
+                serverCopperBottomHeight = builder
                 .comment("Copper ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverCopperBottomHeight")
                 .defineInRange("CopperBottomHeight", 40, 1, 254);
-		serverCopperMaxHeight = builder
+                serverCopperMaxHeight = builder
                 .comment("Copper ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverCopperMaxHeight")
                 .defineInRange("CopperMaxHeight", 128, 1, 255);
-		builder.pop();
-		
-		builder.push("Tin");
+                builder.pop();
+                
+                builder.push("Tin");
         serverTinVeinSize = builder
                 .comment("Tin ore vein size")
                 .translation(SimpleOres.MODID + ".config.serverTinVeinSize")
@@ -220,6 +220,6 @@ final class ServerConfig
                 .define("EnableOnyxArmor", true);
         builder.pop();
         
-	} // end ctor
+        } // end ctor
 
 } // end class ServerConfig

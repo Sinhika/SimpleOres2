@@ -71,10 +71,10 @@ public final class ConfigHelper
                 SimpleOresConfig.INSTANCE.putFlag("adamantium_armor", ConfigHolder.SERVER.serverEnableAdamantiumArmor.get());
                 SimpleOresConfig.INSTANCE.putFlag("onyx_armor", ConfigHolder.SERVER.serverEnableOnyxArmor.get());
                 
-        } // end bakeServer()
+    } // end bakeServer()
 
         @SuppressWarnings("unused")
-		private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
+                private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
         {
                 modConfig.getConfigData().set(path, newValue);
                 modConfig.save();
