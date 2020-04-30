@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:onyx_hoe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "onyx_tools"
+		}
+	],
 	"pattern" : [
 		"SS ",
 		" T ",

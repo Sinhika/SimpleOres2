@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:mythril_pickaxe"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "mythril_tools"
+		}
+	],
 	"pattern" : [
 		"SSS",
 		" T ",

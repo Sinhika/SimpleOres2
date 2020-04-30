@@ -2,6 +2,12 @@
 	"result" : {
 		"item" : "simpleores:tin_sword"
 	},
+	"conditions" : [
+		{
+			"type" : "simpleores:flag",
+			"flag" : "tin_tools"
+		}
+	],
 	"pattern" : [
 		" S ",
 		" S ",
