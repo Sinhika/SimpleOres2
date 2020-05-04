@@ -5,8 +5,11 @@ Repository for SimpleOres2
 
 Created by AleXndrTheGr8st, maintained by Sinhika, 1.15.2 port by Paint_Ninja.
 
-Forge 1.15.2 port enabled thanks to Cadiboo's LGPL-licensed example code 
-<https://github.com/Cadiboo/Example-Mod> that he made free to all to borrow, 
+New Tin ore and Silver ore textures courtesy of Malcom Riley's donation of his 
+[unused texture collection](https://github.com/malcolmriley/unused-textures) to the modding world,   
+licensed by [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
+
+Forge 1.15.2 port enabled thanks to Cadiboo's [LGPL-licensed example code](https://github.com/Cadiboo/Example-Mod) that he made free to all to borrow, 
 in the hopes of encouraging good coding practices in
 Forge mods. I hope I did a good job with it. 
 
