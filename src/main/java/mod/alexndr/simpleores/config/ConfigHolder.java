@@ -13,7 +13,7 @@ public final class ConfigHolder
 {
 
 	public static final ForgeConfigSpec SERVER_SPEC;
-	static final ServerConfig SERVER;
+	public static final ServerConfig SERVER;
 	static {
 		{
 			final Pair<ServerConfig, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(ServerConfig::new);
