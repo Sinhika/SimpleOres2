@@ -7,15 +7,19 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.simpleores.api.config.FlagCondition;
 import mod.alexndr.simpleores.api.loot.SimpleOresLootModifiers;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -96,4 +100,12 @@ public final class ModEventSubscriber
 						new ResourceLocation(SimpleOres.MODID, "mod_shears_harvest")) );
 	} // end registerModifierSerializers
 
+	@SubscribeEvent
+	public static void onRegisterRecipeSerializers(
+	        @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
+	{
+	       CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
+                                                   new ResourceLocation(SimpleOres.MODID, "flag")));	    
+	} // end registerRecipeSerializers
+	
 } // end class ModEventSubscriber
