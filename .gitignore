@@ -15,3 +15,4 @@ build.number
 bin/
 .gradle/
 .idea/
+.project
