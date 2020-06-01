@@ -1,6 +1,7 @@
 package mod.alexndr.simpleores.init;
 
 import mod.alexndr.simpleores.SimpleOres;
+import mod.alexndr.simpleores.api.content.SimpleShearsItem;
 import mod.alexndr.simpleores.content.CopperBucket;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
@@ -13,7 +14,6 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShearsItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
@@ -161,20 +161,20 @@ public final class ModItems
                     new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
 
     // shears
-    public static final RegistryObject<ShearsItem> copper_shears = ITEMS.register("copper_shears",
-            () -> new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
+    public static final RegistryObject<SimpleShearsItem> copper_shears = ITEMS.register("copper_shears",
+            () -> new SimpleShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.COPPER.getMaxUses())
                     .group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ShearsItem> tin_shears = ITEMS.register("tin_shears",
-            () -> new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
+    public static final RegistryObject<SimpleShearsItem> tin_shears = ITEMS.register("tin_shears",
+            () -> new SimpleShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.TIN.getMaxUses())
                     .group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ShearsItem> mythril_shears = ITEMS.register("mythril_shears",
-            () -> new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.MYTHRIL.getMaxUses())
+    public static final RegistryObject<SimpleShearsItem> mythril_shears = ITEMS.register("mythril_shears",
+            () -> new SimpleShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.MYTHRIL.getMaxUses())
                     .group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ShearsItem> adamantium_shears = ITEMS.register("adamantium_shears",
-            () -> new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ADAMANTIUM.getMaxUses())
+    public static final RegistryObject<SimpleShearsItem> adamantium_shears = ITEMS.register("adamantium_shears",
+            () -> new SimpleShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ADAMANTIUM.getMaxUses())
                     .group(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<ShearsItem> onyx_shears = ITEMS.register("onyx_shears",
-            () -> new ShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ONYX.getMaxUses())
+    public static final RegistryObject<SimpleShearsItem> onyx_shears = ITEMS.register("onyx_shears",
+            () -> new SimpleShearsItem(new Item.Properties().maxDamage(SimpleOresItemTier.ONYX.getMaxUses())
                     .group(ModTabGroups.MOD_ITEM_GROUP)));
 
     // ARMOR
