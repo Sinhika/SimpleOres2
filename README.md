@@ -20,6 +20,7 @@ TO-DO
 -----
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * <s>make recipes disable-able in config.</s>
+* add chance of ingots, tools to appropriate treasure chests.
 * Implement graphical configuration from the menu...when Forge re-implents it.
 * update or move the SimpleOres, etc. wiki
 
