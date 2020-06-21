@@ -15,7 +15,8 @@ public class SimpleOresConfig implements ISimpleConfig
     public static boolean enableMythrilOre;
     public static boolean enableAdamantiumOre;
     public static boolean enableOnyxOre;
-
+    public static boolean addModLootToChests;
+    
     // Vein/Chunk Count, MinHeight, MaxHeightBase, MaxHeight
     public static  CountRangeConfig copper_cfg;
     public static  int copper_veinsize = 7;

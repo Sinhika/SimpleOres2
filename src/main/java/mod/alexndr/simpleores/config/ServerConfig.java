@@ -58,8 +58,16 @@ final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableAdamantiumArmor;
     final ForgeConfigSpec.BooleanValue serverEnableOnyxArmor;
     
+    final ForgeConfigSpec.BooleanValue serverAddModLootToChests;
+    
         ServerConfig(final ForgeConfigSpec.Builder builder)
         {
+            builder.push("General");
+            serverAddModLootToChests = builder.comment("Add SimpleOres items to chest loot?")
+                .translation(SimpleOres.MODID + ".config.addModLootToChests")
+                .define("AddModLootToChests", true);
+            builder.pop();
+            
             builder.push("OreGeneration");
         serverEnableCopperOre = builder
                 .comment("Enable copper ore generation?")
