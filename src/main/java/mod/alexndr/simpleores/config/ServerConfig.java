@@ -90,7 +90,7 @@ final class ServerConfig
 		serverCopperVeinCount = builder
                 .comment("Copper ore vein count per chunk")
                 .translation(SimpleOres.MODID + ".config.serverCopperVeinCount")
-                .defineInRange("CopperVeinCount", 15, 1, Integer.MAX_VALUE);
+                .defineInRange("CopperVeinCount", 25, 1, Integer.MAX_VALUE);
 		serverCopperBottomHeight = builder
                 .comment("Copper ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverCopperBottomHeight")
@@ -109,7 +109,7 @@ final class ServerConfig
         serverTinVeinCount = builder
                 .comment("Tin ore vein count per chunk")
                 .translation(SimpleOres.MODID + ".config.serverTinVeinCount")
-                .defineInRange("TinVeinCount", 10, 1, Integer.MAX_VALUE);
+                .defineInRange("TinVeinCount", 20, 1, Integer.MAX_VALUE);
         serverTinBottomHeight = builder
                 .comment("Tin ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverTinBottomHeight")
@@ -117,7 +117,7 @@ final class ServerConfig
         serverTinMaxHeight = builder
                 .comment("Tin ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverTinMaxHeight")
-                .defineInRange("TinMaxHeight", 70, 1, 255);
+                .defineInRange("TinMaxHeight", 90, 1, 255);
         builder.pop();
 
         builder.push("Mythril");
@@ -128,7 +128,7 @@ final class ServerConfig
         serverMythrilVeinCount = builder
                 .comment("Mythril ore vein count per chunk")
                 .translation(SimpleOres.MODID + ".config.serverMythrilVeinCount")
-                .defineInRange("MythrilVeinCount", 4, 1, Integer.MAX_VALUE);
+                .defineInRange("MythrilVeinCount", 8, 1, Integer.MAX_VALUE);
         serverMythrilBottomHeight = builder
                 .comment("Mythril ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverMythrilBottomHeight")
