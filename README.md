@@ -20,9 +20,10 @@ TO-DO
 -----
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * <s>make recipes disable-able in config.</s>
-* add chance of ingots, tools to appropriate treasure chests.
+* add chance of ingots, tools to appropriate treasure chests - in progress
+* added SimpleOres items to villager, trader trade menus.
 * Implement graphical configuration from the menu...when Forge re-implents it.
-* update or move the SimpleOres, etc. wiki
+* update or move the SimpleOres, etc. wiki - in progress.
 
 
 License

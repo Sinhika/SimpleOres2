@@ -1,0 +1,77 @@
+{
+    "__comment": "This table is injected as its own pool into minecraft:chests/simple_dungeon",
+    "pools": [
+        {
+            "name": "main",
+            "rolls": 1,
+            "entries": [
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_helmet",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_chestplate",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_leggings",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_boots",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_sword",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_axe",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_pickaxe",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_shovel",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_bow",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_shears",
+                        "weight": 1,
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                }, 
+                {
+                        "type": "item",
+                        "name": "simpleores:onyx_gem",
+                        "weight": 3,
+                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 4} }]
+                }
+            ]
+        }
+    ]
+}
