@@ -39,7 +39,8 @@ public final class ForgeEventSubscriber
                 // village_blacksmith chest loot table anyway.
                 if (file.startsWith("village/village_")) 
                 {
-                    file = "village_blacksmith";
+                    String village = "village/";
+                    file = file.substring(file.indexOf(village) + village.length());
                 }
                 else if (file.startsWith("stronghold_")) 
                 {
@@ -63,7 +64,12 @@ public final class ForgeEventSubscriber
                     LOGGER.debug("Attempting to inject loot pool for " + file);
                     event.getTable().addPool(ChestLootHandler.getInjectPool(SimpleOres.MODID, "nether"));
                     break;
-                case "village_blacksmith":
+                case "village_weaponsmith":
+                case "village_toolsmith":
+                case "village_armorer":
+                case "village_shepherd":
+                case "village_mason":
+                case "village_fletcher":
                 case "desert_pyramid":
                 case "abandoned_mineshaft":
                 case "jungle_temple":
