@@ -81,6 +81,7 @@ public final class ForgeEventSubscriber
                 default:
                     // cases deliberately ignored:
                     // dispensers, because you don't shoot ingots/ores/tools at people.
+                    // other villagers
                     // the_end, because no end ores or metals.
                     break;
                 } // end-switch
