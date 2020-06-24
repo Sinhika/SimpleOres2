@@ -18,12 +18,12 @@ mods up from 1.12.2
 
 TO-DO
 -----
-* fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * <s>make recipes disable-able in config.</s>
-* add chance of ingots, tools to appropriate treasure chests - in progress
+* <s>add chance of ingots, tools to appropriate treasure chests</s>
+* update or move the SimpleOres, etc. wiki - in progress.
+* fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * added SimpleOres items to villager, trader trade menus.
 * Implement graphical configuration from the menu...when Forge re-implents it.
-* update or move the SimpleOres, etc. wiki - in progress.
 
 
 License
