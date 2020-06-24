@@ -16,7 +16,6 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = EventBusSubscriber.Bus.FORGE)
 public final class ForgeEventSubscriber
 {
-    @SuppressWarnings("unused")
 	private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Forge Event Subscriber");
 
     /**
