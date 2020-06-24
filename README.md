@@ -22,13 +22,12 @@ mods up from 1.12.2
 
 TO-DO
 -----
-* fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
-* add silver back in, because Zot's Only Silver hasn't been updated since 1.7.10.
 * <s>make recipes disable-able in config.</s>
-* add chance of ingots, tools to appropriate treasure chests - in progress
+* <s>add chance of ingots, tools to appropriate treasure chests</s>
+* update or move the SimpleOres, etc. wiki - in progress.
+* fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * added SimpleOres items to villager, trader trade menus.
 * Implement graphical configuration from the menu...when Forge re-implents it.
-* update or move the SimpleOres, etc. wiki - in progress.
 
 License
 -------
