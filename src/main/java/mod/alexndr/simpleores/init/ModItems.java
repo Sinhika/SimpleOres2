@@ -34,7 +34,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public final class ModItems 
 {
     public static final DeferredRegister<Item> ITEMS = 
-            DeferredRegister.create(ForgeRegistries.ITEMS, SimpleOres.MODID);
+            new DeferredRegister<Item>(ForgeRegistries.ITEMS, SimpleOres.MODID);
 
     // ingots and nuggets
     public static final RegistryObject<Item> copper_ingot = ITEMS.register("copper_ingot", 
