@@ -39,7 +39,7 @@
                         "type": "item",
                         "name": "simpleores:mythril_axe",
                         "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 3} }]
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
                 }, 
                 {
                         "type": "item",
@@ -51,85 +51,72 @@
                         "type": "item",
                         "name": "simpleores:mythril_shovel",
                         "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 3} }]
+                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:mythril_hoe",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_helmet",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_chestplate",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_leggings",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_boots",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_sword",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_axe",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 3,"max": 7} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_pickaxe",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_shovel",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_hoe",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 2,"max": 3} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:onyx_helmet",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:onyx_chestplate",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:onyx_leggings",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
@@ -170,32 +157,27 @@
                 {
                         "type": "item",
                         "name": "simpleores:tin_shears",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 3,"max": 5} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:adamantium_shears",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 5,"max": 7} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:onyx_shears",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:mythril_bow",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 2} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",
                         "name": "simpleores:onyx_bow",
-                        "weight": 1,
-                        "functions": [{ "function": "set_count", "count": {"min": 1,"max": 1} }]
+                        "weight": 1
                 }, 
                 {
                         "type": "item",

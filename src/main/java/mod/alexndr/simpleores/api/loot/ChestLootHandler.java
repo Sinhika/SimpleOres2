@@ -25,8 +25,7 @@ public final class ChestLootHandler
 
     private static LootEntry.Builder<?> getInjectEntry(String modid, String name, int weight) {
         ResourceLocation table = new ResourceLocation(modid, "inject/" + name);
-        return TableLootEntry.builder(table)
-                .weight(weight);
+        return TableLootEntry.builder(table).weight(weight);
     }
 
 } // end-class
