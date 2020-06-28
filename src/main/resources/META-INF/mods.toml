@@ -28,7 +28,7 @@ Additional Credits: Emirhangg (Turkish translation), AzazEL3095 (Castillian Span
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[31.1.34,)"
+    versionRange="[31.2.26,)"
     ordering="NONE"
     side="BOTH"
 
