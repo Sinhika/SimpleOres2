@@ -145,20 +145,20 @@ public final class ModItems
 
     // hoes
     public static final RegistryObject<HoeItem> copper_hoe = ITEMS.register("copper_hoe",
-            () -> new HoeItem(SimpleOresItemTier.COPPER,-2.0F,
-                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+            () -> new HoeItem(SimpleOresItemTier.COPPER,-1, -2.0F,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> tin_hoe = ITEMS.register("tin_hoe",
-            () -> new HoeItem(SimpleOresItemTier.TIN,-3.0F,
-                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+            () -> new HoeItem(SimpleOresItemTier.TIN,-1, -3.0F,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> mythril_hoe = ITEMS.register("mythril_hoe",
-            () -> new HoeItem(SimpleOresItemTier.MYTHRIL,-1.0F,
-                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+            () -> new HoeItem(SimpleOresItemTier.MYTHRIL,-3, -1.0F,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> adamantium_hoe = ITEMS.register("adamantium_hoe",
-            () -> new HoeItem(SimpleOresItemTier.ADAMANTIUM,-1.0F,
-                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+            () -> new HoeItem(SimpleOresItemTier.ADAMANTIUM, - 3, -1.0F,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)) {});
     public static final RegistryObject<HoeItem> onyx_hoe = ITEMS.register("onyx_hoe",
-            () -> new HoeItem(SimpleOresItemTier.ONYX, 0.0F,
-                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+            () -> new HoeItem(SimpleOresItemTier.ONYX, -5, 0.0F,
+                    new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)) {});
 
     // shears
     public static final RegistryObject<SimpleShearsItem> copper_shears = ITEMS.register("copper_shears",
