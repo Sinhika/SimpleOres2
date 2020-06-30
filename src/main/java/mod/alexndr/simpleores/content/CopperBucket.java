@@ -1,5 +1,10 @@
 package mod.alexndr.simpleores.content;
 
+import java.util.List;
+import java.util.function.Supplier;
+
+import javax.annotation.Nullable;
+
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,7 +17,6 @@ import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -20,27 +24,21 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.function.Supplier;
-
 public class CopperBucket extends BucketItem
 {
-    @SuppressWarnings("deprecation")
-	public CopperBucket(Properties builder)
+    public CopperBucket(Properties builder)
     {
     	// ForgeRegistries.FLUIDS.?
-        super(Fluids.EMPTY, builder);
+        super(() -> Fluids.EMPTY, builder);
     }
 
     public CopperBucket(Supplier<? extends Fluid> supplier, Properties builder) {
 		super(supplier, builder);
 	}
 
-	@SuppressWarnings("deprecation")
 	public CopperBucket(net.minecraft.fluid.Fluid containedFluidIn, Properties builder)
     {
-        super(containedFluidIn, builder);
+        super(()->containedFluidIn, builder);
     }
 
     @Override
@@ -59,7 +57,7 @@ public class CopperBucket extends BucketItem
                 super.onItemRightClick(worldIn, playerIn, handIn);
 
         // intercept result and correct bucket type.
-        if (itemStackActionResult.getType() == ActionResultType.SUCCESS)
+        if (itemStackActionResult.getType() == ActionResultType.CONSUME)
         {
             ItemStack newItemStack = ItemStack.EMPTY;
 
@@ -70,16 +68,16 @@ public class CopperBucket extends BucketItem
             {
                 if (newBucket == null) {
                     newItemStack = ItemStack.EMPTY;
-                    playerIn.playSound(SoundEvents.BLOCK_LAVA_EXTINGUISH, 1.0F, 1.0F);
+                    // playerIn.playSound(SoundEvents.BLOCK_LAVA_EXTINGUISH, 1.0F, 1.0F);
                 }
                 else {
                     newItemStack = new ItemStack(newBucket);
                 }
                 itemStackActionResult =
-                        new ActionResult<ItemStack>(ActionResultType.SUCCESS,
+                        new ActionResult<ItemStack>(ActionResultType.CONSUME,
                                                     newItemStack);
             } // end-if newBucket changed
-        } // end-if Action SUCCESS
+        } // end-if Action CONSUME
         return itemStackActionResult;
     } // end onItemRightClick()
 

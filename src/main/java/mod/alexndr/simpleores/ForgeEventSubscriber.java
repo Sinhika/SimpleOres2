@@ -1,13 +1,30 @@
 package mod.alexndr.simpleores;
 
-import net.minecraftforge.event.LootTableLoadEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import mod.alexndr.simpleores.api.loot.ChestLootHandler;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.init.ModItems;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.FlowingFluidBlock;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.stats.Stats;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.util.Direction;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraftforge.event.LootTableLoadEvent;
+import net.minecraftforge.event.entity.player.FillBucketEvent;
+import net.minecraftforge.eventbus.api.Event.Result;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 /**
  * Subscribe to events from the FORGE EventBus that should be handled on both PHYSICAL sides in this class
@@ -18,6 +35,45 @@ public final class ForgeEventSubscriber
 {
 	private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Forge Event Subscriber");
 
+	/**
+	 * deal with copper bucket poking lava.
+	 */
+	@SubscribeEvent
+	public static void FillBucket(final FillBucketEvent event)
+	{
+	    if (event.getEmptyBucket().getItem() == ModItems.copper_bucket.get()) 
+	    {
+	        if (event.getTarget().getType() == RayTraceResult.Type.BLOCK) 
+	        {
+	            BlockRayTraceResult rtResult = (BlockRayTraceResult) event.getTarget();
+	            BlockPos blockpos = rtResult.getPos();
+	            Direction direction = rtResult.getFace();
+	            BlockPos blockpos1 = blockpos.offset(direction);
+	            if (event.getWorld().isBlockModifiable(event.getPlayer(), blockpos) 
+	                && event.getPlayer().canPlayerEdit(blockpos1, direction, event.getEmptyBucket()))
+	            {
+	                BlockState blockstate1 = event.getWorld().getBlockState(blockpos);
+	                if (blockstate1.getBlock() instanceof FlowingFluidBlock) 
+	                {
+	                    Fluid fluid = ((FlowingFluidBlock) blockstate1.getBlock()).getFluid();
+	                    if (fluid != Fluids.EMPTY && fluid.isIn(FluidTags.LAVA)) 
+	                    {
+	                        Item bucketItem = event.getEmptyBucket().getItem();
+	                        event.getPlayer().addStat(Stats.ITEM_USED.get(bucketItem));
+	                        SoundEvent soundevent = SoundEvents.BLOCK_LAVA_EXTINGUISH;
+	                        event.getPlayer().playSound(soundevent, 1.0F, 1.0F);
+	                        event.setFilledBucket(ItemStack.EMPTY);
+                            event.setResult(Result.ALLOW);
+                            return;
+                        }
+                    } // end-if
+                } // end-if
+	        } // end-if
+	    }
+        event.setResult(Result.DEFAULT);
+	} // end FillBucket()
+	
+	
     /**
      * add mod loot to loot tables. Code heavily based on Botania's LootHandler, which
      * neatly solves the problem when I couldn't figure it out.
