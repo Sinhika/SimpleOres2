@@ -1,7 +1,6 @@
 package mod.alexndr.simpleores.init;
 
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.api.content.SimpleMetalBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.material.Material;
@@ -49,21 +48,21 @@ public final class ModBlocks
                     .harvestTool(ToolType.PICKAXE).harvestLevel(3)));
 
     // Metal Blocks
-    public static final RegistryObject<SimpleMetalBlock> copper_block = BLOCKS.register("copper_block",
-            () -> new SimpleMetalBlock(Block.Properties.create(Material.IRON,
+    public static final RegistryObject<Block> copper_block = BLOCKS.register("copper_block",
+            () -> new Block(Block.Properties.create(Material.IRON,
                     MaterialColor.ORANGE_TERRACOTTA)
                     .hardnessAndResistance(3.0F, 6.0F)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
-    public static final RegistryObject<SimpleMetalBlock> tin_block = BLOCKS.register("tin_block",
-            () -> new SimpleMetalBlock(Block.Properties.create(Material.IRON)
+    public static final RegistryObject<Block> tin_block = BLOCKS.register("tin_block",
+            () -> new Block(Block.Properties.create(Material.IRON)
                     .hardnessAndResistance(4.0F, 6.0F)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
-    public static final RegistryObject<SimpleMetalBlock> mythril_block = BLOCKS.register("mythril_block",
-            () -> new SimpleMetalBlock(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
+    public static final RegistryObject<Block> mythril_block = BLOCKS.register("mythril_block",
+            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
                     .hardnessAndResistance(7.0F, 6.0F)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
-    public static final RegistryObject<SimpleMetalBlock> adamantium_block = BLOCKS.register("adamantium_block",
-            () -> new SimpleMetalBlock(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
+    public static final RegistryObject<Block> adamantium_block = BLOCKS.register("adamantium_block",
+            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
                     .hardnessAndResistance(7.0F, 12.0F)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static final RegistryObject<Block> onyx_block = BLOCKS.register("onyx_block",
