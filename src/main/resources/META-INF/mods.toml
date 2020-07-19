@@ -20,9 +20,7 @@ A simple ore mod, featuring 5 balanced ores: Copper, Tin, Mythril, Adamantium an
 All except Onyx can be found in the overworld, while Onyx can be found only in the Nether.
 Each ore has its own unique properties, armor and tool sets, and more.
 
-Additional Credits: Emirhangg (Turkish translation), AzazEL3095 (Castillian Spanish), 
-	Wanadi (Brazillian Portuguese), El-Limbo (Argentinian Spanish), fearheaven (French),
-	burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, Traditional Chinese)
+Additional Credits: Emirhangg (Turkish translation), AzazEL3095 (Castillian Spanish), Wanadi & IamKahina (Brazillian Portuguese), El-Limbo (Argentinian Spanish), fearheaven (French), burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, Traditional Chinese)
 '''
 
 [[dependencies.simpleores]] #optional
