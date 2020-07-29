@@ -154,7 +154,7 @@ public final class ModItems
             () -> new HoeItem(SimpleOresItemTier.MYTHRIL,-3, -1.0F,
                     new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> adamantium_hoe = ITEMS.register("adamantium_hoe",
-            () -> new HoeItem(SimpleOresItemTier.ADAMANTIUM, - 3, -1.0F,
+            () -> new HoeItem(SimpleOresItemTier.ADAMANTIUM, -3, -1.0F,
                     new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)) {});
     public static final RegistryObject<HoeItem> onyx_hoe = ITEMS.register("onyx_hoe",
             () -> new HoeItem(SimpleOresItemTier.ONYX, -5, 0.0F,
