@@ -88,7 +88,7 @@ public enum SimpleOresArmorMaterial implements IArmorMaterial
     }
 
     @Override
-    public float func_230304_f_()
+    public float getKnockbackResistance()
     {
         // TODO Auto-generated method stub
         return 0;

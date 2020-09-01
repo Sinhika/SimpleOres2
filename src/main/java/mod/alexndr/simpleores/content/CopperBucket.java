@@ -46,8 +46,8 @@ public class CopperBucket extends BucketItem
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add((new TranslationTextComponent("tips.copper_bucket")).func_240699_a_(
-                TextFormatting.GREEN));
+        tooltip.add((new TranslationTextComponent("tips.copper_bucket"))
+                        .mergeStyle(TextFormatting.GREEN));
     }
 
     @Override
