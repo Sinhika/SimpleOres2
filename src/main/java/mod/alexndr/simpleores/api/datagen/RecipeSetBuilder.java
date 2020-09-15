@@ -29,7 +29,7 @@ public class RecipeSetBuilder
     }
 
     public ResourceLocation make_resource(String path) {
-        return new ResourceLocation(modid, path);
+        return new ResourceLocation(this.modid, path);
     }
 
     /**
