@@ -71,13 +71,13 @@ public class SimpleOresDataGenerator
         protected void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
         {
             setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_COPPER), "copper", 
-                                          hasItem(ModItems.copper_ingot.get()), flag("copper_tools"), true);
+                                          hasItem(ModTags.Items.INGOTS_COPPER), flag("copper_tools"), true);
         } // end registerToolRecipes()
         
         protected void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
         {
             setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_COPPER), "copper", 
-                                           hasItem(ModItems.copper_ingot.get()), flag("copper_armor"));
+                                           hasItem(ModTags.Items.INGOTS_COPPER), flag("copper_armor"));
         } // end registerArmorRecipes()
         
         protected void registerStorageRecipes(Consumer<IFinishedRecipe> consumer)

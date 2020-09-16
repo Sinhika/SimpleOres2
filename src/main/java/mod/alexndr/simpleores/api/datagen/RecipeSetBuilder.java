@@ -2,6 +2,8 @@ package mod.alexndr.simpleores.api.datagen;
 
 import java.util.function.Consumer;
 
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.ICriterionInstance;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
@@ -11,6 +13,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.ConditionalAdvancement;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,15 +38,27 @@ public class RecipeSetBuilder
         return new ResourceLocation(this.modid, path);
     }
 
+    public  ConditionalAdvancement.Builder build_advancement_with_condition(ResourceLocation recipe_id, ICondition condition,
+                                                                            ICriterionInstance criterion)
+    {
+        return ConditionalAdvancement.builder()
+                .addCondition(condition)
+                .addAdvancement(
+                        Advancement.Builder.builder()
+                            .withParentId(new ResourceLocation("minecraft", "recipes/root"))
+                            .withRewards(AdvancementRewards.Builder.recipe(recipe_id))
+                            .withCriterion("has_item", criterion));
+    }
+    
     /**
      * Used by a RecipeProvider to generate basic storage recipes for an ingot/block/nugget set.
      * These recipes are non-conditional.
      * 
-     * @param consumer
-     * @param ingot
-     * @param block
-     * @param nugget
-     * @param criterion
+     * @param consumer passed in from RecipeProvider to builder() call.
+     * @param ingot item
+     * @param block block
+     * @param nugget item
+     * @param criterion required to get the recipe advancement; usually hasItem()
      */
     public void buildSimpleStorageRecipes(Consumer<IFinishedRecipe> consumer, 
                                           IItemProvider ingot, IItemProvider block,
@@ -147,7 +162,9 @@ public class RecipeSetBuilder
                         .patternLine("   ")
                         .addCriterion("has_item", criterion)
                         ::build)
+                .setAdvancement(helmet_name, build_advancement_with_condition(helmet_name, condition, criterion))
                 .build(consumer, helmet_name);
+            
             ConditionalRecipe.builder().addCondition(condition)
                 .addRecipe(ShapedRecipeBuilder.shapedRecipe(chestplate)
                         .key('S',item)
@@ -156,6 +173,7 @@ public class RecipeSetBuilder
                         .patternLine("SSS")
                         .addCriterion("has_item", criterion)
                         ::build)
+                .setAdvancement(chestplate_name, build_advancement_with_condition(chestplate_name, condition, criterion))
                 .build(consumer, chestplate_name);
             ConditionalRecipe.builder().addCondition(condition)
                 .addRecipe(ShapedRecipeBuilder.shapedRecipe(leggings)
@@ -165,6 +183,7 @@ public class RecipeSetBuilder
                         .patternLine("S S")
                         .addCriterion("has_item", criterion)
                         ::build)
+                .setAdvancement(leggings_name, build_advancement_with_condition(leggings_name, condition, criterion))
                 .build(consumer, leggings_name);
             ConditionalRecipe.builder().addCondition(condition)
                 .addRecipe(ShapedRecipeBuilder.shapedRecipe(boots)
@@ -174,6 +193,7 @@ public class RecipeSetBuilder
                         .patternLine("S S")
                         .addCriterion("has_item", criterion)
                         ::build)
+                .setAdvancement(boots_name, build_advancement_with_condition(boots_name, condition, criterion))
                 .build(consumer, boots_name);
         } // else has condition
     } // end buildSimpleArmorSet()
@@ -291,6 +311,7 @@ public class RecipeSetBuilder
                         .patternLine(" T ")
                         .addCriterion("has_item", criterion)
                         ::build)
+                .setAdvancement(sword_name, build_advancement_with_condition(sword_name, condition, criterion))
                 .build(consumer, sword_name);
 
             // pickaxe
@@ -305,6 +326,7 @@ public class RecipeSetBuilder
                             .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
+                    .setAdvancement(pickaxe_name, build_advancement_with_condition(pickaxe_name, condition, criterion))
                     .build(consumer, pickaxe_name);
             }
             
@@ -320,7 +342,8 @@ public class RecipeSetBuilder
                             .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
-                    .build(consumer, axe_name);
+                   .setAdvancement(axe_name, build_advancement_with_condition(axe_name, condition, criterion))
+                   .build(consumer, axe_name);
             }
             // shovel
             if (shovel != null) {
@@ -334,6 +357,7 @@ public class RecipeSetBuilder
                             .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
+                    .setAdvancement(shovel_name, build_advancement_with_condition(shovel_name, condition, criterion))
                     .build(consumer, shovel_name);
             }
             // hoe
@@ -348,6 +372,7 @@ public class RecipeSetBuilder
                             .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
+                    .setAdvancement(hoe_name, build_advancement_with_condition(hoe_name, condition, criterion))
                     .build(consumer, hoe_name);
             }
             // shears
@@ -360,6 +385,7 @@ public class RecipeSetBuilder
                             .patternLine("S ")
                             .addCriterion("has_item", criterion)
                             ::build)
+                    .setAdvancement(shears_name, build_advancement_with_condition(shears_name, condition, criterion))
                     .build(consumer, shears_name);
             }
         } // else has condition
