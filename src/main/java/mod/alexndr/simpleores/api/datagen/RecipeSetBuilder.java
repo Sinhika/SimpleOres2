@@ -2,12 +2,16 @@ package mod.alexndr.simpleores.api.datagen;
 
 import java.util.function.Consumer;
 
+import mod.author.simplemod.init.ModItems;
+import mod.author.simplemod.init.ModTags;
 import net.minecraft.advancements.ICriterionInstance;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -39,7 +43,7 @@ public class RecipeSetBuilder
      * @param consumer passed in from RecipeProvider to builder() call.
      * @param item what the armor is made from.
      * @param variant first part of armor piece name, like 'copper' or 'ubermetal'
-     * @param criterion item to get the recipe advancement
+     * @param criterion required to get the recipe advancement; usually hasItem()
      * @param condition null for no conditions, ICondition object for a conditional recipe.
      */
     public void buildSimpleArmorSet(Consumer<IFinishedRecipe> consumer, Ingredient item, 
@@ -125,7 +129,193 @@ public class RecipeSetBuilder
                         ::build)
                 .build(consumer, boots_name);
         } // else has condition
-    } // end buildSimpleArmorSet
+    } // end buildSimpleArmorSet()
     
+    /**
+     * Used by a RecipeProvider to generate recipe sets for tool sets. Based heavily on
+     * Botania's registerToolSetRecipes() method.
+     * 
+     * @param consumer passed in from RecipeProvider to builder() call.
+     * @param item what the tools are made from, besides sticks.
+     * @param variant first part of the tool name, like 'copper' or 'ubermetal'
+     * @param criterion required to get the recipe advancement; usually hasItem().
+     * @param condition null for no conditions, ICondition object for a conditional recipe.
+     * @param has_shears true if there is a shears for this variant, false if no shears.
+     */
+    public void buildSimpleToolSet(Consumer<IFinishedRecipe> consumer, Ingredient item,
+            String variant, ICriterionInstance criterion, ICondition condition, boolean has_shears )
+    {
+        ResourceLocation sword_name = make_resource(variant + "_sword");
+        ResourceLocation pickaxe_name = make_resource(variant + "_pickaxe");
+        ResourceLocation axe_name = make_resource(variant + "_axe");
+        ResourceLocation shovel_name = make_resource(variant + "_shovel");
+        ResourceLocation hoe_name = make_resource(variant + "_hoe");
+        ResourceLocation shears_name = has_shears ? make_resource(variant + "_shears") : null;
+        
+        Ingredient stick = Ingredient.fromTag(Tags.Items.RODS_WOODEN);
+        Item sword = ForgeRegistries.ITEMS.getValue(sword_name);
+        Item pickaxe = ForgeRegistries.ITEMS.getValue(pickaxe_name);
+        Item axe = ForgeRegistries.ITEMS.getValue(axe_name);
+        Item shovel = ForgeRegistries.ITEMS.getValue(shovel_name);
+        Item hoe = ForgeRegistries.ITEMS.getValue(hoe_name);
+        Item shears = has_shears ? ForgeRegistries.ITEMS.getValue(shears_name) : null;
+
+        if (condition==null) 
+        {
+            // sword
+            ShapedRecipeBuilder.shapedRecipe(sword)
+                .key('S', item)
+                .key('T', stick)
+                .patternLine(" S")
+                .patternLine(" S")
+                .patternLine(" T")
+                .addCriterion("has_item", criterion)
+                .build(consumer);
+            
+            // axe
+            if (axe != null) {
+                ShapedRecipeBuilder.shapedRecipe(axe)
+                    .key('S', item)
+                    .key('T', stick)
+                    .patternLine("SS")
+                    .patternLine("ST")
+                    .patternLine(" T")
+                    .addCriterion("has_item", criterion)
+                    .build(consumer);
+            }
+            
+            // hoe
+            if (hoe != null) {
+                ShapedRecipeBuilder.shapedRecipe(hoe)
+                    .key('S', item)
+                    .key('T', stick)
+                    .patternLine("SS")
+                    .patternLine(" T")
+                    .patternLine(" T")
+                    .addCriterion("has_item", criterion)
+                    .build(consumer);
+            }
+            
+            // pickaxe
+            if (pickaxe != null) {
+                ShapedRecipeBuilder.shapedRecipe(pickaxe)
+                    .key('S', item)
+                    .key('T', stick)
+                    .patternLine("SSS")
+                    .patternLine(" T ")
+                    .patternLine(" T ")
+                    .addCriterion("has_item", criterion)
+                    .build(consumer);
+            }
+            
+            // shovel
+            if (shovel != null)
+            {
+                ShapedRecipeBuilder.shapedRecipe(shovel)
+                    .key('S', item)
+                    .key('T', stick)
+                    .patternLine(" S")
+                    .patternLine(" T")
+                    .patternLine(" T")
+                    .addCriterion("has_item", criterion)
+                    .build(consumer);
+            }
+            
+            if (has_shears && shears != null) 
+            {
+                ShapedRecipeBuilder.shapedRecipe(shears)
+                    .key('S', item)
+                    .patternLine(" S")
+                    .patternLine("S ")
+                    .addCriterion("has_item", criterion)
+                    .build(consumer);
+            }
+        } // end condition null
+        else 
+        {
+            // sword
+            ConditionalRecipe.builder().addCondition(condition)
+                .addRecipe(
+                    ShapedRecipeBuilder.shapedRecipe(sword)
+                        .key('S', item)
+                        .key('T', stick)
+                        .patternLine(" S")
+                        .patternLine(" S")
+                        .patternLine(" T")
+                        .addCriterion("has_item", criterion)
+                        ::build)
+                .build(consumer, sword_name);
+
+            // pickaxe
+            if (pickaxe != null) {
+                ConditionalRecipe.builder().addCondition(condition)
+                    .addRecipe(
+                        ShapedRecipeBuilder.shapedRecipe(pickaxe)
+                            .key('S', item)
+                            .key('T', stick)
+                            .patternLine("SSS")
+                            .patternLine(" T ")
+                            .patternLine(" T ")
+                            .addCriterion("has_item", criterion)
+                            ::build)
+                    .build(consumer, pickaxe_name);
+            }
+            
+            // axe
+            if (axe != null) {
+                ConditionalRecipe.builder().addCondition(condition)
+                    .addRecipe(
+                        ShapedRecipeBuilder.shapedRecipe(axe)
+                            .key('S', item)
+                            .key('T', stick)
+                            .patternLine("SS")
+                            .patternLine("ST")
+                            .patternLine(" T")
+                            .addCriterion("has_item", criterion)
+                            ::build)
+                    .build(consumer, axe_name);
+            }
+            // shovel
+            if (shovel != null) {
+                ConditionalRecipe.builder().addCondition(condition)
+                    .addRecipe(
+                        ShapedRecipeBuilder.shapedRecipe(shovel)
+                            .key('S', item)
+                            .key('T', stick)
+                            .patternLine(" S")
+                            .patternLine(" T")
+                            .patternLine(" T")
+                            .addCriterion("has_item", criterion)
+                            ::build)
+                    .build(consumer, shovel_name);
+            }
+            // hoe
+            if (hoe != null) {
+                ConditionalRecipe.builder().addCondition(condition)
+                    .addRecipe(
+                        ShapedRecipeBuilder.shapedRecipe(hoe)
+                            .key('S', item)
+                            .key('T', stick)
+                            .patternLine("SS")
+                            .patternLine(" T")
+                            .patternLine(" T")
+                            .addCriterion("has_item", criterion)
+                            ::build)
+                    .build(consumer, hoe_name);
+            }
+            // shears
+            if (has_shears && shears != null) {
+                ConditionalRecipe.builder().addCondition(condition)
+                    .addRecipe(
+                            ShapedRecipeBuilder.shapedRecipe(shears)
+                            .key('S', item)
+                            .patternLine(" S")
+                            .patternLine("S ")
+                            .addCriterion("has_item", criterion)
+                            ::build)
+                    .build(consumer, shears_name);
+            }
+        } // else has condition
+    } // end buildSimpleToolSet()
     
 } // end class
