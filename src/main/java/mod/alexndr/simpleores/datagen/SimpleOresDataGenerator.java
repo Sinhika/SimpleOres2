@@ -8,6 +8,7 @@ import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simpleores.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTags;
 import net.minecraft.data.DataGenerator;
@@ -81,6 +82,8 @@ public class SimpleOresDataGenerator
         
         protected void registerStorageRecipes(Consumer<IFinishedRecipe> consumer)
         {
+            setbuilder.buildSimpleStorageRecipes(consumer, ModItems.copper_ingot.get(), ModBlocks.copper_block.get(), 
+                                                 ModItems.copper_nugget.get(), hasItem(ModItems.copper_ingot.get()));
         } // end registerStorageRecipes()
         
         protected void registerMiscRecipes(Consumer<IFinishedRecipe> consumer)
