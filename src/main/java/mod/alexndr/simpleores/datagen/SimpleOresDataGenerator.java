@@ -5,7 +5,6 @@ import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 import java.util.function.Consumer;
 
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.api.config.FlagCondition;
 import mod.alexndr.simpleores.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simpleores.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
@@ -15,7 +14,6 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -71,6 +69,8 @@ public class SimpleOresDataGenerator
         
         protected void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
         {
+            setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_COPPER), "copper", 
+                                          hasItem(ModItems.copper_ingot.get()), flag("copper_tools"), true);
         } // end registerToolRecipes()
         
         protected void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
