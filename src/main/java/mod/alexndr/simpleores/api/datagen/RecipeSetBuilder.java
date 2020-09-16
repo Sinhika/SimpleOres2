@@ -65,7 +65,7 @@ public class RecipeSetBuilder
         // ingot <=> nuggets
         if (nugget != null)
         {
-            String ingot_name = ingot.asItem().getTranslationKey();
+            String ingot_name = ingot.asItem().toString();
                     
             ShapelessRecipeBuilder.shapelessRecipe(nugget.asItem(), 9)
                 .addIngredient(ingot)
@@ -78,7 +78,7 @@ public class RecipeSetBuilder
                 .patternLine("SSS")
                 .patternLine("SSS")
                 .addCriterion("has_item", criterion)
-                .build(consumer, make_resource(ingot_name + "_from_nugget"));
+                .build(consumer, make_resource(ingot_name + "_from_nuggets"));
         }
     } // end buildSimpleStorageRecipes
     
