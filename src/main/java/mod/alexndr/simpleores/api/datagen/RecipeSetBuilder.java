@@ -2,11 +2,10 @@ package mod.alexndr.simpleores.api.datagen;
 
 import java.util.function.Consumer;
 
-import mod.author.simplemod.init.ModItems;
-import mod.author.simplemod.init.ModTags;
 import net.minecraft.advancements.ICriterionInstance;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.data.ShapelessRecipeBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
@@ -36,6 +35,54 @@ public class RecipeSetBuilder
         return new ResourceLocation(this.modid, path);
     }
 
+    /**
+     * Used by a RecipeProvider to generate basic storage recipes for an ingot/block/nugget set.
+     * These recipes are non-conditional.
+     * 
+     * @param consumer
+     * @param ingot
+     * @param block
+     * @param nugget
+     * @param criterion
+     */
+    public void buildSimpleStorageRecipes(Consumer<IFinishedRecipe> consumer, 
+                                          IItemProvider ingot, IItemProvider block,
+                                          IItemProvider nugget, ICriterionInstance criterion)
+    {
+        // block <=> ingots
+        ShapelessRecipeBuilder.shapelessRecipe(ingot.asItem(), 9)
+            .addIngredient(block.asItem())
+            .addCriterion("has_item", criterion)
+            .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(block.asItem())
+            .key('S', ingot)
+            .patternLine("SSS")
+            .patternLine("SSS")
+            .patternLine("SSS")
+            .addCriterion("has_item", criterion)
+            .build(consumer);
+        
+        // ingot <=> nuggets
+        if (nugget != null)
+        {
+            String ingot_name = ingot.asItem().getTranslationKey();
+                    
+            ShapelessRecipeBuilder.shapelessRecipe(nugget.asItem(), 9)
+                .addIngredient(ingot)
+                .addCriterion("has_item", criterion)
+                .build(consumer);
+            
+            ShapedRecipeBuilder.shapedRecipe(ingot)
+                .key('S', nugget.asItem())
+                .patternLine("SSS")
+                .patternLine("SSS")
+                .patternLine("SSS")
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(ingot_name + "_from_nugget"));
+        }
+    } // end buildSimpleStorageRecipes
+    
+    
     /**
      * Used by a RecipeProvider to generate recipe sets for armor sets. Based heavily on
      * Botania's registerSimpleArmorSet() method.
@@ -166,9 +213,9 @@ public class RecipeSetBuilder
             ShapedRecipeBuilder.shapedRecipe(sword)
                 .key('S', item)
                 .key('T', stick)
-                .patternLine(" S")
-                .patternLine(" S")
-                .patternLine(" T")
+                .patternLine(" S ")
+                .patternLine(" S ")
+                .patternLine(" T ")
                 .addCriterion("has_item", criterion)
                 .build(consumer);
             
@@ -177,9 +224,9 @@ public class RecipeSetBuilder
                 ShapedRecipeBuilder.shapedRecipe(axe)
                     .key('S', item)
                     .key('T', stick)
-                    .patternLine("SS")
-                    .patternLine("ST")
-                    .patternLine(" T")
+                    .patternLine("SS ")
+                    .patternLine("ST ")
+                    .patternLine(" T ")
                     .addCriterion("has_item", criterion)
                     .build(consumer);
             }
@@ -189,9 +236,9 @@ public class RecipeSetBuilder
                 ShapedRecipeBuilder.shapedRecipe(hoe)
                     .key('S', item)
                     .key('T', stick)
-                    .patternLine("SS")
-                    .patternLine(" T")
-                    .patternLine(" T")
+                    .patternLine("SS ")
+                    .patternLine(" T ")
+                    .patternLine(" T ")
                     .addCriterion("has_item", criterion)
                     .build(consumer);
             }
@@ -214,9 +261,9 @@ public class RecipeSetBuilder
                 ShapedRecipeBuilder.shapedRecipe(shovel)
                     .key('S', item)
                     .key('T', stick)
-                    .patternLine(" S")
-                    .patternLine(" T")
-                    .patternLine(" T")
+                    .patternLine(" S ")
+                    .patternLine(" T ")
+                    .patternLine(" T ")
                     .addCriterion("has_item", criterion)
                     .build(consumer);
             }
@@ -239,9 +286,9 @@ public class RecipeSetBuilder
                     ShapedRecipeBuilder.shapedRecipe(sword)
                         .key('S', item)
                         .key('T', stick)
-                        .patternLine(" S")
-                        .patternLine(" S")
-                        .patternLine(" T")
+                        .patternLine(" S ")
+                        .patternLine(" S ")
+                        .patternLine(" T ")
                         .addCriterion("has_item", criterion)
                         ::build)
                 .build(consumer, sword_name);
@@ -268,9 +315,9 @@ public class RecipeSetBuilder
                         ShapedRecipeBuilder.shapedRecipe(axe)
                             .key('S', item)
                             .key('T', stick)
-                            .patternLine("SS")
-                            .patternLine("ST")
-                            .patternLine(" T")
+                            .patternLine("SS ")
+                            .patternLine("ST ")
+                            .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
                     .build(consumer, axe_name);
@@ -282,9 +329,9 @@ public class RecipeSetBuilder
                         ShapedRecipeBuilder.shapedRecipe(shovel)
                             .key('S', item)
                             .key('T', stick)
-                            .patternLine(" S")
-                            .patternLine(" T")
-                            .patternLine(" T")
+                            .patternLine(" S ")
+                            .patternLine(" T ")
+                            .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
                     .build(consumer, shovel_name);
@@ -296,9 +343,9 @@ public class RecipeSetBuilder
                         ShapedRecipeBuilder.shapedRecipe(hoe)
                             .key('S', item)
                             .key('T', stick)
-                            .patternLine("SS")
-                            .patternLine(" T")
-                            .patternLine(" T")
+                            .patternLine("SS ")
+                            .patternLine(" T ")
+                            .patternLine(" T ")
                             .addCriterion("has_item", criterion)
                             ::build)
                     .build(consumer, hoe_name);
