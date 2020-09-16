@@ -6,6 +6,7 @@ import java.util.function.Consumer;
 
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.api.config.FlagCondition;
+import mod.alexndr.simpleores.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simpleores.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModItems;
@@ -49,7 +50,7 @@ public class SimpleOresDataGenerator
      * @author Sinhika
      *
      */
-    public static class Recipes extends RecipeProvider implements IConditionBuilder
+    public static class Recipes extends RecipeProvider implements IConditionBuilder, ISimpleConditionBuilder
     {
         private RecipeSetBuilder setbuilder;
         
@@ -97,7 +98,7 @@ public class SimpleOresDataGenerator
          */
         public ICondition flag(String name)
         {
-            return new FlagCondition(SimpleOresConfig.INSTANCE, name, new ResourceLocation("simpleores:flag"));
+            return impl_flag(SimpleOres.MODID, SimpleOresConfig.INSTANCE, name);
         }
 
     } // end subclass SimpleModDataGenerator$Recipes.
