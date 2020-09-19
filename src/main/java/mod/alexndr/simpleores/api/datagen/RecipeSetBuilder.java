@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.ICriterionInstance;
+import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.data.ShapelessRecipeBuilder;
@@ -49,6 +50,31 @@ public class RecipeSetBuilder
                             .withRewards(AdvancementRewards.Builder.recipe(recipe_id))
                             .withCriterion("has_item", criterion));
     }
+    
+    
+    /**
+     * Used by a RecipeProvider to generate vanilla recycling to nuggets of a list of items-as-ingredients.
+     * 
+     * @param consumer passed in from RecipeProvider to builder() call.
+     * @param ingredients items that can be recycled to yield nugget.
+     * @param nugget output item
+     * @param criterion required to get the recipe advancement; usually hasItem()
+     */
+    public void buildVanillaRecyclingRecipes(Consumer<IFinishedRecipe> consumer, Ingredient ingredients, 
+                                             IItemProvider nugget, ICriterionInstance criterion, 
+                                             float experienceIn, int cookingTimeIn)
+    {
+        String recipe_name = nugget.asItem().toString() + "_from_smelting";
+        CookingRecipeBuilder.smeltingRecipe(ingredients, nugget, experienceIn, cookingTimeIn)
+            .addCriterion(recipe_name, criterion)
+            .build(consumer, make_resource(recipe_name));
+            
+        recipe_name = nugget.asItem().toString() + "_from_blasting";
+        CookingRecipeBuilder.blastingRecipe(ingredients, nugget, experienceIn, cookingTimeIn/2)
+            .addCriterion(recipe_name, criterion)
+            .build(consumer, make_resource(recipe_name));
+            
+    } // end buildVanillaRecyclingRecipes
     
     /**
      * Used by a RecipeProvider to generate basic storage recipes for an ingot/block/nugget set.
