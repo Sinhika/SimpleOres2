@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "adamantium_tools",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " S",
+          "S "
+        ],
+        "key": {
+          "S": {
+            "tag": "forge:ingots/adamantium"
+          }
+        },
+        "result": {
+          "item": "simpleores:adamantium_shears"
+        }
+      }
+    }
+  ]
+}

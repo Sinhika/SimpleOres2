@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "tin_tools",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SS ",
+          " T ",
+          " T "
+        ],
+        "key": {
+          "S": {
+            "tag": "forge:ingots/tin"
+          },
+          "T": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "simpleores:tin_hoe"
+        }
+      }
+    }
+  ]
+}
