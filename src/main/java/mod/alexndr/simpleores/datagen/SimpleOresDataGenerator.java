@@ -143,6 +143,35 @@ public class SimpleOresDataGenerator
 
         protected void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
         {
+            setbuilder.buildVanillaRecyclingRecipes(consumer,
+                    Ingredient.fromItems(ModItems.adamantium_axe.get(), ModItems.adamantium_boots.get(), ModItems.adamantium_chestplate.get(),
+                            ModItems.adamantium_helmet.get(), ModItems.adamantium_hoe.get(), ModItems.adamantium_leggings.get(), 
+                            ModItems.adamantium_pickaxe.get(),ModItems.adamantium_shovel.get(), ModItems.adamantium_sword.get()), 
+                    ModItems.adamantium_nugget.get(), hasItem(ModItems.adamantium_axe.get()), 
+                    0.3F, 200);
+            
+            setbuilder.buildVanillaRecyclingRecipes(consumer,
+                    Ingredient.fromItems(ModItems.tin_axe.get(), ModItems.tin_boots.get(), ModItems.tin_chestplate.get(),
+                            ModItems.tin_helmet.get(), ModItems.tin_hoe.get(), ModItems.tin_leggings.get(), 
+                            ModItems.tin_pickaxe.get(),ModItems.tin_shovel.get(), ModItems.tin_sword.get()), 
+                    ModItems.tin_nugget.get(), hasItem(ModItems.tin_axe.get()), 
+                    0.2F, 200);
+            
+            setbuilder.buildVanillaRecyclingRecipes(consumer,
+                    Ingredient.fromItems(ModItems.copper_axe.get(), ModItems.copper_boots.get(), ModItems.copper_chestplate.get(),
+                            ModItems.copper_helmet.get(), ModItems.copper_hoe.get(), ModItems.copper_leggings.get(), 
+                            ModItems.copper_pickaxe.get(),ModItems.copper_shovel.get(), ModItems.copper_sword.get(),
+                            ModItems.copper_bucket.get()), 
+                    ModItems.copper_nugget.get(), hasItem(ModItems.copper_axe.get()), 
+                    0.2F, 200);
+            
+            setbuilder.buildVanillaRecyclingRecipes(consumer,
+                    Ingredient.fromItems(ModItems.mythril_axe.get(), ModItems.mythril_boots.get(), ModItems.mythril_chestplate.get(),
+                            ModItems.mythril_helmet.get(), ModItems.mythril_hoe.get(), ModItems.mythril_leggings.get(), 
+                            ModItems.mythril_pickaxe.get(),ModItems.mythril_shovel.get(), ModItems.mythril_sword.get()), 
+                    ModItems.mythril_nugget.get(), hasItem(ModItems.mythril_axe.get()), 
+                    0.4F, 200);
+            
         } // end registerFurnaceRecipes()
         
         /**
