@@ -143,6 +143,17 @@ public class SimpleOresDataGenerator
 
         protected void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
         {
+            setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
+                    hasItem(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
+            setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.copper_ore.get().asItem()), ModItems.copper_ingot.get(), 
+                    hasItem(ModBlocks.copper_ore.get().asItem()), 0.4F, 200);
+            setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
+                    hasItem(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200);
+            setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 
+                    hasItem(ModBlocks.onyx_ore.get().asItem()), 1.0F, 200);
+            setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.tin_ore.get().asItem()), ModItems.tin_ingot.get(), 
+                    hasItem(ModBlocks.tin_ore.get().asItem()), 0.4F, 200);
+            
             setbuilder.buildVanillaRecyclingRecipes(consumer,
                     Ingredient.fromItems(ModItems.adamantium_axe.get(), ModItems.adamantium_boots.get(), ModItems.adamantium_chestplate.get(),
                             ModItems.adamantium_helmet.get(), ModItems.adamantium_hoe.get(), ModItems.adamantium_leggings.get(), 
