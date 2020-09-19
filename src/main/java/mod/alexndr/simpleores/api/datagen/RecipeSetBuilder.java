@@ -53,6 +53,31 @@ public class RecipeSetBuilder
     
     
     /**
+     * 
+     * @param consumer Used by a RecipeProvider to generate ore-to-ingot smelting and blasting recipes.
+     * 
+     * @param consumer passed in from RecipeProvider to builder() call.
+     * @param oreIn ore ingredient.
+     * @param ingotOut ingot or gem created from smelting/blasting oreIn.
+     * @param criterion required to get the recipe advancement; usually hasItem()
+     * @param experienceIn  smelting/blasting xp.
+     * @param cookingTimeIn smelting cook time. Blasting time is automatically 1/2 that.
+     */
+    public void buildOre2IngotRecipes(Consumer<IFinishedRecipe> consumer, Ingredient oreIn, IItemProvider ingotOut,
+            ICriterionInstance criterion, float experienceIn, int cookingTimeIn)
+    {
+        String recipe_name = ingotOut.asItem().toString() + "_from_smelting";
+        CookingRecipeBuilder.smeltingRecipe(oreIn, ingotOut, experienceIn, cookingTimeIn)
+            .addCriterion(recipe_name, criterion)
+            .build(consumer, make_resource(recipe_name));
+
+       recipe_name = ingotOut.asItem().toString() + "_from_blasting";
+       CookingRecipeBuilder.blastingRecipe(oreIn, ingotOut, experienceIn, cookingTimeIn/2)
+           .addCriterion(recipe_name, criterion)
+           .build(consumer, make_resource(recipe_name));
+    }
+    
+    /**
      * Used by a RecipeProvider to generate vanilla recycling to nuggets of a list of items-as-ingredients.
      * 
      * @param consumer passed in from RecipeProvider to builder() call.
@@ -73,7 +98,6 @@ public class RecipeSetBuilder
         CookingRecipeBuilder.blastingRecipe(ingredients, nugget, experienceIn, cookingTimeIn/2)
             .addCriterion(recipe_name, criterion)
             .build(consumer, make_resource(recipe_name));
-            
     } // end buildVanillaRecyclingRecipes
     
     /**
