@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "adamantium_tools",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " S ",
+          " S ",
+          " T "
+        ],
+        "key": {
+          "S": {
+            "tag": "forge:ingots/adamantium"
+          },
+          "T": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "simpleores:adamantium_sword"
+        }
+      }
+    }
+  ]
+}
