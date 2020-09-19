@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:tin_ingot_from_blasting"
+    ]
+  },
+  "criteria": {
+    "tin_ingot_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "simpleores:tin_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:tin_ingot_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tin_ingot_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}
