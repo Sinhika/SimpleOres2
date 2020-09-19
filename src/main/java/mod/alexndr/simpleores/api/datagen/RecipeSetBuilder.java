@@ -38,7 +38,7 @@ public class RecipeSetBuilder
         return new ResourceLocation(this.modid, path);
     }
 
-    public  ConditionalAdvancement.Builder build_advancement_with_condition(ResourceLocation recipe_id, ICondition condition,
+    public ConditionalAdvancement.Builder build_advancement_with_condition(ResourceLocation recipe_id, ICondition condition,
                                                                             ICriterionInstance criterion)
     {
         return ConditionalAdvancement.builder()
@@ -96,6 +96,53 @@ public class RecipeSetBuilder
                 .build(consumer, make_resource(ingot_name + "_from_nuggets"));
         }
     } // end buildSimpleStorageRecipes
+    
+    
+    /**
+     * Used by a RecipeProvider to generate rod and mod bow recipes (that follow the usual pattern), 
+     * optionally with a condition.
+     *
+     */
+    public void buildModBowRecipe(Consumer<IFinishedRecipe> consumer, ResourceLocation bow_name, Ingredient rod_material,
+            Item rod, Ingredient keystone, ICriterionInstance criterion, ICondition condition)
+    {
+            Item bow = ForgeRegistries.ITEMS.getValue(bow_name);
+            Ingredient string = Ingredient.fromTag(Tags.Items.STRING);
+                    
+            ShapedRecipeBuilder.shapedRecipe(rod)
+                .key('S', rod_material)
+                .patternLine("S")
+                .patternLine("S")
+                .addCriterion("has_item", criterion)
+                .build(consumer);
+            
+            if (condition==null)
+            {
+                ShapedRecipeBuilder.shapedRecipe(bow)
+                    .key('X', rod)
+                    .key('Y', string)
+                    .key('Z', keystone)
+                    .patternLine(" XY")
+                    .patternLine("Z Y")
+                    .patternLine(" XY")
+                    .addCriterion("has_item", criterion)
+                    .build(consumer);
+            } // end-if no condition
+            else {
+                ConditionalRecipe.builder().addCondition(condition)
+                .addRecipe(ShapedRecipeBuilder.shapedRecipe(bow)
+                    .key('X', rod)
+                    .key('Y', string)
+                    .key('Z', keystone)
+                    .patternLine(" XY")
+                    .patternLine("Z Y")
+                    .patternLine(" XY")
+                    .addCriterion("has_item", criterion)               
+                    ::build)
+                .setAdvancement(bow_name, build_advancement_with_condition(bow_name, condition, criterion))
+                .build(consumer, bow_name);
+            } // end-else condition
+    } // end buildModBowRecipe()
     
     
     /**

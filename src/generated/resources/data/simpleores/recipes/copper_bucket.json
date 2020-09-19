@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "copper_bucket",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S S",
+          " S "
+        ],
+        "key": {
+          "S": {
+            "tag": "forge:ingots/copper"
+          }
+        },
+        "result": {
+          "item": "simpleores:copper_bucket"
+        }
+      }
+    }
+  ]
+}
