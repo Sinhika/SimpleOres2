@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_nugget_from_blasting"
+    ]
+  },
+  "criteria": {
+    "mythril_nugget_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "simpleores:mythril_axe"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:mythril_nugget_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mythril_nugget_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}
