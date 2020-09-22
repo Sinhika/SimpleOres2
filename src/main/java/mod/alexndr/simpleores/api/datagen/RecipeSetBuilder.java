@@ -148,6 +148,67 @@ public class RecipeSetBuilder
     } // end buildSimpleStorageRecipes
     
     
+    public void buildChunkConversionRecipes(Consumer<IFinishedRecipe> consumer, IItemProvider nugget,
+                                            IItemProvider medium_chunk, IItemProvider large_chunk, 
+                                            ICriterionInstance criterion)
+    {
+        String nugget_name = nugget.asItem().toString();
+        
+        if (medium_chunk != null)
+        {
+            String mchunk_name = medium_chunk.asItem().toString();
+            
+            // nuggets to medium chunk,
+            ShapedRecipeBuilder.shapedRecipe(medium_chunk)
+                .key('S', nugget.asItem())
+                .patternLine("SS")
+                .patternLine("SS")
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(mchunk_name + "_from_nuggets"));
+                
+            // medium chunk to nuggets
+            ShapelessRecipeBuilder.shapelessRecipe(nugget.asItem(), 4)
+                .addIngredient(medium_chunk)
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(nugget_name + "_from_medium_chunk"));
+        }
+        if (large_chunk != null && medium_chunk != null)
+        {
+            String lchunk_name = large_chunk.asItem().toString();
+            String mchunk_name = medium_chunk.asItem().toString();
+            
+            // large chunk to medium chunks
+            ShapelessRecipeBuilder.shapelessRecipe(medium_chunk.asItem(), 2)
+                .addIngredient(large_chunk)
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(mchunk_name + "_from_large_chunk"));
+            
+            // medium chunks + nugget to large chunk
+            ShapelessRecipeBuilder.shapelessRecipe(large_chunk.asItem())
+                .addIngredient(medium_chunk, 2)
+                .addIngredient(nugget)
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(lchunk_name + "_from_medium_chunks"));
+            
+            // nuggets & medium chunk to large chunk.
+            ShapelessRecipeBuilder.shapelessRecipe(large_chunk.asItem())
+                .addIngredient(nugget, 5)
+                .addIngredient(medium_chunk)
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(lchunk_name + "_from_nuggets"));
+           
+        } // end-if large_chunk && medium_chunk
+        else if (large_chunk != null)
+        {
+            // large chunk to nuggets
+            ShapelessRecipeBuilder.shapelessRecipe(nugget.asItem(), 8)
+                .addIngredient(large_chunk)
+                .addCriterion("has_item", criterion)
+                .build(consumer, make_resource(nugget_name + "_from_large_chunk"));
+        } // end else-if just large_chunk exists.
+    } // end buildChunkConversionRecipes
+    
+    
     /**
      * Used by a RecipeProvider to generate rod and mod bow recipes (that follow the usual pattern), 
      * optionally with a condition.
