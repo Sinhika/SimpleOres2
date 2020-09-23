@@ -2,9 +2,15 @@ package mod.alexndr.simpleores.datagen;
 
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
+import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+import com.mojang.datafixers.util.Pair;
 
 import mod.alexndr.simpleores.SimpleOres;
+import mod.alexndr.simpleores.api.datagen.AbstractLootTableProvider;
 import mod.alexndr.simpleores.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simpleores.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
@@ -20,6 +26,8 @@ import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.LootParameterSet;
+import net.minecraft.world.storage.loot.LootTable.Builder;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -48,12 +56,46 @@ public class SimpleOresDataGenerator
         {
             gen.addProvider(new Recipes(gen));
             gen.addProvider(new ModBlockTags(gen));
+            gen.addProvider(new SimpleOresLootTableProvider(gen));
         }
      } // end gatherData()
 
-
+    
     /**
-     * TagsProvider for SimpleOres
+     * LootTableProvider for SimpleOres. Again, proof-of-concept.
+     */
+    public static class SimpleOresLootTableProvider extends AbstractLootTableProvider
+    {
+
+        public SimpleOresLootTableProvider(DataGenerator dataGeneratorIn)
+        {
+            super(dataGeneratorIn);
+        }
+
+        @Override
+        protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables()
+        {
+            tables.clear();
+            standardDropTable(ModBlocks.adamantium_block.get());
+            standardDropTable(ModBlocks.adamantium_ore.get());
+            standardDropTable(ModBlocks.copper_block.get());
+            standardDropTable(ModBlocks.copper_ore.get());
+            standardDropTable(ModBlocks.tin_block.get());
+            standardDropTable(ModBlocks.tin_ore.get());
+            standardDropTable(ModBlocks.mythril_block.get());
+            standardDropTable(ModBlocks.mythril_ore.get());
+            standardDropTable(ModBlocks.onyx_block.get());
+            
+            specialDropTable(ModBlocks.onyx_ore.get(), ModItems.onyx_gem.get());
+            return tables;
+        }
+        
+    } // end-class SimpleOresLootTableProvider
+    
+    /**
+     * TagsProvider for SimpleOres. Mostly this is proof-of-concept, and guidance for other
+     * mods on how to do tags with datagen.
+     * 
      * @author Sinhika
      *
      */
