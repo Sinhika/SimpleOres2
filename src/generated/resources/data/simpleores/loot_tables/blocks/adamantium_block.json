@@ -2,12 +2,11 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name" : "simpleores:droppool",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "simpleores:adamantium_ore"
+          "name": "simpleores:adamantium_block"
         }
       ],
       "conditions": [
