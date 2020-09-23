@@ -3,11 +3,11 @@
   "values": [
     "#forge:ores/copper",
     "#forge:ores/tin",
+    "#forge:ores/adamantine",
+    "#forge:ores/adamantite",
+    "#forge:ores/adamantium",
     "#forge:ores/mithril",
     "#forge:ores/mythril",
-    "#forge:ores/adamantium",
-    "#forge:ores/adamantite",
-    "#forge:ores/adamantine",
     "#forge:ores/onyx"
   ]
 }

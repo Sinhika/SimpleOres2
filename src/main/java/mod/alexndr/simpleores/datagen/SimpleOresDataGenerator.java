@@ -11,12 +11,14 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTags;
+import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
@@ -45,11 +47,96 @@ public class SimpleOresDataGenerator
         if (event.includeServer())
         {
             gen.addProvider(new Recipes(gen));
+            gen.addProvider(new ModBlockTags(gen));
         }
      } // end gatherData()
 
+
+    /**
+     * TagsProvider for SimpleOres
+     * @author Sinhika
+     *
+     */
+    public static class ModBlockTags extends BlockTagsProvider
+    {
+        public ModBlockTags(DataGenerator generatorIn)
+        {
+            super(generatorIn);
+        }
+
+        @Override
+        protected void registerTags()
+        {
+            registerOreTags();
+            registerStorageBlockTags();
+        } // end registerTags()
+        
+        private void registerStorageBlockTags()
+        {
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/adamantium")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/adamantine")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/adamantite")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/copper")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/tin")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/mythril")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/mithril")))
+                .add(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/onyx")));
+            
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/adamantium")))
+                    .add(ModBlocks.adamantium_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/adamantine")))
+                    .add(ModBlocks.adamantium_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/adamantite")))
+                    .add(ModBlocks.adamantium_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/copper")))
+                    .add(ModBlocks.copper_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/tin")))
+                    .add(ModBlocks.tin_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/mythril")))
+                    .add(ModBlocks.mythril_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/mithril")))
+                    .add(ModBlocks.mythril_block.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "storage_blocks/onyx")))
+                    .add(ModBlocks.onyx_block.get());
+
+        } // end registerStorageBlockTags
+        
+        private void registerOreTags()
+        {
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/copper")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/tin")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/adamantine")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/adamantite")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/adamantium")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/mithril")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/mythril")))
+                    .add(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/onyx")));
+
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/copper")))
+                    .add(ModBlocks.copper_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/tin")))
+                    .add(ModBlocks.tin_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/adamantium")))
+                    .add(ModBlocks.adamantium_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/adamantine")))
+                    .add(ModBlocks.adamantium_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/adamantite")))
+                    .add(ModBlocks.adamantium_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/mythril")))
+                    .add(ModBlocks.mythril_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/mithril")))
+                    .add(ModBlocks.mythril_ore.get());
+            this.getBuilder(new BlockTags.Wrapper(new ResourceLocation("forge", "ores/onyx")))
+                    .add(ModBlocks.onyx_ore.get());
+            
+        } // end registerOreTags()
+        
+    } // end-class ModBlockTags
+   
     /** 
-     * RecipeProvider for SimpleMod.
+     * RecipeProvider for SimpleOres.
      * @author Sinhika
      *
      */
