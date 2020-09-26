@@ -29,7 +29,7 @@ import net.minecraft.world.storage.loot.LootPool;
 import net.minecraft.world.storage.loot.LootTable;
 import net.minecraft.world.storage.loot.LootTableManager;
 import net.minecraft.world.storage.loot.StandaloneLootEntry;
-import net.minecraft.world.storage.loot.ValidationTracker;
+import net.minecraft.world.storage.loot.ValidationResults;
 import net.minecraft.world.storage.loot.conditions.ILootCondition;
 import net.minecraft.world.storage.loot.conditions.MatchTool;
 import net.minecraft.world.storage.loot.conditions.SurvivesExplosion;
@@ -114,9 +114,9 @@ public abstract class AbstractLootTableProvider extends LootTableProvider
 
     
     @Override
-    protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker)
+    protected void validate(Map<ResourceLocation, LootTable> map, ValidationResults validationtracker)
     {
-        map.forEach((loc, table) -> LootTableManager.func_227508_a_(validationtracker, loc, table));
+        map.forEach((loc, table) -> LootTableManager.func_215302_a(validationtracker, loc, table, map::get));
     }
    
     
