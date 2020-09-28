@@ -1,6 +1,5 @@
 package mod.alexndr.simpleores.config;
 
-import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraftforge.fml.config.ModConfig;
 
 /**

@@ -17,24 +17,24 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.LootTableProvider;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.loot.ConstantRange;
+import net.minecraft.loot.ILootFunctionConsumer;
+import net.minecraft.loot.ItemLootEntry;
+import net.minecraft.loot.LootEntry;
+import net.minecraft.loot.LootParameterSet;
+import net.minecraft.loot.LootParameterSets;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTableManager;
+import net.minecraft.loot.StandaloneLootEntry;
+import net.minecraft.loot.ValidationTracker;
+import net.minecraft.loot.conditions.ILootCondition;
+import net.minecraft.loot.conditions.MatchTool;
+import net.minecraft.loot.conditions.SurvivesExplosion;
+import net.minecraft.loot.functions.ApplyBonus;
+import net.minecraft.loot.functions.ExplosionDecay;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.storage.loot.ConstantRange;
-import net.minecraft.world.storage.loot.ILootFunctionConsumer;
-import net.minecraft.world.storage.loot.ItemLootEntry;
-import net.minecraft.world.storage.loot.LootEntry;
-import net.minecraft.world.storage.loot.LootParameterSet;
-import net.minecraft.world.storage.loot.LootParameterSets;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.LootTable;
-import net.minecraft.world.storage.loot.LootTableManager;
-import net.minecraft.world.storage.loot.StandaloneLootEntry;
-import net.minecraft.world.storage.loot.ValidationTracker;
-import net.minecraft.world.storage.loot.conditions.ILootCondition;
-import net.minecraft.world.storage.loot.conditions.MatchTool;
-import net.minecraft.world.storage.loot.conditions.SurvivesExplosion;
-import net.minecraft.world.storage.loot.functions.ApplyBonus;
-import net.minecraft.world.storage.loot.functions.ExplosionDecay;
 
 /**
  * A LootTableProvider class with helper functions. Based on work by sciwhiz12
@@ -116,7 +116,7 @@ public abstract class AbstractLootTableProvider extends LootTableProvider
     @Override
     protected void validate(Map<ResourceLocation, LootTable> map, ValidationTracker validationtracker)
     {
-        map.forEach((loc, table) -> LootTableManager.func_227508_a_(validationtracker, loc, table));
+        map.forEach((loc, table) -> LootTableManager.validateLootTable(validationtracker, loc, table));
     }
    
     

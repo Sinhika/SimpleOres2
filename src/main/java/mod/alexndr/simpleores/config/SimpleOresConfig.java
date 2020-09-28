@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import mod.alexndr.simpleores.api.config.ISimpleConfig;
-import net.minecraft.world.gen.placement.CountRangeConfig;
 
 public class SimpleOresConfig implements ISimpleConfig
 {
