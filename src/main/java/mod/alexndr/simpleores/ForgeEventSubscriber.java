@@ -153,7 +153,7 @@ public final class ForgeEventSubscriber
     /**
      * Biome loading triggers ore generation.
      */
-    @SubscribeEvent
+    @SubscribeEvent(priority=EventPriority.HIGH)
     public static void onBiomeLoading(BiomeLoadingEvent evt)
     {
         if (!OreGeneration.checkAndInitBiome(evt)) return;
@@ -165,7 +165,6 @@ public final class ForgeEventSubscriber
         else {
             OreGeneration.generateOverworldOres(evt);
         }
-        evt.setPhase(EventPriority.HIGH);
     } // end onBiomeLoading()
     
 } // end-class
