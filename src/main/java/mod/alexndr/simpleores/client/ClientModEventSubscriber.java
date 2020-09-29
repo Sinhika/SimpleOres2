@@ -3,11 +3,9 @@ package mod.alexndr.simpleores.client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.simplecorelib.client.ClientUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModItems;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemModelsProperties;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -34,22 +32,9 @@ public class ClientModEventSubscriber
     @SubscribeEvent
     public static void onFMLClientSetupEvent(final FMLClientSetupEvent event) 
     {
-        setupBowModelProperties(ModItems.mythril_bow.get());
-        setupBowModelProperties(ModItems.onyx_bow.get());
+        ClientUtils.setupBowModelProperties(ModItems.mythril_bow.get());
+        ClientUtils.setupBowModelProperties(ModItems.onyx_bow.get());
         LOGGER.debug("bow model properties set.");
     } // end onFMLClientSetupEvent()
 
-    private static void setupBowModelProperties(Item bow) 
-    {
-        ItemModelsProperties.registerProperty(bow, new ResourceLocation("pull"), (p0, p1, p2) -> {
-            if (p2 == null) {
-               return 0.0F;
-            } else {
-               return p2.getActiveItemStack() != p0 ? 0.0F : (float)(p0.getUseDuration() - p2.getItemInUseCount()) / 20.0F;
-            }
-         });
-        ItemModelsProperties.registerProperty(bow, new ResourceLocation("pulling"), (p0, p1, p2) -> {
-            return p2 != null && p2.isHandActive() && p2.getActiveItemStack() == p0 ? 1.0F : 0.0F;
-         });
-    }
 } // end class

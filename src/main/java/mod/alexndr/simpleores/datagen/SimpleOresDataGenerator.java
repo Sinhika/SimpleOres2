@@ -9,10 +9,10 @@ import java.util.function.Supplier;
 
 import com.mojang.datafixers.util.Pair;
 
+import mod.alexndr.simplecorelib.datagen.AbstractLootTableProvider;
+import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
+import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.api.datagen.AbstractLootTableProvider;
-import mod.alexndr.simpleores.api.datagen.ISimpleConditionBuilder;
-import mod.alexndr.simpleores.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;

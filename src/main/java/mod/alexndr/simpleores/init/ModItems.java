@@ -1,7 +1,7 @@
 package mod.alexndr.simpleores.init;
 
+import mod.alexndr.simplecorelib.content.SimpleShearsItem;
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.api.content.SimpleShearsItem;
 import mod.alexndr.simpleores.content.CopperBucket;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;

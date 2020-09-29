@@ -7,11 +7,10 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.alexndr.simpleores.api.config.FlagCondition;
+import mod.alexndr.simplecorelib.config.FlagCondition;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
-import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.item.BlockItem;
@@ -21,29 +20,23 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@SuppressWarnings("deprecation")
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = MOD)
 public final class ModEventSubscriber 
 {
 	private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Mod Event Subscriber");
 
     /**
-     * For best inter-mod compatibility, run ore generation in a DeferredWorkQueue, per dieseiben07.
      * @param event
      */
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-        DeferredWorkQueue.runLater( ()-> {
-            OreGeneration.setupOreGen();
-        });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
@@ -96,5 +89,5 @@ public final class ModEventSubscriber
 	       CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
                                                    new ResourceLocation(SimpleOres.MODID, "flag")));	    
 	} // end registerRecipeSerializers
-	
+
 } // end class ModEventSubscriber

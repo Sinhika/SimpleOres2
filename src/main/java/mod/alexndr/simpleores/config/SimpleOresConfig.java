@@ -3,7 +3,7 @@ package mod.alexndr.simpleores.config;
 import java.util.HashMap;
 import java.util.Map;
 
-import mod.alexndr.simpleores.api.config.ISimpleConfig;
+import mod.alexndr.simplecorelib.config.ISimpleConfig;
 
 public class SimpleOresConfig implements ISimpleConfig
 {
@@ -16,17 +16,12 @@ public class SimpleOresConfig implements ISimpleConfig
     public static boolean enableOnyxOre;
     public static boolean addModLootToChests;
     
-    // Vein/Chunk Count, MinHeight, MaxHeightBase, MaxHeight
-    public static  CountRangeConfig copper_cfg;
-    public static  int copper_veinsize = 7;
-    public static  CountRangeConfig tin_cfg;
-    public static  int tin_veinsize = 7;
-    public static  CountRangeConfig mythril_cfg;
-    public static  int mythril_veinsize = 4;
-    public static  CountRangeConfig adamantium_cfg;
-    public static  int adamantium_veinsize = 4;
-    public static  CountRangeConfig onyx_cfg;
-    public static  int onyx_veinsize = 7;
+    //  MinHeight, MaxHeightBase, MaxHeight
+    public static ModOreConfig copper_cfg;
+    public static ModOreConfig tin_cfg;
+    public static ModOreConfig mythril_cfg;
+    public static ModOreConfig adamantium_cfg;
+    public static ModOreConfig onyx_cfg;
     
     public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
     

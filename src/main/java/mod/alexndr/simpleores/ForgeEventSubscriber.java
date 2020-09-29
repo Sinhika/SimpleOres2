@@ -3,8 +3,9 @@ package mod.alexndr.simpleores;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.alexndr.simpleores.api.loot.ChestLootHandler;
+import mod.alexndr.simplecorelib.loot.ChestLootHandler;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
@@ -20,9 +21,12 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.Event.Result;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
@@ -144,5 +148,24 @@ public final class ForgeEventSubscriber
             
         } // end-if config allows
     } // end LootLoad()
+    
+    
+    /**
+     * Biome loading triggers ore generation.
+     */
+    @SubscribeEvent
+    public static void onBiomeLoading(BiomeLoadingEvent evt)
+    {
+        if (!OreGeneration.checkAndInitBiome(evt)) return;
+        
+        if (evt.getCategory() == Biome.Category.NETHER) 
+        {
+            OreGeneration.generateNetherOres(evt);
+        }
+        else {
+            OreGeneration.generateOverworldOres(evt);
+        }
+        evt.setPhase(EventPriority.HIGH);
+    } // end onBiomeLoading()
     
 } // end-class
