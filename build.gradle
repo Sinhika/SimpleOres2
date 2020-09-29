@@ -93,6 +93,13 @@ minecraft {
     }
 }
 
+repositories {
+        maven {
+                name = "mcmodsrepo"
+                url = "file:///${project.projectDir}/../mcmodsrepo"
+        }
+}
+
 sourceSets {
     main.resources.srcDirs += 'src/generated/resources'
 }
@@ -103,6 +110,7 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     //minecraft 'net.minecraftforge:forge:1.15.2-31.1.34'
     minecraft "net.minecraftforge:forge:${version_forge}"
+    compile fg.deobf("mod.alexndr.simplecorelib:SimpleCoreLib:${simplecorelib_version}")
 
 }
 
