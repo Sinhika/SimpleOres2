@@ -1,5 +1,6 @@
 package mod.alexndr.simpleores.config;
 
+import mod.alexndr.simplecorelib.config.ModOreConfig;
 import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.fml.config.ModConfig;
 

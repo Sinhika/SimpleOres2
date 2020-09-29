@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import mod.alexndr.simplecorelib.config.ISimpleConfig;
+import mod.alexndr.simplecorelib.config.ModOreConfig;
 
 public class SimpleOresConfig implements ISimpleConfig
 {

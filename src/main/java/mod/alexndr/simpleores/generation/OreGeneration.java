@@ -1,13 +1,11 @@
 package mod.alexndr.simpleores.generation;
 
+import mod.alexndr.simplecorelib.world.OreGenUtils;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage.Decoration;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 /**
@@ -48,12 +46,9 @@ public class OreGeneration
     protected static void initNetherFeatures()
     {
         if (ORE_ONYX != null) return;
-
-        ORE_ONYX = Feature.ORE.withConfiguration(
-                    new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b,
-                        ModBlocks.onyx_ore.get().getDefaultState(), SimpleOresConfig.onyx_cfg.getVein_size()))
-                    .withPlacement(Placement.field_242907_l.configure(SimpleOresConfig.onyx_cfg.getCfg())
-                            .func_242728_a().func_242731_b(SimpleOresConfig.onyx_cfg.getVein_count()));
+        
+        ORE_ONYX = OreGenUtils.buildNetherOreFeature(ModBlocks.onyx_ore.get().getDefaultState(),
+                SimpleOresConfig.onyx_cfg);
     } // end-initNetherFeatures()
 
     /**
@@ -65,42 +60,26 @@ public class OreGeneration
     {
         if (ORE_COPPER == null)
         {
-            ORE_COPPER = Feature.ORE.withConfiguration(
-                            new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, 
-                                    ModBlocks.copper_ore.get().getDefaultState(), 
-                                    SimpleOresConfig.copper_cfg.getVein_size()))
-                    .withPlacement(Placement.field_242907_l.configure(SimpleOresConfig.copper_cfg.getCfg())
-                            .func_242728_a().func_242731_b(SimpleOresConfig.copper_cfg.getVein_count()));
+            ORE_COPPER = OreGenUtils.buildOverworldOreFeature(
+                    ModBlocks.copper_ore.get().getDefaultState(), SimpleOresConfig.copper_cfg); 
         }
         
         if (ORE_TIN == null)
         {
-            ORE_TIN = Feature.ORE.withConfiguration(
-                            new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, 
-                                    ModBlocks.tin_ore.get().getDefaultState(), 
-                                    SimpleOresConfig.tin_cfg.getVein_size()))
-                    .withPlacement(Placement.field_242907_l.configure(SimpleOresConfig.tin_cfg.getCfg())
-                            .func_242728_a().func_242731_b(SimpleOresConfig.tin_cfg.getVein_count()));
+            ORE_TIN = OreGenUtils.buildOverworldOreFeature(
+                    ModBlocks.tin_ore.get().getDefaultState(), SimpleOresConfig.tin_cfg); 
         }
         
         if (ORE_MYTHRIL == null)
         {
-            ORE_MYTHRIL = Feature.ORE.withConfiguration(
-                            new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, 
-                                    ModBlocks.mythril_ore.get().getDefaultState(), 
-                                    SimpleOresConfig.mythril_cfg.getVein_size()))
-                    .withPlacement(Placement.field_242907_l.configure(SimpleOresConfig.mythril_cfg.getCfg())
-                            .func_242728_a().func_242731_b(SimpleOresConfig.mythril_cfg.getVein_count()));
+            ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(
+                    ModBlocks.mythril_ore.get().getDefaultState(), SimpleOresConfig.mythril_cfg); 
         }
        
         if (ORE_ADAMANTIUM == null)
         {
-            ORE_ADAMANTIUM = Feature.ORE.withConfiguration(
-                            new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, 
-                                    ModBlocks.adamantium_ore.get().getDefaultState(), 
-                                    SimpleOresConfig.adamantium_cfg.getVein_size()))
-                    .withPlacement(Placement.field_242907_l.configure(SimpleOresConfig.adamantium_cfg.getCfg())
-                            .func_242728_a().func_242731_b(SimpleOresConfig.adamantium_cfg.getVein_count()));
+            ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(
+                    ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_cfg); 
         }
     } // end-initOverworldFeatures()
 
