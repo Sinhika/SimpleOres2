@@ -37,3 +37,10 @@ Additional Credits: Emirhangg (Turkish translation), AzazEL3095 (Castillian Span
     versionRange="[1.16.3,]"
     ordering="NONE"
     side="BOTH"
+    
+[[dependencies.simpleores]]
+    modId="simplecorelib"
+    mandatory=true
+    versionRange="[1.16.3-2.0.0.3,]"
+    ordering="NONE"
+    side="BOTH"
