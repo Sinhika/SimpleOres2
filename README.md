@@ -14,13 +14,15 @@ Thanks also to Paint_Ninja for doing the initial 1.15.2 port, which encourages
 me to get back to tackling all the messy issues involved in porting these
 mods up from 1.12.2
 
-**WARNING: 1.15 is a Work-in-Progress; expect frequent changes!**
+**WARNING: 1.16 is a Work-in-Progress; expect frequent changes!**
 
 TO-DO
 -----
 * <s>make recipes disable-able in config.</s>
 * <s>add chance of ingots, tools to appropriate treasure chests</s>
 * update or move the SimpleOres, etc. wiki - in progress.
+* add dusts for all ores.
+* add textures and ore generation for onyx ore in magma block, other nether blocks? (Basaltic onyx ore is just sadistic).
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * added SimpleOres items to villager, trader trade menus.
 * Implement graphical configuration from the menu...when Forge re-implents it.
