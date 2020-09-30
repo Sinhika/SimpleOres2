@@ -88,7 +88,7 @@ public class OreGeneration
      */
     public static void generateNetherOres(BiomeLoadingEvent evt)
     {
-        evt.getGeneration().withFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_ONYX);
+        evt.getGeneration().withFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX);
     } // end generateNetherOres()
     
     /**
