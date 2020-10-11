@@ -13,7 +13,7 @@ version="${version}"
 displayName="Simple Ores"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.15/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
-credits="AleXndrTheGr8st (original mod), Sinhika (ports, maintenance), and Paint_Ninja (initial 1.15 port)"
+credits="AleXndrTheGr8st (original mod), Sinhika (maintenance, ports), Paint_Ninja (initial 1.15 port), Thombias (updated textures)."
 authors="AleXndrTheGr8st, Sinhika, Paint_Ninja"
 description='''
 A simple ore mod, featuring 5 balanced ores: Copper, Tin, Mythril, Adamantium and Onyx. 
