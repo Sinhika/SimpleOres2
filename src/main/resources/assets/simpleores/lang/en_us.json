@@ -18,8 +18,13 @@
     "item.simpleores.tin_nugget": "Tin Nugget",
     "item.simpleores.mythril_ingot": "Mythril Ingot",
     "item.simpleores.mythril_nugget": "Mythril Nugget",
+    "item.simpleores.mythril_dust" : "Mythril Dust",
+    "item.simpleores.crushed_mythril_ore" : "Mythril Ore Chunks",
     "item.simpleores.adamantium_ingot": "Adamantium Ingot",
     "item.simpleores.adamantium_nugget": "Adamantium Nugget",
+    "item.simpleores.adamantium_dust" : "Adamantium Dust",
+    "item.simpleores.crushed_adamantium_ore" : "Adamantium Ore Chunks",
+    
     "item.simpleores.onyx_gem": "Onyx",
     "item.simpleores.copper_bucket": "Copper Bucket",
     "item.simpleores.copper_bucket_water": "Copper Bucket of Water",
