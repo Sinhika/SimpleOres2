@@ -156,9 +156,11 @@ public class CrushingRecipe implements IRecipe<IInventory>
         return true;
     }
 
-    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<CrushingRecipe> {
+    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<CrushingRecipe> 
+    {
         @Override
-        public CrushingRecipe read(ResourceLocation recipeId, JsonObject json) {
+        public CrushingRecipe read(ResourceLocation recipeId, JsonObject json) 
+        {
             CrushingRecipe recipe = new CrushingRecipe(recipeId);
             recipe.processTime = JSONUtils.getInt(json, "process_time", 400);
             recipe.ingredient = Ingredient.deserialize(json.get("ingredient"));
@@ -176,7 +178,8 @@ public class CrushingRecipe implements IRecipe<IInventory>
         }
 
         @Override
-        public CrushingRecipe read(ResourceLocation recipeId, PacketBuffer buffer) {
+        public CrushingRecipe read(ResourceLocation recipeId, PacketBuffer buffer) 
+        {
             CrushingRecipe recipe = new CrushingRecipe(recipeId);
             recipe.processTime = buffer.readVarInt();
             recipe.ingredient = Ingredient.read(buffer);
