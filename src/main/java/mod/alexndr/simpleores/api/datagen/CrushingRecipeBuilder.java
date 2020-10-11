@@ -110,9 +110,7 @@ public final class CrushingRecipeBuilder extends AbstractRecipeSetBuilder
     public void build(Consumer<IFinishedRecipe> consumer)
     {
         ResourceLocation resultId = fromItem(results.keySet().iterator().next());
-        ResourceLocation id = new ResourceLocation(
-                "minecraft".equals(resultId.getNamespace()) ? modid : resultId.getNamespace(),
-                "crushing/" + resultId.getPath());
+        ResourceLocation id = new ResourceLocation(modid, "crushing/" + resultId.getPath());
         build(consumer, id);
     }
 

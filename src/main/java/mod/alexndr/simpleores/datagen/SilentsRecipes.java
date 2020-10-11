@@ -56,10 +56,10 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
         // crush ingots
         CrushingRecipeBuilder.crushingIngot(SimpleOres.MODID,
                 ModTags.Items.INGOTS_MYTHRIL, ModItems.mythril_dust.get(), CRUSHING_INGOT_TIME)
-            .build(consumer, new ResourceLocation("simpleores:crushing/mythril_dust_from_ingot"));
+            .build(consumer, new ResourceLocation(SimpleOres.MODID, "crushing/mythril_dust_from_ingot"));
         CrushingRecipeBuilder.crushingIngot(SimpleOres.MODID,
                 ModTags.Items.INGOTS_ADAMANTIUM, ModItems.adamantium_dust.get(), CRUSHING_INGOT_TIME)
-            .build(consumer, new ResourceLocation("simpleores:crushing/adamantium_dust_from_ingot"));
+            .build(consumer, new ResourceLocation(SimpleOres.MODID, "crushing/adamantium_dust_from_ingot"));
     } // end registerRecipes()
 
 
