@@ -56,6 +56,15 @@ public final class ModItems
     public static final RegistryObject<Item> onyx_gem = ITEMS.register("onyx_gem",
             ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
 
+    public static final RegistryObject<Item> adamantium_dust = ITEMS.register("adamantium_dust",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> crushed_adamantium_ore = ITEMS.register("crushed_adamantium_ore",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> mythril_dust = ITEMS.register("mythril_dust",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> crushed_mythril_ore = ITEMS.register("crushed_mythril_ore",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    
     // parts
     public static final RegistryObject<Item> mythril_rod = ITEMS.register("mythril_rod",
             ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
