@@ -1,6 +1,5 @@
 package mod.alexndr.simpleores.init;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
@@ -15,6 +14,9 @@ public class ModTags
         public static final ITag.INamedTag<Item> INGOTS_MYTHRIL = forgeTag("ingots/mythril");
         public static final ITag.INamedTag<Item> INGOTS_ADAMANTIUM = forgeTag("ingots/adamantium");
         public static final ITag.INamedTag<Item> GEMS_ONYX = forgeTag("gems/onyx");
+
+        public static final ITag.INamedTag<Item> ORES_MYTHRIL = forgeTag("ores/mythril");
+        public static final ITag.INamedTag<Item> ORES_ADAMANTIUM = forgeTag("ores/adamantium");
         
         public static final ITag.INamedTag<Item> DUSTS_MYTHRIL = forgeTag("dusts/mythril");
         public static final ITag.INamedTag<Item> DUSTS_ADAMANTIUM = forgeTag("dusts/adamantium");
