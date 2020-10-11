@@ -26,17 +26,11 @@ import net.minecraftforge.registries.ForgeRegistries;
  * @author Sinhika
  *
  */
-public class RecipeSetBuilder
+public class RecipeSetBuilder extends AbstractRecipeSetBuilder
 {
-    protected final String modid;
-    
     public RecipeSetBuilder(String modid)
     {
-        this.modid = modid;
-    }
-
-    public ResourceLocation make_resource(String path) {
-        return new ResourceLocation(this.modid, path);
+        super(modid);
     }
 
     public ConditionalAdvancement.Builder build_advancement_with_condition(ResourceLocation recipe_id, ICondition condition,
