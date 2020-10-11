@@ -60,6 +60,7 @@ public class SimpleOresDataGenerator
         {
             gen.addProvider(new Recipes(gen));
             gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
+            gen.addProvider(new ModItemTags(gen));
             gen.addProvider(new SimpleOresLootTableProvider(gen));
         }
      } // end gatherData()
@@ -183,7 +184,7 @@ public class SimpleOresDataGenerator
     /**
      * ItemTagsProvider for SimpleOres.
      */
-    public class ModItemTags extends ItemTagsProvider
+    public static class ModItemTags extends ItemTagsProvider
     {
 
         public ModItemTags(DataGenerator generatorIn)
