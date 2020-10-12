@@ -65,6 +65,9 @@ public class CrushingRecipe implements IRecipe<IInventory>
         }
     } // end ctor
 
+    public static void init(String modid) {
+        CRUSHING = new ResourceLocation(modid, "crushing");
+    }
     /**
      * Get the time (in ticks) required to crush one ingredient
      *

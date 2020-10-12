@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import mod.alexndr.simpleores.api.config.FlagCondition;
 import mod.alexndr.simpleores.api.loot.SimpleOresLootModifiers;
+import mod.alexndr.simpleores.api.recipes.CrushingRecipe;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
@@ -105,7 +106,10 @@ public final class ModEventSubscriber
 	        @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
 	{
 	       CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
-                                                   new ResourceLocation(SimpleOres.MODID, "flag")));	    
+                                                   new ResourceLocation(SimpleOres.MODID, "flag")));
+	       CrushingRecipe.init(SimpleOres.MODID);
+	       event.getRegistry().register(
+	               CrushingRecipe.SERIALIZER.setRegistryName(CrushingRecipe.RECIPE_TYPE.toString()));
 	} // end registerRecipeSerializers
 	
 } // end class ModEventSubscriber
