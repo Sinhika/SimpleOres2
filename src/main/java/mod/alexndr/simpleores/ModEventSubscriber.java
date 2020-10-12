@@ -7,7 +7,8 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.alexndr.simplecorelib.config.FlagCondition;
+import mod.alexndr.simpleores.api.config.FlagCondition;
+import mod.alexndr.simpleores.api.recipes.CrushingRecipe;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
@@ -29,7 +30,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = MOD)
 public final class ModEventSubscriber 
 {
-	private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Mod Event Subscriber");
+        private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Mod Event Subscriber");
 
     /**
      * @param event
@@ -40,16 +41,16 @@ public final class ModEventSubscriber
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
-	/**
-	 * This method will be called by Forge when it is time for the mod to register its Items.
-	 * This method will always be called after the Block registry method.
-	 */
-	@SubscribeEvent
-	public static void onRegisterItems(final RegistryEvent.Register<Item> event)
-	{
-		final IForgeRegistry<Item> registry = event.getRegistry();
+        /**
+         * This method will be called by Forge when it is time for the mod to register its Items.
+         * This method will always be called after the Block registry method.
+         */
+        @SubscribeEvent
+        public static void onRegisterItems(final RegistryEvent.Register<Item> event)
+        {
+                final IForgeRegistry<Item> registry = event.getRegistry();
 
-		// We need to go over the entire registry so that we include any potential Registry Overrides
+                // We need to go over the entire registry so that we include any potential Registry Overrides
         // Automatically register BlockItems for all our Blocks
         ModBlocks.BLOCKS.getEntries().stream()
                 .map(RegistryObject::get)
@@ -67,27 +68,30 @@ public final class ModEventSubscriber
                     // Register the BlockItem
                     registry.register(blockItem);
                 });
-		LOGGER.debug("Registered BlockItems");
-	}  // end onRegisterItems()
+                LOGGER.debug("Registered BlockItems");
+        }  // end onRegisterItems()
 
-	@SubscribeEvent
-	public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
-	{
-		final ModConfig config = event.getConfig();
+        @SubscribeEvent
+        public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
+        {
+                final ModConfig config = event.getConfig();
 
-		// Rebake the configs when they change
-		if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
-			ConfigHelper.bakeServer(config);
-		}
-	} // onModConfigEvent
+                // Rebake the configs when they change
+                if (config.getSpec() == ConfigHolder.SERVER_SPEC) {
+                        ConfigHelper.bakeServer(config);
+                }
+        } // onModConfigEvent
 
-	
-	@SubscribeEvent
-	public static void onRegisterRecipeSerializers(
-	        @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
-	{
-	       CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
-                                                   new ResourceLocation(SimpleOres.MODID, "flag")));	    
-	} // end registerRecipeSerializers
+        
+        @SubscribeEvent
+        public static void onRegisterRecipeSerializers(
+                @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
+        {
+               CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
+                                                   new ResourceLocation(SimpleOres.MODID, "flag")));
+               CrushingRecipe.init(SimpleOres.MODID);
+               event.getRegistry().register(
+                       CrushingRecipe.SERIALIZER.setRegistryName(CrushingRecipe.RECIPE_TYPE.toString()));
+        } // end registerRecipeSerializers
 
 } // end class ModEventSubscriber
