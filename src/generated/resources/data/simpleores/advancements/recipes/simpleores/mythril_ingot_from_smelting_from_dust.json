@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_ingot_from_smelting_from_dust"
+    ]
+  },
+  "criteria": {
+    "mythril_ingot_from_smelting_from_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "simpleores:mythril_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:mythril_ingot_from_smelting_from_dust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mythril_ingot_from_smelting_from_dust",
+      "has_the_recipe"
+    ]
+  ]
+}
