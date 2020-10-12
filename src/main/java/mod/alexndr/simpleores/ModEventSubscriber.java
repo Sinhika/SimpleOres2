@@ -21,6 +21,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
@@ -89,9 +91,11 @@ public final class ModEventSubscriber
         {
                CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE, 
                                                    new ResourceLocation(SimpleOres.MODID, "flag")));
-               CrushingRecipe.init(SimpleOres.MODID);
-               event.getRegistry().register(
+               
+               if (! ModList.get().isLoaded("silents_mechanisms")) {
+                   event.getRegistry().register(
                        CrushingRecipe.SERIALIZER.setRegistryName(CrushingRecipe.RECIPE_TYPE.toString()));
+               }
         } // end registerRecipeSerializers
-
+        
 } // end class ModEventSubscriber
