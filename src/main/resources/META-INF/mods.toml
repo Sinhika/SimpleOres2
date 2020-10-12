@@ -38,3 +38,11 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
     versionRange="[1.15.2,]"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.simpleores]]
+	modId="silents_mechanisms"
+	mandatory=false
+	versionRange="[1.15.2,]"
+	ordering="BEFORE"
+	side="BOTH"
+	    
