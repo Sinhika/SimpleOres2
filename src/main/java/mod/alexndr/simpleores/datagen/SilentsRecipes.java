@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.api.datagen.CrushingRecipeBuilder;
 import mod.alexndr.simpleores.api.datagen.ISimpleConditionBuilder;
+import mod.alexndr.simpleores.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTags;
@@ -12,6 +13,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -24,14 +26,44 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
     private static final float CRUSHING_CHUNKS_EXTRA_CHANCE = 0.1f;
     private static final float CRUSHING_ORE_STONE_CHANCE = 0.1f;
     
+    private RecipeSetBuilder setbuilder;
+    
     public SilentsRecipes(DataGenerator generatorIn)
     {
         super(generatorIn);
+        setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
     
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer)
+    {
+        registerCrushingRecipes(consumer);
+        registerFurnaceRecipes(consumer);
+    } // end registerRecipes()
+
+
+    private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
+    {
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.fromItems(ModItems.adamantium_dust.get().asItem()), 
+                ModItems.adamantium_ingot.get(), 
+                hasItem(ModItems.adamantium_dust.get().asItem()), 0.7F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.fromItems(ModItems.crushed_adamantium_ore.get().asItem()), 
+                ModItems.adamantium_ingot.get(), 
+                hasItem(ModItems.crushed_adamantium_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.fromItems(ModItems.mythril_dust.get().asItem()), 
+                ModItems.mythril_ingot.get(), 
+                hasItem(ModItems.mythril_dust.get().asItem()), 0.7F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.fromItems(ModItems.crushed_mythril_ore.get().asItem()), 
+                ModItems.mythril_ingot.get(), 
+                hasItem(ModItems.crushed_mythril_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+    }
+    
+    private void registerCrushingRecipes(Consumer<IFinishedRecipe> consumer)
     {
         // crush ore
         CrushingRecipeBuilder.crushingOre(SimpleOres.MODID,
@@ -60,7 +92,7 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
         CrushingRecipeBuilder.crushingIngot(SimpleOres.MODID,
                 ModTags.Items.INGOTS_ADAMANTIUM, ModItems.adamantium_dust.get(), CRUSHING_INGOT_TIME)
             .build(consumer, new ResourceLocation(SimpleOres.MODID, "crushing/adamantium_dust_from_ingot"));
-    } // end registerRecipes()
+    } // end registerCrushingRecipes
 
 
     @Override
