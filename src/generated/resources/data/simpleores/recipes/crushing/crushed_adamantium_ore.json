@@ -1,0 +1,17 @@
+{
+  "type": "simpleores:crushing",
+  "process_time": 400,
+  "ingredient": {
+    "tag": "forge:ores/adamantium"
+  },
+  "results": [
+    {
+      "item": "simpleores:crushed_adamantium_ore",
+      "count": 2
+    },
+    {
+      "item": "minecraft:cobblestone",
+      "chance": 0.1
+    }
+  ]
+}

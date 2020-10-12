@@ -1,0 +1,16 @@
+{
+  "type": "simpleores:crushing",
+  "process_time": 300,
+  "ingredient": {
+    "tag": "silents_mechanisms:chunks/mythril"
+  },
+  "results": [
+    {
+      "item": "simpleores:mythril_dust"
+    },
+    {
+      "item": "simpleores:mythril_dust",
+      "chance": 0.1
+    }
+  ]
+}

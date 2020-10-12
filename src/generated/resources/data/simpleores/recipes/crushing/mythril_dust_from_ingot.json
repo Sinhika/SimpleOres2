@@ -1,0 +1,12 @@
+{
+  "type": "simpleores:crushing",
+  "process_time": 200,
+  "ingredient": {
+    "tag": "forge:ingots/mythril"
+  },
+  "results": [
+    {
+      "item": "simpleores:mythril_dust"
+    }
+  ]
+}
