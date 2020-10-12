@@ -40,7 +40,7 @@ public class CrushingRecipe implements IRecipe<IInventory>
 {
     protected final String modid;
     
-    public static ResourceLocation CRUSHING = null;
+    public static ResourceLocation CRUSHING = new ResourceLocation("silents_mechanisms", "crushing");
 
     public static final IRecipeType<CrushingRecipe> RECIPE_TYPE = new IRecipeType<CrushingRecipe>() 
     {
@@ -60,14 +60,8 @@ public class CrushingRecipe implements IRecipe<IInventory>
     {
         this.modid = recipeId.getNamespace();
         this.recipeId = recipeId;
-        if (CRUSHING == null) {
-            CRUSHING = new ResourceLocation(modid, "crushing");
-        }
     } // end ctor
 
-    public static void init(String modid) {
-        CRUSHING = new ResourceLocation(modid, "crushing");
-    }
     /**
      * Get the time (in ticks) required to crush one ingredient
      *

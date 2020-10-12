@@ -1,5 +1,5 @@
 {
-  "type": "simpleores:crushing",
+  "type": "silents_mechanisms:crushing",
   "process_time": 200,
   "ingredient": {
     "tag": "forge:ingots/mythril"
