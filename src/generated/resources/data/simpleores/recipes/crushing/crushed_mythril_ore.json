@@ -1,0 +1,17 @@
+{
+  "type": "silents_mechanisms:crushing",
+  "process_time": 400,
+  "ingredient": {
+    "tag": "forge:ores/mythril"
+  },
+  "results": [
+    {
+      "item": "simpleores:crushed_mythril_ore",
+      "count": 2
+    },
+    {
+      "item": "minecraft:cobblestone",
+      "chance": 0.1
+    }
+  ]
+}
