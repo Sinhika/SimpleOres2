@@ -7,8 +7,8 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.alexndr.simpleores.api.config.FlagCondition;
-import mod.alexndr.simpleores.api.recipes.CrushingRecipe;
+import mod.alexndr.simplecorelib.config.FlagCondition;
+import mod.alexndr.simplecorelib.recipes.CrushingRecipe;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
@@ -21,7 +21,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
