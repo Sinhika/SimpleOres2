@@ -1,0 +1,71 @@
+{
+	"conditions": [
+		{
+			"value": {
+				"tag": "forge:gems/onyx",
+				"type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		}
+	],
+	"availability": {
+		"tier": 4,
+		"visible": true,
+		"gear_blacklist": [
+		],
+		"can_salvage": true
+	},
+	"crafting_items": {
+		"main": {
+			"tag": "forge:gems/onyx"
+		}
+	},
+	"name": {
+		"translate": "material.simpleores.onyx"
+	},
+	"stats": {
+		"main": {
+			"durability": 3280,
+			"armor_durability": 45.0,
+			"enchantability": 15.0,
+			"harvest_level": 4.0,
+			"harvest_speed": 10.0,
+			"melee_damage": 5.0,
+			"magic_damage": 1.0,
+			"attack_speed": -2.4,
+			"armor": 24.0,
+			"armor_toughness": 2.0,
+			"magic_armor": 24.0,
+			"ranged_damage": 1.0,
+			"ranged_speed": 0.2,
+			"rarity": 90.0,
+			"silentgems:chargeability": 1.0
+		},
+		"rod": {
+			"durability": {
+				"mul2": -0.1
+			},
+			"harvest_speed": {
+				"mul2": 0.2
+			},
+			"rarity": 90.0
+		}
+	},
+	"traits": {
+		"main": [
+			{
+				"name" : "silentgear:chipping",
+				"level" : 1
+			},
+			{
+				"name": "silentgear:brittle",
+				"level": 1
+			},
+			{
+				"name": "silentgear:jagged",
+				"level": 1
+			}
+			
+		]
+	}
+}
