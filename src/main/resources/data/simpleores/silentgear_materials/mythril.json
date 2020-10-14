@@ -1,0 +1,86 @@
+{
+	"conditions": [
+		{
+			"value": {
+				"tag": "forge:ingots/mythril",
+				"type": "forge:tag_empty"
+			},
+			"type": "forge:not"
+		}
+	],
+	"availability": {
+		"tier": 2,
+		"visible": true,
+		"gear_blacklist": [
+		],
+		"can_salvage": true
+	},
+	"crafting_items": {
+		"main": {
+			"tag": "forge:ingots/mythril"
+		}
+	},
+	"name": {
+		"translate": "material.simpleores.mythril"
+	},
+	"stats": {
+		"main": {
+			"durability": 800.0,
+			"armor_durability": 22.0,
+			"enchantability": 12.0,
+			"harvest_level": 2.0,
+			"harvest_speed": 8.0,
+			"melee_damage": 3.0,
+			"magic_damage": 3.0,
+			"attack_speed": -2.4,
+			"armor": 15.0,
+			"armor_toughness": 0.0,
+			"magic_armor": 10.0,
+			"ranged_damage": 0.4,
+			"ranged_speed": 0.2,
+			"rarity": 50.0,
+			"silentgems:chargeability": 2.0
+		},
+		"rod": {
+			"durability": {
+				"mul2": -0.1
+			},
+			"harvest_speed": {
+				"mul2": 0.2
+			},
+			"rarity": 50.0
+		}
+	},
+	"traits": {
+		"main": [
+			{
+				"name" : "silentgear:brilliant",
+				"level": 2
+			},
+			{
+				"name" : "silentgear:light",
+				"level" : 1
+			},
+			{
+				"name": "silentgear:malleable",
+				"level": 2
+			},
+			{
+				"name": "silentgear:soft",
+				"level": 1,
+				"conditions": [
+					{
+						"type": "silentgear:material_ratio",
+						"ratio": 0.5
+					}
+				]
+			}
+		],
+		"rod": [
+			{
+				"name": "silentgear:soft",
+				"level": 2
+			}
+		]
+	}
+}
