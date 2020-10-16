@@ -1,9 +1,6 @@
 {
     "itemGroup.simpleores": "Simple Ores",
     "config.enableCopperOre" : "EnableCopperOre",
-    "material.simpleores.mythril" : "Mythril",
-    "material.simpleores.adamantium" : "Adamantium",
-    "material.simpleores.onyx" : "Onyx",
     "block.simpleores.copper_ore": "Copper Ore",
     "block.simpleores.copper_block": "Block of Copper",
     "block.simpleores.tin_ore": "Tin Ore",
