@@ -54,6 +54,14 @@
 	"traits": {
 		"main": [
 			{
+				"name" : "silentgear:brilliant",
+				"level": 2
+			},
+			{
+				"name" : "silentgear:light",
+				"level" : 1
+			},
+			{
 				"name": "silentgear:malleable",
 				"level": 2
 			},
