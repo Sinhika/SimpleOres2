@@ -54,10 +54,6 @@
 	"traits": {
 		"main": [
 			{
-				"name" : "silentgear:heavy",
-				"level" : 1
-			},
-			{
 				"name": "silentgear:adamant",
 				"level": 1
 			}
