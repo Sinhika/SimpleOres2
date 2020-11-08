@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[34,)" #mandatory
+loaderVersion="[35,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 license="LGPL 3"
 
@@ -29,28 +29,27 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[34.1.0,)"
+    versionRange="[35.0.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3,]"
+    versionRange="[1.16.4,)"
     ordering="NONE"
     side="BOTH"
     
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.3-2.0.1.2,]"
+    versionRange="[1.16.4-2.0.2.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
-	modId="silents_mechanisms"
-	mandatory=false
-	versionRange="[1.16.3,]"
-	ordering="BEFORE"
-	side="BOTH"
-	    
+        modId="silents_mechanisms"
+        mandatory=false
+        versionRange="[1.16.4,)"
+        ordering="BEFORE"
+        side="BOTH"
