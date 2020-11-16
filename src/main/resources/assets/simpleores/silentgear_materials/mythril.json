@@ -8,7 +8,13 @@
       "texture": "silentgear:_highlight"
     }
   ],
-  "main/armor": [
+   "main/fragment": [
+    {
+      "texture": "silentgear:metal",
+      "color": "#7F7FFF"
+    }
+  ],
+   "main/armor": [
     {
       "texture": "silentgear:main_generic_hc",
       "color": "#7F7FFF"
