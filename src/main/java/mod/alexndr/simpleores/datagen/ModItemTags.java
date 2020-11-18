@@ -34,7 +34,7 @@ public class ModItemTags extends ItemTagsProvider
                 .addTag(TagUtils.forgeTag("dusts/mithril"))
                 .addTag(TagUtils.forgeTag("dusts/mythril"))
                 .addTag(TagUtils.forgeTag("dusts/copper"))
-                .addTag(TagUtils.forgeTag("dusts_tin"));
+                .addTag(TagUtils.forgeTag("dusts/tin"));
         
         
         this.getOrCreateBuilder(TagUtils.forgeTag("dusts/adamantium"))
