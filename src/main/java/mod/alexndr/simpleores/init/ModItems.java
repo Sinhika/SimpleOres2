@@ -56,6 +56,14 @@ public final class ModItems
     public static final RegistryObject<Item> onyx_gem = ITEMS.register("onyx_gem",
             ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
 
+    public static final RegistryObject<Item> copper_dust = ITEMS.register("copper_dust",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> crushed_copper_ore = ITEMS.register("crushed_copper_ore",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> tin_dust = ITEMS.register("tin_dust",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> crushed_tin_ore = ITEMS.register("crushed_tin_ore",
+            ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> adamantium_dust = ITEMS.register("adamantium_dust",
             ()-> new Item(new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> crushed_adamantium_ore = ITEMS.register("crushed_adamantium_ore",

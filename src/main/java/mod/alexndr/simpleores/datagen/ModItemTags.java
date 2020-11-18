@@ -16,7 +16,6 @@ public class ModItemTags extends ItemTagsProvider
     public ModItemTags(DataGenerator generatorIn, @javax.annotation.Nullable ExistingFileHelper existingFileHelper)
     {
         super(generatorIn, new ModBlockTags(generatorIn, existingFileHelper), SimpleOres.MODID, existingFileHelper);
-        // TODO Auto-generated constructor stub
     }
 
     @Override
@@ -33,7 +32,10 @@ public class ModItemTags extends ItemTagsProvider
                 .addTag(TagUtils.forgeTag("dusts/adamantite"))
                 .addTag(TagUtils.forgeTag("dusts/adamantium"))
                 .addTag(TagUtils.forgeTag("dusts/mithril"))
-                .addTag(TagUtils.forgeTag("dusts/mythril"));
+                .addTag(TagUtils.forgeTag("dusts/mythril"))
+                .addTag(TagUtils.forgeTag("dusts/copper"))
+                .addTag(TagUtils.forgeTag("dusts_tin"));
+        
         
         this.getOrCreateBuilder(TagUtils.forgeTag("dusts/adamantium"))
             .add(ModItems.adamantium_dust.get());
@@ -45,6 +47,10 @@ public class ModItemTags extends ItemTagsProvider
             .add(ModItems.mythril_dust.get());
         this.getOrCreateBuilder(TagUtils.forgeTag("dusts/mithril"))
             .add(ModItems.mythril_dust.get());
+        this.getOrCreateBuilder(TagUtils.forgeTag("dusts/copper"))
+            .add(ModItems.copper_dust.get());
+        this.getOrCreateBuilder(TagUtils.forgeTag("dusts/tin"))
+            .add(ModItems.tin_dust.get());
     } // end registerDustTags()
     
     private void registerOreChunkTags()
@@ -54,7 +60,9 @@ public class ModItemTags extends ItemTagsProvider
             .addTag(TagUtils.modTag("silents_mechanisms", "chunks/adamantite"))
             .addTag(TagUtils.modTag("silents_mechanisms", "chunks/adamantium"))
             .addTag(TagUtils.modTag("silents_mechanisms", "chunks/mithril"))
-            .addTag(TagUtils.modTag("silents_mechanisms", "chunks/mythril"));
+            .addTag(TagUtils.modTag("silents_mechanisms", "chunks/mythril"))
+            .addTag(TagUtils.modTag("silents_mechanisms", "chunks/copper"))
+            .addTag(TagUtils.modTag("silents_mechanisms", "chunks/tin"));
         this.getOrCreateBuilder(TagUtils.modTag("silents_mechanisms", "chunks/adamantium"))
             .add(ModItems.crushed_adamantium_ore.get());
         this.getOrCreateBuilder(TagUtils.modTag("silents_mechanisms", "chunks/adamantine"))
@@ -65,5 +73,9 @@ public class ModItemTags extends ItemTagsProvider
             .add(ModItems.crushed_mythril_ore.get());
         this.getOrCreateBuilder(TagUtils.modTag("silents_mechanisms", "chunks/mithril"))
             .add(ModItems.crushed_mythril_ore.get());
+        this.getOrCreateBuilder(TagUtils.modTag("silents_mechanisms", "chunks/copper"))
+            .add(ModItems.crushed_copper_ore.get());
+        this.getOrCreateBuilder(TagUtils.modTag("silents_mechanisms", "chunks/tin"))
+            .add(ModItems.crushed_tin_ore.get());
     } // end registerOreChunkTags()
 } // end class ModItemTags

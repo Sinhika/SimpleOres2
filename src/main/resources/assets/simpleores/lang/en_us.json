@@ -14,8 +14,12 @@
 
     "item.simpleores.copper_ingot": "Copper Ingot",
     "item.simpleores.copper_nugget": "Copper Nugget",
+    "item.simpleores.copper_dust" : "Copper Dust",
+    "item.simpleores.crushed_copper_ore" : "Copper Ore Chunks",
     "item.simpleores.tin_ingot": "Tin Ingot",
     "item.simpleores.tin_nugget": "Tin Nugget",
+    "item.simpleores.tin_dust" : "Tin Dust",
+    "item.simpleores.crushed_tin_ore" : "Tin Ore Chunks",
     "item.simpleores.mythril_ingot": "Mythril Ingot",
     "item.simpleores.mythril_nugget": "Mythril Nugget",
     "item.simpleores.mythril_dust" : "Mythril Dust",
