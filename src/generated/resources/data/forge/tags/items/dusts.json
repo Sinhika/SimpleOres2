@@ -5,6 +5,8 @@
     "#forge:dusts/adamantite",
     "#forge:dusts/adamantium",
     "#forge:dusts/mithril",
-    "#forge:dusts/mythril"
+    "#forge:dusts/mythril",
+    "#forge:dusts/copper",
+    "#forge:dusts/tin"
   ]
 }

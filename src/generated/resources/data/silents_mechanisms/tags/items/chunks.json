@@ -5,6 +5,8 @@
     "#silents_mechanisms:chunks/adamantite",
     "#silents_mechanisms:chunks/adamantium",
     "#silents_mechanisms:chunks/mithril",
-    "#silents_mechanisms:chunks/mythril"
+    "#silents_mechanisms:chunks/mythril",
+    "#silents_mechanisms:chunks/copper",
+    "#silents_mechanisms:chunks/tin"
   ]
 }
