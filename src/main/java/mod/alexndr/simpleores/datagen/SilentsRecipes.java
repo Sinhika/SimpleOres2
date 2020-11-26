@@ -7,6 +7,7 @@ import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTags;
 import net.minecraft.block.Blocks;
@@ -61,11 +62,19 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
                 Ingredient.fromItems(ModItems.crushed_mythril_ore.get().asItem()), 
                 ModItems.mythril_ingot.get(), 
                 hasItem(ModItems.crushed_mythril_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.fromItems(ModItems.crushed_tin_ore.get().asItem()), 
+                ModItems.tin_ingot.get(), 
+                hasItem(ModItems.crushed_tin_ore.get().asItem()), 0.4F, 200, "_from_ore_chunk");
     }
     
     private void registerCrushingRecipes(Consumer<IFinishedRecipe> consumer)
     {
         // crush ore
+        CrushingRecipeBuilder.crushingOre(SimpleOres.MODID,
+                ModBlocks.tin_ore.get(), ModItems.crushed_tin_ore.get(), CRUSHING_ORE_TIME, 
+                Blocks.COBBLESTONE, CRUSHING_ORE_STONE_CHANCE)
+            .build(consumer);
         CrushingRecipeBuilder.crushingOre(SimpleOres.MODID,
                 ModTags.Items.ORES_MYTHRIL, ModItems.crushed_mythril_ore.get(), CRUSHING_ORE_TIME, 
                 Blocks.COBBLESTONE, CRUSHING_ORE_STONE_CHANCE)
@@ -77,6 +86,10 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
         
         // crush chunks
         CrushingRecipeBuilder.crushingChunks(SimpleOres.MODID, 
+                ModItems.crushed_tin_ore.get(), ModItems.tin_dust.get(), CRUSHING_CHUNKS_TIME, 
+                CRUSHING_CHUNKS_EXTRA_CHANCE)
+            .build(consumer);
+        CrushingRecipeBuilder.crushingChunks(SimpleOres.MODID, 
                 ModTags.Items.CHUNKS_ADAMANTIUM, ModItems.adamantium_dust.get(), CRUSHING_CHUNKS_TIME, 
                 CRUSHING_CHUNKS_EXTRA_CHANCE)
             .build(consumer);
@@ -86,6 +99,9 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
             .build(consumer);
         
         // crush ingots
+        CrushingRecipeBuilder.crushingIngot(SimpleOres.MODID,
+                ModItems.tin_ingot.get(), ModItems.tin_dust.get(), CRUSHING_INGOT_TIME)
+            .build(consumer, new ResourceLocation(SimpleOres.MODID, "crushing/tin_dust_from_ingot"));
         CrushingRecipeBuilder.crushingIngot(SimpleOres.MODID,
                 ModTags.Items.INGOTS_MYTHRIL, ModItems.mythril_dust.get(), CRUSHING_INGOT_TIME)
             .build(consumer, new ResourceLocation(SimpleOres.MODID, "crushing/mythril_dust_from_ingot"));
