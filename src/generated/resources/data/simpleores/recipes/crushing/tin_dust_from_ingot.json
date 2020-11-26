@@ -1,0 +1,12 @@
+{
+  "type": "silents_mechanisms:crushing",
+  "process_time": 200,
+  "ingredient": {
+    "item": "simpleores:tin_ingot"
+  },
+  "results": [
+    {
+      "item": "simpleores:tin_dust"
+    }
+  ]
+}
