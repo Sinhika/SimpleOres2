@@ -27,8 +27,6 @@ public class ModTags
         public static final ITag.INamedTag<Item> CHUNKS_TIN = TagUtils.silentsTag("chunks/tin");
         public static final ITag.INamedTag<Item> CHUNKS_MYTHRIL = TagUtils.silentsTag("chunks/mythril");
         public static final ITag.INamedTag<Item> CHUNKS_ADAMANTIUM = TagUtils.silentsTag("chunks/adamantium");
-        
-         
      } // end subclass Items
     
     public static class Blocks 
