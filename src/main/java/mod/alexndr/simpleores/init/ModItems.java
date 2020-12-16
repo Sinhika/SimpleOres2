@@ -131,10 +131,10 @@ public final class ModItems
             () -> new AxeItem(SimpleOresItemTier.COPPER, 7.0F, -3.1F,
                     new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> tin_axe = ITEMS.register("tin_axe",
-            () -> new AxeItem(SimpleOresItemTier.TIN, 6.0F, -3.0F,
+            () -> new AxeItem(SimpleOresItemTier.TIN, 6.0F, -2.7F,
                     new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> mythril_axe = ITEMS.register("mythril_axe",
-            () -> new AxeItem(SimpleOresItemTier.MYTHRIL, 8.0F, -3.2F,
+            () -> new AxeItem(SimpleOresItemTier.MYTHRIL, 8.0F, -3.0F,
                     new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> adamantium_axe = ITEMS.register("adamantium_axe",
             () -> new AxeItem(SimpleOresItemTier.ADAMANTIUM, 6.0F, -3.0F,
