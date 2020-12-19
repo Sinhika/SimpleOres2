@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.init.ModBlocks;
-import mod.alexndr.simpleores.init.ModFeatures;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -30,7 +29,6 @@ public class SimpleOres
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-        ModFeatures.FEATURES.register(modEventBus);
         
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);

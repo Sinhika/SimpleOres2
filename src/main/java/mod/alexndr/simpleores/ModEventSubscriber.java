@@ -18,6 +18,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -38,14 +39,22 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-        event.enqueueWork(() -> {
-            OreGeneration.initNetherFeatures();
-            OreGeneration.initOverworldFeatures();
-        });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
+    /**
+     * This method will be called by Forge when it is time for the mod to register
+     * its features. Here we call the methods that register configured features for
+     * ore generation.
+     */
+    @SubscribeEvent
+    public static void onRegisterFeatures(final RegistryEvent.Register<Feature<?>> event)
+    {
+        OreGeneration.initNetherFeatures();
+        OreGeneration.initOverworldFeatures();
+    }
      
+    
     /**
      * This method will be called by Forge when it is time for the mod to register
      * its Items. This method will always be called after the Block registry method.
