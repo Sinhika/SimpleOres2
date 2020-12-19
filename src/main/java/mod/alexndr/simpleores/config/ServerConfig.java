@@ -170,7 +170,7 @@ final class ServerConfig
         serverOnyxVeinSize = builder
                 .comment("Onyx ore vein size")
                 .translation(SimpleOres.MODID + ".config.serverOnyxVeinSize")
-                .defineInRange("OnyxVeinSize", 7, 1, Integer.MAX_VALUE);
+                .defineInRange("OnyxVeinSize", 4, 1, Integer.MAX_VALUE);
         serverOnyxVeinCount = builder
                 .comment("Onyx ore vein count per chunk")
                 .translation(SimpleOres.MODID + ".config.serverOnyxVeinCount")
