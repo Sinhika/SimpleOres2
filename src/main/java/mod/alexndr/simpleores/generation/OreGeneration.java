@@ -3,7 +3,7 @@ package mod.alexndr.simpleores.generation;
 import mod.alexndr.simplecorelib.world.OreGenUtils;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
-import net.minecraft.world.biome.Biome;
+import mod.alexndr.simpleores.init.ModFeatures;
 import net.minecraft.world.gen.GenerationStage.Decoration;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -13,42 +13,22 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
  */
 public class OreGeneration
 {
-    protected static ConfiguredFeature<?, ?> ORE_COPPER;
-    protected static ConfiguredFeature<?, ?> ORE_TIN;
-    protected static ConfiguredFeature<?, ?> ORE_MYTHRIL;
-    protected static ConfiguredFeature<?, ?> ORE_ADAMANTIUM;
-    protected static ConfiguredFeature<?, ?> ORE_ONYX;
-
-    /**
-     * Do we care about this biome? Yes, if overworld or nether, no if THEEND. Also
-     * init relevant Features, if they are null.
-     */
-    public static boolean checkAndInitBiome(BiomeLoadingEvent evt)
-    {
-        if (evt.getCategory() == Biome.Category.NETHER)
-        {
-            initNetherFeatures();
-            return true;
-        }
-        else if (evt.getCategory() != Biome.Category.THEEND)
-        {
-            initOverworldFeatures();
-            return true;
-        }
-        return false;
-    } // end checkBiome
+    public static ConfiguredFeature<?, ?> ORE_COPPER;
+    public static ConfiguredFeature<?, ?> ORE_TIN;
+    public static ConfiguredFeature<?, ?> ORE_MYTHRIL;
+    public static ConfiguredFeature<?, ?> ORE_ADAMANTIUM;
+    public static ConfiguredFeature<?, ?> ORE_ONYX;
 
     /**
      * initialize nether Features.
      * 
      * @param evt
      */
-    protected static void initNetherFeatures()
+    public static void initNetherFeatures()
     {
-        if (ORE_ONYX != null) return;
-        
-        ORE_ONYX = OreGenUtils.buildNetherOreFeature(ModBlocks.onyx_ore.get().getDefaultState(),
-                SimpleOresConfig.onyx_cfg);
+        ORE_ONYX = OreGenUtils.buildNetherOreFeature(
+                                ModFeatures.ONYX_VEIN.get(), ModBlocks.onyx_ore.get().getDefaultState(),
+                                SimpleOresConfig.onyx_cfg);
     } // end-initNetherFeatures()
 
     /**
@@ -56,31 +36,16 @@ public class OreGeneration
      * 
      * @param evt
      */
-    protected static void initOverworldFeatures()
+    public static void initOverworldFeatures()
     {
-        if (ORE_COPPER == null)
-        {
-            ORE_COPPER = OreGenUtils.buildOverworldOreFeature(
-                    ModBlocks.copper_ore.get().getDefaultState(), SimpleOresConfig.copper_cfg); 
-        }
-        
-        if (ORE_TIN == null)
-        {
-            ORE_TIN = OreGenUtils.buildOverworldOreFeature(
-                    ModBlocks.tin_ore.get().getDefaultState(), SimpleOresConfig.tin_cfg); 
-        }
-        
-        if (ORE_MYTHRIL == null)
-        {
-            ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(
-                    ModBlocks.mythril_ore.get().getDefaultState(), SimpleOresConfig.mythril_cfg); 
-        }
-       
-        if (ORE_ADAMANTIUM == null)
-        {
-            ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(
-                    ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_cfg); 
-        }
+        ORE_COPPER = OreGenUtils.buildOverworldOreFeature(ModFeatures.COPPER_VEIN.get(),
+                ModBlocks.copper_ore.get().getDefaultState(), SimpleOresConfig.copper_cfg);
+        ORE_TIN = OreGenUtils.buildOverworldOreFeature(ModFeatures.TIN_VEIN.get(),
+                ModBlocks.tin_ore.get().getDefaultState(), SimpleOresConfig.tin_cfg);
+        ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(ModFeatures.MYTHRIL_VEIN.get(),
+                ModBlocks.mythril_ore.get().getDefaultState(), SimpleOresConfig.mythril_cfg);
+        ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(ModFeatures.ADAMANTIUM_VEIN.get(),
+                ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_cfg);
     } // end-initOverworldFeatures()
 
     /** 
