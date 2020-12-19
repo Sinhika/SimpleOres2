@@ -21,6 +21,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -39,21 +40,13 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+              OreGeneration.initNetherFeatures();
+              OreGeneration.initOverworldFeatures();
+        });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
-    /**
-     * This method will be called by Forge when it is time for the mod to register
-     * its features. Here we call the methods that register configured features for
-     * ore generation.
-     */
-    @SubscribeEvent
-    public static void onRegisterFeatures(final RegistryEvent.Register<Feature<?>> event)
-    {
-        OreGeneration.initNetherFeatures();
-        OreGeneration.initOverworldFeatures();
-    }
-     
     
     /**
      * This method will be called by Forge when it is time for the mod to register
@@ -87,6 +80,20 @@ public final class ModEventSubscriber
         LOGGER.debug("Registered BlockItems");
     } // end onRegisterItems()
 
+    
+    /**
+     * This method will be called by Forge when it is time for the mod to register
+     * its features. Here we call the methods that register configured features for
+     * ore generation.
+     */
+//    @SubscribeEvent(priority=EventPriority.LOW)
+//    public static void onRegisterFeatures(final RegistryEvent.Register<Feature<?>> event)
+//    {
+//        OreGeneration.initNetherFeatures();
+//        OreGeneration.initOverworldFeatures();
+//    }
+     
+    
     @SubscribeEvent
     public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
     {
