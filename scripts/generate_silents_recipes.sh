@@ -29,10 +29,10 @@ make_silents_recipes.py --type=crusher --ticks=200 --ingredient='#forge:ingots/m
     --result='simpleores:mythril_dust' mythril_dust_from_ingot
 
 # ores
-make_silents_recipes.py --type=crusher --ticks=400 --ingredient='#forge:ores/adamantium' \
+make_silents_recipes.py --type=crusher --ticks=400 --ingredient='simpleores:adamantium_ore' \
     --result 'simpleores:crushed_adamantium_ore,2' 'minecraft_cobblestone,0.1' \
     -- crushed_adamantium_ore
-make_silents_recipes.py --type=crusher --ticks=400 --ingredient='#forge:ores/mythril' \
+make_silents_recipes.py --type=crusher --ticks=400 --ingredient='simpleores:mythril_ore' \
     --result 'simpleores:crushed_mythril_ore,2' 'minecraft_cobblestone,0.1' \
     -- crushed_mythril_ore
 make_silents_recipes.py --type=crusher --ticks=400 --ingredient='simpleores:tin_ore' \

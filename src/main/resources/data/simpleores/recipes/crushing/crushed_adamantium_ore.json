@@ -8,7 +8,7 @@
     "type": "silents_mechanisms:crushing",
     "process_time": 400,
     "ingredient": {
-        "tag": "forge:ores/adamantium"
+        "item": "simpleores:adamantium_ore"
     },
     "results": [
         {

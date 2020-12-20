@@ -8,7 +8,7 @@
     "type": "silents_mechanisms:crushing",
     "process_time": 400,
     "ingredient": {
-        "tag": "forge:ores/mythril"
+        "item": "simpleores:mythril_ore"
     },
     "results": [
         {
