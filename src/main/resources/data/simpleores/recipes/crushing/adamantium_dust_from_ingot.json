@@ -6,7 +6,7 @@
         }
     ],
     "type": "silents_mechanisms:crushing",
-    "process_time": 300,
+    "process_time": 200,
     "ingredient": {
         "tag": "forge:ingots/adamantium"
     },

@@ -21,21 +21,21 @@ cd $TARGETDIR
 # crusher
 
 # ingots
-make_silents_recipes.py --type=crusher --ingredient='#forge:ingots/adamantium' \
+make_silents_recipes.py --type=crusher --ticks=200 --ingredient='#forge:ingots/adamantium' \
     --result='simpleores:adamantium_dust' adamantium_dust_from_ingot
-make_silents_recipes.py --type=crusher --ingredient='simpleores:tin_ingot' \
+make_silents_recipes.py --type=crusher --ticks=200 --ingredient='simpleores:tin_ingot' \
     --result='simpleores:tin_dust' tin_dust_from_ingot
-make_silents_recipes.py --type=crusher --ingredient='#forge:ingots/mythril' \
+make_silents_recipes.py --type=crusher --ticks=200 --ingredient='#forge:ingots/mythril' \
     --result='simpleores:mythril_dust' mythril_dust_from_ingot
 
 # ores
-make_silents_recipes.py --type=crusher --ingredient='#forge:ores/adamantium' \
+make_silents_recipes.py --type=crusher --ticks=400 --ingredient='#forge:ores/adamantium' \
     --result 'simpleores:crushed_adamantium_ore,2' 'minecraft_cobblestone,0.1' \
     -- crushed_adamantium_ore
-make_silents_recipes.py --type=crusher --ingredient='#forge:ores/mythril' \
+make_silents_recipes.py --type=crusher --ticks=400 --ingredient='#forge:ores/mythril' \
     --result 'simpleores:crushed_mythril_ore,2' 'minecraft_cobblestone,0.1' \
     -- crushed_mythril_ore
-make_silents_recipes.py --type=crusher --ingredient='simpleores:tin_ore' \
+make_silents_recipes.py --type=crusher --ticks=400 --ingredient='simpleores:tin_ore' \
     --result 'simpleores:crushed_tin_ore,2' 'minecraft_cobblestone,0.1' \
     -- crushed_tin_ore
 

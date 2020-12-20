@@ -6,7 +6,7 @@
         }
     ],
     "type": "silents_mechanisms:crushing",
-    "process_time": 300,
+    "process_time": 400,
     "ingredient": {
         "item": "simpleores:tin_ore"
     },

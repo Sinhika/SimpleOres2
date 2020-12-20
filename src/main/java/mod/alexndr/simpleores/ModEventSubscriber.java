@@ -78,20 +78,6 @@ public final class ModEventSubscriber
         LOGGER.debug("Registered BlockItems");
     } // end onRegisterItems()
 
-    
-    /**
-     * This method will be called by Forge when it is time for the mod to register
-     * its features. Here we call the methods that register configured features for
-     * ore generation.
-     */
-//    @SubscribeEvent(priority=EventPriority.LOW)
-//    public static void onRegisterFeatures(final RegistryEvent.Register<Feature<?>> event)
-//    {
-//        OreGeneration.initNetherFeatures();
-//        OreGeneration.initOverworldFeatures();
-//    }
-     
-    
     @SubscribeEvent
     public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
     {
@@ -110,11 +96,6 @@ public final class ModEventSubscriber
         CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE,
                 new ResourceLocation(SimpleOres.MODID, "flag")));
 
-//               if (! ModList.get().isLoaded("silents_mechanisms")) 
-//               {
-//                   event.getRegistry().register(
-//                       CrushingRecipe.SERIALIZER.setRegistryName(CrushingRecipe.RECIPE_TYPE.toString()));
-//               }
     } // end registerRecipeSerializers
 
 } // end class ModEventSubscriber
