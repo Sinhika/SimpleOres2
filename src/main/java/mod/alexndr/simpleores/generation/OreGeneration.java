@@ -50,7 +50,7 @@ public class OreGeneration
         ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
                 ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_cfg);
         
-        OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_COPPER);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "copper_vein", ORE_COPPER);
         OreGenUtils.registerFeature(SimpleOres.MODID, "tin_vein", ORE_TIN);
         OreGenUtils.registerFeature(SimpleOres.MODID, "mythril_vein", ORE_MYTHRIL);
         OreGenUtils.registerFeature(SimpleOres.MODID, "adamantium_vein", ORE_ADAMANTIUM);
