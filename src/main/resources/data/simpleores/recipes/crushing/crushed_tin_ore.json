@@ -1,0 +1,23 @@
+{
+    "conditions": [
+        {
+            "modid": "silents_mechanisms",
+            "type": "forge:mod_loaded"
+        }
+    ],
+    "type": "silents_mechanisms:crushing",
+    "process_time": 300,
+    "ingredient": {
+        "item": "simpleores:tin_ore"
+    },
+    "results": [
+        {
+            "item": "simpleores:crushed_tin_ore",
+            "count": "2"
+        },
+        {
+            "item": "minecraft_cobblestone",
+            "chance": 0.1
+        }
+    ]
+}

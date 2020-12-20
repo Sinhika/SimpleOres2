@@ -1,0 +1,18 @@
+{
+    "conditions": [
+        {
+            "modid": "silents_mechanisms",
+            "type": "forge:mod_loaded"
+        }
+    ],
+    "type": "silents_mechanisms:crushing",
+    "process_time": 300,
+    "ingredient": {
+        "tag": "forge:ingots/mythril"
+    },
+    "results": [
+        {
+            "item": "simpleores:mythril_dust"
+        }
+    ]
+}
