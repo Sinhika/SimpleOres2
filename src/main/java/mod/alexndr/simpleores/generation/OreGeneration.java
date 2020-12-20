@@ -4,9 +4,6 @@ import mod.alexndr.simplecorelib.world.OreGenUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.GenerationStage.Decoration;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
@@ -33,7 +30,7 @@ public class OreGeneration
         ORE_ONYX = OreGenUtils.buildNetherOreFeature(
                 Feature.ORE, ModBlocks.onyx_ore.get().getDefaultState(),
                                 SimpleOresConfig.onyx_cfg);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(SimpleOres.MODID, "onyx_vein"), ORE_ONYX);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_ONYX);
     } // end-initNetherFeatures()
 
     
@@ -53,10 +50,10 @@ public class OreGeneration
         ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
                 ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_cfg);
         
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(SimpleOres.MODID, "onyx_vein"), ORE_COPPER);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(SimpleOres.MODID, "tin_vein"), ORE_TIN);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(SimpleOres.MODID, "mythril_vein"), ORE_MYTHRIL);
-        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(SimpleOres.MODID, "adamantium_vein"), ORE_ADAMANTIUM);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_COPPER);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "tin_vein", ORE_TIN);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "mythril_vein", ORE_MYTHRIL);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "adamantium_vein", ORE_ADAMANTIUM);
     } // end-initOverworldFeatures()
     
 
