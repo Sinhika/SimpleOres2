@@ -17,7 +17,7 @@
 	},
 	"crafting_items": {
 		"main": {
-			"tag": "forge:gems/onyx"
+			"item": "simpleores:onyx"
 		}
 	},
 	"name": {
