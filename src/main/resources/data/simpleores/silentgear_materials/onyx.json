@@ -17,7 +17,7 @@
 	},
 	"crafting_items": {
 		"main": {
-			"item": "simpleores:onyx"
+			"item": "simpleores:onyx_gem"
 		}
 	},
 	"name": {

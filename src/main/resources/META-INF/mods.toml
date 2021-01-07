@@ -12,7 +12,7 @@ modId="simpleores"
 version="${version}"
 displayName="Simple Ores"
 logoFile="simple_ores.png"
-updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.16/update.json"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.16.4/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
 credits="AleXndrTheGr8st (original mod), Sinhika (maintenance, ports), Paint_Ninja (initial 1.15 port), Thombias (new textures)."
 authors="AleXndrTheGr8st, Sinhika, Paint_Ninja"
@@ -29,7 +29,7 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[35.0.0,)"
+    versionRange="[35.1.0,)"
     ordering="NONE"
     side="BOTH"
 
@@ -53,3 +53,11 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
         versionRange="[1.16.4,)"
         ordering="BEFORE"
         side="BOTH"
+        
+[[dependencies.simpleores]]
+        modId="silentgear"
+        mandatory=false
+        versionRange="[1.16.4,)"
+        ordering="BEFORE"
+        side="BOTH"
+        
