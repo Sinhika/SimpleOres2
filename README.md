@@ -18,14 +18,14 @@ mods up from 1.12.2
 
 TO-DO
 -----
-* <s>make recipes disable-able in config.</s>
-* <s>add chance of ingots, tools to appropriate treasure chests</s>
 * update or move the SimpleOres, etc. wiki - in progress.
-* add dusts for all ores.
+* <s>add dusts for all ores.</s>
+* <s>add support for Silent's Mechanisms: Crusher</s>
+* <s>add support for Silent Gear</s>
 * add textures and ore generation for onyx ore in magma block, basalt, other nether blocks? (Blackstone onyx ore is just sadistic).
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * added SimpleOres items to villager, trader trade menus.
-* Implement graphical configuration from the menu...when Forge re-implents it.
+* Implement graphical configuration from the menu...when Forge re-implements it.
 
 
 License
