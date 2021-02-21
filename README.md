@@ -26,6 +26,8 @@ TO-DO
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * added SimpleOres items to villager, trader trade menus.
 * Implement graphical configuration from the menu...when Forge re-implements it.
+* add random chance for injected loot, instead of 100% guaranteed.
+
 
 
 License
