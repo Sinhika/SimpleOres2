@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 
 import com.mojang.datafixers.util.Pair;
 
-import mod.alexndr.simplecorelib.datagen.AbstractLootTableProvider;
+import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.data.DataGenerator;
@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 /**
  * LootTableProvider for SimpleOres. Again, proof-of-concept.
  */
-public class SimpleOresLootTableProvider extends AbstractLootTableProvider
+public class SimpleOresLootTableProvider extends BlockLootTableProvider
 {
 
     public SimpleOresLootTableProvider(DataGenerator dataGeneratorIn)
