@@ -34,7 +34,7 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         tables.clear();
         
         // abandoned mineshaft
-        LootPool.Builder foo = createChestPool(1,1, 0.25F)
+        LootPool.Builder foo = createChestPool(1,1, 0.50F)
                 .addEntry(ItemLootEntry.builder(ModItems.copper_bucket.get()).weight(3))
                 .addEntry(ItemLootEntry.builder(ModItems.copper_sword.get()).weight(3))
                 .addEntry(ItemLootEntry.builder(ModItems.copper_axe.get()).weight(3))

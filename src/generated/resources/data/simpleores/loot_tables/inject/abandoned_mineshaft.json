@@ -1,0 +1,162 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:copper_bucket"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:copper_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:copper_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:copper_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:copper_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:tin_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:tin_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:tin_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:tin_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_bow"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "simpleores:tin_shears"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 5.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:copper_ore"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 5.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:tin_ore"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:mythril_ore"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:adamantium_ore"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ]
+    }
+  ]
+}
