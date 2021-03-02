@@ -57,7 +57,7 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]]
         modId="silentgear"
         mandatory=false
-        versionRange="[1.16.3-2.5.2,)"
+        versionRange="[1.16.3-2.6.5,)"
         ordering="BEFORE"
         side="BOTH"
         
