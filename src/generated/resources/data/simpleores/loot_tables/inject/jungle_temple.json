@@ -1,0 +1,178 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_shears"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:adamantium_shears"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_shears"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:mythril_bow"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_bow"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:mythril_ingot"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:adamantium_ingot"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_gem"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.25
+        }
+      ]
+    }
+  ]
+}

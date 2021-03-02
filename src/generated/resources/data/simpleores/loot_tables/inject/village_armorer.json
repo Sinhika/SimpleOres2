@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:copper_ingot"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "simpleores:tin_ingot"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ]
+    }
+  ]
+}
