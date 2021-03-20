@@ -20,6 +20,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.item.Item.Properties;
+
 /**
  * Custom bow that does extra damage (intrinsic POWER 2 enchantment) and sets
  * things on fire (intrinsic FLAME enchantment).
@@ -32,13 +34,13 @@ public class OnyxBow extends BowItem
     }
 
     @Override
-    public void onPlayerStoppedUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft)
+    public void releaseUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft)
     {
         // add the default enchantments for Onyx bow.
         Map<Enchantment,Integer> oldEnchants = EnchantmentHelper.getEnchantments(stack);
         stack = this.addOnyxEnchantments(oldEnchants, stack);
 
-        super.onPlayerStoppedUsing(stack, worldIn, entityLiving, timeLeft);
+        super.releaseUsing(stack, worldIn, entityLiving, timeLeft);
 
         // remove temporary intrinsic enchantments.
         EnchantmentHelper.setEnchantments(oldEnchants, stack);
@@ -52,12 +54,12 @@ public class OnyxBow extends BowItem
 
         // add intrinsic POWER enchantment only if bow does not already have
         // one >= 2.
-        if (! (enchMap.containsKey(Enchantments.POWER) && enchMap.get(Enchantments.POWER) > 1) )
+        if (! (enchMap.containsKey(Enchantments.POWER_ARROWS) && enchMap.get(Enchantments.POWER_ARROWS) > 1) )
         {
-            enchMap.put(Enchantments.POWER, 2);
+            enchMap.put(Enchantments.POWER_ARROWS, 2);
         }
 
-        if (! enchMap.containsKey(Enchantments.FLAME)) enchMap.put(Enchantments.FLAME, 1);
+        if (! enchMap.containsKey(Enchantments.FLAMING_ARROWS)) enchMap.put(Enchantments.FLAMING_ARROWS, 1);
 
         // add intrinsic enchantments, if any.
         if (enchMap.size() > 0) {
@@ -68,10 +70,10 @@ public class OnyxBow extends BowItem
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
-        super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add((new TranslationTextComponent("tips.damage_tooltip")).mergeStyle(TextFormatting.GREEN));
-        tooltip.add((new TranslationTextComponent("tips.flame_tooltip")).mergeStyle(TextFormatting.GREEN));
+        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+        tooltip.add((new TranslationTextComponent("tips.damage_tooltip")).withStyle(TextFormatting.GREEN));
+        tooltip.add((new TranslationTextComponent("tips.flame_tooltip")).withStyle(TextFormatting.GREEN));
     }
 }  // end class OnyxBow

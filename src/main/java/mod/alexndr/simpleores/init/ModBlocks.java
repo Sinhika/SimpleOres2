@@ -28,47 +28,47 @@ public final class ModBlocks
 
     // Ore Blocks
     public static final RegistryObject<OreBlock> copper_ore = BLOCKS.register("copper_ore",
-            () -> new OreBlock(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance( 1.7F, 3.0F)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 1.7F, 3.0F)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> tin_ore = BLOCKS.register("tin_ore",
-            () -> new OreBlock(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance( 3.0F, 3.0F)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(1).setRequiresTool()));
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 3.0F, 3.0F)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(1).requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> mythril_ore = BLOCKS.register("mythril_ore",
-            () -> new OreBlock(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance( 4.0F, 3.0F)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 4.0F, 3.0F)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(2).requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
-            () -> new OreBlock(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance( 5.0F, 3.0F)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(2).setRequiresTool()));
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 5.0F, 3.0F)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(2).requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> onyx_ore = BLOCKS.register("onyx_ore",
-            () -> new OreBlock(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance( 7.0F, 3.0F)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(3).setRequiresTool()));
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 7.0F, 3.0F)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(3).requiresCorrectToolForDrops()));
 
     // Metal Blocks
     public static final RegistryObject<Block> copper_block = BLOCKS.register("copper_block",
-            () -> new Block(Block.Properties.create(Material.IRON,
-                    MaterialColor.ORANGE_TERRACOTTA)
-                    .hardnessAndResistance(3.0F, 6.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            () -> new Block(Block.Properties.of(Material.METAL,
+                    MaterialColor.TERRACOTTA_ORANGE)
+                    .strength(3.0F, 6.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> tin_block = BLOCKS.register("tin_block",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(4.0F, 6.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(4.0F, 6.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> mythril_block = BLOCKS.register("mythril_block",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(7.0F, 6.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                    .strength(7.0F, 6.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> adamantium_block = BLOCKS.register("adamantium_block",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
+                    .strength(7.0F, 12.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> onyx_block = BLOCKS.register("onyx_block",
-            () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.OBSIDIAN)
-                    .hardnessAndResistance(20.0F, 100.0F)
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).setRequiresTool()));
+            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.PODZOL)
+                    .strength(20.0F, 100.0F)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
 
 }  // end class ModBlocks

@@ -67,7 +67,7 @@ public final class ModEventSubscriber
                 {
                     // Make the properties, and make it so that the item will be on our ItemGroup
                     // (CreativeTab)
-                    final Item.Properties properties = new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP);
+                    final Item.Properties properties = new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP);
                     // Create the new BlockItem with the block and it's properties
                     final BlockItem blockItem = new BlockItem(block, properties);
                     // Set the new BlockItem's registry name to the block's registry name

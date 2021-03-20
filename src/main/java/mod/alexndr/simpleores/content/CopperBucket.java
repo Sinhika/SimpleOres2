@@ -24,6 +24,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.item.Item.Properties;
+
 public class CopperBucket extends BucketItem
 {
     public CopperBucket(Properties builder)
@@ -43,25 +45,25 @@ public class CopperBucket extends BucketItem
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
-        super.addInformation(stack, worldIn, tooltip, flagIn);
+        super.appendHoverText(stack, worldIn, tooltip, flagIn);
         tooltip.add((new TranslationTextComponent("tips.copper_bucket"))
-                        .mergeStyle(TextFormatting.GREEN));
+                        .withStyle(TextFormatting.GREEN));
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn)
+    public ActionResult<ItemStack> use(World worldIn, PlayerEntity playerIn, Hand handIn)
     {
         ActionResult<ItemStack> itemStackActionResult =
-                super.onItemRightClick(worldIn, playerIn, handIn);
+                super.use(worldIn, playerIn, handIn);
 
         // intercept result and correct bucket type.
-        if (itemStackActionResult.getType() == ActionResultType.CONSUME)
+        if (itemStackActionResult.getResult() == ActionResultType.CONSUME)
         {
             ItemStack newItemStack = ItemStack.EMPTY;
 
-            Item itemBucket = itemStackActionResult.getResult().getItem();
+            Item itemBucket = itemStackActionResult.getObject().getItem();
             Item newBucket = fixBucketItem(itemBucket);
 
             if (newBucket != itemBucket)
@@ -101,7 +103,7 @@ public class CopperBucket extends BucketItem
     } // end fixBucketItem()
 
     @Override
-    protected ItemStack emptyBucket(ItemStack stack, PlayerEntity playerEntity)
+    protected ItemStack getEmptySuccessItem(ItemStack stack, PlayerEntity playerEntity)
     {
         return !playerEntity.isCreative()
                 ? new ItemStack(ModItems.copper_bucket.get())

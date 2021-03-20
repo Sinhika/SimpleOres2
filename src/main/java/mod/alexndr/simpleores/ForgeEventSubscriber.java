@@ -50,21 +50,21 @@ public final class ForgeEventSubscriber
 	        if (event.getTarget().getType() == RayTraceResult.Type.BLOCK) 
 	        {
 	            BlockRayTraceResult rtResult = (BlockRayTraceResult) event.getTarget();
-	            BlockPos blockpos = rtResult.getPos();
-	            Direction direction = rtResult.getFace();
-	            BlockPos blockpos1 = blockpos.offset(direction);
-	            if (event.getWorld().isBlockModifiable(event.getPlayer(), blockpos) 
-	                && event.getPlayer().canPlayerEdit(blockpos1, direction, event.getEmptyBucket()))
+	            BlockPos blockpos = rtResult.getBlockPos();
+	            Direction direction = rtResult.getDirection();
+	            BlockPos blockpos1 = blockpos.relative(direction);
+	            if (event.getWorld().mayInteract(event.getPlayer(), blockpos) 
+	                && event.getPlayer().mayUseItemAt(blockpos1, direction, event.getEmptyBucket()))
 	            {
 	                BlockState blockstate1 = event.getWorld().getBlockState(blockpos);
 	                if (blockstate1.getBlock() instanceof FlowingFluidBlock) 
 	                {
 	                    Fluid fluid = ((FlowingFluidBlock) blockstate1.getBlock()).getFluid();
-	                    if (fluid != Fluids.EMPTY && fluid.isIn(FluidTags.LAVA)) 
+	                    if (fluid != Fluids.EMPTY && fluid.is(FluidTags.LAVA)) 
 	                    {
 	                        Item bucketItem = event.getEmptyBucket().getItem();
-	                        event.getPlayer().addStat(Stats.ITEM_USED.get(bucketItem));
-	                        SoundEvent soundevent = SoundEvents.BLOCK_LAVA_EXTINGUISH;
+	                        event.getPlayer().awardStat(Stats.ITEM_USED.get(bucketItem));
+	                        SoundEvent soundevent = SoundEvents.LAVA_EXTINGUISH;
 	                        event.getPlayer().playSound(soundevent, 1.0F, 1.0F);
 	                        event.setFilledBucket(ItemStack.EMPTY);
                             event.setResult(Result.ALLOW);

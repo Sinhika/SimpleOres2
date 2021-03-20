@@ -29,7 +29,7 @@ public class OreGeneration
     {
         if (! SimpleOresConfig.enableOnyxOre) return;
         ORE_ONYX = OreGenUtils.buildNetherOreFeature(
-                Feature.ORE, ModBlocks.onyx_ore.get().getDefaultState(),
+                Feature.ORE, ModBlocks.onyx_ore.get().defaultBlockState(),
                                 SimpleOresConfig.onyx_cfg);
         OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_ONYX);
     } // end-initNetherFeatures()
@@ -44,25 +44,25 @@ public class OreGeneration
     {
         if (SimpleOresConfig.enableCopperOre) {
             ORE_COPPER = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.copper_ore.get().getDefaultState(), SimpleOresConfig.copper_cfg);
+                    ModBlocks.copper_ore.get().defaultBlockState(), SimpleOresConfig.copper_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "copper_vein", ORE_COPPER);
         }
         if (SimpleOresConfig.enableTinOre)
         {
             ORE_TIN = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.tin_ore.get().getDefaultState(), SimpleOresConfig.tin_cfg);
+                    ModBlocks.tin_ore.get().defaultBlockState(), SimpleOresConfig.tin_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "tin_vein", ORE_TIN);
         }
         if (SimpleOresConfig.enableMythrilOre)
         {
             ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.mythril_ore.get().getDefaultState(), SimpleOresConfig.mythril_cfg);
+                    ModBlocks.mythril_ore.get().defaultBlockState(), SimpleOresConfig.mythril_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "mythril_vein", ORE_MYTHRIL);
         }
         if (SimpleOresConfig.enableAdamantiumOre)
         {
             ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.adamantium_ore.get().getDefaultState(), SimpleOresConfig.adamantium_cfg);
+                    ModBlocks.adamantium_ore.get().defaultBlockState(), SimpleOresConfig.adamantium_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "adamantium_vein", ORE_ADAMANTIUM);
         }
     } // end-initOverworldFeatures()
@@ -74,7 +74,7 @@ public class OreGeneration
     public static void generateNetherOres(BiomeLoadingEvent evt)
     {
         if (SimpleOresConfig.enableOnyxOre) 
-            evt.getGeneration().withFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX);
+            evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX);
     } // end generateNetherOres()
     
     /**
@@ -83,13 +83,13 @@ public class OreGeneration
     public static void generateOverworldOres(BiomeLoadingEvent evt)
     {
         if (SimpleOresConfig.enableCopperOre)
-            evt.getGeneration().withFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_COPPER);
+            evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_COPPER);
         if (SimpleOresConfig.enableTinOre)
-           evt.getGeneration().withFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_TIN);
+           evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_TIN);
         if (SimpleOresConfig.enableMythrilOre)
-            evt.getGeneration().withFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_MYTHRIL);
+            evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_MYTHRIL);
         if (SimpleOresConfig.enableAdamantiumOre)
-            evt.getGeneration().withFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_ADAMANTIUM);
+            evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_ADAMANTIUM);
     } // end generateOverworldOres()
     
 

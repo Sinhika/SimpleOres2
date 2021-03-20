@@ -9,7 +9,7 @@ license="LGPL 3"
 
 [[mods]]
 modId="simpleores"
-version="${version}"
+version="${file.jarVersion}"
 displayName="Simple Ores"
 logoFile="simple_ores.png"
 updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.16/update.json"
@@ -29,7 +29,7 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[36.0.0,37.0.0)"
+    versionRange="[36.1.0,37.0.0)"
     ordering="NONE"
     side="BOTH"
 
@@ -43,21 +43,21 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.5-2.0.6.2,1.16.5-2.0.7.0)"
+    versionRange="[${simplecorelib_min},${simplecorelib_max})"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
         modId="silents_mechanisms"
         mandatory=false
-        versionRange="[1.16.3-0.8.9,)"
+        versionRange="[${silentmech_min},)"
         ordering="BEFORE"
         side="BOTH"
         
 [[dependencies.simpleores]]
         modId="silentgear"
         mandatory=false
-        versionRange="[1.16.3-2.6.5,)"
+        versionRange="[${silentgear_min},)"
         ordering="BEFORE"
         side="BOTH"
         

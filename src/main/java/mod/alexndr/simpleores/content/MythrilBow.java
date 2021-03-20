@@ -21,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.item.Item.Properties;
+
 /**
  *  A bow with some special features: Efficiency, which makes it act like an
  *  INFINITY bow sometimes, and extra damage (equivalent to POWER 2).
@@ -38,21 +40,21 @@ public class MythrilBow extends BowItem
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
-        super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add((new TranslationTextComponent("tips.damage_tooltip")).mergeStyle(TextFormatting.GREEN));
-        tooltip.add((new TranslationTextComponent("tips.efficiency_tooltip")).mergeStyle(TextFormatting.GREEN));
+        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+        tooltip.add((new TranslationTextComponent("tips.damage_tooltip")).withStyle(TextFormatting.GREEN));
+        tooltip.add((new TranslationTextComponent("tips.efficiency_tooltip")).withStyle(TextFormatting.GREEN));
     }
 
     @Override
-    public void onPlayerStoppedUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft)
+    public void releaseUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft)
     {
         // add the default enchantments for Mythril bow.
         Map<Enchantment,Integer> oldEnchants = EnchantmentHelper.getEnchantments(stack);
         stack = this.addMythrilEnchantments(oldEnchants, stack);
 
-        super.onPlayerStoppedUsing(stack, worldIn, entityLiving, timeLeft);
+        super.releaseUsing(stack, worldIn, entityLiving, timeLeft);
 
         // remove temporary intrinsic enchantments.
         EnchantmentHelper.setEnchantments(oldEnchants, stack);
@@ -66,15 +68,15 @@ public class MythrilBow extends BowItem
 
         // add intrinsic POWER enchantment only if bow does not already have
         // one >= 2.
-        if (! (enchMap.containsKey(Enchantments.POWER) && enchMap.get(Enchantments.POWER) > 1) )
+        if (! (enchMap.containsKey(Enchantments.POWER_ARROWS) && enchMap.get(Enchantments.POWER_ARROWS) > 1) )
         {
-            enchMap.put(Enchantments.POWER, 2);
+            enchMap.put(Enchantments.POWER_ARROWS, 2);
         }
 
         // add intrinsic INFINITY enchantment if RNG <= EFFICIENCY.
-        if (! enchMap.containsKey(Enchantments.INFINITY))
+        if (! enchMap.containsKey(Enchantments.INFINITY_ARROWS))
         {
-            if (rng.nextInt(100) < EFFICIENCY) enchMap.put(Enchantments.INFINITY, 1);
+            if (rng.nextInt(100) < EFFICIENCY) enchMap.put(Enchantments.INFINITY_ARROWS, 1);
         }
 
         // add intrinsic enchantments, if any.

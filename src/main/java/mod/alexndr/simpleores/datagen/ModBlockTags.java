@@ -22,7 +22,7 @@ public class ModBlockTags extends BlockTagsProvider
     }
 
     @Override
-    protected void registerTags()
+    protected void addTags()
     {
         registerOreTags();
         registerStorageBlockTags();
@@ -30,7 +30,7 @@ public class ModBlockTags extends BlockTagsProvider
     
     private void registerStorageBlockTags()
     {
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantite"))
@@ -40,28 +40,28 @@ public class ModBlockTags extends BlockTagsProvider
             .addTag(TagUtils.forgeBlockTag("storage_blocks/mithril"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/onyx"));
         
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
                 .add(ModBlocks.adamantium_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
                 .add(ModBlocks.adamantium_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "storage_blocks/adamantite"))
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/adamantite"))
                 .add(ModBlocks.adamantium_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "storage_blocks/copper"))
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/copper"))
                 .add(ModBlocks.copper_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "storage_blocks/tin"))
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/tin"))
                 .add(ModBlocks.tin_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "storage_blocks/mythril"))
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/mythril"))
                 .add(ModBlocks.mythril_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "storage_blocks/mithril"))
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/mithril"))
                 .add(ModBlocks.mythril_block.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "storage_blocks/onyx"))
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/onyx"))
                 .add(ModBlocks.onyx_block.get());
 
     } // end registerStorageBlockTags
     
     private void registerOreTags()
     {
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores"))
+        this.tag(TagUtils.forgeBlockTag( "ores"))
                 .addTag(TagUtils.forgeBlockTag( "ores/copper"))
                 .addTag(TagUtils.forgeBlockTag( "ores/tin"))
                 .addTag(TagUtils.forgeBlockTag( "ores/adamantine"))
@@ -71,21 +71,21 @@ public class ModBlockTags extends BlockTagsProvider
                 .addTag(TagUtils.forgeBlockTag( "ores/mythril"))
                 .addTag(TagUtils.forgeBlockTag( "ores/onyx"));
 
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/copper"))
+        this.tag(TagUtils.forgeBlockTag( "ores/copper"))
                 .add(ModBlocks.copper_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/tin"))
+        this.tag(TagUtils.forgeBlockTag( "ores/tin"))
                 .add(ModBlocks.tin_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/adamantium"))
+        this.tag(TagUtils.forgeBlockTag( "ores/adamantium"))
                 .add(ModBlocks.adamantium_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/adamantine"))
+        this.tag(TagUtils.forgeBlockTag( "ores/adamantine"))
                 .add(ModBlocks.adamantium_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/adamantite"))
+        this.tag(TagUtils.forgeBlockTag( "ores/adamantite"))
                 .add(ModBlocks.adamantium_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/mythril"))
+        this.tag(TagUtils.forgeBlockTag( "ores/mythril"))
                 .add(ModBlocks.mythril_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/mithril"))
+        this.tag(TagUtils.forgeBlockTag( "ores/mithril"))
                 .add(ModBlocks.mythril_ore.get());
-        this.getOrCreateBuilder(TagUtils.forgeBlockTag( "ores/onyx"))
+        this.tag(TagUtils.forgeBlockTag( "ores/onyx"))
                 .add(ModBlocks.onyx_ore.get());
     } // end registerOreTags()
 

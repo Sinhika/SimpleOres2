@@ -26,7 +26,7 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
     }
     
     @Override
-    protected void registerRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
     {
         registerFurnaceRecipes(consumer);
     } // end registerRecipes()
@@ -35,25 +35,25 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
     private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
     {
         setbuilder.buildOre2IngotRecipes(consumer, 
-                Ingredient.fromItems(ModItems.adamantium_dust.get().asItem()), 
+                Ingredient.of(ModItems.adamantium_dust.get().asItem()), 
                 ModItems.adamantium_ingot.get(), 
-                hasItem(ModItems.adamantium_dust.get().asItem()), 0.7F, 200, "_from_dust");
+                has(ModItems.adamantium_dust.get().asItem()), 0.7F, 200, "_from_dust");
         setbuilder.buildOre2IngotRecipes(consumer, 
-                Ingredient.fromItems(ModItems.crushed_adamantium_ore.get().asItem()), 
+                Ingredient.of(ModItems.crushed_adamantium_ore.get().asItem()), 
                 ModItems.adamantium_ingot.get(), 
-                hasItem(ModItems.crushed_adamantium_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+                has(ModItems.crushed_adamantium_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
         setbuilder.buildOre2IngotRecipes(consumer, 
-                Ingredient.fromItems(ModItems.mythril_dust.get().asItem()), 
+                Ingredient.of(ModItems.mythril_dust.get().asItem()), 
                 ModItems.mythril_ingot.get(), 
-                hasItem(ModItems.mythril_dust.get().asItem()), 0.7F, 200, "_from_dust");
+                has(ModItems.mythril_dust.get().asItem()), 0.7F, 200, "_from_dust");
         setbuilder.buildOre2IngotRecipes(consumer, 
-                Ingredient.fromItems(ModItems.crushed_mythril_ore.get().asItem()), 
+                Ingredient.of(ModItems.crushed_mythril_ore.get().asItem()), 
                 ModItems.mythril_ingot.get(), 
-                hasItem(ModItems.crushed_mythril_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+                has(ModItems.crushed_mythril_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
         setbuilder.buildOre2IngotRecipes(consumer, 
-                Ingredient.fromItems(ModItems.crushed_tin_ore.get().asItem()), 
+                Ingredient.of(ModItems.crushed_tin_ore.get().asItem()), 
                 ModItems.tin_ingot.get(), 
-                hasItem(ModItems.crushed_tin_ore.get().asItem()), 0.4F, 200, "_from_ore_chunk");
+                has(ModItems.crushed_tin_ore.get().asItem()), 0.4F, 200, "_from_ore_chunk");
     }
     
 

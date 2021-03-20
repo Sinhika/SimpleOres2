@@ -35,7 +35,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
-    protected void registerRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -46,52 +46,52 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     
     protected void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
     {
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_COPPER), "copper", 
-                                      hasItem(ModTags.Items.INGOTS_COPPER), flag("copper_tools"), true);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_TIN), "tin", 
-                hasItem(ModTags.Items.INGOTS_TIN), flag("tin_tools"), true);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_MYTHRIL), "mythril", 
-                hasItem(ModTags.Items.INGOTS_MYTHRIL), flag("mythril_tools"), true);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_ADAMANTIUM), "adamantium", 
-                hasItem(ModTags.Items.INGOTS_ADAMANTIUM), flag("adamantium_tools"), true);
-        setbuilder.buildSimpleToolSet(consumer, Ingredient.fromTag(ModTags.Items.GEMS_ONYX), "onyx", 
-                hasItem(ModTags.Items.GEMS_ONYX), flag("onyx_tools"), true);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModTags.Items.INGOTS_COPPER), "copper", 
+                                      has(ModTags.Items.INGOTS_COPPER), flag("copper_tools"), true);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModTags.Items.INGOTS_TIN), "tin", 
+                has(ModTags.Items.INGOTS_TIN), flag("tin_tools"), true);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModTags.Items.INGOTS_MYTHRIL), "mythril", 
+                has(ModTags.Items.INGOTS_MYTHRIL), flag("mythril_tools"), true);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModTags.Items.INGOTS_ADAMANTIUM), "adamantium", 
+                has(ModTags.Items.INGOTS_ADAMANTIUM), flag("adamantium_tools"), true);
+        setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModTags.Items.GEMS_ONYX), "onyx", 
+                has(ModTags.Items.GEMS_ONYX), flag("onyx_tools"), true);
         
-        setbuilder.buildModBowRecipe(consumer, ModItems.mythril_bow.getId(), Ingredient.fromTag(ModTags.Items.INGOTS_MYTHRIL), 
-                ModItems.mythril_rod.get(), Ingredient.fromItems(Items.IRON_INGOT), hasItem(ModTags.Items.INGOTS_MYTHRIL), 
+        setbuilder.buildModBowRecipe(consumer, ModItems.mythril_bow.getId(), Ingredient.of(ModTags.Items.INGOTS_MYTHRIL), 
+                ModItems.mythril_rod.get(), Ingredient.of(Items.IRON_INGOT), has(ModTags.Items.INGOTS_MYTHRIL), 
                 flag("mod_bows"));
         
-        setbuilder.buildModBowRecipe(consumer, ModItems.onyx_bow.getId(), Ingredient.fromTag(ModTags.Items.GEMS_ONYX), 
-                ModItems.onyx_rod.get(), Ingredient.fromItems(Items.IRON_INGOT), hasItem(ModTags.Items.GEMS_ONYX), 
+        setbuilder.buildModBowRecipe(consumer, ModItems.onyx_bow.getId(), Ingredient.of(ModTags.Items.GEMS_ONYX), 
+                ModItems.onyx_rod.get(), Ingredient.of(Items.IRON_INGOT), has(ModTags.Items.GEMS_ONYX), 
                 flag("mod_bows"));
     } // end registerToolRecipes()
     
     protected void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
     {
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_COPPER), "copper", 
-                                       hasItem(ModTags.Items.INGOTS_COPPER), flag("copper_armor"));
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_TIN), "tin", 
-                hasItem(ModTags.Items.INGOTS_TIN), flag("tin_armor"));
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_MYTHRIL), "mythril", 
-                hasItem(ModTags.Items.INGOTS_MYTHRIL), flag("mythril_armor"));
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromTag(ModTags.Items.INGOTS_ADAMANTIUM), "adamantium", 
-                hasItem(ModTags.Items.INGOTS_ADAMANTIUM), flag("adamantium_armor"));
-        setbuilder.buildSimpleArmorSet(consumer, Ingredient.fromTag(ModTags.Items.GEMS_ONYX), "onyx", 
-                hasItem(ModTags.Items.GEMS_ONYX), flag("onyx_armor"));
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModTags.Items.INGOTS_COPPER), "copper", 
+                                       has(ModTags.Items.INGOTS_COPPER), flag("copper_armor"));
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModTags.Items.INGOTS_TIN), "tin", 
+                has(ModTags.Items.INGOTS_TIN), flag("tin_armor"));
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModTags.Items.INGOTS_MYTHRIL), "mythril", 
+                has(ModTags.Items.INGOTS_MYTHRIL), flag("mythril_armor"));
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModTags.Items.INGOTS_ADAMANTIUM), "adamantium", 
+                has(ModTags.Items.INGOTS_ADAMANTIUM), flag("adamantium_armor"));
+        setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModTags.Items.GEMS_ONYX), "onyx", 
+                has(ModTags.Items.GEMS_ONYX), flag("onyx_armor"));
     } // end registerArmorRecipes()
     
     protected void registerStorageRecipes(Consumer<IFinishedRecipe> consumer)
     {
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.copper_ingot.get(), ModBlocks.copper_block.get(), 
-                                             ModItems.copper_nugget.get(), hasItem(ModItems.copper_ingot.get()));
+                                             ModItems.copper_nugget.get(), has(ModItems.copper_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(), 
-                ModItems.tin_nugget.get(), hasItem(ModItems.tin_ingot.get()));
+                ModItems.tin_nugget.get(), has(ModItems.tin_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.mythril_ingot.get(), ModBlocks.mythril_block.get(), 
-                ModItems.mythril_nugget.get(), hasItem(ModItems.mythril_ingot.get()));
+                ModItems.mythril_nugget.get(), has(ModItems.mythril_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.adamantium_ingot.get(), ModBlocks.adamantium_block.get(), 
-                ModItems.adamantium_nugget.get(), hasItem(ModItems.adamantium_ingot.get()));
+                ModItems.adamantium_nugget.get(), has(ModItems.adamantium_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.onyx_gem.get(), ModBlocks.onyx_block.get(), 
-                null, hasItem(ModItems.onyx_gem.get()));
+                null, has(ModItems.onyx_gem.get()));
     } // end registerStorageRecipes()
     
     protected void registerMiscRecipes(Consumer<IFinishedRecipe> consumer)
@@ -100,59 +100,59 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         ResourceLocation copper_bucket_name = new ResourceLocation(SimpleOres.MODID, "copper_bucket");
         ConditionalRecipe.builder().addCondition(flag("copper_bucket"))
         .addRecipe(
-            ShapedRecipeBuilder.shapedRecipe(ModItems.copper_bucket.get())
-                .key('S', ModTags.Items.INGOTS_COPPER)
-                .patternLine("S S")
-                .patternLine(" S ")
-                .addCriterion("has_item", hasItem(ModTags.Items.INGOTS_COPPER))
-                ::build)
+            ShapedRecipeBuilder.shaped(ModItems.copper_bucket.get())
+                .define('S', ModTags.Items.INGOTS_COPPER)
+                .pattern("S S")
+                .pattern(" S ")
+                .unlockedBy("has_item", has(ModTags.Items.INGOTS_COPPER))
+                ::save)
         .setAdvancement(copper_bucket_name, 
                       setbuilder.build_advancement_with_condition(copper_bucket_name, 
-                              flag("copper_bucket"), hasItem(ModTags.Items.INGOTS_COPPER)))
+                              flag("copper_bucket"), has(ModTags.Items.INGOTS_COPPER)))
         .build(consumer, copper_bucket_name);
        
     } // end registerMiscRecipes()
 
     protected void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
     {
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
-                hasItem(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.copper_ore.get().asItem()), ModItems.copper_ingot.get(), 
-                hasItem(ModBlocks.copper_ore.get().asItem()), 0.4F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
-                hasItem(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 
-                hasItem(ModBlocks.onyx_ore.get().asItem()), 1.0F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.fromItems(ModBlocks.tin_ore.get().asItem()), ModItems.tin_ingot.get(), 
-                hasItem(ModBlocks.tin_ore.get().asItem()), 0.4F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
+                has(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.copper_ore.get().asItem()), ModItems.copper_ingot.get(), 
+                has(ModBlocks.copper_ore.get().asItem()), 0.4F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
+                has(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 
+                has(ModBlocks.onyx_ore.get().asItem()), 1.0F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.tin_ore.get().asItem()), ModItems.tin_ingot.get(), 
+                has(ModBlocks.tin_ore.get().asItem()), 0.4F, 200);
         
         setbuilder.buildVanillaRecyclingRecipes(consumer,
-                Ingredient.fromItems(ModItems.adamantium_axe.get(), ModItems.adamantium_boots.get(), ModItems.adamantium_chestplate.get(),
+                Ingredient.of(ModItems.adamantium_axe.get(), ModItems.adamantium_boots.get(), ModItems.adamantium_chestplate.get(),
                         ModItems.adamantium_helmet.get(), ModItems.adamantium_hoe.get(), ModItems.adamantium_leggings.get(), 
                         ModItems.adamantium_pickaxe.get(),ModItems.adamantium_shovel.get(), ModItems.adamantium_sword.get()), 
-                ModItems.adamantium_nugget.get(), hasItem(ModItems.adamantium_axe.get()), 
+                ModItems.adamantium_nugget.get(), has(ModItems.adamantium_axe.get()), 
                 0.3F, 200);
         
         setbuilder.buildVanillaRecyclingRecipes(consumer,
-                Ingredient.fromItems(ModItems.tin_axe.get(), ModItems.tin_boots.get(), ModItems.tin_chestplate.get(),
+                Ingredient.of(ModItems.tin_axe.get(), ModItems.tin_boots.get(), ModItems.tin_chestplate.get(),
                         ModItems.tin_helmet.get(), ModItems.tin_hoe.get(), ModItems.tin_leggings.get(), 
                         ModItems.tin_pickaxe.get(),ModItems.tin_shovel.get(), ModItems.tin_sword.get()), 
-                ModItems.tin_nugget.get(), hasItem(ModItems.tin_axe.get()), 
+                ModItems.tin_nugget.get(), has(ModItems.tin_axe.get()), 
                 0.2F, 200);
         
         setbuilder.buildVanillaRecyclingRecipes(consumer,
-                Ingredient.fromItems(ModItems.copper_axe.get(), ModItems.copper_boots.get(), ModItems.copper_chestplate.get(),
+                Ingredient.of(ModItems.copper_axe.get(), ModItems.copper_boots.get(), ModItems.copper_chestplate.get(),
                         ModItems.copper_helmet.get(), ModItems.copper_hoe.get(), ModItems.copper_leggings.get(), 
                         ModItems.copper_pickaxe.get(),ModItems.copper_shovel.get(), ModItems.copper_sword.get(),
                         ModItems.copper_bucket.get()), 
-                ModItems.copper_nugget.get(), hasItem(ModItems.copper_axe.get()), 
+                ModItems.copper_nugget.get(), has(ModItems.copper_axe.get()), 
                 0.2F, 200);
         
         setbuilder.buildVanillaRecyclingRecipes(consumer,
-                Ingredient.fromItems(ModItems.mythril_axe.get(), ModItems.mythril_boots.get(), ModItems.mythril_chestplate.get(),
+                Ingredient.of(ModItems.mythril_axe.get(), ModItems.mythril_boots.get(), ModItems.mythril_chestplate.get(),
                         ModItems.mythril_helmet.get(), ModItems.mythril_hoe.get(), ModItems.mythril_leggings.get(), 
                         ModItems.mythril_pickaxe.get(),ModItems.mythril_shovel.get(), ModItems.mythril_sword.get()), 
-                ModItems.mythril_nugget.get(), hasItem(ModItems.mythril_axe.get()), 
+                ModItems.mythril_nugget.get(), has(ModItems.mythril_axe.get()), 
                 0.4F, 200);
         
     } // end registerFurnaceRecipes()
