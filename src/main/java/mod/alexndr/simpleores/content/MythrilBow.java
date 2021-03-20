@@ -21,8 +21,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import net.minecraft.item.Item.Properties;
-
 /**
  *  A bow with some special features: Efficiency, which makes it act like an
  *  INFINITY bow sometimes, and extra damage (equivalent to POWER 2).

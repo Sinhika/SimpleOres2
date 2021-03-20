@@ -43,21 +43,21 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[${simplecorelib_min},${simplecorelib_max})"
+    versionRange="[1.16.5-2.0.7.0,1.16.5-2.0.8.0)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
         modId="silents_mechanisms"
         mandatory=false
-        versionRange="[${silentmech_min},)"
+        versionRange="[1.16.3-0.8.9,)"
         ordering="BEFORE"
         side="BOTH"
         
 [[dependencies.simpleores]]
         modId="silentgear"
         mandatory=false
-        versionRange="[${silentgear_min},)"
+        versionRange="[1.16.3-2.6.5,)"
         ordering="BEFORE"
         side="BOTH"
         
