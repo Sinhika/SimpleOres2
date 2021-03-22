@@ -159,7 +159,7 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
                 .add(ItemLootEntry.lootTableItem(ModItems.mythril_bow.get()).setWeight(1));
         addInjectionTable(SimpleOres.MODID, "igloo_chest", foo);
 
-        // nether
+        // bastion
         foo = createChestPool(1, 1, 0.25F).add(ItemLootEntry.lootTableItem(ModItems.onyx_helmet.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_chestplate.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_leggings.get()).setWeight(1))
@@ -172,7 +172,7 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_shears.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_gem.get()).setWeight(3)
                         .apply(SetCount.setCount(RandomValueRange.between(2, 4))));
-        addInjectionTable(SimpleOres.MODID, "nether", foo);
+        addInjectionTable(SimpleOres.MODID, "bastion", foo);
 
         // simple_dungeon
         foo = createChestPool(1, 1, 0.50F).add(ItemLootEntry.lootTableItem(ModItems.copper_helmet.get()).setWeight(2))
