@@ -9,14 +9,13 @@ import com.mojang.datafixers.util.Pair;
 
 import mod.alexndr.simplecorelib.datagen.LootTableInjectorProvider;
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.loot.ItemLootEntry;
 import net.minecraft.loot.LootParameterSet;
 import net.minecraft.loot.LootPool;
-import net.minecraft.loot.RandomValueRange;
 import net.minecraft.loot.LootTable.Builder;
+import net.minecraft.loot.RandomValueRange;
 import net.minecraft.loot.functions.SetCount;
 import net.minecraft.util.ResourceLocation;
 
@@ -36,61 +35,20 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         // abandoned mineshaft
         LootPool.Builder foo = createChestPool(1, 1, 0.75F)
                 .add(ItemLootEntry.lootTableItem(ModItems.copper_bucket.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_sword.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_axe.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_pickaxe.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_shovel.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_sword.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_axe.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_shovel.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_bow.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_shovel.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.tin_shears.get()).setWeight(3))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.copper_ore.get()).setWeight(9)
+                .add(ItemLootEntry.lootTableItem(ModItems.copper_ingot.get()).setWeight(9)
                         .apply(SetCount.setCount(RandomValueRange.between(3, 5))))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.tin_ore.get()).setWeight(9)
+                .add(ItemLootEntry.lootTableItem(ModItems.tin_ingot.get()).setWeight(9)
                         .apply(SetCount.setCount(RandomValueRange.between(3, 5))))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.mythril_ore.get()).setWeight(6)
+                .add(ItemLootEntry.lootTableItem(ModItems.mythril_ingot.get()).setWeight(6)
                         .apply(SetCount.setCount(RandomValueRange.between(2, 3))))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.adamantium_ore.get()).setWeight(1)
+                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
                         .apply(SetCount.setCount(RandomValueRange.between(1, 2))));
         addInjectionTable(SimpleOres.MODID, "abandoned_mineshaft", foo);
 
         // desert_pyramid
-        foo = createChestPool(1, 1, 0.25F).add(ItemLootEntry.lootTableItem(ModItems.mythril_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_shovel.get()).setWeight(1))
+        foo = createChestPool(1, 1, 0.25F)
                 .add(ItemLootEntry.lootTableItem(ModItems.mythril_bow.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_bow.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.mythril_ingot.get()).setWeight(2)
                         .apply(SetCount.setCount(RandomValueRange.between(3, 7))))
                 .add(ItemLootEntry.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
@@ -100,38 +58,7 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         addInjectionTable(SimpleOres.MODID, "desert_pyramid", foo);
 
         // jungle_temple
-        foo = createChestPool(1, 1, 0.25F).add(ItemLootEntry.lootTableItem(ModItems.mythril_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_hoe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_hoe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_hoe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_bow.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_bow.get()).setWeight(1))
+        foo = createChestPool(1, 1, 0.25F)
                 .add(ItemLootEntry.lootTableItem(ModItems.mythril_ingot.get()).setWeight(2)
                         .apply(SetCount.setCount(RandomValueRange.between(1, 3))))
                 .add(ItemLootEntry.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
@@ -140,27 +67,18 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         addInjectionTable(SimpleOres.MODID, "jungle_temple", foo);
 
         // igloo_chest
-        foo = createChestPool(1, 1, 0.25F).add(ItemLootEntry.lootTableItem(ModItems.copper_helmet.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_chestplate.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_leggings.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_boots.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_sword.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_axe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_pickaxe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_shovel.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_helmet.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_chestplate.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_leggings.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_boots.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_sword.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_axe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_shovel.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_bow.get()).setWeight(1));
+        foo = createChestPool(1, 1, 0.25F)
+                .add(ItemLootEntry.lootTableItem(ModItems.mythril_nugget.get()).setWeight(1)
+                        .apply(SetCount.setCount(RandomValueRange.between(1, 3))))
+                .add(ItemLootEntry.lootTableItem(ModItems.copper_nugget.get()).setWeight(5)
+                        .apply(SetCount.setCount(RandomValueRange.between(1, 3))))
+                .add(ItemLootEntry.lootTableItem(ModItems.tin_nugget.get()).setWeight(5)
+                        .apply(SetCount.setCount(RandomValueRange.between(1, 3))));
         addInjectionTable(SimpleOres.MODID, "igloo_chest", foo);
 
         // bastion
-        foo = createChestPool(1, 1, 0.25F).add(ItemLootEntry.lootTableItem(ModItems.onyx_helmet.get()).setWeight(1))
+        foo = createChestPool(1, 1, 0.25F)
+                .add(ItemLootEntry.lootTableItem(ModItems.onyx_helmet.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_chestplate.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_leggings.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.onyx_boots.get()).setWeight(1))
@@ -175,50 +93,7 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         addInjectionTable(SimpleOres.MODID, "bastion", foo);
 
         // simple_dungeon
-        foo = createChestPool(1, 1, 0.50F).add(ItemLootEntry.lootTableItem(ModItems.copper_helmet.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_chestplate.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_leggings.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_boots.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_sword.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_axe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_pickaxe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_shovel.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_helmet.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_chestplate.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_leggings.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_boots.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_sword.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_axe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_shovel.get()).setWeight(2))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.mythril_bow.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_helmet.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_chestplate.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_leggings.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_boots.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_sword.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_axe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_pickaxe.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_shovel.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.tin_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.copper_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModItems.onyx_shears.get()).setWeight(1))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.copper_ore.get()).setWeight(2)
-                        .apply(SetCount.setCount(RandomValueRange.between(2, 4))))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.tin_ore.get()).setWeight(2)
-                        .apply(SetCount.setCount(RandomValueRange.between(2, 4))))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.mythril_ore.get()).setWeight(1)
-                        .apply(SetCount.setCount(RandomValueRange.between(1, 2))))
-                .add(ItemLootEntry.lootTableItem(ModBlocks.adamantium_ore.get()).setWeight(1))
+        foo = createChestPool(1, 1, 0.50F)
                 .add(ItemLootEntry.lootTableItem(ModItems.copper_ingot.get()).setWeight(3)
                         .apply(SetCount.setCount(RandomValueRange.between(2, 4))))
                 .add(ItemLootEntry.lootTableItem(ModItems.tin_ingot.get()).setWeight(3)
@@ -231,22 +106,15 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
 
         // spawn_bonus_chest
         foo = createChestPool(1, 1, 0.75F)
-            .add(ItemLootEntry.lootTableItem(ModItems.copper_sword.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_axe.get()).setWeight(3))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_pickaxe.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.copper_shovel.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.copper_hoe.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.tin_sword.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.tin_axe.get()).setWeight(2))
-            .add(ItemLootEntry.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.tin_shovel.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.tin_hoe.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_bucket.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_shears.get()).setWeight(1));
         addInjectionTable(SimpleOres.MODID, "spawn_bonus_chest", foo);
 
         // village_armorer
-        foo = createChestPool(1, 1, 0.50F).add(ItemLootEntry.lootTableItem(ModItems.copper_helmet.get()).setWeight(1))
+        foo = createChestPool(1, 1, 0.50F)
+            .add(ItemLootEntry.lootTableItem(ModItems.copper_helmet.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_chestplate.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_leggings.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_boots.get()).setWeight(1))
@@ -266,7 +134,8 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         addInjectionTable(SimpleOres.MODID, "village_fletcher", foo);
 
         // village_mason
-        foo = createChestPool(1, 1, 0.50F).add(ItemLootEntry.lootTableItem(ModItems.copper_pickaxe.get()).setWeight(1))
+        foo = createChestPool(1, 1, 0.50F)
+            .add(ItemLootEntry.lootTableItem(ModItems.copper_pickaxe.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_bucket.get()).setWeight(1));
         addInjectionTable(SimpleOres.MODID, "village_mason", foo);
@@ -284,8 +153,6 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
             .add(ItemLootEntry.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.tin_shovel.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_bucket.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.tin_shears.get()).setWeight(1))
-            .add(ItemLootEntry.lootTableItem(ModItems.copper_shears.get()).setWeight(1))
             .add(ItemLootEntry.lootTableItem(ModItems.copper_ingot.get()).setWeight(3)
                     .apply(SetCount.setCount(RandomValueRange.between(2, 4))))
             .add(ItemLootEntry.lootTableItem(ModItems.tin_ingot.get()).setWeight(3)

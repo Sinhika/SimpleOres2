@@ -13,82 +13,6 @@
         {
           "type": "minecraft:item",
           "weight": 3,
-          "name": "simpleores:copper_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:copper_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:copper_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:copper_shovel"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:tin_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:tin_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:tin_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:tin_shovel"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:mythril_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:mythril_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:mythril_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:mythril_shovel"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:mythril_bow"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:adamantium_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:adamantium_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:adamantium_pickaxe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:adamantium_shovel"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
           "name": "simpleores:tin_shears"
         },
         {
@@ -104,7 +28,7 @@
               }
             }
           ],
-          "name": "simpleores:copper_ore"
+          "name": "simpleores:copper_ingot"
         },
         {
           "type": "minecraft:item",
@@ -119,7 +43,7 @@
               }
             }
           ],
-          "name": "simpleores:tin_ore"
+          "name": "simpleores:tin_ingot"
         },
         {
           "type": "minecraft:item",
@@ -134,7 +58,7 @@
               }
             }
           ],
-          "name": "simpleores:mythril_ore"
+          "name": "simpleores:mythril_ingot"
         },
         {
           "type": "minecraft:item",
@@ -148,7 +72,7 @@
               }
             }
           ],
-          "name": "simpleores:adamantium_ore"
+          "name": "simpleores:adamantium_ingot"
         }
       ],
       "conditions": [

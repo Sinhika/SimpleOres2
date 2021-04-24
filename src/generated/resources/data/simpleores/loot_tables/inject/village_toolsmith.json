@@ -27,14 +27,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "simpleores:tin_shears"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "simpleores:copper_shears"
-        },
-        {
-          "type": "minecraft:item",
           "weight": 3,
           "functions": [
             {
