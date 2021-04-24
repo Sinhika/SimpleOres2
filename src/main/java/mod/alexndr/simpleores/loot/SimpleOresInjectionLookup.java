@@ -29,6 +29,7 @@ public class SimpleOresInjectionLookup extends InjectionTableLookup
         this.replace("village_taiga_house", null);
         
         // these tables all present as themselves.
+        this.remove("buried_treasure");
         this.remove("igloo_chest");
         this.remove("village_armorer");
         this.remove("village_fletcher");
@@ -36,6 +37,6 @@ public class SimpleOresInjectionLookup extends InjectionTableLookup
         this.remove("village_shepherd");
         this.remove("village_toolsmith");
         this.remove("village_weaponsmith");
-    }
+    } // end ctor
 
 } // end class

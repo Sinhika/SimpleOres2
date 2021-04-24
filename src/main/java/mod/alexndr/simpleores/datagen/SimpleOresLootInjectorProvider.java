@@ -112,6 +112,16 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
             .add(ItemLootEntry.lootTableItem(ModItems.copper_shears.get()).setWeight(1));
         addInjectionTable(SimpleOres.MODID, "spawn_bonus_chest", foo);
 
+        // buried_treasure
+        foo = createChestPool(1, 1, 0.50F)
+                .add(ItemLootEntry.lootTableItem(ModItems.mythril_sword.get()).setWeight(1))
+                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_boots.get()).setWeight(1))
+                .add(ItemLootEntry.lootTableItem(ModItems.mythril_ingot.get()).setWeight(5)
+                        .apply(SetCount.setCount(RandomValueRange.between(1, 4))))
+                .add(ItemLootEntry.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
+                        .apply(SetCount.setCount(RandomValueRange.between(1, 3))));
+        addInjectionTable(SimpleOres.MODID, "buried_treasure", foo);
+        
         // village_armorer
         foo = createChestPool(1, 1, 0.50F)
             .add(ItemLootEntry.lootTableItem(ModItems.copper_helmet.get()).setWeight(1))
