@@ -92,6 +92,11 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
                         .apply(SetCount.setCount(RandomValueRange.between(2, 4))));
         addInjectionTable(SimpleOres.MODID, "bastion", foo);
 
+        // ruined_portal
+        foo = createChestPool(1, 1, 0.25F)
+            .add(ItemLootEntry.lootTableItem(ModItems.onyx_gem.get()).setWeight(1));
+        addInjectionTable(SimpleOres.MODID, "ruined_portal", foo);
+        
         // simple_dungeon
         foo = createChestPool(1, 1, 0.50F)
                 .add(ItemLootEntry.lootTableItem(ModItems.copper_ingot.get()).setWeight(3)

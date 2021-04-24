@@ -9,34 +9,42 @@ public class SimpleOresInjectionLookup extends InjectionTableLookup
     public SimpleOresInjectionLookup()
     {
         super();
-        this.replace("nether_bridge", "bastion");
+        
+        this.put("bastion_bridge", "bastion");
+        this.put("bastion_hoglin_stable", "bastion");
+        this.put("bastion_other", "bastion");
+        this.put("bastion_treasure", "bastion");
+        this.put("nether_bridge", "bastion");
         
         // just use 'simple_dungeon' for all this.
-        this.replace("shipwreck_supply", "simple_dungeon");
-        this.replace("shipwreck_map", "simple_dungeon");
-        this.replace("shipwreck_treasure", "simple_dungeon");
-        this.replace("stronghold_crossing", "simple_dungeon");
-        this.replace("stronghold_corridor", "simple_dungeon");
-        this.replace("stronghold_library", "simple_dungeon");
-        this.replace("underwater_ruin_small", "simple_dungeon");
-        this.replace("underwater_ruin_big", "simple_dungeon");
+        this.put("shipwreck_supply", "simple_dungeon");
+        this.put("shipwreck_map", "simple_dungeon");
+        this.put("shipwreck_treasure", "simple_dungeon");
         
-        // we don't have a 'village_house' table.
-        this.replace("village_savanna_house", null);
-        this.replace("village_plains_house", null);
-        this.replace("village_desert_house", null);
-        this.replace("village_snowy_house", null);
-        this.replace("village_taiga_house", null);
+        this.put("stronghold_crossing", "simple_dungeon");
+        this.put("stronghold_corridor", "simple_dungeon");
+        
+        this.put("underwater_ruin_small", "simple_dungeon");
+        this.put("underwater_ruin_big", "simple_dungeon");
         
         // these tables all present as themselves.
-        this.remove("buried_treasure");
-        this.remove("igloo_chest");
-        this.remove("village_armorer");
-        this.remove("village_fletcher");
-        this.remove("village_mason");
-        this.remove("village_shepherd");
-        this.remove("village_toolsmith");
-        this.remove("village_weaponsmith");
+        this.put("abandoned_mineshaft", "abandoned_mineshaft");
+        this.put("buried_treasure", "buried_treasure");
+        this.put("desert_pyramid", "desert_pyramid");
+        this.put("igloo_chest", "igloo_chest");
+        this.put("jungle_temple", "jungle_temple");
+        this.put("ruined_portal", "ruined_portal");
+        this.put("simple_dungeon", "simple_dungeon");
+        this.put("spawn_bonus_chest", "spawn_bonus_chest");
+        
+        // villagers
+        this.put("village_armorer", "village_armorer");
+        this.put("village_fletcher", "village_fletcher");
+        this.put("village_mason", "village_mason");
+        this.put("village_shepherd", "village_shepherd");
+        this.put("village_toolsmith", "village_toolsmith");
+        this.put("village_weaponsmith", "village_weaponsmith");
+        
     } // end ctor
 
 } // end class
