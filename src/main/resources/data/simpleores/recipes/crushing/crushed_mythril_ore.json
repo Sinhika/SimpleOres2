@@ -16,7 +16,7 @@
             "count": 2
         },
         {
-            "item": "minecraft_cobblestone",
+            "item": "minecraft:cobblestone",
             "chance": 0.1
         }
     ]
