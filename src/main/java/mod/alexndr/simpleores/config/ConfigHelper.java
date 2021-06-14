@@ -79,4 +79,8 @@ public final class ConfigHelper
         modConfig.save();
     } // end setValueAndSave()
 
+    public static void bakeClient(final ModConfig config)
+    {
+    } // end bakeClient
+
 } // end class ConfigHelper
