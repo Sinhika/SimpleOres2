@@ -4,13 +4,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
 def getVersionAppendage() {
     if (System.env.BUILD_NUMBER)
@@ -124,7 +125,8 @@ minecraft {
 repositories {
     maven {
         name = "mcmodsrepo"
-        url = "file:///${project.projectDir}/../mcmodsrepo"
+        //url = "file:///${project.projectDir}/../mcmodsrepo"
+        url = "file:///${project.projectDir}/../../Minecraft_1.16/mcmodsrepo"
     }
     maven {
         name = "CurseForge"
@@ -140,7 +142,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${version_forge}"
-    compile fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
+    implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
 
 }
 
