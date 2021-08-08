@@ -14,10 +14,10 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -91,7 +91,7 @@ public final class ModEventSubscriber
     } // onModConfigEvent
 
     @SubscribeEvent
-    public static void onRegisterRecipeSerializers(@Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
+    public static void onRegisterRecipeSerializers(@Nonnull final RegistryEvent.Register<RecipeSerializer<?>> event)
     {
         CraftingHelper.register(new FlagCondition.Serializer(SimpleOresConfig.INSTANCE,
                 new ResourceLocation(SimpleOres.MODID, "flag")));

@@ -8,21 +8,21 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.loot.SimpleOresInjectionLookup;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -64,9 +64,9 @@ public final class ForgeEventSubscriber
 	{
 	    if (event.getEmptyBucket().getItem() == ModItems.copper_bucket.get()) 
 	    {
-	        if (event.getTarget().getType() == RayTraceResult.Type.BLOCK) 
+	        if (event.getTarget().getType() == HitResult.Type.BLOCK) 
 	        {
-	            BlockRayTraceResult rtResult = (BlockRayTraceResult) event.getTarget();
+	            BlockHitResult rtResult = (BlockHitResult) event.getTarget();
 	            BlockPos blockpos = rtResult.getBlockPos();
 	            Direction direction = rtResult.getDirection();
 	            BlockPos blockpos1 = blockpos.relative(direction);
@@ -74,9 +74,9 @@ public final class ForgeEventSubscriber
 	                && event.getPlayer().mayUseItemAt(blockpos1, direction, event.getEmptyBucket()))
 	            {
 	                BlockState blockstate1 = event.getWorld().getBlockState(blockpos);
-	                if (blockstate1.getBlock() instanceof FlowingFluidBlock) 
+	                if (blockstate1.getBlock() instanceof LiquidBlock) 
 	                {
-	                    Fluid fluid = ((FlowingFluidBlock) blockstate1.getBlock()).getFluid();
+	                    Fluid fluid = ((LiquidBlock) blockstate1.getBlock()).getFluid();
 	                    if (fluid != Fluids.EMPTY && fluid.is(FluidTags.LAVA)) 
 	                    {
 	                        Item bucketItem = event.getEmptyBucket().getItem();
@@ -101,11 +101,11 @@ public final class ForgeEventSubscriber
     @SubscribeEvent(priority=EventPriority.HIGH)
     public static void onBiomeLoading(BiomeLoadingEvent evt)
     {
-        if (evt.getCategory() == Biome.Category.NETHER) 
+        if (evt.getCategory() == Biome.BiomeCategory.NETHER) 
         {
             OreGeneration.generateNetherOres(evt);
         }
-        else if (evt.getCategory() != Biome.Category.THEEND)
+        else if (evt.getCategory() != Biome.BiomeCategory.THEEND)
         {
             OreGeneration.generateOverworldOres(evt);
         }

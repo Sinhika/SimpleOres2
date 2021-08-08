@@ -8,9 +8,9 @@ import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -26,13 +26,13 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
     }
     
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerFurnaceRecipes(consumer);
     } // end registerRecipes()
 
 
-    private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildOre2IngotRecipes(consumer, 
                 Ingredient.of(ModItems.adamantium_dust.get().asItem()), 

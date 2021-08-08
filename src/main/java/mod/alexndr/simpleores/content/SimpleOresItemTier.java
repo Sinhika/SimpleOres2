@@ -1,13 +1,13 @@
 package mod.alexndr.simpleores.content;
 
 import mod.alexndr.simpleores.init.ModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
 
 import java.util.function.Supplier;
 
-public enum SimpleOresItemTier implements IItemTier
+public enum SimpleOresItemTier implements Tier
 {
    COPPER(1, 185, 4.0F, 1.0F, 8, ()->{ return Ingredient.of( ModItems.copper_ingot.get()); }),
    TIN(1, 220, 3.5F, 1.0F, 8, ()->{ return Ingredient.of( ModItems.tin_ingot.get()); }),
@@ -20,7 +20,7 @@ public enum SimpleOresItemTier implements IItemTier
    private final float efficiency;
    private final float attackDamage;
    private final int enchantability;
-   private final LazyValue<Ingredient> repairMaterial;
+   private final LazyLoadedValue<Ingredient> repairMaterial;
 
    private SimpleOresItemTier(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn,
                     Supplier<Ingredient> repairMaterialIn)
@@ -30,7 +30,7 @@ public enum SimpleOresItemTier implements IItemTier
       this.efficiency = efficiencyIn;
       this.attackDamage = attackDamageIn;
       this.enchantability = enchantabilityIn;
-      this.repairMaterial = new LazyValue<>(repairMaterialIn);
+      this.repairMaterial = new LazyLoadedValue<>(repairMaterialIn);
    }
 
    @Override

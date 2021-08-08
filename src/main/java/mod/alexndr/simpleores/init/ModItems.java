@@ -7,15 +7,15 @@ import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresItemTier;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -197,72 +197,72 @@ public final class ModItems
     // ARMOR
     // copper
     public static final RegistryObject<ArmorItem> copper_helmet = ITEMS.register("copper_helmet",
-            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> copper_leggings = ITEMS.register("copper_leggings",
-            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> copper_chestplate = ITEMS.register("copper_chestplate",
-            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> copper_boots = ITEMS.register("copper_boots",
-            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleOresArmorMaterial.COPPER, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // tin
     public static final RegistryObject<ArmorItem> tin_helmet = ITEMS.register("tin_helmet",
-            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tin_leggings = ITEMS.register("tin_leggings",
-            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tin_chestplate = ITEMS.register("tin_chestplate",
-            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tin_boots = ITEMS.register("tin_boots",
-            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleOresArmorMaterial.TIN, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // mythril
     public static final RegistryObject<ArmorItem> mythril_helmet = ITEMS.register("mythril_helmet",
-            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> mythril_leggings = ITEMS.register("mythril_leggings",
-            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> mythril_chestplate = ITEMS.register("mythril_chestplate",
-            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> mythril_boots = ITEMS.register("mythril_boots",
-            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleOresArmorMaterial.MYTHRIL, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // adamantium
     public static final RegistryObject<ArmorItem> adamantium_helmet = ITEMS.register("adamantium_helmet",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> adamantium_leggings = ITEMS.register("adamantium_leggings",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> adamantium_chestplate = ITEMS.register("adamantium_chestplate",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> adamantium_boots = ITEMS.register("adamantium_boots",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ADAMANTIUM, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // onyx
     public static final RegistryObject<ArmorItem> onyx_helmet = ITEMS.register("onyx_helmet",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> onyx_leggings = ITEMS.register("onyx_leggings",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> onyx_chestplate = ITEMS.register("onyx_chestplate",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> onyx_boots = ITEMS.register("onyx_boots",
-            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleOresArmorMaterial.ONYX, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
 } // end class

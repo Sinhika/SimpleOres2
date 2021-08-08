@@ -6,23 +6,25 @@ import java.util.function.Supplier;
 import javax.annotation.Nullable;
 
 import mod.alexndr.simpleores.init.ModItems;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BucketItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class CopperBucket extends BucketItem
 {
@@ -36,28 +38,28 @@ public class CopperBucket extends BucketItem
 		super(supplier, builder);
 	}
 
-	public CopperBucket(net.minecraft.fluid.Fluid containedFluidIn, Properties builder)
+	public CopperBucket(net.minecraft.world.level.material.Fluid containedFluidIn, Properties builder)
     {
         super(()->containedFluidIn, builder);
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
     {
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
-        tooltip.add((new TranslationTextComponent("tips.copper_bucket"))
-                        .withStyle(TextFormatting.GREEN));
+        tooltip.add((new TranslatableComponent("tips.copper_bucket"))
+                        .withStyle(ChatFormatting.GREEN));
     }
 
     @Override
-    public ActionResult<ItemStack> use(World worldIn, PlayerEntity playerIn, Hand handIn)
+    public InteractionResultHolder<ItemStack> use(Level worldIn, Player playerIn, InteractionHand handIn)
     {
-        ActionResult<ItemStack> itemStackActionResult =
+        InteractionResultHolder<ItemStack> itemStackActionResult =
                 super.use(worldIn, playerIn, handIn);
 
         // intercept result and correct bucket type.
-        if (itemStackActionResult.getResult() == ActionResultType.CONSUME)
+        if (itemStackActionResult.getResult() == InteractionResult.CONSUME)
         {
             ItemStack newItemStack = ItemStack.EMPTY;
 
@@ -74,7 +76,7 @@ public class CopperBucket extends BucketItem
                     newItemStack = new ItemStack(newBucket);
                 }
                 itemStackActionResult =
-                        new ActionResult<ItemStack>(ActionResultType.CONSUME,
+                        new InteractionResultHolder<ItemStack>(InteractionResult.CONSUME,
                                                     newItemStack);
             } // end-if newBucket changed
         } // end-if Action CONSUME
@@ -101,7 +103,7 @@ public class CopperBucket extends BucketItem
     } // end fixBucketItem()
 
     @Override
-    protected ItemStack getEmptySuccessItem(ItemStack stack, PlayerEntity playerEntity)
+    protected ItemStack getEmptySuccessItem(ItemStack stack, Player playerEntity)
     {
         return !playerEntity.isCreative()
                 ? new ItemStack(ModItems.copper_bucket.get())

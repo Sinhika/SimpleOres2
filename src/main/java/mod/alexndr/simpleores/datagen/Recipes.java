@@ -10,12 +10,12 @@ import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTags;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -35,7 +35,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -44,7 +44,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         registerFurnaceRecipes(consumer);
     } // end registerRecipes() 
     
-    protected void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerToolRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModTags.Items.INGOTS_COPPER), "copper", 
                                       has(ModTags.Items.INGOTS_COPPER), flag("copper_tools"), true);
@@ -66,7 +66,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 flag("mod_bows"));
     } // end registerToolRecipes()
     
-    protected void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerArmorRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModTags.Items.INGOTS_COPPER), "copper", 
                                        has(ModTags.Items.INGOTS_COPPER), flag("copper_armor"));
@@ -80,7 +80,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 has(ModTags.Items.GEMS_ONYX), flag("onyx_armor"));
     } // end registerArmorRecipes()
     
-    protected void registerStorageRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerStorageRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.copper_ingot.get(), ModBlocks.copper_block.get(), 
                                              ModItems.copper_nugget.get(), has(ModItems.copper_ingot.get()));
@@ -94,7 +94,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 null, has(ModItems.onyx_gem.get()));
     } // end registerStorageRecipes()
     
-    protected void registerMiscRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerMiscRecipes(Consumer<FinishedRecipe> consumer)
     {
         // copper bucket
         ResourceLocation copper_bucket_name = new ResourceLocation(SimpleOres.MODID, "copper_bucket");
@@ -113,7 +113,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
        
     } // end registerMiscRecipes()
 
-    protected void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
                 has(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
