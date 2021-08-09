@@ -11,7 +11,7 @@ public final class ModTabGroups
 {
 
     public static final CreativeModeTab MOD_ITEM_GROUP = 
-            new ModTabGroup(SimpleOres.MODID, () -> new ItemStack(ModItems.copper_ingot.get()));
+            new ModTabGroup(SimpleOres.MODID, () -> new ItemStack(ModItems.copper_pickaxe.get()));
 
     public static final class ModTabGroup extends CreativeModeTab
     {

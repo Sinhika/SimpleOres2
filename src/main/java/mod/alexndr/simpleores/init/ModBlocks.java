@@ -48,6 +48,20 @@ public final class ModBlocks
                     .strength( 7.0F, 3.0F)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(3).requiresCorrectToolForDrops()));
 
+    // Raw_metal blocks
+    public static final RegistryObject<Block> raw_tin_block = BLOCKS.register("raw_tin_block",
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(4.0F, 6.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> raw_mythril_block = BLOCKS.register("raw_mythril_block",
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                    .strength(7.0F, 6.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> raw_adamantium_block = BLOCKS.register("raw_adamantium_block",
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
+                    .strength(7.0F, 12.0F).sound(SoundType.METAL)
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops()));
+    
     // Metal Blocks
     public static final RegistryObject<Block> copper_block = BLOCKS.register("copper_block",
             () -> new Block(Block.Properties.of(Material.METAL,

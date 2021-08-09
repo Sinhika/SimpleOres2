@@ -1,8 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "config.enableCopperOre" : "EnableCopperOre",
-    "block.simpleores.copper_ore": "Mena de cobre",
-    "block.simpleores.copper_block": "Bloque de cobre",
     "block.simpleores.tin_ore": "Mena de estaño",
     "block.simpleores.tin_block": "Bloque de estaño",
     "block.simpleores.mythril_ore": "Mena de mitrilo",
@@ -12,7 +9,6 @@
     "block.simpleores.onyx_ore": "Mena de onyx",
     "block.simpleores.onyx_block": "Bloque de Onyx",
 
-    "item.simpleores.copper_ingot": "Lingote de cobre",
     "item.simpleores.copper_nugget": "Pepita de cobre",
     "item.simpleores.tin_ingot": "Lingote de estaño",
     "item.simpleores.tin_nugget": "Pepita de estaño",

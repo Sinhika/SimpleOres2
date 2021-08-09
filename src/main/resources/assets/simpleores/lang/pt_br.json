@@ -1,7 +1,5 @@
 {
     "itemGroup.simpleores": "SimpleOres",
-    "block.simpleores.copper_ore": "Minério de cobre",
-    "block.simpleores.copper_block": "Bloco de cobre",
     "block.simpleores.tin_ore": "Minério de estanho",
     "block.simpleores.tin_block": "Bloco de estanho",
     "block.simpleores.mythril_ore": "Minério de mithril",
@@ -11,7 +9,6 @@
     "block.simpleores.onyx_ore": "Minério de ônix",
     "block.simpleores.onyx_block": "Bloco de ônix",
 
-    "item.simpleores.copper_ingot": "Barra de cobre",
     "item.simpleores.copper_nugget": "Pepita de cobre",
     "item.simpleores.tin_ingot": "Barra de estanho",
     "item.simpleores.tin_nugget": "Pepita de estanho",

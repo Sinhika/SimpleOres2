@@ -1,7 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "block.simpleores.copper_ore": "Kobbermalm",
-    "block.simpleores.copper_block": "Kobberblok",
     "block.simpleores.tin_ore": "Tinmalm",
     "block.simpleores.tin_block": "Tinblok",
     "block.simpleores.mythril_ore": "Mythrilmal",
@@ -11,7 +9,6 @@
     "block.simpleores.onyx_ore": "Onyxmalm",
     "block.simpleores.onyx_block": "Onyxblok",
 
-    "item.simpleores.copper_ingot": "Kobberbar",
     "item.simpleores.tin_ingot": "Tinbar",
     "item.simpleores.mythril_ingot": "Mythrilbar",
     "item.simpleores.adamantium_ingot": "Adamantiumbar",

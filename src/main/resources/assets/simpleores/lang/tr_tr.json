@@ -1,8 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "config.enableCopperOre" : "EnableCopperOre",
-    "block.simpleores.copper_ore": "Bakır Cevheri",
-    "block.simpleores.copper_block": "Bakır Bloğu",
     "block.simpleores.tin_ore": "Kalay Cevheri",
     "block.simpleores.tin_block": "Kalay Bloğu",
     "block.simpleores.mythril_ore": "Mitril Cevheri",
@@ -12,7 +9,6 @@
     "block.simpleores.onyx_ore": "Oniks Cevheri",
     "block.simpleores.onyx_block": "Oniks Bloğu",
 
-    "item.simpleores.copper_ingot": "Bakır Külçesi",
     "item.simpleores.copper_nugget": "Bakır Parçası",
     "item.simpleores.tin_ingot": "Kalay Külçesi",
     "item.simpleores.tin_nugget": "Kalay Parçası",

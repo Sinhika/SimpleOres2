@@ -1,7 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "block.simpleores.copper_ore": "铜矿石",
-    "block.simpleores.copper_block": "铜块",
     "block.simpleores.tin_ore": "锡矿石",
     "block.simpleores.tin_block": "锡块",
     "block.simpleores.mythril_ore": "秘银矿石",
@@ -22,7 +20,6 @@
     "block.simpleores.adamantium_bars": "精金栏杆",
     "block.simpleores.onyx_bars": "缟玛瑙栏杆",
 
-    "item.simpleores.copper_ingot": "铜锭",
     "item.simpleores.tin_ingot": "锡锭",
     "item.simpleores.mythril_ingot": "秘银锭",
     "item.simpleores.adamantium_ingot": "精金锭",

@@ -1,7 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "block.simpleores.copper_ore": "Мідна руда",
-    "block.simpleores.copper_block": "Блок міді",
     "block.simpleores.tin_ore": "Олов'яна руда",
     "block.simpleores.tin_block": "Блок олова",
     "block.simpleores.mythril_ore": "Міфрилова руда",
@@ -11,7 +9,6 @@
     "block.simpleores.onyx_ore": "Оніксова руда",
     "block.simpleores.onyx_block": "Блок оніксу",
 
-    "item.simpleores.copper_ingot": "Мідний зливок",
     "item.simpleores.tin_ingot": "Олов'яний зливок",
     "item.simpleores.mythril_ingot": "Міфриловий зливок",
     "item.simpleores.adamantium_ingot": "Адамантовий зливок",

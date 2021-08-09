@@ -1,7 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "block.simpleores.copper_ore": "Mineral de Cobre",
-    "block.simpleores.copper_block": "Bloque de Cobre",
     "block.simpleores.tin_ore": "Mineral de Estaño",
     "block.simpleores.tin_block": "Bloque de Estaño",
     "block.simpleores.mythril_ore": "Mineral de Mitrilo",
@@ -11,7 +9,6 @@
     "block.simpleores.onyx_ore": "Mineral de Onix",
     "block.simpleores.onyx_block": "Bloque de Onix",
 
-    "item.simpleores.copper_ingot": "Lingote de Cobre",
     "item.simpleores.tin_ingot": "Lingote de Estaño",
     "item.simpleores.mythril_ingot": "Lingote de Mitrilo",
     "item.simpleores.adamantium_ingot": "Lingote de Adamantio",

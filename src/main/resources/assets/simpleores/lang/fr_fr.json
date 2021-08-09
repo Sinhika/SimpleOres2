@@ -1,7 +1,5 @@
 {
     "itemGroup.simpleores": "Simple Ores",
-    "block.simpleores.copper_ore": "Minerai de Cuivre",
-    "block.simpleores.copper_block": "Bloc de Cuivre",
     "block.simpleores.tin_ore": "Minerai d'Étain",
     "block.simpleores.tin_block": "Bloc d'Étain",
     "block.simpleores.mythril_ore": "Minerai de Mythril",
@@ -11,7 +9,6 @@
     "block.simpleores.onyx_ore": "Minerai d'Onyx",
     "block.simpleores.onyx_block": "Bloc d'Onyx",
 
-    "item.simpleores.copper_ingot": "Lingot de Cuivre",
     "item.simpleores.tin_ingot": "Lingot d'Étain",
     "item.simpleores.mythril_ingot": "Lingot de Mythril",
     "item.simpleores.adamantium_ingot": "Lingot d'Adamantium",
