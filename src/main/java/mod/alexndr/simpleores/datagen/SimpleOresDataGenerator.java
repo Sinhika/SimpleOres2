@@ -6,7 +6,7 @@ import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 /**
  * bundles up the GatherDataEvent handler and all the necessary data providers for

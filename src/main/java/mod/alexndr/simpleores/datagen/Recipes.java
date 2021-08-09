@@ -13,9 +13,10 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -35,7 +36,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
-    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -82,8 +83,19 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     
     protected void registerStorageRecipes(Consumer<FinishedRecipe> consumer)
     {
-        setbuilder.buildSimpleStorageRecipes(consumer, ModItems.copper_ingot.get(), ModBlocks.copper_block.get(), 
-                                             ModItems.copper_nugget.get(), has(ModItems.copper_ingot.get()));
+        ShapelessRecipeBuilder.shapeless(ModItems.copper_nugget.get(), 9)
+	        .requires(Items.COPPER_INGOT)
+	        .unlockedBy("has_item", has(Items.COPPER_INGOT))
+	        .save(consumer);
+    
+	    ShapedRecipeBuilder.shaped(Items.COPPER_INGOT)
+	        .define('S', ModItems.copper_nugget.get())
+	        .pattern("SSS")
+	        .pattern("SSS")
+	        .pattern("SSS")
+	        .unlockedBy("has_item", has(ModItems.copper_nugget.get()))
+	        .save(consumer, new ResourceLocation(SimpleOres.MODID, Items.COPPER_INGOT.toString() + "_from_nuggets"));
+
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(), 
                 ModItems.tin_nugget.get(), has(ModItems.tin_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.mythril_ingot.get(), ModBlocks.mythril_block.get(), 
@@ -117,8 +129,6 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     {
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
                 has(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.copper_ore.get().asItem()), ModItems.copper_ingot.get(), 
-                has(ModBlocks.copper_ore.get().asItem()), 0.4F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
                 has(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 

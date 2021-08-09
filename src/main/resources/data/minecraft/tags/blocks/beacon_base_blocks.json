@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-  	"simpleores:copper_block",
   	"simpleores:tin_block",
   	"simpleores:mythril_block",
   	"simpleores:adamantium_block"

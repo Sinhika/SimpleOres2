@@ -15,9 +15,9 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable.Builder;
-import net.minecraft.world.level.storage.loot.RandomValueBounds;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
 {
@@ -36,44 +36,40 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         LootPool.Builder foo = createChestPool(1, 1, 0.75F)
                 .add(LootItem.lootTableItem(ModItems.copper_bucket.get()).setWeight(3))
                 .add(LootItem.lootTableItem(ModItems.tin_shears.get()).setWeight(3))
-                .add(LootItem.lootTableItem(ModItems.copper_ingot.get()).setWeight(9)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(3, 5))))
                 .add(LootItem.lootTableItem(ModItems.tin_ingot.get()).setWeight(9)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(3, 5))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 5))))
                 .add(LootItem.lootTableItem(ModItems.mythril_ingot.get()).setWeight(6)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 3))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 3))))
                 .add(LootItem.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 2))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))));
         addInjectionTable(SimpleOres.MODID, "abandoned_mineshaft", foo);
 
         // desert_pyramid
         foo = createChestPool(1, 1, 0.25F)
                 .add(LootItem.lootTableItem(ModItems.mythril_bow.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.mythril_ingot.get()).setWeight(2)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(3, 7))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 7))))
                 .add(LootItem.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 3))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 3))))
                 .add(LootItem.lootTableItem(ModItems.onyx_gem.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 2))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))));
         addInjectionTable(SimpleOres.MODID, "desert_pyramid", foo);
 
         // jungle_temple
         foo = createChestPool(1, 1, 0.25F)
                 .add(LootItem.lootTableItem(ModItems.mythril_ingot.get()).setWeight(2)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
                 .add(LootItem.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(3, 7))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 7))))
                 .add(LootItem.lootTableItem(ModItems.onyx_gem.get()).setWeight(1));
         addInjectionTable(SimpleOres.MODID, "jungle_temple", foo);
 
         // igloo_chest
         foo = createChestPool(1, 1, 0.25F)
                 .add(LootItem.lootTableItem(ModItems.mythril_nugget.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))))
-                .add(LootItem.lootTableItem(ModItems.copper_nugget.get()).setWeight(5)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
                 .add(LootItem.lootTableItem(ModItems.tin_nugget.get()).setWeight(5)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))));
         addInjectionTable(SimpleOres.MODID, "igloo_chest", foo);
 
         // bastion
@@ -89,7 +85,7 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
                 .add(LootItem.lootTableItem(ModItems.onyx_bow.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.onyx_shears.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.onyx_gem.get()).setWeight(3)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 4))));
         addInjectionTable(SimpleOres.MODID, "bastion", foo);
 
         // ruined_portal
@@ -99,14 +95,12 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
         
         // simple_dungeon
         foo = createChestPool(1, 1, 0.50F)
-                .add(LootItem.lootTableItem(ModItems.copper_ingot.get()).setWeight(3)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))))
                 .add(LootItem.lootTableItem(ModItems.tin_ingot.get()).setWeight(3)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 4))))
                 .add(LootItem.lootTableItem(ModItems.mythril_ingot.get()).setWeight(2)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 3))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 3))))
                 .add(LootItem.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 3))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 3))));
         addInjectionTable(SimpleOres.MODID, "simple_dungeon", foo);
 
         // spawn_bonus_chest
@@ -122,9 +116,9 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
                 .add(LootItem.lootTableItem(ModItems.mythril_sword.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.adamantium_boots.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.mythril_ingot.get()).setWeight(5)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 4))))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 4))))
                 .add(LootItem.lootTableItem(ModItems.adamantium_ingot.get()).setWeight(1)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(1, 3))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))));
         addInjectionTable(SimpleOres.MODID, "buried_treasure", foo);
         
         // village_armorer
@@ -137,10 +131,8 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
             .add(LootItem.lootTableItem(ModItems.tin_chestplate.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.tin_leggings.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.tin_boots.get()).setWeight(1))
-            .add(LootItem.lootTableItem(ModItems.copper_ingot.get()).setWeight(3)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))))
             .add(LootItem.lootTableItem(ModItems.tin_ingot.get()).setWeight(3)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 4))));
         addInjectionTable(SimpleOres.MODID, "village_armorer", foo);
 
         // village_fletcher
@@ -168,10 +160,8 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
             .add(LootItem.lootTableItem(ModItems.tin_pickaxe.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.tin_shovel.get()).setWeight(1))
             .add(LootItem.lootTableItem(ModItems.copper_bucket.get()).setWeight(1))
-            .add(LootItem.lootTableItem(ModItems.copper_ingot.get()).setWeight(3)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))))
             .add(LootItem.lootTableItem(ModItems.tin_ingot.get()).setWeight(3)
-                    .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 4))));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 4))));
         addInjectionTable(SimpleOres.MODID, "village_toolsmith", foo);
        
         // village_weaponsmith
@@ -180,10 +170,8 @@ public class SimpleOresLootInjectorProvider extends LootTableInjectorProvider
                 .add(LootItem.lootTableItem(ModItems.copper_axe.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.tin_sword.get()).setWeight(1))
                 .add(LootItem.lootTableItem(ModItems.tin_axe.get()).setWeight(2))
-                .add(LootItem.lootTableItem(ModItems.copper_ingot.get()).setWeight(2)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 3))))
-                .add(LootItem.lootTableItem(ModItems.tin_ingot.get()).setWeight(2)
-                        .apply(SetItemCountFunction.setCount(RandomValueBounds.between(2, 3))));
+                 .add(LootItem.lootTableItem(ModItems.tin_ingot.get()).setWeight(2)
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 3))));
         addInjectionTable(SimpleOres.MODID, "village_weaponsmith", foo);
 
         return tables;

@@ -4,6 +4,7 @@ import mod.alexndr.simplecorelib.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -40,14 +41,16 @@ public class ModBlockTags extends BlockTagsProvider
             .addTag(TagUtils.forgeBlockTag("storage_blocks/mithril"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/onyx"));
         
+        // because they haven't been added to forge by default yet.
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/copper"))
+        	.add(Blocks.COPPER_BLOCK);
+        // end-copper
         this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
                 .add(ModBlocks.adamantium_block.get());
         this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
                 .add(ModBlocks.adamantium_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/adamantite"))
                 .add(ModBlocks.adamantium_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/copper"))
-                .add(ModBlocks.copper_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/tin"))
                 .add(ModBlocks.tin_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/mythril"))
@@ -71,8 +74,11 @@ public class ModBlockTags extends BlockTagsProvider
                 .addTag(TagUtils.forgeBlockTag( "ores/mythril"))
                 .addTag(TagUtils.forgeBlockTag( "ores/onyx"));
 
+        // because vanilla copper hasn't been added to forge tags by default yet.
         this.tag(TagUtils.forgeBlockTag( "ores/copper"))
-                .add(ModBlocks.copper_ore.get());
+                .add(Blocks.COPPER_ORE)
+                .add(Blocks.DEEPSLATE_COPPER_ORE);
+        // end copper
         this.tag(TagUtils.forgeBlockTag( "ores/tin"))
                 .add(ModBlocks.tin_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/adamantium"))

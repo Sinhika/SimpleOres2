@@ -37,21 +37,25 @@ public final class ModItems
             DeferredRegister.create(ForgeRegistries.ITEMS, SimpleOres.MODID);
 
     // ingots and nuggets
-    public static final RegistryObject<Item> copper_ingot = ITEMS.register("copper_ingot", 
-            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> copper_nugget = ITEMS.register("copper_nugget",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> tin_ingot = ITEMS.register("tin_ingot",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> tin_nugget = ITEMS.register("tin_nugget",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<Item> mythril_ingot = ITEMS.register("mythril_ingot",
+    public static final RegistryObject<Item> raw_tin = ITEMS.register("raw_tin",
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+   public static final RegistryObject<Item> mythril_ingot = ITEMS.register("mythril_ingot",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> mythril_nugget = ITEMS.register("mythril_nugget",
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> raw_mythril = ITEMS.register("raw_mythril",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> adamantium_ingot = ITEMS.register("adamantium_ingot",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> adamantium_nugget = ITEMS.register("adamantium_nugget",
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> raw_adamantium = ITEMS.register("raw_adamantium",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> onyx_gem = ITEMS.register("onyx_gem",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));

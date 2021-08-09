@@ -26,7 +26,7 @@ public class SilentsRecipes extends RecipeProvider implements ISimpleConditionBu
     }
     
     @Override
-    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerFurnaceRecipes(consumer);
     } // end registerRecipes()
