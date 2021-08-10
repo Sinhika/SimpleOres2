@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "simpleores:raw_mythril"
+    }
+  },
+  "result": {
+    "item": "simpleores:raw_mythril_block"
+  }
+}

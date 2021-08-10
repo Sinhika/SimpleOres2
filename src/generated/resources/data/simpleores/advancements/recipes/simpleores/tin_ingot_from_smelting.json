@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simpleores:tin_ore"
+            "items": [
+              "simpleores:raw_tin"
+            ]
           }
         ]
       }

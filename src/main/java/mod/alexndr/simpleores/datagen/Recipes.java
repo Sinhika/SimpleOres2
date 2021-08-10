@@ -136,15 +136,15 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_adamantium.get()), ModItems.adamantium_ingot.get(), 
                 has(ModItems.raw_adamantium.get().asItem()), 0.7F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
-                has(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
+                has(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200, "_from_ore");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_mythril.get()), ModItems.mythril_ingot.get(), 
                 has(ModItems.raw_mythril.get().asItem()), 0.7F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
-                has(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200);
+                has(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200, "_from_ore");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_tin.get()), ModItems.tin_ingot.get(), 
                 has(ModItems.raw_tin.get()), 0.4F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.tin_ore.get().asItem()), ModItems.tin_ingot.get(), 
-                has(ModBlocks.tin_ore.get().asItem()), 0.4F, 200);
+                has(ModBlocks.tin_ore.get().asItem()), 0.4F, 200, "_from_ore");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 
                 has(ModBlocks.onyx_ore.get().asItem()), 1.0F, 200);
         

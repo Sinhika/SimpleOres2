@@ -3,7 +3,12 @@
   "pools": [
     {
       "name": "main",
-      "rolls": 1.0,
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1.0,
+        "max": 1.0
+      },
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -20,10 +25,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1.0,
-                "max": 4.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 4.0
+              },
+              "add": false
             }
           ],
           "name": "simpleores:mythril_ingot"
@@ -34,10 +40,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 3.0
+              },
+              "add": false
             }
           ],
           "name": "simpleores:adamantium_ingot"
@@ -48,7 +55,8 @@
           "condition": "minecraft:random_chance",
           "chance": 0.5
         }
-      ]
+      ],
+      "functions": []
     }
   ]
 }

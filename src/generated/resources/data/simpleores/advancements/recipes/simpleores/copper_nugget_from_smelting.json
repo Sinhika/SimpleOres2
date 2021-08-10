@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simpleores:copper_axe"
+            "items": [
+              "simpleores:copper_axe"
+            ]
           }
         ]
       }

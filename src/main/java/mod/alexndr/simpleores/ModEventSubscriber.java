@@ -11,7 +11,6 @@ import mod.alexndr.simplecorelib.config.FlagCondition;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
-import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.resources.ResourceLocation;

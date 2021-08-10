@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "simpleores:adamantium_ore"
+    "item": "simpleores:raw_adamantium"
   },
   "result": "simpleores:adamantium_ingot",
   "experience": 0.7,

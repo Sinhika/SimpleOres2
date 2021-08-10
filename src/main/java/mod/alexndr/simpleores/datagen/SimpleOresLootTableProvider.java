@@ -31,12 +31,13 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
     {
         tables.clear();
         standardDropTable(ModBlocks.adamantium_block.get());
-        standardDropTable(ModBlocks.adamantium_ore.get());
         standardDropTable(ModBlocks.tin_block.get());
-        standardDropTable(ModBlocks.tin_ore.get());
         standardDropTable(ModBlocks.mythril_block.get());
-        standardDropTable(ModBlocks.mythril_ore.get());
         standardDropTable(ModBlocks.onyx_block.get());
+        
+        specialDropTable(ModBlocks.tin_ore.get(), ModItems.raw_tin.get());
+        specialDropTable(ModBlocks.mythril_ore.get(), ModItems.raw_mythril.get());
+        specialDropTable(ModBlocks.adamantium_ore.get(), ModItems.raw_adamantium.get());
         
         specialDropTable(ModBlocks.onyx_ore.get(), ModItems.onyx_gem.get());
         return tables;

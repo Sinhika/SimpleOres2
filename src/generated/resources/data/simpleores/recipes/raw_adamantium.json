@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpleores:raw_adamantium_block"
+    }
+  ],
+  "result": {
+    "item": "simpleores:raw_adamantium",
+    "count": 9
+  }
+}

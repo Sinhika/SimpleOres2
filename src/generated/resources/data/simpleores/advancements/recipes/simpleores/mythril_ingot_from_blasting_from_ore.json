@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_ingot_from_blasting_from_ore"
+    ]
+  },
+  "criteria": {
+    "mythril_ingot_from_blasting_from_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:mythril_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:mythril_ingot_from_blasting_from_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mythril_ingot_from_blasting_from_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

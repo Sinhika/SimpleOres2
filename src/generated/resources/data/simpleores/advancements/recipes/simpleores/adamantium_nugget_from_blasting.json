@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simpleores:adamantium_axe"
+            "items": [
+              "simpleores:adamantium_axe"
+            ]
           }
         ]
       }

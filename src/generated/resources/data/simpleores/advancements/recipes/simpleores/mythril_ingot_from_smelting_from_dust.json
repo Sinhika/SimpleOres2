@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simpleores:mythril_dust"
+            "items": [
+              "simpleores:mythril_dust"
+            ]
           }
         ]
       }

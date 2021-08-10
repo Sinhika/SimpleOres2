@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "simpleores:tin_ore"
+    "item": "simpleores:raw_tin"
   },
   "result": "simpleores:tin_ingot",
   "experience": 0.4,
