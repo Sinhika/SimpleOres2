@@ -54,7 +54,22 @@ public class ModBlockTags extends BlockTagsProvider
         	.add(ModBlocks.raw_mythril_block.get())
         	.add(ModBlocks.onyx_block.get())
         	.add(ModBlocks.onyx_ore.get());
-    }
+        
+        this.tag(TagUtils.modBlockTag("minecraft", "needs_stone_tool"))
+        	.add(ModBlocks.tin_ore.get())
+        	.add(ModBlocks.tin_block.get())
+        	.add(ModBlocks.raw_tin_block.get());
+        this.tag(TagUtils.modBlockTag("minecraft", "needs_iron_tool"))
+        	.add(ModBlocks.adamantium_block.get())
+        	.add(ModBlocks.adamantium_ore.get())
+        	.add(ModBlocks.raw_adamantium_block.get())
+        	.add(ModBlocks.mythril_block.get())
+        	.add(ModBlocks.mythril_ore.get())
+        	.add(ModBlocks.raw_mythril_block.get());
+        this.tag(TagUtils.modBlockTag("minecraft", "needs_diamond_tool"))
+        	.add(ModBlocks.onyx_block.get())
+        	.add(ModBlocks.onyx_ore.get());
+    } // end registerMiningTags()
     
     private void registerStorageBlockTags()
     {
