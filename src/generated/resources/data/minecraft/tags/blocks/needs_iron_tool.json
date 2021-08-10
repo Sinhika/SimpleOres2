@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "simpleores:adamantium_block",
+    "simpleores:adamantium_ore",
+    "simpleores:raw_adamantium_block",
+    "simpleores:mythril_block",
+    "simpleores:mythril_ore",
+    "simpleores:raw_mythril_block"
+  ]
+}
