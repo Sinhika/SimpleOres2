@@ -2,10 +2,12 @@ package mod.alexndr.simpleores.datagen;
 
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
+import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 /**
@@ -29,8 +31,83 @@ public class ModItemTags extends ItemTagsProvider
         registerDustTags();
         registerOreChunkTags();
     	registerMisc();
+    	registerBlockItemTags();
     }
 
+    private void registerBlockItemTags()
+    {
+        this.tag(TagUtils.forgeTag("storage_blocks"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/raw_adamantium"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/adamantium"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/adamantine"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/adamantite"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/copper"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/raw_copper"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/tin"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/raw_tin"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/mythril"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/mithril"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/raw_mythril"))
+	        .addTag(TagUtils.forgeTag("storage_blocks/onyx"));
+    
+	    // because they haven't been added to forge by default yet.
+	    this.tag(TagUtils.forgeTag( "storage_blocks/copper"))
+	    	.add(Blocks.COPPER_BLOCK.asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/raw_copper"))
+			.add(Blocks.RAW_COPPER_BLOCK.asItem());
+	    // end-copper
+	    this.tag(TagUtils.forgeTag("storage_blocks/raw_adamantium"))
+	    	.add(ModBlocks.raw_adamantium_block.get().asItem());
+	    this.tag(TagUtils.forgeTag("storage_blocks/adamantium"))
+	            .add(ModBlocks.adamantium_block.get().asItem());
+	    this.tag(TagUtils.forgeTag("storage_blocks/adamantine"))
+	            .add(ModBlocks.adamantium_block.get().asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/adamantite"))
+	            .add(ModBlocks.adamantium_block.get().asItem());
+	    this.tag(TagUtils.forgeTag("storage_blocks/raw_tin"))
+			.add(ModBlocks.raw_tin_block.get().asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/tin"))
+	            .add(ModBlocks.tin_block.get().asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/raw_mythril"))
+	    .add(ModBlocks.raw_mythril_block.get().asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/mythril"))
+	            .add(ModBlocks.mythril_block.get().asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/mithril"))
+	            .add(ModBlocks.mythril_block.get().asItem());
+	    this.tag(TagUtils.forgeTag( "storage_blocks/onyx"))
+	            .add(ModBlocks.onyx_block.get().asItem());
+
+        this.tag(TagUtils.forgeTag( "ores"))
+	        .addTag(TagUtils.forgeTag( "ores/copper"))
+	        .addTag(TagUtils.forgeTag( "ores/tin"))
+	        .addTag(TagUtils.forgeTag( "ores/adamantine"))
+	        .addTag(TagUtils.forgeTag( "ores/adamantite"))
+	        .addTag(TagUtils.forgeTag( "ores/adamantium"))
+	        .addTag(TagUtils.forgeTag( "ores/mithril"))
+	        .addTag(TagUtils.forgeTag( "ores/mythril"))
+	        .addTag(TagUtils.forgeTag( "ores/onyx"));
+
+		// because vanilla copper hasn't been added to forge tags by default yet.
+		this.tag(TagUtils.forgeTag( "ores/copper"))
+		        .add(Blocks.COPPER_ORE.asItem())
+		        .add(Blocks.DEEPSLATE_COPPER_ORE.asItem());
+		// end copper
+		this.tag(TagUtils.forgeTag( "ores/tin"))
+		        .add(ModBlocks.tin_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/adamantium"))
+		        .add(ModBlocks.adamantium_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/adamantine"))
+		        .add(ModBlocks.adamantium_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/adamantite"))
+		        .add(ModBlocks.adamantium_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/mythril"))
+		        .add(ModBlocks.mythril_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/mithril"))
+		        .add(ModBlocks.mythril_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/onyx"))
+		        .add(ModBlocks.onyx_ore.get().asItem());
+    } // end registerBlockItemTags()
+    
     private void registerNuggetTags()
     {
         this.tag(TagUtils.forgeTag("nuggets"))

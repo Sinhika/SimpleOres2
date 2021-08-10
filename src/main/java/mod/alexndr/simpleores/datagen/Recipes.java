@@ -98,10 +98,16 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(), 
                 ModItems.tin_nugget.get(), has(ModItems.tin_ingot.get()));
+        setbuilder.buildSimpleStorageRecipes(consumer, ModItems.raw_tin.get(), 
+        		ModBlocks.raw_tin_block.get(), null, has(ModItems.raw_tin.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.mythril_ingot.get(), ModBlocks.mythril_block.get(), 
                 ModItems.mythril_nugget.get(), has(ModItems.mythril_ingot.get()));
+        setbuilder.buildSimpleStorageRecipes(consumer, ModItems.raw_mythril.get(), 
+        		ModBlocks.raw_mythril_block.get(), null, has(ModItems.raw_mythril.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.adamantium_ingot.get(), ModBlocks.adamantium_block.get(), 
                 ModItems.adamantium_nugget.get(), has(ModItems.adamantium_ingot.get()));
+        setbuilder.buildSimpleStorageRecipes(consumer, ModItems.raw_adamantium.get(), 
+        		ModBlocks.raw_adamantium_block.get(), null, has(ModItems.raw_adamantium.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.onyx_gem.get(), ModBlocks.onyx_block.get(), 
                 null, has(ModItems.onyx_gem.get()));
     } // end registerStorageRecipes()
@@ -127,14 +133,20 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 
     protected void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)
     {
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_adamantium.get()), ModItems.adamantium_ingot.get(), 
+                has(ModItems.raw_adamantium.get().asItem()), 0.7F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.adamantium_ore.get().asItem()), ModItems.adamantium_ingot.get(), 
                 has(ModBlocks.adamantium_ore.get().asItem()), 0.7F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_mythril.get()), ModItems.mythril_ingot.get(), 
+                has(ModItems.raw_mythril.get().asItem()), 0.7F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
                 has(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200);
-        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 
-                has(ModBlocks.onyx_ore.get().asItem()), 1.0F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_tin.get()), ModItems.tin_ingot.get(), 
+                has(ModItems.raw_tin.get()), 0.4F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.tin_ore.get().asItem()), ModItems.tin_ingot.get(), 
                 has(ModBlocks.tin_ore.get().asItem()), 0.4F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.onyx_ore.get().asItem()), ModItems.onyx_gem.get(), 
+                has(ModBlocks.onyx_ore.get().asItem()), 1.0F, 200);
         
         setbuilder.buildVanillaRecyclingRecipes(consumer,
                 Ingredient.of(ModItems.adamantium_axe.get(), ModItems.adamantium_boots.get(), ModItems.adamantium_chestplate.get(),

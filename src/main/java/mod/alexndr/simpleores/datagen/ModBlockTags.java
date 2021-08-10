@@ -27,39 +27,77 @@ public class ModBlockTags extends BlockTagsProvider
     {
         registerOreTags();
         registerStorageBlockTags();
+        registerMiningTags();
+        registerBeaconTags();
     } // end registerTags()
+    
+    private void registerBeaconTags()
+    {
+    	this.tag(TagUtils.modBlockTag("minecraft", "beacon_base_blocks"))
+    		.add(Blocks.COPPER_BLOCK)
+			.add(ModBlocks.adamantium_block.get())
+			.add(ModBlocks.tin_block.get())
+			.add(ModBlocks.mythril_block.get());
+    }
+    
+    private void registerMiningTags()
+    {
+        this.tag(TagUtils.modBlockTag("minecraft", "mineable/pickaxe"))
+        	.add(ModBlocks.adamantium_block.get())
+        	.add(ModBlocks.adamantium_ore.get())
+        	.add(ModBlocks.raw_adamantium_block.get())
+        	.add(ModBlocks.tin_block.get())
+        	.add(ModBlocks.tin_ore.get())
+        	.add(ModBlocks.raw_tin_block.get())
+        	.add(ModBlocks.mythril_block.get())
+        	.add(ModBlocks.mythril_ore.get())
+        	.add(ModBlocks.raw_mythril_block.get())
+        	.add(ModBlocks.onyx_block.get())
+        	.add(ModBlocks.onyx_ore.get());
+    }
     
     private void registerStorageBlockTags()
     {
         this.tag(TagUtils.forgeBlockTag("storage_blocks"))
+            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_adamantium"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantite"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/copper"))
+            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_copper"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/tin"))
+            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_tin"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/mythril"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/mithril"))
+            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_mythril"))
             .addTag(TagUtils.forgeBlockTag("storage_blocks/onyx"));
         
         // because they haven't been added to forge by default yet.
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/copper"))
         	.add(Blocks.COPPER_BLOCK);
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/raw_copper"))
+    		.add(Blocks.RAW_COPPER_BLOCK);
         // end-copper
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/raw_adamantium"))
+        	.add(ModBlocks.raw_adamantium_block.get());
         this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
                 .add(ModBlocks.adamantium_block.get());
         this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
                 .add(ModBlocks.adamantium_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/adamantite"))
                 .add(ModBlocks.adamantium_block.get());
+        this.tag(TagUtils.forgeBlockTag("storage_blocks/raw_tin"))
+    		.add(ModBlocks.raw_tin_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/tin"))
                 .add(ModBlocks.tin_block.get());
+        this.tag(TagUtils.forgeBlockTag( "storage_blocks/raw_mythril"))
+        .add(ModBlocks.raw_mythril_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/mythril"))
                 .add(ModBlocks.mythril_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/mithril"))
                 .add(ModBlocks.mythril_block.get());
         this.tag(TagUtils.forgeBlockTag( "storage_blocks/onyx"))
                 .add(ModBlocks.onyx_block.get());
-
     } // end registerStorageBlockTags
     
     private void registerOreTags()

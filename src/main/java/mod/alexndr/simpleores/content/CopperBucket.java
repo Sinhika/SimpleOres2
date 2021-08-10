@@ -102,11 +102,11 @@ public class CopperBucket extends BucketItem
         return bucketIn;
     } // end fixBucketItem()
 
-    @Override
-    protected ItemStack getEmptySuccessItem(ItemStack stack, Player playerEntity)
-    {
-        return !playerEntity.isCreative()
-                ? new ItemStack(ModItems.copper_bucket.get())
-                : stack;
-    }
+//    @Override
+//    protected ItemStack getEmptySuccessItem(ItemStack stack, Player playerEntity)
+//    {
+//        return !playerEntity.isCreative()
+//                ? new ItemStack(ModItems.copper_bucket.get())
+//                : stack;
+//    }
 }  // end class CopperBucket

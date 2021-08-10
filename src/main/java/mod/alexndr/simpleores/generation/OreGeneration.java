@@ -42,12 +42,7 @@ public class OreGeneration
      */
     public static void initOverworldFeatures()
     {
-        if (SimpleOresConfig.enableCopperOre) {
-            ORE_COPPER = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.copper_ore.get().defaultBlockState(), SimpleOresConfig.copper_cfg);
-            OreGenUtils.registerFeature(SimpleOres.MODID, "copper_vein", ORE_COPPER);
-        }
-        if (SimpleOresConfig.enableTinOre)
+         if (SimpleOresConfig.enableTinOre)
         {
             ORE_TIN = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
                     ModBlocks.tin_ore.get().defaultBlockState(), SimpleOresConfig.tin_cfg);
@@ -82,8 +77,6 @@ public class OreGeneration
      */
     public static void generateOverworldOres(BiomeLoadingEvent evt)
     {
-        if (SimpleOresConfig.enableCopperOre)
-            evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_COPPER);
         if (SimpleOresConfig.enableTinOre)
            evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_TIN);
         if (SimpleOresConfig.enableMythrilOre)

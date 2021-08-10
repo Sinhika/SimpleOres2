@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-  	"simpleores:tin_block",
-  	"simpleores:mythril_block",
-  	"simpleores:adamantium_block"
-  ]
-}
