@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "simpleores:block/raw_mythril_block"
+        }
+    }
+}
