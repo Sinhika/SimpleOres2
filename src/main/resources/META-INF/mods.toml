@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[36,)" #mandatory
+loaderVersion="[37,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 license="LGPL 3"
 
@@ -12,7 +12,7 @@ modId="simpleores"
 version="${file.jarVersion}"
 displayName="Simple Ores"
 logoFile="simple_ores.png"
-updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.16/update.json"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.17/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
 credits="AleXndrTheGr8st (original mod), Sinhika (maintenance, ports), Paint_Ninja (initial 1.15 port), Thombias (new textures)."
 authors="AleXndrTheGr8st, Sinhika, Paint_Ninja"
@@ -29,35 +29,21 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[36.1.0,37.0.0)"
+    versionRange="[37.0.26,38.0.0)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.17.1,1.18)"
     ordering="NONE"
     side="BOTH"
     
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.5-2.0.8.0,1.16.5-2.0.9.0)"
+    versionRange="[1.17.1-3.0.0.0,1.17.1-3.1.0.0)"
     ordering="NONE"
     side="BOTH"
-
-[[dependencies.simpleores]]
-        modId="silents_mechanisms"
-        mandatory=false
-        versionRange="[0.8.9,)"
-        ordering="BEFORE"
-        side="BOTH"
-        
-[[dependencies.simpleores]]
-        modId="silentgear"
-        mandatory=false
-        versionRange="[1.16.3-2.6.5,)"
-        ordering="BEFORE"
-        side="BOTH"
         
