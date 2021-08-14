@@ -6,7 +6,7 @@ import mod.alexndr.simpleores.content.CopperBucket;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
-import mod.alexndr.simpleores.content.SimpleOresItemTier;
+import mod.alexndr.simpleores.content.SimpleOresTiers;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
@@ -98,104 +98,104 @@ public final class ModItems
 
     // swords
     public static final RegistryObject<SwordItem> copper_sword = ITEMS.register("copper_sword",
-            () -> new SwordItem(SimpleOresItemTier.COPPER, 3, -2.4F,
+            () -> new SwordItem(SimpleOresTiers.COPPER, 3, -2.4F,
                                 new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> tin_sword = ITEMS.register("tin_sword",
-            () -> new SwordItem(SimpleOresItemTier.TIN, 3, -2.4F,
+            () -> new SwordItem(SimpleOresTiers.TIN, 3, -2.4F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> mythril_sword = ITEMS.register("mythril_sword",
-            () -> new SwordItem(SimpleOresItemTier.MYTHRIL, 3, -2.4F,
+            () -> new SwordItem(SimpleOresTiers.MYTHRIL, 3, -2.4F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> adamantium_sword = ITEMS.register("adamantium_sword",
-            () -> new SwordItem(SimpleOresItemTier.ADAMANTIUM, 3, -2.4F,
+            () -> new SwordItem(SimpleOresTiers.ADAMANTIUM, 3, -2.4F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SwordItem> onyx_sword = ITEMS.register("onyx_sword",
-            () -> new SwordItem(SimpleOresItemTier.ONYX, 3, -2.4F,
+            () -> new SwordItem(SimpleOresTiers.ONYX, 3, -2.4F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // pickaxes
     public static final RegistryObject<PickaxeItem> copper_pickaxe = ITEMS.register("copper_pickaxe",
-            () -> new PickaxeItem(SimpleOresItemTier.COPPER, 1, -2.8F,
+            () -> new PickaxeItem(SimpleOresTiers.COPPER, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> tin_pickaxe = ITEMS.register("tin_pickaxe",
-            () -> new PickaxeItem(SimpleOresItemTier.TIN, 1, -2.8F,
+            () -> new PickaxeItem(SimpleOresTiers.TIN, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> mythril_pickaxe = ITEMS.register("mythril_pickaxe",
-            () -> new PickaxeItem(SimpleOresItemTier.MYTHRIL, 1, -2.8F,
+            () -> new PickaxeItem(SimpleOresTiers.MYTHRIL, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> adamantium_pickaxe = ITEMS.register("adamantium_pickaxe",
-            () -> new PickaxeItem(SimpleOresItemTier.ADAMANTIUM, 1, -2.8F,
+            () -> new PickaxeItem(SimpleOresTiers.ADAMANTIUM, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<PickaxeItem> onyx_pickaxe = ITEMS.register("onyx_pickaxe",
-            () -> new PickaxeItem(SimpleOresItemTier.ONYX, 1, -2.8F,
+            () -> new PickaxeItem(SimpleOresTiers.ONYX, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // axes
     public static final RegistryObject<AxeItem> copper_axe = ITEMS.register("copper_axe",
-            () -> new AxeItem(SimpleOresItemTier.COPPER, 7.0F, -3.1F,
+            () -> new AxeItem(SimpleOresTiers.COPPER, 7.0F, -3.1F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> tin_axe = ITEMS.register("tin_axe",
-            () -> new AxeItem(SimpleOresItemTier.TIN, 6.0F, -2.7F,
+            () -> new AxeItem(SimpleOresTiers.TIN, 6.0F, -2.7F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> mythril_axe = ITEMS.register("mythril_axe",
-            () -> new AxeItem(SimpleOresItemTier.MYTHRIL, 8.0F, -3.0F,
+            () -> new AxeItem(SimpleOresTiers.MYTHRIL, 8.0F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> adamantium_axe = ITEMS.register("adamantium_axe",
-            () -> new AxeItem(SimpleOresItemTier.ADAMANTIUM, 6.0F, -3.0F,
+            () -> new AxeItem(SimpleOresTiers.ADAMANTIUM, 6.0F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> onyx_axe = ITEMS.register("onyx_axe",
-            () -> new AxeItem(SimpleOresItemTier.ONYX, 9.0F, -3.0F,
+            () -> new AxeItem(SimpleOresTiers.ONYX, 9.0F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // shovels
     public static final RegistryObject<ShovelItem> copper_shovel = ITEMS.register("copper_shovel",
-            () -> new ShovelItem(SimpleOresItemTier.COPPER, 1.5F, -3.0F,
+            () -> new ShovelItem(SimpleOresTiers.COPPER, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> tin_shovel = ITEMS.register("tin_shovel",
-            () -> new ShovelItem(SimpleOresItemTier.TIN, 1.5F, -3.0F,
+            () -> new ShovelItem(SimpleOresTiers.TIN, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> mythril_shovel = ITEMS.register("mythril_shovel",
-            () -> new ShovelItem(SimpleOresItemTier.MYTHRIL, 1.5F, -3.0F,
+            () -> new ShovelItem(SimpleOresTiers.MYTHRIL, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> adamantium_shovel = ITEMS.register("adamantium_shovel",
-            () -> new ShovelItem(SimpleOresItemTier.ADAMANTIUM, 1.5F, -3.0F,
+            () -> new ShovelItem(SimpleOresTiers.ADAMANTIUM, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ShovelItem> onyx_shovel = ITEMS.register("onyx_shovel",
-            () -> new ShovelItem(SimpleOresItemTier.ONYX, 1.5F, -3.0F,
+            () -> new ShovelItem(SimpleOresTiers.ONYX, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // hoes
     public static final RegistryObject<HoeItem> copper_hoe = ITEMS.register("copper_hoe",
-            () -> new HoeItem(SimpleOresItemTier.COPPER,-1, -2.0F,
+            () -> new HoeItem(SimpleOresTiers.COPPER,-1, -2.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> tin_hoe = ITEMS.register("tin_hoe",
-            () -> new HoeItem(SimpleOresItemTier.TIN,-1, -3.0F,
+            () -> new HoeItem(SimpleOresTiers.TIN,-1, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> mythril_hoe = ITEMS.register("mythril_hoe",
-            () -> new HoeItem(SimpleOresItemTier.MYTHRIL,-3, -1.0F,
+            () -> new HoeItem(SimpleOresTiers.MYTHRIL,-3, -1.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> adamantium_hoe = ITEMS.register("adamantium_hoe",
-            () -> new HoeItem(SimpleOresItemTier.ADAMANTIUM, -3, -1.0F,
+            () -> new HoeItem(SimpleOresTiers.ADAMANTIUM, -3, -1.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)) {});
     public static final RegistryObject<HoeItem> onyx_hoe = ITEMS.register("onyx_hoe",
-            () -> new HoeItem(SimpleOresItemTier.ONYX, -5, 0.0F,
+            () -> new HoeItem(SimpleOresTiers.ONYX, -5, 0.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)) {});
 
     // shears
     public static final RegistryObject<SimpleShearsItem> copper_shears = ITEMS.register("copper_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresItemTier.COPPER.getUses())
+            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.COPPER.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SimpleShearsItem> tin_shears = ITEMS.register("tin_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresItemTier.TIN.getUses())
+            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.TIN.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SimpleShearsItem> mythril_shears = ITEMS.register("mythril_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresItemTier.MYTHRIL.getUses())
+            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.MYTHRIL.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SimpleShearsItem> adamantium_shears = ITEMS.register("adamantium_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresItemTier.ADAMANTIUM.getUses())
+            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.ADAMANTIUM.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<SimpleShearsItem> onyx_shears = ITEMS.register("onyx_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresItemTier.ONYX.getUses())
+            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.ONYX.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // ARMOR
