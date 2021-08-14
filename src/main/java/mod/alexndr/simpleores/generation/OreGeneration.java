@@ -42,6 +42,7 @@ public class OreGeneration
      */
     public static void initOverworldFeatures()
     {
+
          if (SimpleOresConfig.enableTinOre)
         {
             ORE_TIN = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
