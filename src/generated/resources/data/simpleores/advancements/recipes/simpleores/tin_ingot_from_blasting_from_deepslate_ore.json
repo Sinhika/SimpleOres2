@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "simpleores:mythril_ingot_from_smelting_from_ore"
+      "simpleores:tin_ingot_from_blasting_from_deepslate_ore"
     ]
   },
   "criteria": {
-    "mythril_ingot_from_smelting_from_ore": {
+    "tin_ingot_from_blasting_from_deepslate_ore": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "simpleores:mythril_ore"
+              "simpleores:deepslate_tin_ore"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "simpleores:mythril_ingot_from_smelting_from_ore"
+        "recipe": "simpleores:tin_ingot_from_blasting_from_deepslate_ore"
       }
     }
   },
   "requirements": [
     [
-      "mythril_ingot_from_smelting_from_ore",
+      "tin_ingot_from_blasting_from_deepslate_ore",
       "has_the_recipe"
     ]
   ]
