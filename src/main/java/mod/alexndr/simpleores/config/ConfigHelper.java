@@ -1,5 +1,7 @@
 package mod.alexndr.simpleores.config;
 
+import mod.alexndr.simplecorelib.config.ModOreConfig;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraftforge.fml.config.ModConfig;
 
 /**
@@ -17,33 +19,29 @@ public final class ConfigHelper
     {
         SimpleOresConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
-//        SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
-//        SimpleOresConfig.tin_cfg = new ModOreConfig(
-//                new RangeDecoratorConfiguration(ConfigHolder.SERVER.serverTinBottomHeight.get(), 0, 
-//                                        ConfigHolder.SERVER.serverTinMaxHeight.get()),
-//                ConfigHolder.SERVER.serverTinVeinSize.get(),
-//                ConfigHolder.SERVER.serverTinVeinCount.get());
-//
-//        SimpleOresConfig.enableMythrilOre = ConfigHolder.SERVER.serverEnableMythrilOre.get();
-//        SimpleOresConfig.mythril_cfg =  new ModOreConfig(
-//                new RangeDecoratorConfiguration(ConfigHolder.SERVER.serverMythrilBottomHeight.get(), 0,
-//                                        ConfigHolder.SERVER.serverMythrilMaxHeight.get()),
-//                ConfigHolder.SERVER.serverMythrilVeinSize.get(),
-//                ConfigHolder.SERVER.serverMythrilVeinCount.get());
-//
-//        SimpleOresConfig.enableAdamantiumOre = ConfigHolder.SERVER.serverEnableAdamantiumOre.get();
-//        SimpleOresConfig.adamantium_cfg =  new ModOreConfig(
-//                new RangeDecoratorConfiguration(ConfigHolder.SERVER.serverAdamantiumBottomHeight.get(), 0,
-//                                        ConfigHolder.SERVER.serverAdamantiumMaxHeight.get()),
-//                ConfigHolder.SERVER.serverAdamantiumVeinSize.get(),
-//                ConfigHolder.SERVER.serverAdamantiumVeinCount.get());
-//
-//        SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
-//        SimpleOresConfig.onyx_cfg = new ModOreConfig(
-//                new RangeDecoratorConfiguration(ConfigHolder.SERVER.serverOnyxBottomHeight.get(), 0, 
-//                                        ConfigHolder.SERVER.serverOnyxMaxHeight.get()),
-//                ConfigHolder.SERVER.serverOnyxVeinSize.get(),
-//                ConfigHolder.SERVER.serverOnyxVeinCount.get());
+        SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
+        SimpleOresConfig.tin_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverTinVeinSize.get(),
+        		ConfigHolder.SERVER.serverTinVeinCount.get(), 
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverTinBottomHeight.get()),
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverTinMaxHeight.get()));
+
+        SimpleOresConfig.enableMythrilOre = ConfigHolder.SERVER.serverEnableMythrilOre.get();
+        SimpleOresConfig.mythril_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverMythrilVeinSize.get(),
+        		ConfigHolder.SERVER.serverMythrilVeinCount.get(), 
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverMythrilBottomHeight.get()),
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverMythrilMaxHeight.get()));
+
+        SimpleOresConfig.enableAdamantiumOre = ConfigHolder.SERVER.serverEnableAdamantiumOre.get();
+        SimpleOresConfig.adamantium_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverAdamantiumVeinSize.get(),
+        		ConfigHolder.SERVER.serverAdamantiumVeinCount.get(), 
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverAdamantiumBottomHeight.get()),
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverAdamantiumMaxHeight.get()));
+        
+        SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
+        SimpleOresConfig.onyx_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverOnyxVeinSize.get(),
+        		ConfigHolder.SERVER.serverOnyxVeinCount.get(), 
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxBottomHeight.get()),
+        		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxMaxHeight.get()));
         
         // recipe flags
         SimpleOresConfig.INSTANCE.putFlag("copper_tools", ConfigHolder.SERVER.serverEnableCopperTools.get());
