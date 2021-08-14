@@ -45,7 +45,3 @@ gen_model_jsons.py --type=block deepslate_adamantium_ore
 gen_model_jsons.py --type=inventory --item_only raw_tin
 gen_model_jsons.py --type=inventory --item_only raw_mythril
 gen_model_jsons.py --type=inventory --item_only raw_adamantium
-gen_model_jsons.py --type=inventory --item_only deepslate_tin_ore
-gen_model_jsons.py --type=inventory --item_only deepslate_mythril_ore
-gen_model_jsons.py --type=inventory --item_only deepslate_adamantium_ore
-
