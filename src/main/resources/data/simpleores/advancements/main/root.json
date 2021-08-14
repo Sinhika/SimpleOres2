@@ -1,7 +1,7 @@
 {
     "display":  {
         "icon": {
-            "item": "simpleores:copper_ore"
+            "item": "simpleores:copper_pickaxe"
         },
         "title": {
             "translate": "advancements.welcome"

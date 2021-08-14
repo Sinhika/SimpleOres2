@@ -13,6 +13,7 @@ import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
+import mod.alexndr.simpleores.generation.OreGeneration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -38,10 +39,10 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-//        event.enqueueWork(() -> {
-//              OreGeneration.initNetherFeatures();
-//              OreGeneration.initOverworldFeatures();
-//        });
+        event.enqueueWork(() -> {
+              OreGeneration.initNetherFeatures();
+              OreGeneration.initOverworldFeatures();
+        });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 

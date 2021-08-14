@@ -1,7 +1,7 @@
 {
     "display":  {
         "icon": {
-            "item": "simpleores:copper_ore"
+            "item": "minecraft:copper_ore"
         },
         "title": {
             "translate": "advancements.copper_ach"
@@ -15,7 +15,7 @@
     "parent" : "simpleores:main/root",
    	"rewards": {
     	"recipes": [
-      		"simpleores:copper_block", "simpleores:copper_ingot"
+      		"minecraft:copper_block", "minecraft:copper_ingot"
     	]
   	},
     "criteria" : {
@@ -23,7 +23,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{"item" : "simpleores:copper_ore"}
+      			{"item" : "minecraft:copper_ore"}
       			]
       		}
     	}
