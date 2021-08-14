@@ -1,12 +1,14 @@
 package mod.alexndr.simpleores.generation;
 
+import com.google.common.collect.ImmutableList;
+
 import mod.alexndr.simplecorelib.world.OreGenUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 /**
@@ -14,6 +16,25 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
  */
 public class OreGeneration
 {
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TIN_TARGET_LIST = ImmutableList.of(
+				OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, 
+						ModBlocks.tin_ore.get().defaultBlockState()),
+				OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+						ModBlocks.deepslate_tin_ore.get().defaultBlockState()));
+
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_MYTHRIL_TARGET_LIST = ImmutableList.of(
+			OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, 
+					ModBlocks.mythril_ore.get().defaultBlockState()),
+			OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+					ModBlocks.deepslate_mythril_ore.get().defaultBlockState()));
+	
+	public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_ADAMANTIUM_TARGET_LIST = ImmutableList.of(
+			OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, 
+					ModBlocks.adamantium_ore.get().defaultBlockState()),
+			OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+					ModBlocks.deepslate_adamantium_ore.get().defaultBlockState()));
+	
+	
     public static ConfiguredFeature<?, ?> ORE_COPPER;
     public static ConfiguredFeature<?, ?> ORE_TIN;
     public static ConfiguredFeature<?, ?> ORE_MYTHRIL;
@@ -28,9 +49,7 @@ public class OreGeneration
     public static void initNetherFeatures()
     {
         if (! SimpleOresConfig.enableOnyxOre) return;
-        ORE_ONYX = OreGenUtils.buildNetherOreFeature(
-                Feature.ORE, ModBlocks.onyx_ore.get().defaultBlockState(),
-                                SimpleOresConfig.onyx_cfg);
+        ORE_ONYX = OreGenUtils.buildNetherOreFeature(ModBlocks.onyx_ore.get().defaultBlockState(), SimpleOresConfig.onyx_cfg);
         OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_ONYX);
     } // end-initNetherFeatures()
 
@@ -45,20 +64,17 @@ public class OreGeneration
 
          if (SimpleOresConfig.enableTinOre)
         {
-            ORE_TIN = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.tin_ore.get().defaultBlockState(), SimpleOresConfig.tin_cfg);
+            ORE_TIN = OreGenUtils.buildOverworldOreFeature(ORE_TIN_TARGET_LIST, SimpleOresConfig.tin_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "tin_vein", ORE_TIN);
         }
         if (SimpleOresConfig.enableMythrilOre)
         {
-            ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.mythril_ore.get().defaultBlockState(), SimpleOresConfig.mythril_cfg);
+            ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(ORE_MYTHRIL_TARGET_LIST, SimpleOresConfig.mythril_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "mythril_vein", ORE_MYTHRIL);
         }
         if (SimpleOresConfig.enableAdamantiumOre)
         {
-            ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(Feature.ORE,
-                    ModBlocks.adamantium_ore.get().defaultBlockState(), SimpleOresConfig.adamantium_cfg);
+            ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(ORE_ADAMANTIUM_TARGET_LIST, SimpleOresConfig.adamantium_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "adamantium_vein", ORE_ADAMANTIUM);
         }
     } // end-initOverworldFeatures()

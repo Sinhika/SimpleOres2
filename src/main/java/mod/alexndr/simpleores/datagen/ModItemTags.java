@@ -93,17 +93,23 @@ public class ModItemTags extends ItemTagsProvider
 		        .add(Blocks.DEEPSLATE_COPPER_ORE.asItem());
 		// end copper
 		this.tag(TagUtils.forgeTag( "ores/tin"))
-		        .add(ModBlocks.tin_ore.get().asItem());
+		        .add(ModBlocks.tin_ore.get().asItem())
+		        .add(ModBlocks.deepslate_tin_ore.get().asItem());
 		this.tag(TagUtils.forgeTag( "ores/adamantium"))
-		        .add(ModBlocks.adamantium_ore.get().asItem());
+		        .add(ModBlocks.adamantium_ore.get().asItem())
+		        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
 		this.tag(TagUtils.forgeTag( "ores/adamantine"))
-		        .add(ModBlocks.adamantium_ore.get().asItem());
+	        .add(ModBlocks.adamantium_ore.get().asItem())
+	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
 		this.tag(TagUtils.forgeTag( "ores/adamantite"))
-		        .add(ModBlocks.adamantium_ore.get().asItem());
+	        .add(ModBlocks.adamantium_ore.get().asItem())
+	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
 		this.tag(TagUtils.forgeTag( "ores/mythril"))
-		        .add(ModBlocks.mythril_ore.get().asItem());
+		        .add(ModBlocks.mythril_ore.get().asItem())
+		        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
 		this.tag(TagUtils.forgeTag( "ores/mithril"))
-		        .add(ModBlocks.mythril_ore.get().asItem());
+	        .add(ModBlocks.mythril_ore.get().asItem())
+	        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
 		this.tag(TagUtils.forgeTag( "ores/onyx"))
 		        .add(ModBlocks.onyx_ore.get().asItem());
     } // end registerBlockItemTags()

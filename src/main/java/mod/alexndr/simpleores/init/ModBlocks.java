@@ -30,11 +30,23 @@ public final class ModBlocks
             () -> new OreBlock(Block.Properties.of(Material.STONE)
                     .strength( 3.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
+    public static final RegistryObject<OreBlock> deepslate_tin_ore = BLOCKS.register("deepslate_tin_ore",
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 3.0F, 3.0F)
+                    .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> mythril_ore = BLOCKS.register("mythril_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
+    public static final RegistryObject<OreBlock> deepslate_mythril_ore = BLOCKS.register("deepslate_mythril_ore",
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 4.0F, 3.0F)
+                    .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 5.0F, 3.0F)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<OreBlock> deepslate_adamantium_ore = BLOCKS.register("deepslate_adamantium_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
                     .strength( 5.0F, 3.0F)
                     .requiresCorrectToolForDrops()));

@@ -45,26 +45,32 @@ public class ModBlockTags extends BlockTagsProvider
         this.tag(TagUtils.modBlockTag("minecraft", "mineable/pickaxe"))
         	.add(ModBlocks.adamantium_block.get())
         	.add(ModBlocks.adamantium_ore.get())
+        	.add(ModBlocks.deepslate_adamantium_ore.get())
         	.add(ModBlocks.raw_adamantium_block.get())
         	.add(ModBlocks.tin_block.get())
         	.add(ModBlocks.tin_ore.get())
+        	.add(ModBlocks.deepslate_tin_ore.get())
         	.add(ModBlocks.raw_tin_block.get())
         	.add(ModBlocks.mythril_block.get())
         	.add(ModBlocks.mythril_ore.get())
+        	.add(ModBlocks.deepslate_mythril_ore.get())
         	.add(ModBlocks.raw_mythril_block.get())
         	.add(ModBlocks.onyx_block.get())
         	.add(ModBlocks.onyx_ore.get());
         
         this.tag(TagUtils.modBlockTag("minecraft", "needs_stone_tool"))
         	.add(ModBlocks.tin_ore.get())
+        	.add(ModBlocks.deepslate_tin_ore.get())
         	.add(ModBlocks.tin_block.get())
         	.add(ModBlocks.raw_tin_block.get());
         this.tag(TagUtils.modBlockTag("minecraft", "needs_iron_tool"))
         	.add(ModBlocks.adamantium_block.get())
         	.add(ModBlocks.adamantium_ore.get())
+        	.add(ModBlocks.deepslate_adamantium_ore.get())
         	.add(ModBlocks.raw_adamantium_block.get())
         	.add(ModBlocks.mythril_block.get())
         	.add(ModBlocks.mythril_ore.get())
+        	.add(ModBlocks.deepslate_mythril_ore.get())
         	.add(ModBlocks.raw_mythril_block.get());
         this.tag(TagUtils.modBlockTag("minecraft", "needs_diamond_tool"))
         	.add(ModBlocks.onyx_block.get())
@@ -133,17 +139,23 @@ public class ModBlockTags extends BlockTagsProvider
                 .add(Blocks.DEEPSLATE_COPPER_ORE);
         // end copper
         this.tag(TagUtils.forgeBlockTag( "ores/tin"))
-                .add(ModBlocks.tin_ore.get());
+                .add(ModBlocks.tin_ore.get())
+                .add(ModBlocks.deepslate_tin_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/adamantium"))
-                .add(ModBlocks.adamantium_ore.get());
+                .add(ModBlocks.adamantium_ore.get())
+        		.add(ModBlocks.deepslate_adamantium_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/adamantine"))
-                .add(ModBlocks.adamantium_ore.get());
+	        .add(ModBlocks.adamantium_ore.get())
+			.add(ModBlocks.deepslate_adamantium_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/adamantite"))
-                .add(ModBlocks.adamantium_ore.get());
+	        .add(ModBlocks.adamantium_ore.get())
+			.add(ModBlocks.deepslate_adamantium_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/mythril"))
-                .add(ModBlocks.mythril_ore.get());
+                .add(ModBlocks.mythril_ore.get())
+                .add(ModBlocks.deepslate_mythril_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/mithril"))
-                .add(ModBlocks.mythril_ore.get());
+	        .add(ModBlocks.mythril_ore.get())
+	        .add(ModBlocks.deepslate_mythril_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/onyx"))
                 .add(ModBlocks.onyx_ore.get());
     } // end registerOreTags()
