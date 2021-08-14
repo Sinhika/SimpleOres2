@@ -3,6 +3,7 @@ package mod.alexndr.simpleores;
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
 import javax.annotation.Nonnull;
+import java.util.*;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,12 +12,15 @@ import mod.alexndr.simplecorelib.config.FlagCondition;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.content.SimpleOresItemTier;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -42,6 +46,17 @@ public final class ModEventSubscriber
 //              OreGeneration.initNetherFeatures();
 //              OreGeneration.initOverworldFeatures();
 //        });
+    	TierSortingRegistry.registerTier(SimpleOresItemTier.COPPER, new ResourceLocation(SimpleOres.MODID, "COPPER"), 
+    									 List.of(Tiers.WOOD), List.of(Tiers.IRON));
+    	TierSortingRegistry.registerTier(SimpleOresItemTier.TIN, new ResourceLocation(SimpleOres.MODID, "TIN"), 
+				 						 List.of(Tiers.WOOD), List.of(Tiers.IRON));
+    	TierSortingRegistry.registerTier(SimpleOresItemTier.MYTHRIL, new ResourceLocation(SimpleOres.MODID, "MYTHRIL"), 
+				 						List.of(Tiers.STONE), List.of(Tiers.DIAMOND));
+    	TierSortingRegistry.registerTier(SimpleOresItemTier.ADAMANTIUM, new ResourceLocation(SimpleOres.MODID, "ADAMANTIUM"), 
+				 						List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    	TierSortingRegistry.registerTier(SimpleOresItemTier.ONYX, new ResourceLocation(SimpleOres.MODID, "ONYX"), 
+				 						List.of(Tiers.DIAMOND), List.of() );
+    	
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
