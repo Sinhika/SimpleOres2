@@ -20,7 +20,7 @@ public final class ConfigHelper
         SimpleOresConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
         SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
-        SimpleOresConfig.tin_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverTinVeinSize.get(),
+        SimpleOresConfig.tin_cfg = new ModOreConfig(ModOreConfig.TRIANGLE, ConfigHolder.SERVER.serverTinVeinSize.get(),
         		ConfigHolder.SERVER.serverTinVeinCount.get(), 
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverTinBottomHeight.get()),
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverTinMaxHeight.get()));
@@ -38,11 +38,13 @@ public final class ConfigHelper
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverAdamantiumMaxHeight.get()));
         
         SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
-        SimpleOresConfig.onyx_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverOnyxVeinSize.get(),
+        SimpleOresConfig.onyx_cfg = new ModOreConfig(ModOreConfig.FULL_RANGE, ConfigHolder.SERVER.serverOnyxVeinSize.get(),
+        		ConfigHolder.SERVER.serverOnyxVeinCount.get(),VerticalAnchor.bottom(), VerticalAnchor.top());
+        SimpleOresConfig.onyx_rock_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverOnyxVeinSize.get(),
         		ConfigHolder.SERVER.serverOnyxVeinCount.get(), 
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxBottomHeight.get()),
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxMaxHeight.get()));
-        
+        		
         // recipe flags
         SimpleOresConfig.INSTANCE.putFlag("copper_tools", ConfigHolder.SERVER.serverEnableCopperTools.get());
         SimpleOresConfig.INSTANCE.putFlag("tin_tools", ConfigHolder.SERVER.serverEnableTinTools.get());

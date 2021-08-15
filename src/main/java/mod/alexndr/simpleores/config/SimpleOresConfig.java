@@ -18,6 +18,7 @@ public class SimpleOresConfig extends SimpleConfig
     public static ModOreConfig mythril_cfg;
     public static ModOreConfig adamantium_cfg;
     public static ModOreConfig onyx_cfg;
+    public static ModOreConfig onyx_rock_cfg;
     
     public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
 

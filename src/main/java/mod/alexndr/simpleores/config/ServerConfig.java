@@ -64,10 +64,6 @@ final class ServerConfig
 	    builder.pop();
 	    
 	    builder.push("OreGeneration");
-//        serverEnableCopperOre = builder
-//                .comment("Enable copper ore generation?")
-//                .translation(SimpleOres.MODID + ".config.enableCopperOre")
-//                .define("EnableCopperOre", true);
         serverEnableTinOre = builder
                 .comment("Enable tin ore generation?")
                 .translation(SimpleOres.MODID + ".config.enableTinOre")
@@ -152,13 +148,13 @@ final class ServerConfig
                 .translation(SimpleOres.MODID + ".config.serverOnyxVeinCount")
                 .defineInRange("OnyxVeinCount", 5, 1, Integer.MAX_VALUE);
         serverOnyxBottomHeight = builder
-                .comment("Onyx ore minimum height")
+                .comment("Onyx ore minimum height in rock only (netherrack goes full range)")
                 .translation(SimpleOres.MODID + ".config.serverOnyxBottomHeight")
-                .defineInRange("OnyxBottomHeight", 1, 1, 127);
+                .defineInRange("OnyxBottomHeight", 8, 1, 127);
         serverOnyxMaxHeight = builder
-                .comment("Onyx ore maximum height")
+                .comment("Onyx ore maximum height in rock only (netherrack goes full range)")
                 .translation(SimpleOres.MODID + ".config.serverOnyxMaxHeight")
-                .defineInRange("OnyxMaxHeight", 128, 1, 128);
+                .defineInRange("OnyxMaxHeight", 64, 1, 128);
         builder.pop();
         builder.pop();
         

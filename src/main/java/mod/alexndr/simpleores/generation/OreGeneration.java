@@ -35,11 +35,11 @@ public class OreGeneration
 					ModBlocks.deepslate_adamantium_ore.get().defaultBlockState()));
 	
 	
-    public static ConfiguredFeature<?, ?> ORE_COPPER;
     public static ConfiguredFeature<?, ?> ORE_TIN;
     public static ConfiguredFeature<?, ?> ORE_MYTHRIL;
     public static ConfiguredFeature<?, ?> ORE_ADAMANTIUM;
     public static ConfiguredFeature<?, ?> ORE_ONYX;
+    public static ConfiguredFeature<?, ?> ORE_ONYX_ROCK;
 
     /**
      * initialize nether Features.
@@ -50,7 +50,11 @@ public class OreGeneration
     {
         if (! SimpleOresConfig.enableOnyxOre) return;
         ORE_ONYX = OreGenUtils.buildNetherOreFeature(ModBlocks.onyx_ore.get().defaultBlockState(), SimpleOresConfig.onyx_cfg);
+        ORE_ONYX_ROCK = OreGenUtils.buildNetherRockFeature(ModBlocks.onyx_ore.get().defaultBlockState(), 
+        												   SimpleOresConfig.onyx_rock_cfg);
+        
         OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_ONYX);
+        OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_in_rock", ORE_ONYX_ROCK);
     } // end-initNetherFeatures()
 
     
@@ -85,8 +89,10 @@ public class OreGeneration
      */
     public static void generateNetherOres(BiomeLoadingEvent evt)
     {
-        if (SimpleOresConfig.enableOnyxOre) 
+        if (SimpleOresConfig.enableOnyxOre) {
             evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX);
+            evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX_ROCK);
+        }
     } // end generateNetherOres()
     
     /**
