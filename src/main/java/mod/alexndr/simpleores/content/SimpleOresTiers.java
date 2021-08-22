@@ -51,7 +51,7 @@ public final class SimpleOresTiers
 	
 	public static final Tier ONYX = TierSortingRegistry.registerTier(
 			new ForgeTier(Tiers.NETHERITE.getLevel(), 3280, 10.0F, 5.0F, 15, ONYX_TAG, ()->Ingredient.of( ModItems.onyx_gem.get())), 
-			new ResourceLocation(SimpleOres.MODID, "onyx"),List.of(Tiers.DIAMOND), List.of() );
+			new ResourceLocation(SimpleOres.MODID, "onyx"),List.of(Tiers.NETHERITE), List.of() );
 
     
 } // end class
