@@ -39,7 +39,6 @@ public class OreGeneration
     public static ConfiguredFeature<?, ?> ORE_MYTHRIL;
     public static ConfiguredFeature<?, ?> ORE_ADAMANTIUM;
     public static ConfiguredFeature<?, ?> ORE_ONYX;
-    public static ConfiguredFeature<?, ?> ORE_ONYX_ROCK;
 
     /**
      * initialize nether Features.
@@ -49,12 +48,9 @@ public class OreGeneration
     public static void initNetherFeatures()
     {
         if (! SimpleOresConfig.enableOnyxOre) return;
-        ORE_ONYX = OreGenUtils.buildNetherOreFeature(ModBlocks.onyx_ore.get().defaultBlockState(), SimpleOresConfig.onyx_cfg);
-        ORE_ONYX_ROCK = OreGenUtils.buildNetherRockFeature(ModBlocks.onyx_ore.get().defaultBlockState(), 
-        												   SimpleOresConfig.onyx_rock_cfg);
+        ORE_ONYX = OreGenUtils.buildNetherRockFeature(ModBlocks.onyx_ore.get().defaultBlockState(), SimpleOresConfig.onyx_cfg);
         
         OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_vein", ORE_ONYX);
-        OreGenUtils.registerFeature(SimpleOres.MODID, "onyx_in_rock", ORE_ONYX_ROCK);
     } // end-initNetherFeatures()
 
     
@@ -91,7 +87,6 @@ public class OreGeneration
     {
         if (SimpleOresConfig.enableOnyxOre) {
             evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX);
-            evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, OreGeneration.ORE_ONYX_ROCK);
         }
     } // end generateNetherOres()
     
