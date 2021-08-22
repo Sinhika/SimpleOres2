@@ -96,7 +96,7 @@ public final class ModItems
     public static final RegistryObject<OnyxBow> onyx_bow = ITEMS.register("onyx_bow",
             () -> new OnyxBow(new Item.Properties().durability(1000).tab(ModTabGroups.MOD_ITEM_GROUP)));
 
-    // swords
+    // swords: constant dmg 3, eff -2.4
     public static final RegistryObject<SwordItem> copper_sword = ITEMS.register("copper_sword",
             () -> new SwordItem(SimpleOresTiers.COPPER, 3, -2.4F,
                                 new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
@@ -113,7 +113,7 @@ public final class ModItems
             () -> new SwordItem(SimpleOresTiers.ONYX, 3, -2.4F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
-    // pickaxes
+    // pickaxes: constant dmg 1, eff: -2.8
     public static final RegistryObject<PickaxeItem> copper_pickaxe = ITEMS.register("copper_pickaxe",
             () -> new PickaxeItem(SimpleOresTiers.COPPER, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
@@ -130,24 +130,24 @@ public final class ModItems
             () -> new PickaxeItem(SimpleOresTiers.ONYX, 1, -2.8F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
-    // axes
+    // axes: axe dmg + tier dmg == ~8.0  (9.0 for uber-materials); constant eff: -3.2 (3.1 to 3.0 for uberliness)
     public static final RegistryObject<AxeItem> copper_axe = ITEMS.register("copper_axe",
-            () -> new AxeItem(SimpleOresTiers.COPPER, 7.0F, -3.1F,
+            () -> new AxeItem(SimpleOresTiers.COPPER, 7.0F, -3.2F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> tin_axe = ITEMS.register("tin_axe",
-            () -> new AxeItem(SimpleOresTiers.TIN, 6.0F, -2.7F,
+            () -> new AxeItem(SimpleOresTiers.TIN, 7.0F, -3.2F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> mythril_axe = ITEMS.register("mythril_axe",
-            () -> new AxeItem(SimpleOresTiers.MYTHRIL, 8.0F, -3.0F,
+            () -> new AxeItem(SimpleOresTiers.MYTHRIL, 5.0F, -3.2F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> adamantium_axe = ITEMS.register("adamantium_axe",
-            () -> new AxeItem(SimpleOresTiers.ADAMANTIUM, 6.0F, -3.0F,
+            () -> new AxeItem(SimpleOresTiers.ADAMANTIUM, 5.0F, -3.2F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<AxeItem> onyx_axe = ITEMS.register("onyx_axe",
-            () -> new AxeItem(SimpleOresTiers.ONYX, 9.0F, -3.0F,
+            () -> new AxeItem(SimpleOresTiers.ONYX, 4.0F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
-    // shovels
+    // shovels: constant dmg: 1.5, eff: -3.0
     public static final RegistryObject<ShovelItem> copper_shovel = ITEMS.register("copper_shovel",
             () -> new ShovelItem(SimpleOresTiers.COPPER, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
@@ -164,12 +164,12 @@ public final class ModItems
             () -> new ShovelItem(SimpleOresTiers.ONYX, 1.5F, -3.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
-    // hoes
+    // hoes: hoe dmg + tier dmg == 0; Eff: -3 for bad hoe materials, 0 for uber materials, rest in-between.
     public static final RegistryObject<HoeItem> copper_hoe = ITEMS.register("copper_hoe",
             () -> new HoeItem(SimpleOresTiers.COPPER,-1, -2.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> tin_hoe = ITEMS.register("tin_hoe",
-            () -> new HoeItem(SimpleOresTiers.TIN,-1, -3.0F,
+            () -> new HoeItem(SimpleOresTiers.TIN,-1, -2.0F,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)){});
     public static final RegistryObject<HoeItem> mythril_hoe = ITEMS.register("mythril_hoe",
             () -> new HoeItem(SimpleOresTiers.MYTHRIL,-3, -1.0F,
