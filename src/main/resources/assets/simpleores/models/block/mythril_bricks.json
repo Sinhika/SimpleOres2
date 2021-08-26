@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "aesthetics:block/mythril_bricks"
+		"all": "simpleores:block/mythril_bricks"
 	}
 }

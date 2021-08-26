@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "aesthetics:item/mythril_door"
+        "layer0": "simpleores:item/mythril_door"
     }
 }

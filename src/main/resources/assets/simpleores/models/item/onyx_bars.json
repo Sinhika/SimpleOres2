@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "aesthetics:block/onyx_bars"
+        "layer0": "simpleores:block/onyx_bars"
     }
 }

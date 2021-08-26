@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:block/mythril_bars",
-        "bars": "aesthetics:block/mythril_bars",
-        "edge": "aesthetics:block/mythril_bars"
+        "particle": "simpleores:block/mythril_bars",
+        "bars": "simpleores:block/mythril_bars",
+        "edge": "simpleores:block/mythril_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 8 ],

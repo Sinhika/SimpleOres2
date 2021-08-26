@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:block/copper_bars",
-        "bars": "aesthetics:block/copper_bars"
+        "particle": "simpleores:block/copper_bars",
+        "bars": "simpleores:block/copper_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

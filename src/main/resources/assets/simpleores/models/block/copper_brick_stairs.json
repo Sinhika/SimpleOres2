@@ -1,8 +1,8 @@
 {
     "parent": "block/stairs",
     "textures": {
-        "bottom": "aesthetics:block/copper_bricks",
-        "top": "aesthetics:block/copper_bricks",
-        "side": "aesthetics:block/copper_bricks"
+        "bottom": "simpleores:block/copper_bricks",
+        "top": "simpleores:block/copper_bricks",
+        "side": "simpleores:block/copper_bricks"
     }
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "aesthetics:block/onyx_bricks"
+		"all": "simpleores:block/onyx_bricks"
 	}
 }

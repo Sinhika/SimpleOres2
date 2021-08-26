@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"": { "model": "aesthetics:block/mythril_bricks" }
+		"": { "model": "simpleores:block/mythril_bricks" }
 	}
 }

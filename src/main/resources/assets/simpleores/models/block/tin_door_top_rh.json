@@ -1,7 +1,7 @@
 {
     "parent": "block/door_top_rh",
     "textures": {
-        "bottom": "aesthetics:block/tin_door_lower",
-        "top": "aesthetics:block/tin_door_upper"
+        "bottom": "simpleores:block/tin_door_lower",
+        "top": "simpleores:block/tin_door_upper"
     }
 }

@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:block/adamantium_bars",
-        "bars": "aesthetics:block/adamantium_bars",
-        "edge": "aesthetics:block/adamantium_bars"
+        "particle": "simpleores:block/adamantium_bars",
+        "bars": "simpleores:block/adamantium_bars",
+        "edge": "simpleores:block/adamantium_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

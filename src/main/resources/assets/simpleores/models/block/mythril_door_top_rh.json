@@ -1,7 +1,7 @@
 {
     "parent": "block/door_top_rh",
     "textures": {
-        "bottom": "aesthetics:block/mythril_door_lower",
-        "top": "aesthetics:block/mythril_door_upper"
+        "bottom": "simpleores:block/mythril_door_lower",
+        "top": "simpleores:block/mythril_door_upper"
     }
 }

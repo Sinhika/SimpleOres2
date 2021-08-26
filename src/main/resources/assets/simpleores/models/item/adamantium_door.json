@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "aesthetics:item/adamantium_door"
+        "layer0": "simpleores:item/adamantium_door"
     }
 }
 

@@ -1,7 +1,7 @@
 {
     "parent": "block/door_top_rh",
     "textures": {
-        "bottom": "aesthetics:block/copper_door_lower",
-        "top": "aesthetics:block/copper_door_upper"
+        "bottom": "simpleores:block/copper_door_lower",
+        "top": "simpleores:block/copper_door_upper"
     }
 }

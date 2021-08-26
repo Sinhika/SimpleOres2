@@ -1,5 +1,5 @@
 {
 	"variants": {
-		"": { "model": "aesthetics:block/copper_bricks" }
+		"": { "model": "simpleores:block/copper_bricks" }
 	}
 }

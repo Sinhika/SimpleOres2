@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:block/onyx_bars",
-        "bars": "aesthetics:block/onyx_bars",
-        "edge": "aesthetics:block/onyx_bars"
+        "particle": "simpleores:block/onyx_bars",
+        "bars": "simpleores:block/onyx_bars",
+        "edge": "simpleores:block/onyx_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

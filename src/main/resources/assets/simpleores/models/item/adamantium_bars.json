@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "aesthetics:block/adamantium_bars"
+        "layer0": "simpleores:block/adamantium_bars"
     }
 }

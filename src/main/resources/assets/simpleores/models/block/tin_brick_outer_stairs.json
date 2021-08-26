@@ -1,8 +1,8 @@
 {
     "parent": "block/outer_stairs",
     "textures": {
-        "bottom": "aesthetics:block/tin_bricks",
-        "top": "aesthetics:block/tin_bricks",
-        "side": "aesthetics:block/tin_bricks"
+        "bottom": "simpleores:block/tin_bricks",
+        "top": "simpleores:block/tin_bricks",
+        "side": "simpleores:block/tin_bricks"
     }
 }
