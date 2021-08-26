@@ -54,13 +54,17 @@ final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableOnyxArmor;
     
     final ForgeConfigSpec.BooleanValue serverAddModLootToChests;
-    
+    final ForgeConfigSpec.BooleanValue serverEnableAesthetics;
+
 	ServerConfig(final ForgeConfigSpec.Builder builder)
 	{
 	    builder.push("General");
 	    serverAddModLootToChests = builder.comment("Add SimpleOres items to chest loot?")
                 .translation(SimpleOres.MODID + ".config.addModLootToChests")
                 .define("AddModLootToChests", true);
+        serverEnableAesthetics = builder.comment("Enable Simple Ores aesthetic blocks?")
+                .translation(SimpleOres.MODID + "config.EnableAesthetics")
+                .define("EnableSimpleOresBlocks", true);
 	    builder.pop();
 	    
 	    builder.push("OreGeneration");

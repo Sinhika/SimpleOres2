@@ -64,17 +64,17 @@ public class OreGeneration
 
          if (SimpleOresConfig.enableTinOre)
         {
-            ORE_TIN = OreGenUtils.buildOverworldOreFeature(ORE_TIN_TARGET_LIST, SimpleOresConfig.tin_cfg);
+            ORE_TIN = OreGenUtils.buildTargettedOreFeature(ORE_TIN_TARGET_LIST, SimpleOresConfig.tin_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "tin_vein", ORE_TIN);
         }
         if (SimpleOresConfig.enableMythrilOre)
         {
-            ORE_MYTHRIL = OreGenUtils.buildOverworldOreFeature(ORE_MYTHRIL_TARGET_LIST, SimpleOresConfig.mythril_cfg);
+            ORE_MYTHRIL = OreGenUtils.buildTargettedOreFeature(ORE_MYTHRIL_TARGET_LIST, SimpleOresConfig.mythril_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "mythril_vein", ORE_MYTHRIL);
         }
         if (SimpleOresConfig.enableAdamantiumOre)
         {
-            ORE_ADAMANTIUM = OreGenUtils.buildOverworldOreFeature(ORE_ADAMANTIUM_TARGET_LIST, SimpleOresConfig.adamantium_cfg);
+            ORE_ADAMANTIUM = OreGenUtils.buildTargettedOreFeature(ORE_ADAMANTIUM_TARGET_LIST, SimpleOresConfig.adamantium_cfg);
             OreGenUtils.registerFeature(SimpleOres.MODID, "adamantium_vein", ORE_ADAMANTIUM);
         }
     } // end-initOverworldFeatures()

@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "aesthetics:block/adamantium_bricks",
+        "top": "aesthetics:block/adamantium_bricks",
+        "side": "aesthetics:block/adamantium_bricks"
+    }
+}

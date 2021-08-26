@@ -2,8 +2,12 @@ package mod.alexndr.simpleores.init;
 
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -86,5 +90,64 @@ public final class ModBlocks
             () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.PODZOL)
                     .strength(20.0F, 100.0F)
                     .requiresCorrectToolForDrops()));
+    
+    // Blocks - bricks - Simple Ores
+    public static RegistryObject<Block> copper_bricks = BLOCKS.register("copper_bricks",
+            () -> new Block(Block.Properties.copy(Blocks.COPPER_BLOCK)));
+    public static RegistryObject<Block> tin_bricks = BLOCKS.register("tin_bricks",
+            () -> new Block(Block.Properties.copy(tin_block.get())));
+    public static RegistryObject<Block> onyx_bricks = BLOCKS.register("onyx_bricks",
+            () -> new Block(Block.Properties.copy(onyx_block.get())));
+    public static RegistryObject<Block> adamantium_bricks = BLOCKS.register("adamantium_bricks",
+            () -> new Block(Block.Properties.copy(adamantium_block.get())));
+    public static RegistryObject<Block> mythril_bricks = BLOCKS.register("mythril_bricks",
+            () -> new Block(Block.Properties.copy(mythril_block.get())));
+
+    // Blocks - stairs - simpleores
+    public static RegistryObject<StairBlock> copper_brick_stairs = BLOCKS.register("copper_brick_stairs", 
+            () -> new StairBlock( () -> copper_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(copper_bricks.get())));
+    public static RegistryObject<StairBlock> tin_brick_stairs = BLOCKS.register("tin_brick_stairs", 
+            () -> new StairBlock( () -> tin_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(tin_bricks.get())));
+    public static RegistryObject<StairBlock> onyx_brick_stairs = BLOCKS.register("onyx_brick_stairs", 
+            () -> new StairBlock( () -> onyx_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(onyx_bricks.get())));
+    public static RegistryObject<StairBlock> adamantium_brick_stairs = BLOCKS.register("adamantium_brick_stairs", 
+            () -> new StairBlock( () -> adamantium_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(adamantium_bricks.get())));
+    public static RegistryObject<StairBlock> mythril_brick_stairs = BLOCKS.register("mythril_brick_stairs", 
+            () -> new StairBlock( () -> mythril_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(mythril_bricks.get())));
+
+    // Blocks - doors - simpleores
+    public static RegistryObject<DoorBlock> copper_door = BLOCKS.register("copper_door",
+            () -> new DoorBlock(Block.Properties.copy(Blocks.COPPER_BLOCK).noOcclusion()));
+    public static RegistryObject<DoorBlock> tin_door = BLOCKS.register("tin_door",
+            () -> new DoorBlock(Block.Properties.copy(tin_block.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> adamantium_door = BLOCKS.register("adamantium_door",
+            () -> new DoorBlock(Block.Properties.copy(adamantium_block.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> onyx_door = BLOCKS.register("onyx_door",
+            () -> new DoorBlock(Block.Properties.copy(onyx_block.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> mythril_door = BLOCKS.register("mythril_door",
+            () -> new DoorBlock(Block.Properties.copy(mythril_block.get()).noOcclusion()));
+   
+    // Blocks - bars - simpleores
+    public static RegistryObject<IronBarsBlock> copper_bars = BLOCKS.register("copper_bars",
+            () -> new IronBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
+    public static RegistryObject<IronBarsBlock> tin_bars = BLOCKS.register("tin_bars",
+            () -> new IronBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(4.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
+    public static RegistryObject<IronBarsBlock> onyx_bars = BLOCKS.register("onyx_bars",
+            () -> new IronBarsBlock(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+                    .strength(20.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static RegistryObject<IronBarsBlock> adamantium_bars = BLOCKS.register("adamantium_bars",
+            () -> new IronBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
+    public static RegistryObject<IronBarsBlock> mythril_bars = BLOCKS.register("mythril_bars",
+            () -> new IronBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
+    
 
 }  // end class ModBlocks

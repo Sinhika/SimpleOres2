@@ -3,6 +3,7 @@
     "material.simpleores.mythril" : "Mythril",
     "material.simpleores.adamantium" : "Adamantium",
     "material.simpleores.onyx" : "Nether Onyx",
+    
     "block.simpleores.tin_ore": "Tin Ore",
     "block.simpleores.deepslate_tin_ore": "Deepslate Tin Ore",
     "block.simpleores.tin_block": "Block of Tin",
@@ -17,6 +18,30 @@
     "block.simpleores.raw_adamantium_block" : "Block of Raw Adamantium",
     "block.simpleores.onyx_ore": "Onyx Ore",
     "block.simpleores.onyx_block": "Block of Onyx",
+
+    "block.simpleores.copper_bricks": "Copper Bricks",
+    "block.simpleores.tin_bricks": "Tin Bricks",
+    "block.simpleores.mythril_bricks": "Mythril Bricks",
+    "block.simpleores.adamantium_bricks": "Adamantium Bricks",
+    "block.simpleores.onyx_bricks": "Onyx Bricks",
+
+    "block.simpleores.copper_brick_stairs": "Copper Brick Stairs",
+    "block.simpleores.tin_brick_stairs": "Tin Brick Stairs",
+    "block.simpleores.mythril_brick_stairs": "Mythril Brick Stairs",
+    "block.simpleores.adamantium_brick_stairs": "Adamantium Brick Stairs",
+    "block.simpleores.onyx_brick_stairs": "Onyx Brick Stairs",
+
+    "block.simpleores.copper_bars": "Copper Bars",
+    "block.simpleores.tin_bars": "Tin Bars",
+    "block.simpleores.mythril_bars": "Mythril Bars",
+    "block.simpleores.adamantium_bars": "Adamantium Bars",
+    "block.simpleores.onyx_bars": "Onyx Bars",
+
+    "block.simpleores.adamantium_door": "Adamantium Door",
+    "block.simpleores.copper_door": "Copper Door",
+    "block.simpleores.mythril_door": "Mythril Door",
+    "block.simpleores.onyx_door": "Onyx Door",
+    "block.simpleores.tin_door": "Tin Door",
 
     "item.simpleores.copper_nugget": "Copper Nugget",
     "item.simpleores.copper_dust" : "Copper Dust",

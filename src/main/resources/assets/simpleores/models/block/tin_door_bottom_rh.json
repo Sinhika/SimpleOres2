@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "aesthetics:block/tin_door_lower",
+        "top": "aesthetics:block/tin_door_upper"
+    }
+}

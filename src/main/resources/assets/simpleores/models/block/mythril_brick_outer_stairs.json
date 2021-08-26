@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "aesthetics:block/mythril_bricks",
+        "top": "aesthetics:block/mythril_bricks",
+        "side": "aesthetics:block/mythril_bricks"
+    }
+}

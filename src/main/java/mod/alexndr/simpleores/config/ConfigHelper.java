@@ -18,7 +18,7 @@ public final class ConfigHelper
     public static void bakeServer(final ModConfig config)
     {
         SimpleOresConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
-        
+
         SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
         SimpleOresConfig.tin_cfg = new ModOreConfig(ModOreConfig.TRIANGLE, ConfigHolder.SERVER.serverTinVeinSize.get(),
         		ConfigHolder.SERVER.serverTinVeinCount.get(), 
@@ -46,6 +46,7 @@ public final class ConfigHelper
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxMaxHeight.get()));
         		
         // recipe flags
+        SimpleOresConfig.INSTANCE.putFlag("aesthetics_enabled", ConfigHolder.SERVER.serverEnableAesthetics.get());
         SimpleOresConfig.INSTANCE.putFlag("copper_tools", ConfigHolder.SERVER.serverEnableCopperTools.get());
         SimpleOresConfig.INSTANCE.putFlag("tin_tools", ConfigHolder.SERVER.serverEnableTinTools.get());
         SimpleOresConfig.INSTANCE.putFlag("mythril_tools", ConfigHolder.SERVER.serverEnableMythrilTools.get());

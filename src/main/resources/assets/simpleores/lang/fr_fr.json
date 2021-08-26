@@ -1,5 +1,6 @@
 {
     "itemGroup.simpleores": "Simple Ores",
+    
     "block.simpleores.tin_ore": "Minerai d'Étain",
     "block.simpleores.tin_block": "Bloc d'Étain",
     "block.simpleores.mythril_ore": "Minerai de Mythril",
@@ -8,6 +9,30 @@
     "block.simpleores.adamantium_block": "Bloc d'Adamantium",
     "block.simpleores.onyx_ore": "Minerai d'Onyx",
     "block.simpleores.onyx_block": "Bloc d'Onyx",
+
+   "block.simpleores.copper_bricks": "Brique en Cuivre",
+    "block.simpleores.tin_bricks": "Brique en Étain",
+    "block.simpleores.mythril_bricks": "Brique en Mythril",
+    "block.simpleores.adamantium_bricks": "Brique en Adamantium",
+    "block.simpleores.onyx_bricks": "Brique en Onyx",
+
+    "block.simpleores.copper_brick_stairs": "Escalier en Brique de Cuivre",
+    "block.simpleores.tin_brick_stairs": "Escalier en Brique d'Étain",
+    "block.simpleores.mythril_brick_stairs": "Escalier en Brique de Mythril",
+    "block.simpleores.adamantium_brick_stairs": "Escalier en Brique d'Adamantium",
+    "block.simpleores.onyx_brick_stairs": "Escalier en Brique d'Onyx",
+
+    "block.simpleores.copper_bars": "Barreaux de Cuivre",
+    "block.simpleores.tin_bars": "Barreaux d'Étain",
+    "block.simpleores.mythril_bars": "Barreaux de Mythril",
+    "block.simpleores.adamantium_bars": "Barreaux d'Adamantium",
+    "block.simpleores.onyx_bars": "Barreaux d'Onyx",
+
+    "block.simpleores.adamantium_door": "Porte en Adamantium",
+    "block.simpleores.copper_door": "Porte en Cuivre",
+    "block.simpleores.mythril_door": "Porte en Mythril",
+    "block.simpleores.onyx_door": "Porte en Onyx",
+    "block.simpleores.tin_door": "Porte en Étain",
 
     "item.simpleores.tin_ingot": "Lingot d'Étain",
     "item.simpleores.mythril_ingot": "Lingot de Mythril",

@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "aesthetics:block/adamantium_door_lower",
+        "top": "aesthetics:block/adamantium_door_upper"
+    }
+}

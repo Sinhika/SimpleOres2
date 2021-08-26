@@ -1,5 +1,6 @@
 {
     "itemGroup.simpleores": "Simple Ores",
+    
     "block.simpleores.tin_ore": "Олов'яна руда",
     "block.simpleores.tin_block": "Блок олова",
     "block.simpleores.mythril_ore": "Міфрилова руда",
@@ -8,6 +9,30 @@
     "block.simpleores.adamantium_block": "Блок адамантію",
     "block.simpleores.onyx_ore": "Оніксова руда",
     "block.simpleores.onyx_block": "Блок оніксу",
+
+   "block.simpleores.copper_bricks": "Мідна цегла",
+    "block.simpleores.tin_bricks": "Олов'яна цегла",
+    "block.simpleores.mythril_bricks": "Міфрилова цегла",
+    "block.simpleores.adamantium_bricks": "Адамантова цегла",
+    "block.simpleores.onyx_bricks": "Оніксова цегла",
+
+    "block.simpleores.copper_brick_stairs": "Сходи з мідної цегли",
+    "block.simpleores.tin_brick_stairs": "Сходи з олов'яної цегли",
+    "block.simpleores.mythril_brick_stairs": "Сходи з міфрилової цегли",
+    "block.simpleores.adamantium_brick_stairs": "Сходи з адамантової цегли",
+    "block.simpleores.onyx_brick_stairs": "Сходи з оніксової цегли",
+
+    "block.simpleores.copper_bars": "Мідні грати",
+    "block.simpleores.tin_bars": "Олов'яні грати",
+    "block.simpleores.mythril_bars": "Міфрилові грати",
+    "block.simpleores.adamantium_bars": "Адамантові грати",
+    "block.simpleores.onyx_bars": "Оніксові грати",
+
+    "block.simpleores.adamantium_door": "Адамантові двері",
+    "block.simpleores.copper_door": "Мідні двері",
+    "block.simpleores.mythril_door": "Міфрилові двері",
+    "block.simpleores.onyx_door": "Оніксові двері",
+    "block.simpleores.tin_door": "Олов'яні двері",
 
     "item.simpleores.tin_ingot": "Олов'яний зливок",
     "item.simpleores.mythril_ingot": "Міфриловий зливок",
