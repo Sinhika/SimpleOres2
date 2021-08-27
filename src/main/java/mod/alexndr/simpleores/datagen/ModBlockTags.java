@@ -1,11 +1,13 @@
 package mod.alexndr.simpleores.datagen;
 
+import java.util.List;
+
+import mod.alexndr.simplecorelib.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
-import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 /**
@@ -15,7 +17,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
  * @author Sinhika
  *
  */
-public class ModBlockTags extends BlockTagsProvider
+public class ModBlockTags extends MiningBlockTags
 {
     public ModBlockTags(DataGenerator generatorIn, @javax.annotation.Nullable ExistingFileHelper existingFileHelper)
     {
@@ -29,7 +31,25 @@ public class ModBlockTags extends BlockTagsProvider
         registerStorageBlockTags();
         registerMiningTags();
         registerBeaconTags();
+        registerDoorsAndStairs();
     } // end registerTags()
+    
+    private void registerDoorsAndStairs()
+    {
+    	this.tag(TagUtils.modBlockTag("minecraft", "doors"))
+    		.add(ModBlocks.copper_door.get())
+    		.add(ModBlocks.tin_door.get())
+    		.add(ModBlocks.adamantium_door.get())
+    		.add(ModBlocks.onyx_door.get())
+    		.add(ModBlocks.mythril_door.get());
+    	
+    	this.tag(TagUtils.modBlockTag("minecraft","stairs"))
+    		.add(ModBlocks.copper_brick_stairs.get())
+    		.add(ModBlocks.adamantium_brick_stairs.get())
+    		.add(ModBlocks.tin_brick_stairs.get())
+    		.add(ModBlocks.mythril_brick_stairs.get())
+    		.add(ModBlocks.onyx_brick_stairs.get());
+    }
     
     private void registerBeaconTags()
     {
@@ -42,39 +62,28 @@ public class ModBlockTags extends BlockTagsProvider
     
     private void registerMiningTags()
     {
-        this.tag(TagUtils.modBlockTag("minecraft", "mineable/pickaxe"))
-        	.add(ModBlocks.adamantium_block.get())
-        	.add(ModBlocks.adamantium_ore.get())
-        	.add(ModBlocks.deepslate_adamantium_ore.get())
-        	.add(ModBlocks.raw_adamantium_block.get())
-        	.add(ModBlocks.tin_block.get())
-        	.add(ModBlocks.tin_ore.get())
-        	.add(ModBlocks.deepslate_tin_ore.get())
-        	.add(ModBlocks.raw_tin_block.get())
-        	.add(ModBlocks.mythril_block.get())
-        	.add(ModBlocks.mythril_ore.get())
-        	.add(ModBlocks.deepslate_mythril_ore.get())
-        	.add(ModBlocks.raw_mythril_block.get())
-        	.add(ModBlocks.onyx_block.get())
-        	.add(ModBlocks.onyx_ore.get());
-        
-        this.tag(TagUtils.modBlockTag("minecraft", "needs_stone_tool"))
-        	.add(ModBlocks.tin_ore.get())
-        	.add(ModBlocks.deepslate_tin_ore.get())
-        	.add(ModBlocks.tin_block.get())
-        	.add(ModBlocks.raw_tin_block.get());
-        this.tag(TagUtils.modBlockTag("minecraft", "needs_iron_tool"))
-        	.add(ModBlocks.adamantium_block.get())
-        	.add(ModBlocks.adamantium_ore.get())
-        	.add(ModBlocks.deepslate_adamantium_ore.get())
-        	.add(ModBlocks.raw_adamantium_block.get())
-        	.add(ModBlocks.mythril_block.get())
-        	.add(ModBlocks.mythril_ore.get())
-        	.add(ModBlocks.deepslate_mythril_ore.get())
-        	.add(ModBlocks.raw_mythril_block.get());
-        this.tag(TagUtils.modBlockTag("minecraft", "needs_diamond_tool"))
-        	.add(ModBlocks.onyx_block.get())
-        	.add(ModBlocks.onyx_ore.get());
+        // do nothing; super() generates all the vanilla blocktags, and we don't want that.
+     	registerMineableTags(List.of(ModBlocks.adamantium_block.get(), ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
+     			ModBlocks.raw_adamantium_block.get(), ModBlocks.tin_block.get(), ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get(), 
+     			ModBlocks.raw_tin_block.get(), ModBlocks.mythril_block.get(), ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
+     			ModBlocks.raw_mythril_block.get(), ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), 
+     			ModBlocks.tin_bars.get(), ModBlocks.tin_brick_stairs.get(), ModBlocks.tin_bricks.get(), ModBlocks.tin_door.get(), 
+     			ModBlocks.adamantium_bars.get(), ModBlocks.adamantium_bricks.get(), ModBlocks.adamantium_brick_stairs.get(), ModBlocks.adamantium_door.get(),
+     			ModBlocks.copper_bars.get(), ModBlocks.copper_brick_stairs.get(), ModBlocks.copper_bricks.get(), ModBlocks.copper_door.get(),
+     			ModBlocks.mythril_bars.get(), ModBlocks.mythril_brick_stairs.get(), ModBlocks.mythril_bricks.get(), ModBlocks.mythril_door.get(),
+     			ModBlocks.onyx_bars.get(), ModBlocks.onyx_brick_stairs.get(), ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get()), 
+     			List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get(), ModBlocks.tin_block.get(), ModBlocks.raw_tin_block.get(),
+     	     			ModBlocks.tin_bars.get(), ModBlocks.tin_brick_stairs.get(), ModBlocks.tin_bricks.get(), ModBlocks.tin_door.get(), 
+     	     			ModBlocks.copper_bars.get(), ModBlocks.copper_brick_stairs.get(), ModBlocks.copper_bricks.get(), ModBlocks.copper_door.get()), // 1 stone
+     			List.of(ModBlocks.adamantium_block.get(), ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(), 
+     					ModBlocks.raw_adamantium_block.get(), ModBlocks.mythril_block.get(), ModBlocks.mythril_ore.get(), 
+     					ModBlocks.deepslate_mythril_ore.get(), ModBlocks.raw_mythril_block.get(),
+     	     			ModBlocks.adamantium_bars.get(), ModBlocks.adamantium_bricks.get(), ModBlocks.adamantium_brick_stairs.get(), ModBlocks.adamantium_door.get(),
+     	     			ModBlocks.mythril_bars.get(), ModBlocks.mythril_brick_stairs.get(), ModBlocks.mythril_bricks.get(), ModBlocks.mythril_door.get()), // 2 - iron
+     			List.of(ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), ModBlocks.onyx_bars.get(), ModBlocks.onyx_brick_stairs.get(), 
+     					ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get()), // 3 - diamond
+     			List.of()); // 4 - netherite
+     			
     } // end registerMiningTags()
     
     private void registerStorageBlockTags()

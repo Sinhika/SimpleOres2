@@ -34,6 +34,22 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.tin_block.get());
         standardDropTable(ModBlocks.mythril_block.get());
         standardDropTable(ModBlocks.onyx_block.get());
+        standardDropTable(ModBlocks.adamantium_bars.get());
+        standardDropTable(ModBlocks.adamantium_brick_stairs.get());
+        standardDropTable(ModBlocks.adamantium_bricks.get());
+        standardDropTable(ModBlocks.adamantium_door.get());
+        standardDropTable(ModBlocks.copper_bars.get());
+        standardDropTable(ModBlocks.copper_brick_stairs.get());
+        standardDropTable(ModBlocks.copper_bricks.get());
+        standardDropTable(ModBlocks.copper_door.get());
+        standardDropTable(ModBlocks.mythril_bars.get());
+        standardDropTable(ModBlocks.mythril_brick_stairs.get());
+        standardDropTable(ModBlocks.mythril_bricks.get());
+        standardDropTable(ModBlocks.mythril_door.get());
+        standardDropTable(ModBlocks.onyx_bars.get());
+        standardDropTable(ModBlocks.onyx_brick_stairs.get());
+        standardDropTable(ModBlocks.onyx_bricks.get());
+        standardDropTable(ModBlocks.onyx_door.get());
         
         specialDropTable(ModBlocks.tin_ore.get(), ModItems.raw_tin.get());
         specialDropTable(ModBlocks.mythril_ore.get(), ModItems.raw_mythril.get());
