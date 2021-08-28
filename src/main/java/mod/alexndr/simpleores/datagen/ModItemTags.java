@@ -45,7 +45,6 @@ public class ModItemTags extends ItemTagsProvider
     		.add(ModBlocks.mythril_door.get().asItem());
     	
     	this.tag(TagUtils.modTag("minecraft","stairs"))
-    		.add(ModBlocks.copper_brick_stairs.get().asItem())
     		.add(ModBlocks.adamantium_brick_stairs.get().asItem())
     		.add(ModBlocks.tin_brick_stairs.get().asItem())
     		.add(ModBlocks.mythril_brick_stairs.get().asItem())

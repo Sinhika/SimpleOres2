@@ -92,8 +92,8 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     
     // Blocks - bricks - Simple Ores
-    public static RegistryObject<Block> copper_bricks = BLOCKS.register("copper_bricks",
-            () -> new Block(Block.Properties.copy(Blocks.COPPER_BLOCK)));
+//    public static RegistryObject<Block> copper_bricks = BLOCKS.register("copper_bricks",
+//            () -> new Block(Block.Properties.copy(Blocks.COPPER_BLOCK)));
     public static RegistryObject<Block> tin_bricks = BLOCKS.register("tin_bricks",
             () -> new Block(Block.Properties.copy(tin_block.get())));
     public static RegistryObject<Block> onyx_bricks = BLOCKS.register("onyx_bricks",
@@ -104,9 +104,9 @@ public final class ModBlocks
             () -> new Block(Block.Properties.copy(mythril_block.get())));
 
     // Blocks - stairs - simpleores
-    public static RegistryObject<StairBlock> copper_brick_stairs = BLOCKS.register("copper_brick_stairs", 
-            () -> new StairBlock( () -> copper_bricks.get().defaultBlockState(), 
-                                   Block.Properties.copy(copper_bricks.get())));
+//    public static RegistryObject<StairBlock> copper_brick_stairs = BLOCKS.register("copper_brick_stairs", 
+//            () -> new StairBlock( () -> copper_bricks.get().defaultBlockState(), 
+//                                   Block.Properties.copy(copper_bricks.get())));
     public static RegistryObject<StairBlock> tin_brick_stairs = BLOCKS.register("tin_brick_stairs", 
             () -> new StairBlock( () -> tin_bricks.get().defaultBlockState(), 
                                    Block.Properties.copy(tin_bricks.get())));

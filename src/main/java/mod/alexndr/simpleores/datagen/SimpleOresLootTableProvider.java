@@ -39,8 +39,6 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.adamantium_bricks.get());
         standardDropTable(ModBlocks.adamantium_door.get());
         standardDropTable(ModBlocks.copper_bars.get());
-        standardDropTable(ModBlocks.copper_brick_stairs.get());
-        standardDropTable(ModBlocks.copper_bricks.get());
         standardDropTable(ModBlocks.copper_door.get());
         standardDropTable(ModBlocks.mythril_bars.get());
         standardDropTable(ModBlocks.mythril_brick_stairs.get());
