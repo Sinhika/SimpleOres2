@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "simpleores:copper_brick_stairs",
+    "simpleores:adamantium_brick_stairs",
+    "simpleores:tin_brick_stairs",
+    "simpleores:mythril_brick_stairs",
+    "simpleores:onyx_brick_stairs"
+  ]
+}

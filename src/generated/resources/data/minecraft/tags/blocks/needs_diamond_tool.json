@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "simpleores:onyx_block",
-    "simpleores:onyx_ore"
+    "simpleores:onyx_ore",
+    "simpleores:onyx_bars",
+    "simpleores:onyx_brick_stairs",
+    "simpleores:onyx_bricks",
+    "simpleores:onyx_door"
   ]
 }

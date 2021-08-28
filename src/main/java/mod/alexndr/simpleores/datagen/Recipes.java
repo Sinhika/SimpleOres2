@@ -43,7 +43,24 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         registerToolRecipes(consumer);
         registerArmorRecipes(consumer);
         registerFurnaceRecipes(consumer);
+        registerAestheticRecipes(consumer);
     } // end registerRecipes() 
+    
+    
+    protected void registerAestheticRecipes(Consumer<FinishedRecipe> consumer)
+    {
+    	 setbuilder.buildSimpleAestheticBlocks(consumer, Ingredient.of(ModItems.adamantium_ingot.get()), "adamantium", 
+    			has(ModItems.adamantium_ingot.get()), flag("aesthetics_enabled"));
+    	 setbuilder.buildSimpleAestheticBlocks(consumer, Ingredient.of(ModItems.mythril_ingot.get()), "mythril", 
+     			has(ModItems.mythril_ingot.get()), flag("aesthetics_enabled"));
+    	 setbuilder.buildSimpleAestheticBlocks(consumer, Ingredient.of(ModItems.tin_ingot.get()), "tin", 
+      			has(ModItems.tin_ingot.get()), flag("aesthetics_enabled"));
+    	 setbuilder.buildSimpleAestheticBlocks(consumer, Ingredient.of(ModItems.onyx_gem.get()), "onyx", 
+       			has(ModItems.onyx_gem.get()), flag("aesthetics_enabled"));
+    	 setbuilder.buildSimpleAestheticBlocks(consumer, Ingredient.of(Items.COPPER_INGOT), "copper", 
+       			has(Items.COPPER_INGOT), flag("aesthetics_enabled"));
+    } // end registerAestheticRecipes()
+    
     
     protected void registerToolRecipes(Consumer<FinishedRecipe> consumer)
     {

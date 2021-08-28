@@ -8,6 +8,14 @@
     "simpleores:mythril_block",
     "simpleores:mythril_ore",
     "simpleores:deepslate_mythril_ore",
-    "simpleores:raw_mythril_block"
+    "simpleores:raw_mythril_block",
+    "simpleores:adamantium_bars",
+    "simpleores:adamantium_bricks",
+    "simpleores:adamantium_brick_stairs",
+    "simpleores:adamantium_door",
+    "simpleores:mythril_bars",
+    "simpleores:mythril_brick_stairs",
+    "simpleores:mythril_bricks",
+    "simpleores:mythril_door"
   ]
 }

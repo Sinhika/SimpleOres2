@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S  ",
+          "SS ",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "minecraft:copper_ingot"
+          }
+        },
+        "result": {
+          "item": "simpleores:copper_brick_stairs",
+          "count": 4
+        }
+      }
+    }
+  ]
+}

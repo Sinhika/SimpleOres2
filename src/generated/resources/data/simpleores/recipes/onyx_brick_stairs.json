@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S  ",
+          "SS ",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "simpleores:onyx_gem"
+          }
+        },
+        "result": {
+          "item": "simpleores:onyx_brick_stairs",
+          "count": 4
+        }
+      }
+    }
+  ]
+}

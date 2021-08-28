@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "simpleores:copper_door",
+    "simpleores:tin_door",
+    "simpleores:adamantium_door",
+    "simpleores:onyx_door",
+    "simpleores:mythril_door"
+  ]
+}

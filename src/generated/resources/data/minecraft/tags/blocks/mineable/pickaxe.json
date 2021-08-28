@@ -14,6 +14,26 @@
     "simpleores:deepslate_mythril_ore",
     "simpleores:raw_mythril_block",
     "simpleores:onyx_block",
-    "simpleores:onyx_ore"
+    "simpleores:onyx_ore",
+    "simpleores:tin_bars",
+    "simpleores:tin_brick_stairs",
+    "simpleores:tin_bricks",
+    "simpleores:tin_door",
+    "simpleores:adamantium_bars",
+    "simpleores:adamantium_bricks",
+    "simpleores:adamantium_brick_stairs",
+    "simpleores:adamantium_door",
+    "simpleores:copper_bars",
+    "simpleores:copper_brick_stairs",
+    "simpleores:copper_bricks",
+    "simpleores:copper_door",
+    "simpleores:mythril_bars",
+    "simpleores:mythril_brick_stairs",
+    "simpleores:mythril_bricks",
+    "simpleores:mythril_door",
+    "simpleores:onyx_bars",
+    "simpleores:onyx_brick_stairs",
+    "simpleores:onyx_bricks",
+    "simpleores:onyx_door"
   ]
 }
