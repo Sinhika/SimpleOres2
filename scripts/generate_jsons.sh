@@ -25,6 +25,10 @@ gen_blockstate_jsons.py --type=simple raw_adamantium_block
 gen_blockstate_jsons.py --type=simple deepslate_tin_ore
 gen_blockstate_jsons.py --type=simple deepslate_mythril_ore
 gen_blockstate_jsons.py --type=simple deepslate_adamantium_ore
+gen_blockstate_jsons.py --type=slab adamantium_brick_slab
+gen_blockstate_jsons.py --type=slab mythril_brick_slab
+gen_blockstate_jsons.py --type=slab tin_brick_slab
+gen_blockstate_jsons.py --type=slab onyx_brick_slab
 
 # models
 TARGETDIR=${TOPDIR}/src/main/resources/assets/${ID}/models
@@ -40,6 +44,10 @@ gen_model_jsons.py --type=block raw_adamantium_block
 gen_model_jsons.py --type=block deepslate_tin_ore
 gen_model_jsons.py --type=block deepslate_mythril_ore
 gen_model_jsons.py --type=block deepslate_adamantium_ore
+gen_model_jsons.py --type=slab adamantium_brick_slab
+gen_model_jsons.py --type=slab tin_brick_slab
+gen_model_jsons.py --type=slab mythril_brick_slab
+gen_model_jsons.py --type=slab onyx_brick_slab
 
 #inventory items
 gen_model_jsons.py --type=inventory --item_only raw_tin

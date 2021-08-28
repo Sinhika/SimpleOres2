@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "bottom": "simpleores:block/onyx_bricks",
+        "top": "simpleores:block/onyx_bricks",
+        "side": "simpleores:block/onyx_bricks"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SSS",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "simpleores:onyx_gem"
+          }
+        },
+        "result": {
+          "item": "simpleores:onyx_bars",
+          "count": 16
+        }
+      }
+    }
+  ]
+}

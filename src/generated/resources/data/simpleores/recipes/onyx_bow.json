@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "mod_bows",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " XY",
+          "Z Y",
+          " XY"
+        ],
+        "key": {
+          "X": {
+            "item": "simpleores:onyx_rod"
+          },
+          "Y": {
+            "tag": "forge:string"
+          },
+          "Z": {
+            "item": "minecraft:iron_ingot"
+          }
+        },
+        "result": {
+          "item": "simpleores:onyx_bow"
+        }
+      }
+    }
+  ]
+}

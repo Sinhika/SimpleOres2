@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:tin_ingot_from_smelting_from_ore_chunk"
+    ]
+  },
+  "criteria": {
+    "tin_ingot_from_smelting_from_ore_chunk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:crushed_tin_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:tin_ingot_from_smelting_from_ore_chunk"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tin_ingot_from_smelting_from_ore_chunk",
+      "has_the_recipe"
+    ]
+  ]
+}

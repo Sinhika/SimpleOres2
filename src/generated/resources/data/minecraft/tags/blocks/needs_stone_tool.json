@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "simpleores:tin_ore",
+    "simpleores:deepslate_tin_ore",
+    "simpleores:tin_block",
+    "simpleores:raw_tin_block",
+    "simpleores:tin_bars",
+    "simpleores:tin_brick_stairs",
+    "simpleores:tin_bricks",
+    "simpleores:tin_door",
+    "simpleores:copper_bars",
+    "simpleores:copper_door"
+  ]
+}

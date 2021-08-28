@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "onyx_armor",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S S",
+          "SSS",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "tag": "forge:gems/onyx"
+          }
+        },
+        "result": {
+          "item": "simpleores:onyx_chestplate"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:onyx_gem_from_blasting"
+    ]
+  },
+  "criteria": {
+    "onyx_gem_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:onyx_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:onyx_gem_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "onyx_gem_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}

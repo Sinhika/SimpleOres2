@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SS",
+          "SS"
+        ],
+        "key": {
+          "S": {
+            "item": "simpleores:adamantium_ingot"
+          }
+        },
+        "result": {
+          "item": "simpleores:adamantium_bricks"
+        }
+      }
+    }
+  ]
+}

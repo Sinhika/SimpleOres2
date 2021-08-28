@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "bottom": "simpleores:block/adamantium_bricks",
+        "top": "simpleores:block/adamantium_bricks",
+        "side": "simpleores:block/adamantium_bricks"
+    }
+}

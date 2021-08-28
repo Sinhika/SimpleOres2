@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1.0,
+        "max": 1.0
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_bucket"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.5
+        }
+      ],
+      "functions": []
+    }
+  ]
+}

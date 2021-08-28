@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:adamantium_ingot_from_smelting_from_deepslate_ore"
+    ]
+  },
+  "criteria": {
+    "adamantium_ingot_from_smelting_from_deepslate_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:deepslate_adamantium_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:adamantium_ingot_from_smelting_from_deepslate_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "adamantium_ingot_from_smelting_from_deepslate_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

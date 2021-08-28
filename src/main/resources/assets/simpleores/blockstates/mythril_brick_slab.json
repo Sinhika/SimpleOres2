@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "simpleores:block/mythril_brick_slab"
+        },
+        "type=double": {
+            "model": "simpleores:block/mythril_brick_slab"
+        },
+        "type=top": {
+            "model": "simpleores:block/mythril_brick_slab_top"
+        }
+    }
+}

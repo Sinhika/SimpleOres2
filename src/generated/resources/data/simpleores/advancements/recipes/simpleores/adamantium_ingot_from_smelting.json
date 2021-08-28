@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpleores:adamantium_ingot_from_smelting"
+    ]
+  },
+  "criteria": {
+    "adamantium_ingot_from_smelting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:raw_adamantium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpleores:adamantium_ingot_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "adamantium_ingot_from_smelting",
+      "has_the_recipe"
+    ]
+  ]
+}

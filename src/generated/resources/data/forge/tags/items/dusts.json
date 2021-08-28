@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:dusts/adamantine",
+    "#forge:dusts/adamantite",
+    "#forge:dusts/adamantium",
+    "#forge:dusts/mithril",
+    "#forge:dusts/mythril",
+    "#forge:dusts/copper",
+    "#forge:dusts/tin"
+  ]
+}
