@@ -64,7 +64,7 @@ final class ServerConfig
                 .define("AddModLootToChests", true);
         serverEnableAesthetics = builder.comment("Enable Simple Ores aesthetic blocks?")
                 .translation(SimpleOres.MODID + "config.EnableAesthetics")
-                .define("EnableSimpleOresBlocks", true);
+                .define("EnableAestheticsBlocks", true);
 	    builder.pop();
 	    
 	    builder.push("OreGeneration");

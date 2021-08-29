@@ -31,10 +31,10 @@ public class ModBlockTags extends MiningBlockTags
         registerStorageBlockTags();
         registerMiningTags();
         registerBeaconTags();
-        registerDoorsAndStairs();
+        registerDoorsSlabsAndStairs();
     } // end registerTags()
     
-    private void registerDoorsAndStairs()
+    private void registerDoorsSlabsAndStairs()
     {
     	this.tag(TagUtils.modBlockTag("minecraft", "doors"))
     		.add(ModBlocks.copper_door.get())
@@ -48,6 +48,12 @@ public class ModBlockTags extends MiningBlockTags
     		.add(ModBlocks.tin_brick_stairs.get())
     		.add(ModBlocks.mythril_brick_stairs.get())
     		.add(ModBlocks.onyx_brick_stairs.get());
+    	
+    	this.tag(TagUtils.modBlockTag("minecraft","slabs"))
+			.add(ModBlocks.adamantium_brick_slab.get())
+			.add(ModBlocks.tin_brick_slab.get())
+			.add(ModBlocks.mythril_brick_slab.get())
+			.add(ModBlocks.onyx_brick_slab.get());
     }
     
     private void registerBeaconTags()
@@ -68,19 +74,21 @@ public class ModBlockTags extends MiningBlockTags
      			ModBlocks.raw_mythril_block.get(), ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), 
      			ModBlocks.tin_bars.get(), ModBlocks.tin_brick_stairs.get(), ModBlocks.tin_bricks.get(), ModBlocks.tin_door.get(), 
      			ModBlocks.adamantium_bars.get(), ModBlocks.adamantium_bricks.get(), ModBlocks.adamantium_brick_stairs.get(), ModBlocks.adamantium_door.get(),
-     			ModBlocks.copper_bars.get(), ModBlocks.copper_door.get(),
+     			ModBlocks.copper_bars.get(), ModBlocks.copper_door.get(), ModBlocks.tin_brick_slab.get(), ModBlocks.adamantium_brick_slab.get(),
+     			ModBlocks.onyx_brick_slab.get(), ModBlocks.mythril_brick_slab.get(),
      			ModBlocks.mythril_bars.get(), ModBlocks.mythril_brick_stairs.get(), ModBlocks.mythril_bricks.get(), ModBlocks.mythril_door.get(),
      			ModBlocks.onyx_bars.get(), ModBlocks.onyx_brick_stairs.get(), ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get()), 
      			List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get(), ModBlocks.tin_block.get(), ModBlocks.raw_tin_block.get(),
      	     			ModBlocks.tin_bars.get(), ModBlocks.tin_brick_stairs.get(), ModBlocks.tin_bricks.get(), ModBlocks.tin_door.get(), 
-     	     			ModBlocks.copper_bars.get(), ModBlocks.copper_door.get()), // 1 stone
+     	     			ModBlocks.copper_bars.get(), ModBlocks.copper_door.get(), ModBlocks.tin_brick_slab.get()), // 1 stone
      			List.of(ModBlocks.adamantium_block.get(), ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(), 
      					ModBlocks.raw_adamantium_block.get(), ModBlocks.mythril_block.get(), ModBlocks.mythril_ore.get(), 
-     					ModBlocks.deepslate_mythril_ore.get(), ModBlocks.raw_mythril_block.get(),
+     					ModBlocks.deepslate_mythril_ore.get(), ModBlocks.raw_mythril_block.get(), ModBlocks.adamantium_brick_slab.get(),
+     					ModBlocks.mythril_brick_slab.get(),
      	     			ModBlocks.adamantium_bars.get(), ModBlocks.adamantium_bricks.get(), ModBlocks.adamantium_brick_stairs.get(), ModBlocks.adamantium_door.get(),
      	     			ModBlocks.mythril_bars.get(), ModBlocks.mythril_brick_stairs.get(), ModBlocks.mythril_bricks.get(), ModBlocks.mythril_door.get()), // 2 - iron
      			List.of(ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), ModBlocks.onyx_bars.get(), ModBlocks.onyx_brick_stairs.get(), 
-     					ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get()), // 3 - diamond
+     					ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get(), ModBlocks.onyx_brick_slab.get()), // 3 - diamond
      			List.of()); // 4 - netherite
      			
     } // end registerMiningTags()

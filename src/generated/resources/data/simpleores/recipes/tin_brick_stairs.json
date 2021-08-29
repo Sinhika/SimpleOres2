@@ -17,7 +17,7 @@
         ],
         "key": {
           "S": {
-            "item": "simpleores:tin_ingot"
+            "item": "simpleores:tin_bricks"
           }
         },
         "result": {

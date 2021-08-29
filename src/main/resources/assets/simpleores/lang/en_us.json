@@ -31,6 +31,12 @@
     "block.simpleores.adamantium_brick_stairs": "Adamantium Brick Stairs",
     "block.simpleores.onyx_brick_stairs": "Onyx Brick Stairs",
 
+    "block.simpleores.copper_brick_slab": "Copper Brick Slab",
+    "block.simpleores.tin_brick_slab": "Tin Brick Slab",
+    "block.simpleores.mythril_brick_slab": "Mythril Brick Slab",
+    "block.simpleores.adamantium_brick_slab": "Adamantium Brick Slab",
+    "block.simpleores.onyx_brick_slab": "Onyx Brick Slab",
+
     "block.simpleores.copper_bars": "Copper Bars",
     "block.simpleores.tin_bars": "Tin Bars",
     "block.simpleores.mythril_bars": "Mythril Bars",

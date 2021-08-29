@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.material.Material;
@@ -103,6 +104,16 @@ public final class ModBlocks
     public static RegistryObject<Block> mythril_bricks = BLOCKS.register("mythril_bricks",
             () -> new Block(Block.Properties.copy(mythril_block.get())));
 
+    // blocks - slabs
+    public static RegistryObject<SlabBlock> tin_brick_slab = BLOCKS.register("tin_brick_slab",
+    		() -> new SlabBlock(Block.Properties.copy(tin_bricks.get())));
+    public static RegistryObject<SlabBlock> onyx_brick_slab = BLOCKS.register("onyx_brick_slab",
+    		() -> new SlabBlock(Block.Properties.copy(onyx_bricks.get())));
+    public static RegistryObject<SlabBlock> mythril_brick_slab = BLOCKS.register("mythril_brick_slab",
+    		() -> new SlabBlock(Block.Properties.copy(mythril_bricks.get())));
+    public static RegistryObject<SlabBlock> adamantium_brick_slab = BLOCKS.register("adamantium_brick_slab",
+    		() -> new SlabBlock(Block.Properties.copy(adamantium_bricks.get())));
+            
     // Blocks - stairs - simpleores
 //    public static RegistryObject<StairBlock> copper_brick_stairs = BLOCKS.register("copper_brick_stairs", 
 //            () -> new StairBlock( () -> copper_bricks.get().defaultBlockState(), 
