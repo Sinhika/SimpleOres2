@@ -32,10 +32,10 @@ public class ModItemTags extends ItemTagsProvider
         registerOreChunkTags();
     	registerMisc();
     	registerBlockItemTags();
-    	registerDoorsAndStairs();
+    	registerDoorsSlabsAndStairs();
     }
 
-    private void registerDoorsAndStairs()
+    private void registerDoorsSlabsAndStairs()
     {
     	this.tag(TagUtils.modTag("minecraft", "doors"))
     		.add(ModBlocks.copper_door.get().asItem())
@@ -49,6 +49,12 @@ public class ModItemTags extends ItemTagsProvider
     		.add(ModBlocks.tin_brick_stairs.get().asItem())
     		.add(ModBlocks.mythril_brick_stairs.get().asItem())
     		.add(ModBlocks.onyx_brick_stairs.get().asItem());
+    	
+    	this.tag(TagUtils.modTag("minecraft","slabs"))
+    		.add(ModBlocks.adamantium_brick_slab.get().asItem())
+    		.add(ModBlocks.tin_brick_slab.get().asItem())
+    		.add(ModBlocks.mythril_brick_slab.get().asItem())
+    		.add(ModBlocks.onyx_brick_slab.get().asItem());
     }
     
     private void registerBlockItemTags()

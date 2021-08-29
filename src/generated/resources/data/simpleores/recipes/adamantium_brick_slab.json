@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "   ",
+          "   ",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "simpleores:adamantium_bricks"
+          }
+        },
+        "result": {
+          "item": "simpleores:adamantium_brick_slab",
+          "count": 6
+        }
+      }
+    }
+  ]
+}

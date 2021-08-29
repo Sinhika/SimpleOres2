@@ -1,0 +1,21 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "simpleores:mythril_bricks"
+        },
+        "result": "simpleores:mythril_brick_stairs",
+        "count": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "aesthetics_enabled",
+          "type": "simpleores:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "simpleores:onyx_bricks"
+        },
+        "result": "simpleores:onyx_brick_slab",
+        "count": 2
+      }
+    }
+  ]
+}
