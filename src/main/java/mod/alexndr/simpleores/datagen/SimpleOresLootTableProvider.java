@@ -36,6 +36,7 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.onyx_block.get());
         standardDropTable(ModBlocks.adamantium_bars.get());
         standardDropTable(ModBlocks.adamantium_brick_stairs.get());
+        standardDropTable(ModBlocks.adamantium_brick_slab.get());
         standardDropTable(ModBlocks.adamantium_bricks.get());
         standardDropTable(ModBlocks.adamantium_door.get());
         standardDropTable(ModBlocks.copper_bars.get());
@@ -43,11 +44,18 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.mythril_bars.get());
         standardDropTable(ModBlocks.mythril_brick_stairs.get());
         standardDropTable(ModBlocks.mythril_bricks.get());
+        standardDropTable(ModBlocks.mythril_brick_slab.get());
         standardDropTable(ModBlocks.mythril_door.get());
         standardDropTable(ModBlocks.onyx_bars.get());
         standardDropTable(ModBlocks.onyx_brick_stairs.get());
         standardDropTable(ModBlocks.onyx_bricks.get());
+        standardDropTable(ModBlocks.onyx_brick_slab.get());
         standardDropTable(ModBlocks.onyx_door.get());
+        standardDropTable(ModBlocks.tin_bars.get());
+        standardDropTable(ModBlocks.tin_brick_stairs.get());
+        standardDropTable(ModBlocks.tin_bricks.get());
+        standardDropTable(ModBlocks.tin_brick_slab.get());
+        standardDropTable(ModBlocks.tin_door.get());
         
         specialDropTable(ModBlocks.tin_ore.get(), ModItems.raw_tin.get());
         specialDropTable(ModBlocks.mythril_ore.get(), ModItems.raw_mythril.get());
