@@ -1,21 +1,21 @@
 package mod.alexndr.simpleores.init;
 
-import mod.alexndr.simplecorelib.content.SimpleShearsItem;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.content.CopperBucket;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresTiers;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -182,20 +182,20 @@ public final class ModItems
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)) {});
 
     // shears
-    public static final RegistryObject<SimpleShearsItem> copper_shears = ITEMS.register("copper_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.COPPER.getUses())
+    public static final RegistryObject<ShearsItem> copper_shears = ITEMS.register("copper_shears",
+            () -> new ShearsItem(new Item.Properties().durability(SimpleOresTiers.COPPER.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<SimpleShearsItem> tin_shears = ITEMS.register("tin_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.TIN.getUses())
+    public static final RegistryObject<ShearsItem> tin_shears = ITEMS.register("tin_shears",
+            () -> new ShearsItem(new Item.Properties().durability(SimpleOresTiers.TIN.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<SimpleShearsItem> mythril_shears = ITEMS.register("mythril_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.MYTHRIL.getUses())
+    public static final RegistryObject<ShearsItem> mythril_shears = ITEMS.register("mythril_shears",
+            () -> new ShearsItem(new Item.Properties().durability(SimpleOresTiers.MYTHRIL.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<SimpleShearsItem> adamantium_shears = ITEMS.register("adamantium_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.ADAMANTIUM.getUses())
+    public static final RegistryObject<ShearsItem> adamantium_shears = ITEMS.register("adamantium_shears",
+            () -> new ShearsItem(new Item.Properties().durability(SimpleOresTiers.ADAMANTIUM.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<SimpleShearsItem> onyx_shears = ITEMS.register("onyx_shears",
-            () -> new SimpleShearsItem(new Item.Properties().durability(SimpleOresTiers.ONYX.getUses())
+    public static final RegistryObject<ShearsItem> onyx_shears = ITEMS.register("onyx_shears",
+            () -> new ShearsItem(new Item.Properties().durability(SimpleOresTiers.ONYX.getUses())
                     .tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // ARMOR

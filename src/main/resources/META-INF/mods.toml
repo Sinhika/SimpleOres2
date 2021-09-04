@@ -29,7 +29,7 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[37.0.31,38.0.0)"
+    versionRange="[37.0.46,38.0.0)"
     ordering="NONE"
     side="BOTH"
 
