@@ -23,7 +23,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{"item" : "simpleores:mythril_ore"}
+      			{"items" : "simpleores:mythril_ore"}
       			]
       		}
     	}

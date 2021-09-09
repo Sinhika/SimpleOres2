@@ -18,7 +18,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{"item" : "simpleores:copper_pickaxe"}
+      			{"items" : "simpleores:copper_pickaxe"}
       			]
       		}
     	}

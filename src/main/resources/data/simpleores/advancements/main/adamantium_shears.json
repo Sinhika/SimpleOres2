@@ -14,13 +14,13 @@
     },
     "parent" : "simpleores:main/adamantium_ore",
     "criteria" : {
-    	"got_adamantium_shears" : {
-      		"trigger": "minecraft:inventory_changed",
-      		"conditions" : {
-      			"items" : [
-      			{"item" : "simpleores:adamantium_shears"}
-      			]
-      		}
-    	}
+        "got_adamantium_shears" : {
+                "trigger": "minecraft:inventory_changed",
+                "conditions" : {
+                        "items" : [
+                        {"items" : "simpleores:adamantium_shears"}
+                        ]
+                }
+        }
     }
 }

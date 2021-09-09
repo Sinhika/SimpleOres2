@@ -14,13 +14,13 @@
     },
     "parent" : "simpleores:main/adamantium_ore",
     "criteria" : {
-    	"got_adamantium_legs" : {
-      		"trigger": "minecraft:inventory_changed",
-      		"conditions" : {
-      			"items" : [
-      			{"item" : "simpleores:adamantium_leggings"}
-      			]
-      		}
-    	}
+        "got_adamantium_legs" : {
+                "trigger": "minecraft:inventory_changed",
+                "conditions" : {
+                        "items" : [
+                        {"items" : "simpleores:adamantium_leggings"}
+                        ]
+                }
+        }
     }
 }

@@ -13,19 +13,19 @@
         "announce_to_chat": true
     },
     "parent" : "simpleores:main/mythril_ore",
-   	"rewards": {
-    	"recipes": [
-      		"simpleores:adamantium_block", "simpleores:adamantium_ingot"
-    	]
-  	},
+        "rewards": {
+        "recipes": [
+                "simpleores:adamantium_block", "simpleores:adamantium_ingot"
+        ]
+        },
     "criteria" : {
-    	"got_adamantium_ore" : {
-      		"trigger": "minecraft:inventory_changed",
-      		"conditions" : {
-      			"items" : [
-      			{"item" : "simpleores:adamantium_ore"}
-      			]
-      		}
-    	}
+        "got_adamantium_ore" : {
+                "trigger": "minecraft:inventory_changed",
+                "conditions" : {
+                        "items" : [
+                        {"items" : "simpleores:adamantium_ore"}
+                        ]
+                }
+        }
     }
 }

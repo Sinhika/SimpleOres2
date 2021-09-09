@@ -23,7 +23,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{"item" : "simpleores:onyx_ore"}
+      			{"items" : "simpleores:onyx_ore"}
       			]
       		}
     	}

@@ -18,7 +18,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{"item" : "simpleores:tin_shears"}
+      			{"items" : "simpleores:tin_shears"}
       			]
       		}
     	}
