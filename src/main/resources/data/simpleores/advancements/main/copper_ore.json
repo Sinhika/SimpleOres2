@@ -23,7 +23,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{ "items" : "minecraft:copper_ore"}
+      			{ "items" : ["minecraft:copper_ore", "minecraft:deepslate_copper_ore"]}
       			]
       		}
     	}

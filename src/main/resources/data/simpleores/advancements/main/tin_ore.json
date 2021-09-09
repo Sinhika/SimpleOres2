@@ -23,7 +23,7 @@
       		"trigger": "minecraft:inventory_changed",
       		"conditions" : {
       			"items" : [
-      			{"items" : "simpleores:tin_ore"}
+      			{"items" : ["simpleores:tin_ore", "simpleores:deepslate_tin_ore"]}
       			]
       		}
     	}

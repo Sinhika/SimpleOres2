@@ -23,7 +23,7 @@
                 "trigger": "minecraft:inventory_changed",
                 "conditions" : {
                         "items" : [
-                        {"items" : "simpleores:adamantium_ore"}
+                        {"items" : ["simpleores:adamantium_ore", "simpleores:deepslate_adamantium_ore"]}
                         ]
                 }
         }
