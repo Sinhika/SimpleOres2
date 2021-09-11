@@ -4,7 +4,7 @@
             "model": "simpleores:block/adamantium_brick_slab"
         },
         "type=double": {
-            "model": "simpleores:block/adamantium_brick_slab"
+            "model": "simpleores:block/adamantium_bricks"
         },
         "type=top": {
             "model": "simpleores:block/adamantium_brick_slab_top"

@@ -4,7 +4,7 @@
             "model": "simpleores:block/onyx_brick_slab"
         },
         "type=double": {
-            "model": "simpleores:block/onyx_brick_slab"
+            "model": "simpleores:block/onyx_bricks"
         },
         "type=top": {
             "model": "simpleores:block/onyx_brick_slab_top"

@@ -4,7 +4,7 @@
             "model": "simpleores:block/tin_brick_slab"
         },
         "type=double": {
-            "model": "simpleores:block/tin_brick_slab"
+            "model": "simpleores:block/tin_bricks"
         },
         "type=top": {
             "model": "simpleores:block/tin_brick_slab_top"
