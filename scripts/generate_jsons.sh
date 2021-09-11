@@ -25,9 +25,9 @@ gen_blockstate_jsons.py --type=simple raw_adamantium_block
 gen_blockstate_jsons.py --type=simple deepslate_tin_ore
 gen_blockstate_jsons.py --type=simple deepslate_mythril_ore
 gen_blockstate_jsons.py --type=simple deepslate_adamantium_ore
-gen_blockstate_jsons.py --type=slab adamantium_brick_slab
-gen_blockstate_jsons.py --type=slab mythril_brick_slab
 gen_blockstate_jsons.py --type=slab tin_brick_slab
+gen_blockstate_jsons.py --type=slab mythril_brick_slab
+gen_blockstate_jsons.py --type=slab adamantium_brick_slab
 gen_blockstate_jsons.py --type=slab onyx_brick_slab
 
 # models
