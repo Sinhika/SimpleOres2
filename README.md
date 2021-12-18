@@ -14,14 +14,14 @@ Thanks also to Paint_Ninja for doing the initial 1.15.2 port, which encourages
 me to get back to tackling all the messy issues involved in porting these
 mods up from 1.12.2
 
-**WARNING: 1.16 is a Work-in-Progress; expect frequent changes!**
+**WARNING: 1.17 (soon-to-be 1.18) is a Work-in-Progress; expect frequent changes!**
 
 TO-DO
 -----
 * update or move the SimpleOres, etc. wiki - in progress.
-* Move SimpleOres Aesthetics items from Aesthetics to Simple Ores (in progress).
-* Add Stonecutter recipes where necessary.
-* add slabs for metal blocks and brick blocks.
+* <s>Move SimpleOres Aesthetics items from Aesthetics to Simple Ores (in progress).</s>
+* <s>Add Stonecutter recipes where necessary.</s>
+* <s>add slabs for metal blocks and brick blocks.</s>
 * add textures and ore generation for onyx ore in magma block, basalt, other nether blocks? (Blackstone onyx ore is just sadistic).
 * fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
 * added SimpleOres items to villager, trader trade menus.
