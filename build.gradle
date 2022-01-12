@@ -22,7 +22,7 @@ def getVersionAppendage() {
     return "DEV-" + proc.text.trim()
 }
 
-version = "${version_minecraft}-${version_mod}." + getVersionAppendage()
+version = "${version_minecraft}-${version_mod}." + getVersionAppendage() + '-final'
 group = 'mod.alexndr.simpleores'
 archivesBaseName = 'simpleores'
 
