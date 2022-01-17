@@ -11,9 +11,9 @@ import mod.alexndr.simplecorelib.config.FlagCondition;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
+import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModTabGroups;
-import mod.alexndr.simpleores.generation.OreGeneration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,8 +25,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.RegistryObject;
 
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = MOD)
 public final class ModEventSubscriber

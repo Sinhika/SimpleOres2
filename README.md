@@ -14,7 +14,20 @@ Thanks also to Paint_Ninja for doing the initial 1.15.2 port, which encourages
 me to get back to tackling all the messy issues involved in porting these
 mods up from 1.12.2
 
-**WARNING: 1.17 (soon-to-be 1.18) is a Work-in-Progress; expect frequent changes!**
+**WARNING: 1.18 is a Work-in-Progress; expect frequent changes!**
+
+1.18 Ore distributions
+-----------------------
+ * Tin (old: size 7, count 20, height 20-90)
+    - casseterite (aluvial/placer deposits, granitic intrusions)
+        (new: triangle, size 7, count 20, common, center 64 (44-84)
+              uniform, size 7, count 10, common, height 0-72
+    - stannite & others (hydrothermal veins)
+        (deepslate: large tin vein, size ?, count 1?, rare?, height -40 - 0)
+ * Mythril (old: size 4, count 8, height 1-35)
+    - tantalum: granitic intrusions, placer deposits
+ * Adamantium (old: size 4, count 4, height 1-20)
+ * Onyx (old: size 4, count 5, height 8-64 Nether)
 
 TO-DO
 -----
