@@ -140,7 +140,6 @@ public class ModBlockTags extends MiningBlockTags
     private void registerOreTags()
     {
         this.tag(TagUtils.forgeBlockTag( "ores"))
-                .addTag(TagUtils.forgeBlockTag( "ores/copper"))
                 .addTag(TagUtils.forgeBlockTag( "ores/tin"))
                 .addTag(TagUtils.forgeBlockTag( "ores/adamantine"))
                 .addTag(TagUtils.forgeBlockTag( "ores/adamantite"))
@@ -149,11 +148,6 @@ public class ModBlockTags extends MiningBlockTags
                 .addTag(TagUtils.forgeBlockTag( "ores/mythril"))
                 .addTag(TagUtils.forgeBlockTag( "ores/onyx"));
 
-        // because vanilla copper hasn't been added to forge tags by default yet.
-        this.tag(TagUtils.forgeBlockTag( "ores/copper"))
-                .add(Blocks.COPPER_ORE)
-                .add(Blocks.DEEPSLATE_COPPER_ORE);
-        // end copper
         this.tag(TagUtils.forgeBlockTag( "ores/tin"))
                 .add(ModBlocks.tin_ore.get())
                 .add(ModBlocks.deepslate_tin_ore.get());
