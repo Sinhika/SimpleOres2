@@ -2,10 +2,7 @@ package mod.alexndr.simpleores.generation;
 
 import java.util.List;
 
-import com.google.common.collect.ImmutableList;
-
 import mod.alexndr.simplecorelib.world.OreGenUtils;
-import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.data.worldgen.features.FeatureUtils;

@@ -65,7 +65,7 @@ public class ModBlockTags extends MiningBlockTags
 			.add(ModBlocks.mythril_block.get());
     }
     
-    private void registerMiningTags()
+    protected void registerMiningTags()
     {
         // do nothing; super() generates all the vanilla blocktags, and we don't want that.
      	registerMineableTags(List.of(ModBlocks.adamantium_block.get(), ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
@@ -137,8 +137,9 @@ public class ModBlockTags extends MiningBlockTags
                 .add(ModBlocks.onyx_block.get());
     } // end registerStorageBlockTags
     
-    private void registerOreTags()
+    protected void registerOreTags()
     {
+    	// register "forge:ores" tags
         this.tag(TagUtils.forgeBlockTag( "ores"))
                 .addTag(TagUtils.forgeBlockTag( "ores/tin"))
                 .addTag(TagUtils.forgeBlockTag( "ores/adamantine"))
@@ -168,6 +169,20 @@ public class ModBlockTags extends MiningBlockTags
 	        .add(ModBlocks.deepslate_mythril_ore.get());
         this.tag(TagUtils.forgeBlockTag( "ores/onyx"))
                 .add(ModBlocks.onyx_ore.get());
+        
+        // register forge ore_rates tags.
+        this.registerOreRateTags( List.of(), // sparse 
+        		List.of(ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
+        				ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
+        				ModBlocks.onyx_ore.get()), // singular 
+        		List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get())); // dense
+        
+        // register forge:ores_in_ground tags
+        this.registerOresInGroundTags( List.of(ModBlocks.adamantium_ore.get(), ModBlocks.mythril_ore.get(),
+        		ModBlocks.tin_ore.get()), // stone ores
+        		List.of(ModBlocks.deepslate_adamantium_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
+        				ModBlocks.deepslate_tin_ore.get()), // deepslate ores
+        		List.of(ModBlocks.onyx_ore.get()));  // netherrack ores
     } // end registerOreTags()
 
  } // end-class ModBlockTags

@@ -1,18 +1,20 @@
 package mod.alexndr.simpleores.datagen;
 
+import java.util.List;
+
+import mod.alexndr.simplecorelib.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 /**
  * ItemTagsProvider for SimpleOres.
  */
-public class ModItemTags extends ItemTagsProvider
+public class ModItemTags extends MiningItemTags
 {
 
     public ModItemTags(DataGenerator generatorIn, @javax.annotation.Nullable ExistingFileHelper existingFileHelper)
@@ -34,7 +36,60 @@ public class ModItemTags extends ItemTagsProvider
     	registerDoorsSlabsAndStairs();
     }
 
-    private void registerDoorsSlabsAndStairs()
+    
+    @Override
+	protected void registerOreTags() 
+    {
+    	super.registerOreTags();
+    	
+    	// register 'forge:ores' tags.
+        this.tag(TagUtils.forgeTag( "ores"))
+	        .addTag(TagUtils.forgeTag( "ores/tin"))
+	        .addTag(TagUtils.forgeTag( "ores/adamantine"))
+	        .addTag(TagUtils.forgeTag( "ores/adamantite"))
+	        .addTag(TagUtils.forgeTag( "ores/adamantium"))
+	        .addTag(TagUtils.forgeTag( "ores/mithril"))
+	        .addTag(TagUtils.forgeTag( "ores/mythril"))
+	        .addTag(TagUtils.forgeTag( "ores/onyx"));
+	
+		this.tag(TagUtils.forgeTag( "ores/tin"))
+		        .add(ModBlocks.tin_ore.get().asItem())
+		        .add(ModBlocks.deepslate_tin_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/adamantium"))
+		        .add(ModBlocks.adamantium_ore.get().asItem())
+		        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/adamantine"))
+	        .add(ModBlocks.adamantium_ore.get().asItem())
+	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/adamantite"))
+	        .add(ModBlocks.adamantium_ore.get().asItem())
+	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/mythril"))
+		        .add(ModBlocks.mythril_ore.get().asItem())
+		        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/mithril"))
+	        .add(ModBlocks.mythril_ore.get().asItem())
+	        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
+		this.tag(TagUtils.forgeTag( "ores/onyx"))
+		        .add(ModBlocks.onyx_ore.get().asItem());
+		
+        // register forge ore_rates tags.
+        this.registerOreRateTags( List.of(), // sparse 
+        		List.of(ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
+        				ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
+        				ModBlocks.onyx_ore.get()), // singular 
+        		List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get())); // dense
+        
+        // register forge:ores_in_ground tags
+        this.registerOresInGroundTags( List.of(ModBlocks.adamantium_ore.get(), ModBlocks.mythril_ore.get(),
+        		ModBlocks.tin_ore.get()), // stone ores
+        		List.of(ModBlocks.deepslate_adamantium_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
+        				ModBlocks.deepslate_tin_ore.get()), // deepslate ores
+        		List.of(ModBlocks.onyx_ore.get()));  // netherrack ores
+		
+	} // end registerOreTags
+
+	private void registerDoorsSlabsAndStairs()
     {
     	this.tag(TagUtils.modTag("minecraft", "doors"))
     		.add(ModBlocks.copper_door.get().asItem())
@@ -91,35 +146,6 @@ public class ModItemTags extends ItemTagsProvider
 	    this.tag(TagUtils.forgeTag( "storage_blocks/onyx"))
 	            .add(ModBlocks.onyx_block.get().asItem());
 
-        this.tag(TagUtils.forgeTag( "ores"))
-	        .addTag(TagUtils.forgeTag( "ores/tin"))
-	        .addTag(TagUtils.forgeTag( "ores/adamantine"))
-	        .addTag(TagUtils.forgeTag( "ores/adamantite"))
-	        .addTag(TagUtils.forgeTag( "ores/adamantium"))
-	        .addTag(TagUtils.forgeTag( "ores/mithril"))
-	        .addTag(TagUtils.forgeTag( "ores/mythril"))
-	        .addTag(TagUtils.forgeTag( "ores/onyx"));
-
-		this.tag(TagUtils.forgeTag( "ores/tin"))
-		        .add(ModBlocks.tin_ore.get().asItem())
-		        .add(ModBlocks.deepslate_tin_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/adamantium"))
-		        .add(ModBlocks.adamantium_ore.get().asItem())
-		        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/adamantine"))
-	        .add(ModBlocks.adamantium_ore.get().asItem())
-	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/adamantite"))
-	        .add(ModBlocks.adamantium_ore.get().asItem())
-	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/mythril"))
-		        .add(ModBlocks.mythril_ore.get().asItem())
-		        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/mithril"))
-	        .add(ModBlocks.mythril_ore.get().asItem())
-	        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/onyx"))
-		        .add(ModBlocks.onyx_ore.get().asItem());
     } // end registerBlockItemTags()
     
     private void registerNuggetTags()
