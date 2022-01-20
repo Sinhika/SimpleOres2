@@ -7,7 +7,6 @@ import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 /**
@@ -64,8 +63,6 @@ public class ModItemTags extends ItemTagsProvider
 	        .addTag(TagUtils.forgeTag("storage_blocks/adamantium"))
 	        .addTag(TagUtils.forgeTag("storage_blocks/adamantine"))
 	        .addTag(TagUtils.forgeTag("storage_blocks/adamantite"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/copper"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/raw_copper"))
 	        .addTag(TagUtils.forgeTag("storage_blocks/tin"))
 	        .addTag(TagUtils.forgeTag("storage_blocks/raw_tin"))
 	        .addTag(TagUtils.forgeTag("storage_blocks/mythril"))
@@ -73,12 +70,6 @@ public class ModItemTags extends ItemTagsProvider
 	        .addTag(TagUtils.forgeTag("storage_blocks/raw_mythril"))
 	        .addTag(TagUtils.forgeTag("storage_blocks/onyx"));
     
-	    // because they haven't been added to forge by default yet.
-	    this.tag(TagUtils.forgeTag( "storage_blocks/copper"))
-	    	.add(Blocks.COPPER_BLOCK.asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/raw_copper"))
-			.add(Blocks.RAW_COPPER_BLOCK.asItem());
-	    // end-copper
 	    this.tag(TagUtils.forgeTag("storage_blocks/raw_adamantium"))
 	    	.add(ModBlocks.raw_adamantium_block.get().asItem());
 	    this.tag(TagUtils.forgeTag("storage_blocks/adamantium"))
@@ -101,7 +92,6 @@ public class ModItemTags extends ItemTagsProvider
 	            .add(ModBlocks.onyx_block.get().asItem());
 
         this.tag(TagUtils.forgeTag( "ores"))
-	        .addTag(TagUtils.forgeTag( "ores/copper"))
 	        .addTag(TagUtils.forgeTag( "ores/tin"))
 	        .addTag(TagUtils.forgeTag( "ores/adamantine"))
 	        .addTag(TagUtils.forgeTag( "ores/adamantite"))
@@ -110,11 +100,6 @@ public class ModItemTags extends ItemTagsProvider
 	        .addTag(TagUtils.forgeTag( "ores/mythril"))
 	        .addTag(TagUtils.forgeTag( "ores/onyx"));
 
-		// because vanilla copper hasn't been added to forge tags by default yet.
-		this.tag(TagUtils.forgeTag( "ores/copper"))
-		        .add(Blocks.COPPER_ORE.asItem())
-		        .add(Blocks.DEEPSLATE_COPPER_ORE.asItem());
-		// end copper
 		this.tag(TagUtils.forgeTag( "ores/tin"))
 		        .add(ModBlocks.tin_ore.get().asItem())
 		        .add(ModBlocks.deepslate_tin_ore.get().asItem());
@@ -203,7 +188,6 @@ public class ModItemTags extends ItemTagsProvider
     private void registerIngotTags()
     {
         this.tag(TagUtils.forgeTag("ingots"))
-        	.addTag(TagUtils.forgeTag("ingots/copper"))		// TODO: remove when Forge adds it.
     		.addTag(TagUtils.forgeTag("ingots/tin"))
         	.addTag(TagUtils.forgeTag("ingots/adamantine"))
         	.addTag(TagUtils.forgeTag("ingots/adamantite"))
@@ -211,10 +195,6 @@ public class ModItemTags extends ItemTagsProvider
         	.addTag(TagUtils.forgeTag("ingots/mithril"))
         	.addTag(TagUtils.forgeTag("ingots/mythril"));
         
-        // TODO: remove when Forge adds this.
-        this.tag(TagUtils.forgeTag("ingots/copper"))
-    		.add(Items.COPPER_INGOT);
-        // end TODO copper
         this.tag(TagUtils.forgeTag("ingots/tin"))
         	.add(ModItems.tin_ingot.get());
         this.tag(TagUtils.forgeTag("ingots/adamantine"))
