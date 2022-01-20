@@ -62,7 +62,7 @@ public class OreGeneration
         
         ORE_ONYX = FeatureUtils.register("ore_onyx", 
         		OreGenUtils.ConfigureOreFeature(ORE_ONYX_NETHERRACK_TARGET, SimpleOresConfig.onyx_cfg.getVein_size(), 0.0F ));
-        ORE_ONYX_ROCK = FeatureUtils.register("ore_onyx", 
+        ORE_ONYX_ROCK = FeatureUtils.register("ore_onyx_rock", 
         		OreGenUtils.ConfigureOreFeature(ORE_ONYX_ROCK_TARGET, SimpleOresConfig.onyx_rock_cfg.getVein_size(), 0.0F ));
         		
         ORE_ONYX_ALL = PlacementUtils.register("ore_onyx_all", 
@@ -106,10 +106,10 @@ public class OreGeneration
         {
             ORE_ADAMANTIUM = FeatureUtils.register("ore_adamantium", 
             		OreGenUtils.ConfigureOreFeature(ORE_ADAMANTIUM_TARGET_LIST, 
-            										SimpleOresConfig.adamantium_cfg.getVein_size(), 50.0F));
-			ORE_ADAMANTIUM2 = FeatureUtils.register("ore_adamantium", 
+            										SimpleOresConfig.adamantium_cfg.getVein_size(), 0.5F));
+			ORE_ADAMANTIUM2 = FeatureUtils.register("ore_adamantium2", 
 					OreGenUtils.ConfigureOreFeature(ORE_ADAMANTIUM_TARGET_LIST, 
-													SimpleOresConfig.adamantium_cfg2.getVein_size(), 0F));
+													SimpleOresConfig.adamantium_cfg2.getVein_size(), 0.0F));
             ORE_ADAMANTIUM_DEPOSIT = PlacementUtils.register("ore_adamantium_deposit", 
             		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.adamantium_cfg, ORE_ADAMANTIUM));
             ORE_ADAMANTIUM_INTRUSION = PlacementUtils.register("ore_adamantium_intrusion", 
