@@ -97,11 +97,11 @@ final class ServerConfig
         serverTinBottomHeight = builder
                 .comment("Tin ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverTinBottomHeight")
-                .defineInRange("TinBottomHeight", 20, 1, 254);
+                .defineInRange("TinBottomHeight", 44, 1, 254);
         serverTinMaxHeight = builder
                 .comment("Tin ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverTinMaxHeight")
-                .defineInRange("TinMaxHeight", 90, 1, 255);
+                .defineInRange("TinMaxHeight", 84, 1, 255);
         builder.pop();
 
         builder.push("Mythril");
@@ -116,11 +116,11 @@ final class ServerConfig
         serverMythrilBottomHeight = builder
                 .comment("Mythril ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverMythrilBottomHeight")
-                .defineInRange("MythrilBottomHeight", 1, 1, 254);
+                .defineInRange("MythrilBottomHeight", -64, 1, 254);
         serverMythrilMaxHeight = builder
                 .comment("Mythril ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverMythrilMaxHeight")
-                .defineInRange("MythrilMaxHeight", 35, 1, 255);
+                .defineInRange("MythrilMaxHeight", 32, 1, 255);
         builder.pop();
 
         builder.push("Adamantium");
@@ -135,11 +135,11 @@ final class ServerConfig
         serverAdamantiumBottomHeight = builder
                 .comment("Adamantium ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverAdamantiumBottomHeight")
-                .defineInRange("AdamantiumBottomHeight", 1, 1, 254);
+                .defineInRange("AdamantiumBottomHeight", -64, 1, 254);
         serverAdamantiumMaxHeight = builder
                 .comment("Adamantium ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverAdamantiumMaxHeight")
-                .defineInRange("AdamantiumMaxHeight", 20, 1, 255);
+                .defineInRange("AdamantiumMaxHeight", -16, 1, 255);
         builder.pop();
 
         builder.push("Onyx");

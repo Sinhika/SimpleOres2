@@ -15,8 +15,12 @@ public class SimpleOresConfig extends SimpleConfig
     //  MinHeight, MaxHeightBase, MaxHeight
     //public static ModOreConfig copper_cfg;
     public static ModOreConfig tin_cfg;
+    public static ModOreConfig tin_cfg2;
+    // public static ModOreConfig tin_vein; // not used yet.
     public static ModOreConfig mythril_cfg;
+    public static ModOreConfig mythril_cfg2;
     public static ModOreConfig adamantium_cfg;
+    public static ModOreConfig adamantium_cfg2;
     public static ModOreConfig onyx_cfg;
     public static ModOreConfig onyx_rock_cfg;
     
