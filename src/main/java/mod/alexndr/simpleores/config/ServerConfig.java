@@ -116,7 +116,7 @@ final class ServerConfig
         serverMythrilBottomHeight = builder
                 .comment("Mythril ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverMythrilBottomHeight")
-                .defineInRange("MythrilBottomHeight", -64, 1, 254);
+                .defineInRange("MythrilBottomHeight", -63, 1, 254);
         serverMythrilMaxHeight = builder
                 .comment("Mythril ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverMythrilMaxHeight")
@@ -135,7 +135,7 @@ final class ServerConfig
         serverAdamantiumBottomHeight = builder
                 .comment("Adamantium ore minimum height")
                 .translation(SimpleOres.MODID + ".config.serverAdamantiumBottomHeight")
-                .defineInRange("AdamantiumBottomHeight", -64, 1, 254);
+                .defineInRange("AdamantiumBottomHeight", -63, 1, 254);
         serverAdamantiumMaxHeight = builder
                 .comment("Adamantium ore maximum height")
                 .translation(SimpleOres.MODID + ".config.serverAdamantiumMaxHeight")

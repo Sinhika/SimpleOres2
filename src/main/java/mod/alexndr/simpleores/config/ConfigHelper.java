@@ -33,29 +33,29 @@ public final class ConfigHelper
 
         SimpleOresConfig.enableMythrilOre = ConfigHolder.SERVER.serverEnableMythrilOre.get();
         SimpleOresConfig.mythril_cfg = new ModOreConfig(ModOreConfig.TRIANGLE, ConfigHolder.SERVER.serverMythrilVeinSize.get(),
-        		ConfigHolder.SERVER.serverMythrilVeinCount.get(), false, 
+        		ConfigHolder.SERVER.serverMythrilVeinCount.get(), true, 
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverMythrilBottomHeight.get()),
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverMythrilMaxHeight.get()));
         SimpleOresConfig.mythril_cfg2 = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverMythrilVeinSize.get(),
-        		ConfigHolder.SERVER.serverMythrilVeinCount.get()/2, false, 
+        		ConfigHolder.SERVER.serverMythrilVeinCount.get()/2, true, 
         		VerticalAnchor.bottom(), VerticalAnchor.absolute(35));
 
         SimpleOresConfig.enableAdamantiumOre = ConfigHolder.SERVER.serverEnableAdamantiumOre.get();
         SimpleOresConfig.adamantium_cfg = new ModOreConfig(ModOreConfig.TRIANGLE, 
         		ConfigHolder.SERVER.serverAdamantiumVeinSize.get(),
-        		ConfigHolder.SERVER.serverAdamantiumVeinCount.get(), false, 
+        		ConfigHolder.SERVER.serverAdamantiumVeinCount.get(), true, 
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverAdamantiumBottomHeight.get()),
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverAdamantiumMaxHeight.get()));
         SimpleOresConfig.adamantium_cfg2 = new ModOreConfig(ModOreConfig.UNIFORM, 
         		ConfigHolder.SERVER.serverAdamantiumVeinSize.get(),
-        		ConfigHolder.SERVER.serverAdamantiumVeinCount.get()/2, false, 
+        		ConfigHolder.SERVER.serverAdamantiumVeinCount.get(), true, 
         		VerticalAnchor.bottom(), VerticalAnchor.absolute(20));
        
         SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
         SimpleOresConfig.onyx_cfg = new ModOreConfig(ModOreConfig.FULL_RANGE, ConfigHolder.SERVER.serverOnyxVeinSize.get(),
-        		ConfigHolder.SERVER.serverOnyxVeinCount.get(), false, VerticalAnchor.bottom(), VerticalAnchor.top());
+        		ConfigHolder.SERVER.serverOnyxVeinCount.get(), true, VerticalAnchor.bottom(), VerticalAnchor.top());
         SimpleOresConfig.onyx_rock_cfg = new ModOreConfig(ModOreConfig.UNIFORM, ConfigHolder.SERVER.serverOnyxVeinSize.get(),
-        		ConfigHolder.SERVER.serverOnyxVeinCount.get(), false,
+        		ConfigHolder.SERVER.serverOnyxVeinCount.get(), true,
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxBottomHeight.get()),
         		VerticalAnchor.absolute(ConfigHolder.SERVER.serverOnyxMaxHeight.get()));
         		
