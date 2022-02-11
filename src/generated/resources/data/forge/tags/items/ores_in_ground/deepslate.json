@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "simpleores:deepslate_adamantium_ore",
+    "simpleores:deepslate_mythril_ore",
+    "simpleores:deepslate_tin_ore"
+  ]
+}

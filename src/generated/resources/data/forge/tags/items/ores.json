@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ores/tin",
+    "#forge:ores/adamantine",
+    "#forge:ores/adamantite",
+    "#forge:ores/adamantium",
+    "#forge:ores/mithril",
+    "#forge:ores/mythril",
+    "#forge:ores/onyx"
+  ]
+}

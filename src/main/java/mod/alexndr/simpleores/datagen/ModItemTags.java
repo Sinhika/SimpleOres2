@@ -25,6 +25,7 @@ public class ModItemTags extends MiningItemTags
     @Override
     protected void addTags()
     {
+    	super.addTags();
     	registerNuggetTags();
     	registerIngotTags();
     	registerRawMetalTags();
