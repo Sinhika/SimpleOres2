@@ -158,6 +158,8 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 has(ModBlocks.deepslate_adamantium_ore.get().asItem()), 0.7F, 200, "_from_deepslate_ore");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_mythril.get()), ModItems.mythril_ingot.get(), 
                 has(ModItems.raw_mythril.get().asItem()), 0.7F, 200);
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
+                has(ModBlocks.mythril_ore.get().asItem()), 0.7F, 200, "_from_ore");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.deepslate_mythril_ore.get().asItem()), ModItems.mythril_ingot.get(), 
                 has(ModBlocks.deepslate_mythril_ore.get().asItem()), 0.7F, 200, "_from_deepslate_ore");
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_tin.get()), ModItems.tin_ingot.get(), 
