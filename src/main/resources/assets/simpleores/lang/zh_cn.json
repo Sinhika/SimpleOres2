@@ -130,7 +130,7 @@
 
     "advancements.welcome": "欢迎来到简单矿石的世界！",
     "advancements.copper_ach": "既不是金，也不是铁",
-    "advancements.copper_ach.desc": "从采掘铜矿石开始，迈入简单矿石之旅吧。
+    "advancements.copper_ach.desc": "从采掘铜矿石开始，迈入简单矿石之旅吧。"
     "advancements.tin_ach": "鈏",
     "advancements.tin_ach.desc": "挖些锡矿石吧",
     "advancements.mythril_ach": "哇哦，漂亮欸！",
@@ -168,4 +168,3 @@
     "tips.efficiency_tooltip": "效率提高",
     "tips.copper_bucket" : "不能盛装熔岩"
 }
-# 部分成就相关翻译使用了 CFPAOrg i18n 中的翻译
