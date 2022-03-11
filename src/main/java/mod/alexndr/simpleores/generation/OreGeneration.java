@@ -5,10 +5,12 @@ import java.util.List;
 import mod.alexndr.simplecorelib.world.OreGenUtils;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
+import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -32,23 +34,23 @@ public class OreGeneration
 	public static final List<OreConfiguration.TargetBlockState> ORE_ONYX_ROCK_TARGET = 
 			OreGenUtils.BuildNetherOreTargetList(ModBlocks.onyx_ore.get(), false);
 	
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_TIN;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_TIN2;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_MYTHRIL;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_MYTHRIL2;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_ADAMANTIUM;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_ADAMANTIUM2;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_ONYX;
-    public static ConfiguredFeature<OreConfiguration, ?> ORE_ONYX_ROCK;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_TIN2;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_MYTHRIL;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_MYTHRIL2;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ADAMANTIUM;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ADAMANTIUM2;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ONYX;
+    public static Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_ONYX_ROCK;
 
-    public static PlacedFeature ORE_ONYX_ALL;
-    public static PlacedFeature ORE_ONYX_IN_ROCK;
-    public static PlacedFeature ORE_TIN_PLACER;
-    public static PlacedFeature ORE_TIN_INTRUSION;
-    public static PlacedFeature ORE_MYTHRIL_DEPOSIT;
-    public static PlacedFeature ORE_MYTHRIL_INTRUSION;
-    public static PlacedFeature ORE_ADAMANTIUM_DEPOSIT;
-    public static PlacedFeature ORE_ADAMANTIUM_INTRUSION;
+    public static Holder<PlacedFeature> ORE_ONYX_ALL;
+    public static Holder<PlacedFeature> ORE_ONYX_IN_ROCK;
+    public static Holder<PlacedFeature> ORE_TIN_PLACER;
+    public static Holder<PlacedFeature> ORE_TIN_INTRUSION;
+    public static Holder<PlacedFeature> ORE_MYTHRIL_DEPOSIT;
+    public static Holder<PlacedFeature> ORE_MYTHRIL_INTRUSION;
+    public static Holder<PlacedFeature> ORE_ADAMANTIUM_DEPOSIT;
+    public static Holder<PlacedFeature> ORE_ADAMANTIUM_INTRUSION;
     
     
     /**
@@ -60,15 +62,15 @@ public class OreGeneration
     {
         if (! SimpleOresConfig.enableOnyxOre) return;
         
-        ORE_ONYX = FeatureUtils.register("ore_onyx", 
+        ORE_ONYX = FeatureUtils.register("ore_onyx", Feature.ORE, 
         		OreGenUtils.ConfigureOreFeature(ORE_ONYX_NETHERRACK_TARGET, SimpleOresConfig.onyx_cfg.getVein_size(), 0.0F ));
-        ORE_ONYX_ROCK = FeatureUtils.register("ore_onyx_rock", 
+        ORE_ONYX_ROCK = FeatureUtils.register("ore_onyx_rock", Feature.ORE,
         		OreGenUtils.ConfigureOreFeature(ORE_ONYX_ROCK_TARGET, SimpleOresConfig.onyx_rock_cfg.getVein_size(), 0.0F ));
         		
-        ORE_ONYX_ALL = PlacementUtils.register("ore_onyx_all", 
-        		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.onyx_cfg, ORE_ONYX));
-        ORE_ONYX_IN_ROCK = PlacementUtils.register("ore_onyx_in_rock", 
-        		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.onyx_rock_cfg, ORE_ONYX_ROCK));
+        ORE_ONYX_ALL = PlacementUtils.register("ore_onyx_all", ORE_ONYX, 
+                                                OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.onyx_cfg));
+        ORE_ONYX_IN_ROCK = PlacementUtils.register("ore_onyx_in_rock", ORE_ONYX_ROCK, 
+        		                                    OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.onyx_rock_cfg));
     } // end-initNetherFeatures()
 
     
@@ -82,38 +84,40 @@ public class OreGeneration
 
          if (SimpleOresConfig.enableTinOre)
         {
-            ORE_TIN = FeatureUtils.register("ore_tin", 
+            ORE_TIN = FeatureUtils.register("ore_tin", Feature.ORE, 
             		OreGenUtils.ConfigureOreFeature(ORE_TIN_TARGET_LIST, SimpleOresConfig.tin_cfg.getVein_size(), 0.0F));
-            ORE_TIN2 = FeatureUtils.register("ore_tin2", 
+            ORE_TIN2 = FeatureUtils.register("ore_tin2", Feature.ORE, 
             		OreGenUtils.ConfigureOreFeature(ORE_TIN_TARGET_LIST, SimpleOresConfig.tin_cfg2.getVein_size(), 0.0F));
-            ORE_TIN_PLACER = PlacementUtils.register("ore_tin_placer", 
-            		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.tin_cfg, ORE_TIN));
-            ORE_TIN_INTRUSION = PlacementUtils.register("ore_tin_intrusion", 
-            		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.tin_cfg2, ORE_TIN2));
+            
+            ORE_TIN_PLACER = PlacementUtils.register("ore_tin_placer", ORE_TIN, 
+            		OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.tin_cfg));
+            ORE_TIN_INTRUSION = PlacementUtils.register("ore_tin_intrusion", ORE_TIN2, 
+            		OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.tin_cfg2));
         }
         if (SimpleOresConfig.enableMythrilOre)
         {
-            ORE_MYTHRIL = FeatureUtils.register("ore_mythril", 
+            ORE_MYTHRIL = FeatureUtils.register("ore_mythril", Feature.ORE, 
             		OreGenUtils.ConfigureOreFeature(ORE_MYTHRIL_TARGET_LIST, SimpleOresConfig.mythril_cfg.getVein_size(), 0.0F));
-            ORE_MYTHRIL2 = FeatureUtils.register("ore_mythril2", 
+            ORE_MYTHRIL2 = FeatureUtils.register("ore_mythril2", Feature.ORE, 
             		OreGenUtils.ConfigureOreFeature(ORE_MYTHRIL_TARGET_LIST, SimpleOresConfig.mythril_cfg2.getVein_size(), 0.0F));
-            ORE_MYTHRIL_DEPOSIT = PlacementUtils.register("ore_mythril_deposit", 
-            		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.mythril_cfg, ORE_MYTHRIL));
-            ORE_MYTHRIL_INTRUSION = PlacementUtils.register("ore_mythril_intrusion", 
-            		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.mythril_cfg2, ORE_MYTHRIL2));
+            
+            ORE_MYTHRIL_DEPOSIT = PlacementUtils.register("ore_mythril_deposit", ORE_MYTHRIL, 
+            		OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.mythril_cfg));
+            ORE_MYTHRIL_INTRUSION = PlacementUtils.register("ore_mythril_intrusion", ORE_MYTHRIL2, 
+            		OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.mythril_cfg2));
         }
         if (SimpleOresConfig.enableAdamantiumOre)
         {
-            ORE_ADAMANTIUM = FeatureUtils.register("ore_adamantium", 
+            ORE_ADAMANTIUM = FeatureUtils.register("ore_adamantium", Feature.ORE, 
             		OreGenUtils.ConfigureOreFeature(ORE_ADAMANTIUM_TARGET_LIST, 
             										SimpleOresConfig.adamantium_cfg.getVein_size(), 0.5F));
-			ORE_ADAMANTIUM2 = FeatureUtils.register("ore_adamantium2", 
+			ORE_ADAMANTIUM2 = FeatureUtils.register("ore_adamantium2", Feature.ORE, 
 					OreGenUtils.ConfigureOreFeature(ORE_ADAMANTIUM_TARGET_LIST, 
 													SimpleOresConfig.adamantium_cfg2.getVein_size(), 0.0F));
-            ORE_ADAMANTIUM_DEPOSIT = PlacementUtils.register("ore_adamantium_deposit", 
-            		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.adamantium_cfg, ORE_ADAMANTIUM));
-            ORE_ADAMANTIUM_INTRUSION = PlacementUtils.register("ore_adamantium_intrusion", 
-            		OreGenUtils.ConfigurePlacedFeature(SimpleOresConfig.adamantium_cfg2, ORE_ADAMANTIUM2));
+            ORE_ADAMANTIUM_DEPOSIT = PlacementUtils.register("ore_adamantium_deposit", ORE_ADAMANTIUM, 
+            		OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.adamantium_cfg));
+            ORE_ADAMANTIUM_INTRUSION = PlacementUtils.register("ore_adamantium_intrusion", ORE_ADAMANTIUM2, 
+            		OreGenUtils.ConfigurePlacementModifiers(SimpleOresConfig.adamantium_cfg2));
         }
     } // end-initOverworldFeatures()
     

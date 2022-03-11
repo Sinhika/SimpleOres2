@@ -6,7 +6,7 @@ import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -22,16 +22,16 @@ import net.minecraftforge.common.TierSortingRegistry;
  */
 public final class SimpleOresTiers
 {
-	public static final Tag.Named<Block> COPPER_TAG = 
-			BlockTags.createOptional(new ResourceLocation(SimpleOres.MODID, "needs_copper_tool"));
-	public static final Tag.Named<Block> TIN_TAG = 
-			BlockTags.createOptional(new ResourceLocation(SimpleOres.MODID, "needs_tin_tool"));
-	public static final Tag.Named<Block> MYTHRIL_TAG = 
-			BlockTags.createOptional(new ResourceLocation(SimpleOres.MODID, "needs_mythril_tool"));
-	public static final Tag.Named<Block> ADAMANTIUM_TAG = 
-			BlockTags.createOptional(new ResourceLocation(SimpleOres.MODID, "needs_adamantium_tool"));
-	public static final Tag.Named<Block> ONYX_TAG = 
-			BlockTags.createOptional(new ResourceLocation(SimpleOres.MODID, "needs_onyx_tool"));
+	public static final TagKey<Block> COPPER_TAG = 
+			BlockTags.create(new ResourceLocation(SimpleOres.MODID, "needs_copper_tool"));
+	public static final TagKey<Block> TIN_TAG = 
+			BlockTags.create(new ResourceLocation(SimpleOres.MODID, "needs_tin_tool"));
+	public static final TagKey<Block> MYTHRIL_TAG = 
+			BlockTags.create(new ResourceLocation(SimpleOres.MODID, "needs_mythril_tool"));
+	public static final TagKey<Block> ADAMANTIUM_TAG = 
+			BlockTags.create(new ResourceLocation(SimpleOres.MODID, "needs_adamantium_tool"));
+	public static final TagKey<Block> ONYX_TAG = 
+			BlockTags.create(new ResourceLocation(SimpleOres.MODID, "needs_onyx_tool"));
 	
 	public static final Tier COPPER = TierSortingRegistry.registerTier(
 			new ForgeTier(Tiers.STONE.getLevel(), 185, 4.0f, 1.0f, 8, COPPER_TAG,()->Ingredient.of(Items.COPPER_INGOT)),
