@@ -29,21 +29,21 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[39.0.18,40)"
+    versionRange="[40,41)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpleores]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.1,1.19)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
     
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.18.1-4.0.0.3,)"
+    versionRange="[1.18.2-4.1,)"
     ordering="NONE"
     side="BOTH"
         

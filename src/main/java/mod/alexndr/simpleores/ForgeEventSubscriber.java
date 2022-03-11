@@ -8,21 +8,20 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.loot.SimpleOresInjectionLookup;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.stats.Stats;
-import net.minecraft.tags.FluidTags;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.core.BlockPos;
+import net.minecraft.stats.Stats;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -76,8 +75,8 @@ public final class ForgeEventSubscriber
 	                BlockState blockstate1 = event.getWorld().getBlockState(blockpos);
 	                if (blockstate1.getBlock() instanceof LiquidBlock) 
 	                {
-	                    Fluid fluid = ((LiquidBlock) blockstate1.getBlock()).getFluid();
-	                    if (fluid != Fluids.EMPTY && fluid.is(FluidTags.LAVA)) 
+	                    FluidState fluid = ((LiquidBlock) blockstate1.getBlock()).getFluidState(blockstate1);
+	                    if (!fluid.isEmpty() && fluid.is(FluidTags.LAVA)) 
 	                    {
 	                        Item bucketItem = event.getEmptyBucket().getItem();
 	                        event.getPlayer().awardStat(Stats.ITEM_USED.get(bucketItem));
