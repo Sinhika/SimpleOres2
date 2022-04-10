@@ -6,7 +6,7 @@ libs/
 *.launch
 *.log
 *.jar
-! gradle/wrapper/*.jar
+!gradle/wrapper/*.jar
 *.class
 *~
 .classpath
