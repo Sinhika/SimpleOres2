@@ -36,6 +36,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
+    @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
@@ -207,6 +208,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
      * Builds an ICondition representing FlagCondition...
      *
      */
+    @Override
     public ICondition flag(String name)
     {
         return impl_flag(SimpleOres.MODID, SimpleOresConfig.INSTANCE, name);
