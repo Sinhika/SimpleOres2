@@ -65,6 +65,7 @@ public class ModBlockTags extends MiningBlockTags
 			.add(ModBlocks.mythril_block.get());
     }
     
+    @Override
     protected void registerMiningTags()
     {
         // do nothing; super() generates all the vanilla blocktags, and we don't want that.
@@ -137,6 +138,7 @@ public class ModBlockTags extends MiningBlockTags
                 .add(ModBlocks.onyx_block.get());
     } // end registerStorageBlockTags
     
+    @Override
     protected void registerOreTags()
     {
     	// register "forge:ores" tags
