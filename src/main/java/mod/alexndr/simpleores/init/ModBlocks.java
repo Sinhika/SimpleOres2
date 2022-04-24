@@ -160,5 +160,7 @@ public final class ModBlocks
             () -> new IronBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     
-
+    // Blocks - pressure plates
+    // public static RegistryObject<PressurePlateBlock> copper_pressure_plate; // TODO next time.
+    
 }  // end class ModBlocks
