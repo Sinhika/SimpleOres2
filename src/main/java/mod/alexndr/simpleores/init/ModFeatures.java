@@ -75,5 +75,21 @@ public class ModFeatures
                     ()-> OreGenUtils.createPlacedOreFeature(ORE_ONYX.getHolder().get(), SimpleOresConfig.onyx_cfg));
     public static RegistryObject<PlacedFeature> ORE_ONYX_IN_ROCK = PLACED_FEATURES.register("ore_onyx_in_rock", 
             ()-> OreGenUtils.createPlacedOreFeature(ORE_ONYX_ROCK.getHolder().get(), SimpleOresConfig.onyx_rock_cfg));
+    
+    public static RegistryObject<PlacedFeature> ORE_TIN_PLACER = PLACED_FEATURES.register("ore_tin_placer", 
+            ()-> OreGenUtils.createPlacedOreFeature(ORE_TIN.getHolder().get(), SimpleOresConfig.tin_cfg));
+    public static RegistryObject<PlacedFeature> ORE_TIN_INTRUSION = PLACED_FEATURES.register("ore_tin_intrusion", 
+            ()-> OreGenUtils.createPlacedOreFeature(ORE_TIN2.getHolder().get(), SimpleOresConfig.tin_cfg2));
+    
+    public static RegistryObject<PlacedFeature> ORE_MYTHRIL_DEPOSIT = PLACED_FEATURES.register("ore_mythril_deposit", 
+            ()-> OreGenUtils.createPlacedOreFeature(ORE_MYTHRIL.getHolder().get(), SimpleOresConfig.mythril_cfg));
+    public static RegistryObject<PlacedFeature> ORE_MYTHRIL_INTRUSION = PLACED_FEATURES.register("ore_mythril_intrusion", 
+            ()-> OreGenUtils.createPlacedOreFeature(ORE_MYTHRIL2.getHolder().get(), SimpleOresConfig.mythril_cfg2));
+    
+    public static RegistryObject<PlacedFeature> ORE_ADAMANTIUM_DEPOSIT = PLACED_FEATURES.register("ore_adamantium_deposit", 
+            ()-> OreGenUtils.createPlacedOreFeature(ORE_ADAMANTIUM.getHolder().get(), SimpleOresConfig.adamantium_cfg));
+    public static RegistryObject<PlacedFeature> ORE_ADAMANTIUM_INTRUSION = PLACED_FEATURES.register("ore_adamantium_intrusion", 
+            ()-> OreGenUtils.createPlacedOreFeature(ORE_ADAMANTIUM2.getHolder().get(), SimpleOresConfig.adamantium_cfg2));
+    
 
 } // end class

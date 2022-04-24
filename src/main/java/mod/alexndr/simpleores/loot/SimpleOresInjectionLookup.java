@@ -1,6 +1,6 @@
 package mod.alexndr.simpleores.loot;
 
-import mod.alexndr.simplecorelib.helpers.InjectionTableLookup;
+import mod.alexndr.simplecorelib.api.helpers.InjectionTableLookup;
 
 @SuppressWarnings("serial")
 public class SimpleOresInjectionLookup extends InjectionTableLookup

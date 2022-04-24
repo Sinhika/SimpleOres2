@@ -3,7 +3,7 @@ package mod.alexndr.simpleores;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.alexndr.simplecorelib.helpers.LootUtils;
+import mod.alexndr.simplecorelib.api.helpers.LootUtils;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModItems;

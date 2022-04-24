@@ -1,6 +1,6 @@
 package mod.alexndr.simpleores.init;
 
-import mod.alexndr.simplecorelib.helpers.TagUtils;
+import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

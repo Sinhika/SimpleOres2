@@ -2,8 +2,8 @@ package mod.alexndr.simpleores.datagen;
 
 import java.util.function.Consumer;
 
-import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
-import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
+import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
+import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
