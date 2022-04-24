@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[39,)" #mandatory
+loaderVersion="[40,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 license="LGPL 3"
 
@@ -43,7 +43,7 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.18.2-4.1,)"
+    versionRange="[1.18.2-4.3,)"
     ordering="NONE"
     side="BOTH"
         
