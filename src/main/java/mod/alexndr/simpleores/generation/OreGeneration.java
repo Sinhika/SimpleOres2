@@ -17,7 +17,7 @@ public class OreGeneration
     {
         if (SimpleOresConfig.enableOnyxOre) {
             evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, ModFeatures.ORE_ONYX_ALL.getHolder().get());
-            evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, ModFeatures.ORE_ONYX_IN_ROCK.getHolder().get());
+            // evt.getGeneration().addFeature(Decoration.UNDERGROUND_DECORATION, ModFeatures.ORE_ONYX_IN_ROCK.getHolder().get());
         }
     } // end generateNetherOres()
     
