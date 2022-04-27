@@ -33,6 +33,7 @@ public class SimpleOresDataGenerator
             gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new SimpleOresLootTableProvider(gen));
             gen.addProvider(new SimpleOresLootInjectorProvider(gen));
+            gen.addProvider(new SimpleOresBlockStateProvider(gen, event.getExistingFileHelper()));
         }
      } // end gatherData()
 

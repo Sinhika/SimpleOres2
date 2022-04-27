@@ -68,7 +68,14 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         specialDropTable(ModBlocks.deepslate_adamantium_ore.get(), ModItems.raw_adamantium.get());
         
         specialDropTable(ModBlocks.onyx_ore.get(), ModItems.onyx_gem.get());
+        
+        standardDropTable(ModBlocks.copper_pressure_plate.get());
+        standardDropTable(ModBlocks.tin_pressure_plate.get());
+        standardDropTable(ModBlocks.mythril_pressure_plate.get());
+        standardDropTable(ModBlocks.adamantium_pressure_plate.get());
+        standardDropTable(ModBlocks.onyx_pressure_plate.get());
+        
         return tables;
-    }
+    } // end getTables()
     
 } // end-class SimpleOresLootTableProvider
