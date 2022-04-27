@@ -1,5 +1,6 @@
 package mod.alexndr.simpleores.init;
 
+import mod.alexndr.simplecorelib.api.content.MultifunctionPressurePlateBlock;
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -162,5 +163,8 @@ public final class ModBlocks
     
     // Blocks - pressure plates
     // public static RegistryObject<PressurePlateBlock> copper_pressure_plate; // TODO next time.
-    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> onyx_pressure_plate = BLOCKS.register("onyx_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.LIVING, 20, 
+                                                      Block.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
+                                                        .noCollission().strength(0.5F).sound(SoundType.METAL)));
 }  // end class ModBlocks
