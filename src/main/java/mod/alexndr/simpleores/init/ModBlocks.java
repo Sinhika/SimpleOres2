@@ -162,9 +162,28 @@ public final class ModBlocks
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     
     // Blocks - pressure plates
-    // public static RegistryObject<PressurePlateBlock> copper_pressure_plate; // TODO next time.
-    public static final RegistryObject<MultifunctionPressurePlateBlock> onyx_pressure_plate = BLOCKS.register("onyx_pressure_plate", 
-            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.LIVING, 20, 
-                                                      Block.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
+    public static final RegistryObject<MultifunctionPressurePlateBlock> copper_pressure_plate = BLOCKS.register("copper_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.LIVING_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE)
+                                                        .noCollission().strength(0.5F).sound(SoundType.COPPER)));
+    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> tin_pressure_plate = BLOCKS.register("tin_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.EVERYTHING_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL)
                                                         .noCollission().strength(0.5F).sound(SoundType.METAL)));
+    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> mythril_pressure_plate = BLOCKS.register("mythril_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(75, MultifunctionPressurePlateBlock.Sensitivity.MOBS_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                                                        .noCollission().strength(0.5F).sound(SoundType.METAL)));
+    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> adamantium_pressure_plate = BLOCKS.register("adamantium_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(75, MultifunctionPressurePlateBlock.Sensitivity.EVERYTHING_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
+                                                        .noCollission().strength(0.5F).sound(SoundType.METAL)));
+
+    public static final RegistryObject<MultifunctionPressurePlateBlock> onyx_pressure_plate = BLOCKS.register("onyx_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.PLAYERS, 20, 
+                                                      Block.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
+                                                        .noCollission().strength(0.5F).sound(SoundType.STONE)));
 }  // end class ModBlocks
