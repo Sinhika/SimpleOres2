@@ -48,7 +48,13 @@
     "block.simpleores.mythril_door": "Mythril Door",
     "block.simpleores.onyx_door": "Onyx Door",
     "block.simpleores.tin_door": "Tin Door",
-
+    
+	"block.simpleores.copper_pressure_plate" : "Copper Pressure Plate",
+    "block.simpleores.tin_pressure_plate" : "Tin Pressure Plate",
+    "block.simpleores.mythril_pressure_plate" : "Mythril Pressure Plate",
+    "block.simpleores.adamantium_pressure_plate" : "Adamantium Pressure Plate",
+    "block.simpleores.onyx_pressure_plate" : "Onyx Pressure Plate",
+    
     "item.simpleores.copper_nugget": "Copper Nugget",
     "item.simpleores.copper_dust" : "Copper Dust",
     "item.simpleores.crushed_copper_ore" : "Copper Ore Chunks",
