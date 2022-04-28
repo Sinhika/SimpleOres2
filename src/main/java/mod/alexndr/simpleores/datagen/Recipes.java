@@ -147,6 +147,17 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                               flag("copper_bucket"), has(ModTags.Items.INGOTS_COPPER)))
         .build(consumer, copper_bucket_name);
        
+        // pressure_plates
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_COPPER), 
+                ModBlocks.copper_pressure_plate.get(), has(ModTags.Items.INGOTS_COPPER));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_TIN),
+                ModBlocks.tin_pressure_plate.get(), has(ModTags.Items.INGOTS_TIN));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_MYTHRIL),
+                ModBlocks.mythril_pressure_plate.get(), has(ModTags.Items.INGOTS_MYTHRIL));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_ADAMANTIUM),
+                ModBlocks.adamantium_pressure_plate.get(), has(ModTags.Items.INGOTS_ADAMANTIUM));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.GEMS_ONYX),
+                ModBlocks.onyx_pressure_plate.get(), has(ModTags.Items.GEMS_ONYX));
     } // end registerMiscRecipes()
 
     protected void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)

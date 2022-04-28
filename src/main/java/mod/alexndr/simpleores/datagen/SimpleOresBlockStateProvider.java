@@ -42,6 +42,13 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
         ModelFile onyxPlateModel_down = this.models().pressurePlateDown("onyx_plate_down", 
                 new ResourceLocation(SimpleOres.MODID, "block/onyx_block"));
         
+        // ITEM MODELS
+        this.itemModels().withExistingParent("copper_plate", new ResourceLocation(SimpleOres.MODID, "block/copper_plate"));
+        this.itemModels().withExistingParent("tin_plate", new ResourceLocation(SimpleOres.MODID, "block/tin_plate"));
+        this.itemModels().withExistingParent("mythril_plate", new ResourceLocation(SimpleOres.MODID, "block/mythril_plate"));
+        this.itemModels().withExistingParent("adamantium_plate", new ResourceLocation(SimpleOres.MODID, "block/adamantium_plate"));
+        this.itemModels().withExistingParent("onyx_block", new ResourceLocation(SimpleOres.MODID, "block/onyx_block"));
+
         // BLOCKSTATES
         this.buildWeightedPressurePlateBlockState(ModBlocks.copper_pressure_plate.get(), copperPlateModel, copperPlateModel_down);
         this.buildWeightedPressurePlateBlockState(ModBlocks.tin_pressure_plate.get(), tinPlateModel, tinPlateModel_down);
