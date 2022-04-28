@@ -43,11 +43,11 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
                 new ResourceLocation(SimpleOres.MODID, "block/onyx_block"));
         
         // ITEM MODELS
-        this.itemModels().withExistingParent("copper_plate", new ResourceLocation(SimpleOres.MODID, "block/copper_plate"));
-        this.itemModels().withExistingParent("tin_plate", new ResourceLocation(SimpleOres.MODID, "block/tin_plate"));
-        this.itemModels().withExistingParent("mythril_plate", new ResourceLocation(SimpleOres.MODID, "block/mythril_plate"));
-        this.itemModels().withExistingParent("adamantium_plate", new ResourceLocation(SimpleOres.MODID, "block/adamantium_plate"));
-        this.itemModels().withExistingParent("onyx_block", new ResourceLocation(SimpleOres.MODID, "block/onyx_block"));
+        this.itemModels().withExistingParent("copper_pressure_plate", new ResourceLocation(SimpleOres.MODID, "block/copper_plate"));
+        this.itemModels().withExistingParent("tin_pressure_plate", new ResourceLocation(SimpleOres.MODID, "block/tin_plate"));
+        this.itemModels().withExistingParent("mythril_pressure_plate", new ResourceLocation(SimpleOres.MODID, "block/mythril_plate"));
+        this.itemModels().withExistingParent("adamantium_pressure_plate", new ResourceLocation(SimpleOres.MODID, "block/adamantium_plate"));
+        this.itemModels().withExistingParent("onyx_pressure_plate", new ResourceLocation(SimpleOres.MODID, "block/onyx_plate"));
 
         // BLOCKSTATES
         this.buildWeightedPressurePlateBlockState(ModBlocks.copper_pressure_plate.get(), copperPlateModel, copperPlateModel_down);
