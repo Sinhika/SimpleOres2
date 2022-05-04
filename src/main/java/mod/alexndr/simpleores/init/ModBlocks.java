@@ -38,7 +38,7 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> deepslate_tin_ore = BLOCKS.register("deepslate_tin_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
-                    .strength( 3.0F, 3.0F)
+                    .strength( 3.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> mythril_ore = BLOCKS.register("mythril_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
@@ -46,7 +46,7 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> deepslate_mythril_ore = BLOCKS.register("deepslate_mythril_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
-                    .strength( 4.0F, 3.0F)
+                    .strength( 4.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
@@ -54,7 +54,7 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> deepslate_adamantium_ore = BLOCKS.register("deepslate_adamantium_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
-                    .strength( 5.0F, 3.0F)
+                    .strength( 5.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> onyx_ore = BLOCKS.register("onyx_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
@@ -64,15 +64,15 @@ public final class ModBlocks
     // Raw_metal blocks
     public static final RegistryObject<Block> raw_tin_block = BLOCKS.register("raw_tin_block",
             () -> new Block(Block.Properties.of(Material.METAL)
-                    .strength(4.0F, 6.0F).sound(SoundType.METAL)
+                    .strength(4.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> raw_mythril_block = BLOCKS.register("raw_mythril_block",
             () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
-                    .strength(7.0F, 6.0F).sound(SoundType.METAL)
+                    .strength(7.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> raw_adamantium_block = BLOCKS.register("raw_adamantium_block",
             () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
-                    .strength(7.0F, 12.0F).sound(SoundType.METAL)
+                    .strength(7.0F, 12.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
     
     // Metal Blocks

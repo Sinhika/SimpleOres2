@@ -63,7 +63,7 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         multipleDropTable(ModBlocks.tin_ore.get(), ModItems.raw_tin.get(), 1, 3);
         specialDropTable(ModBlocks.mythril_ore.get(), ModItems.raw_mythril.get());
         specialDropTable(ModBlocks.adamantium_ore.get(), ModItems.raw_adamantium.get());
-        specialDropTable(ModBlocks.deepslate_tin_ore.get(), ModItems.raw_tin.get());
+        multipleDropTable(ModBlocks.deepslate_tin_ore.get(), ModItems.raw_tin.get(), 1, 3);
         specialDropTable(ModBlocks.deepslate_mythril_ore.get(), ModItems.raw_mythril.get());
         specialDropTable(ModBlocks.deepslate_adamantium_ore.get(), ModItems.raw_adamantium.get());
         
