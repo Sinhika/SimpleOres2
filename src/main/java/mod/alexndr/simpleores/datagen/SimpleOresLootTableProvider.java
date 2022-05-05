@@ -41,25 +41,28 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         standardDropTable(ModBlocks.adamantium_brick_stairs.get());
         slabDropTable(ModBlocks.adamantium_brick_slab.get());
         standardDropTable(ModBlocks.adamantium_bricks.get());
-        standardDropTable(ModBlocks.adamantium_door.get());
         standardDropTable(ModBlocks.copper_bars.get());
-        standardDropTable(ModBlocks.copper_door.get());
         standardDropTable(ModBlocks.mythril_bars.get());
         standardDropTable(ModBlocks.mythril_brick_stairs.get());
         standardDropTable(ModBlocks.mythril_bricks.get());
         slabDropTable(ModBlocks.mythril_brick_slab.get());
-        standardDropTable(ModBlocks.mythril_door.get());
         standardDropTable(ModBlocks.onyx_bars.get());
         standardDropTable(ModBlocks.onyx_brick_stairs.get());
         standardDropTable(ModBlocks.onyx_bricks.get());
         slabDropTable(ModBlocks.onyx_brick_slab.get());
-        standardDropTable(ModBlocks.onyx_door.get());
         standardDropTable(ModBlocks.tin_bars.get());
         standardDropTable(ModBlocks.tin_brick_stairs.get());
         standardDropTable(ModBlocks.tin_bricks.get());
         slabDropTable(ModBlocks.tin_brick_slab.get());
+        
+        // doors
+        standardDropTable(ModBlocks.adamantium_door.get());
+        standardDropTable(ModBlocks.copper_door.get());
+        standardDropTable(ModBlocks.mythril_door.get());
+        standardDropTable(ModBlocks.onyx_door.get());
         standardDropTable(ModBlocks.tin_door.get());
         
+        // ores
         multipleDropTable(ModBlocks.tin_ore.get(), ModItems.raw_tin.get(), 1, 3);
         specialDropTable(ModBlocks.mythril_ore.get(), ModItems.raw_mythril.get());
         specialDropTable(ModBlocks.adamantium_ore.get(), ModItems.raw_adamantium.get());
@@ -69,6 +72,7 @@ public class SimpleOresLootTableProvider extends BlockLootTableProvider
         
         specialDropTable(ModBlocks.onyx_ore.get(), ModItems.onyx_gem.get());
         
+        // pressure plates
         standardDropTable(ModBlocks.copper_pressure_plate.get());
         standardDropTable(ModBlocks.tin_pressure_plate.get());
         standardDropTable(ModBlocks.mythril_pressure_plate.get());

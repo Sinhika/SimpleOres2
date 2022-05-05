@@ -43,7 +43,7 @@ burunduk (Ukrainian), Ruukas97 (Danish), Unknown (Spanish, Simplified Chinese, T
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.18.2-4.3.0.5,1.18.2-4.4.0.0)"
+    versionRange="[1.18.2-4.3.1.1,1.18.2-4.4.0.0)"
     ordering="NONE"
     side="BOTH"
         
