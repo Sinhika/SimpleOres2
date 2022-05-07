@@ -7,6 +7,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "simpleores:mythril_door",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
           "name": "simpleores:mythril_door"
         }
       ],
