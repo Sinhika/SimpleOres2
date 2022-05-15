@@ -182,7 +182,7 @@ final class ServerConfig
                  .translation(SimpleOres.MODID + ".config.enableCopperBucket")
                   .define("EnableCopperBucket", true);
         serverEnableModBows = builder.comment("false disables recipes")
-                .translation(SimpleOres.MODID + ".config.enableCopperBucket")
+                .translation(SimpleOres.MODID + ".config.enableModBows")
                  .define("EnableModBows", true);
         builder.pop();
         

@@ -65,4 +65,4 @@ public class ClientModEventSubscriber
 
     } // end onFMLClientSetupEvent()
 
-} // end class
+ } // end class

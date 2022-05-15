@@ -11,8 +11,6 @@ import net.minecraftforge.fml.config.ModConfig;
  */
 public final class ConfigHelper
 {
-//      public static void bakeClient(final ModConfig config) { }
-
     public static void bakeServer(final ModConfig config)
     {
         SimpleOresConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
@@ -49,6 +47,8 @@ public final class ConfigHelper
 
     public static void bakeClient(final ModConfig config)
     {
+        SimpleOresConfig.mythrilBowZoom = ConfigHolder.CLIENT.clientMythrilBowZoomFactor.get().floatValue();
+        SimpleOresConfig.onyxBowZoom = ConfigHolder.CLIENT.clientOnyxBowZoomFactor.get().floatValue();
     } // end bakeClient
 
 } // end class ConfigHelper

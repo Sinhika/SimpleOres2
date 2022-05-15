@@ -84,6 +84,10 @@ public final class ModEventSubscriber
         {
             ConfigHelper.bakeServer(config);
         }
+        if (config.getSpec() == ConfigHolder.CLIENT_SPEC) 
+        {
+            ConfigHelper.bakeClient(config);
+        }
     } // onModConfigEvent
 
     @SubscribeEvent

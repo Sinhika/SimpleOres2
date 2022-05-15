@@ -16,6 +16,9 @@ public class SimpleOresConfig extends SimpleConfig
     public static boolean enableOnyxOre;
     public static boolean addModLootToChests;
     
+    public static float mythrilBowZoom;
+    public static float onyxBowZoom;
+    
     public static Lazy<ModOreConfig> tin_cfg = Lazy.of(
             ()->new ModOreConfig(ModOreConfig.TRIANGLE, ConfigHolder.SERVER.serverTinVeinSize.get(),
             ConfigHolder.SERVER.serverTinVeinCount.get(), true, 
