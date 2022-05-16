@@ -3,7 +3,7 @@ package mod.alexndr.simpleores.client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.alexndr.simplecorelib.client.ClientUtils;
+import mod.alexndr.simplecorelib.api.client.ClientUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
@@ -65,4 +65,4 @@ public class ClientModEventSubscriber
 
     } // end onFMLClientSetupEvent()
 
-} // end class
+ } // end class

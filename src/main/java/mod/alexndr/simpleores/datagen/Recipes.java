@@ -2,8 +2,8 @@ package mod.alexndr.simpleores.datagen;
 
 import java.util.function.Consumer;
 
-import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
-import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
+import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
+import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
@@ -36,6 +36,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
+    @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
@@ -146,6 +147,17 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                               flag("copper_bucket"), has(ModTags.Items.INGOTS_COPPER)))
         .build(consumer, copper_bucket_name);
        
+        // pressure_plates
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_COPPER), 
+                ModBlocks.copper_pressure_plate.get(), has(ModTags.Items.INGOTS_COPPER));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_TIN),
+                ModBlocks.tin_pressure_plate.get(), has(ModTags.Items.INGOTS_TIN));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_MYTHRIL),
+                ModBlocks.mythril_pressure_plate.get(), has(ModTags.Items.INGOTS_MYTHRIL));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.INGOTS_ADAMANTIUM),
+                ModBlocks.adamantium_pressure_plate.get(), has(ModTags.Items.INGOTS_ADAMANTIUM));
+        this.setbuilder.buildSimplePressurePlate(consumer, Ingredient.of(ModTags.Items.GEMS_ONYX),
+                ModBlocks.onyx_pressure_plate.get(), has(ModTags.Items.GEMS_ONYX));
     } // end registerMiscRecipes()
 
     protected void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)
@@ -207,6 +219,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
      * Builds an ICondition representing FlagCondition...
      *
      */
+    @Override
     public ICondition flag(String name)
     {
         return impl_flag(SimpleOres.MODID, SimpleOresConfig.INSTANCE, name);

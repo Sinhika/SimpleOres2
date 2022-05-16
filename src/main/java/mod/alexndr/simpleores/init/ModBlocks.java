@@ -1,5 +1,6 @@
 package mod.alexndr.simpleores.init;
 
+import mod.alexndr.simplecorelib.api.content.MultifunctionPressurePlateBlock;
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -37,7 +38,7 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> deepslate_tin_ore = BLOCKS.register("deepslate_tin_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
-                    .strength( 3.0F, 3.0F)
+                    .strength( 3.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> mythril_ore = BLOCKS.register("mythril_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
@@ -45,7 +46,7 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> deepslate_mythril_ore = BLOCKS.register("deepslate_mythril_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
-                    .strength( 4.0F, 3.0F)
+                    .strength( 4.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
@@ -53,7 +54,7 @@ public final class ModBlocks
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> deepslate_adamantium_ore = BLOCKS.register("deepslate_adamantium_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
-                    .strength( 5.0F, 3.0F)
+                    .strength( 5.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<OreBlock> onyx_ore = BLOCKS.register("onyx_ore",
             () -> new OreBlock(Block.Properties.of(Material.STONE)
@@ -63,15 +64,15 @@ public final class ModBlocks
     // Raw_metal blocks
     public static final RegistryObject<Block> raw_tin_block = BLOCKS.register("raw_tin_block",
             () -> new Block(Block.Properties.of(Material.METAL)
-                    .strength(4.0F, 6.0F).sound(SoundType.METAL)
+                    .strength(4.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> raw_mythril_block = BLOCKS.register("raw_mythril_block",
             () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
-                    .strength(7.0F, 6.0F).sound(SoundType.METAL)
+                    .strength(7.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> raw_adamantium_block = BLOCKS.register("raw_adamantium_block",
             () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
-                    .strength(7.0F, 12.0F).sound(SoundType.METAL)
+                    .strength(7.0F, 12.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
     
     // Metal Blocks
@@ -160,5 +161,29 @@ public final class ModBlocks
             () -> new IronBarsBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     
+    // Blocks - pressure plates
+    public static final RegistryObject<MultifunctionPressurePlateBlock> copper_pressure_plate = BLOCKS.register("copper_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.LIVING_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE)
+                                                        .noCollission().strength(0.5F).sound(SoundType.COPPER)));
+    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> tin_pressure_plate = BLOCKS.register("tin_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.EVERYTHING_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL)
+                                                        .noCollission().strength(0.5F).sound(SoundType.METAL)));
+    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> mythril_pressure_plate = BLOCKS.register("mythril_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(75, MultifunctionPressurePlateBlock.Sensitivity.MOBS_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                                                        .noCollission().strength(0.5F).sound(SoundType.METAL)));
+    
+    public static final RegistryObject<MultifunctionPressurePlateBlock> adamantium_pressure_plate = BLOCKS.register("adamantium_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(75, MultifunctionPressurePlateBlock.Sensitivity.EVERYTHING_WEIGHTED, 10, 
+                                                      Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
+                                                        .noCollission().strength(0.5F).sound(SoundType.METAL)));
 
+    public static final RegistryObject<MultifunctionPressurePlateBlock> onyx_pressure_plate = BLOCKS.register("onyx_pressure_plate", 
+            () -> new MultifunctionPressurePlateBlock(15, MultifunctionPressurePlateBlock.Sensitivity.PLAYERS, 20, 
+                                                      Block.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
+                                                        .noCollission().strength(0.5F).sound(SoundType.STONE)));
 }  // end class ModBlocks

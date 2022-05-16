@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "SS ",
+    "   "
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:gems/onyx"
+    }
+  },
+  "result": {
+    "item": "simpleores:onyx_pressure_plate"
+  }
+}

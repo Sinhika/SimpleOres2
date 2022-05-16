@@ -2,13 +2,15 @@ package mod.alexndr.simpleores.datagen;
 
 import java.util.List;
 
-import mod.alexndr.simplecorelib.datagen.MiningBlockTags;
-import mod.alexndr.simplecorelib.helpers.TagUtils;
+import mod.alexndr.simplecorelib.api.datagen.MiningBlockTags;
+import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
 /**
  * BlockTagsProvider for SimpleOres. Mostly this is proof-of-concept, and guidance for other
@@ -32,7 +34,18 @@ public class ModBlockTags extends MiningBlockTags
         registerMiningTags();
         registerBeaconTags();
         registerDoorsSlabsAndStairs();
+        registerMiscTags();
     } // end registerTags()
+    
+    private void registerMiscTags()
+    {
+        this.tag(TagUtils.modBlockTag("minecraft", "pressure_plates"))
+            .add(ModBlocks.copper_pressure_plate.get())
+            .add(ModBlocks.tin_pressure_plate.get())
+            .add(ModBlocks.mythril_pressure_plate.get())
+            .add(ModBlocks.adamantium_pressure_plate.get())
+            .add(ModBlocks.onyx_pressure_plate.get());
+    }
     
     private void registerDoorsSlabsAndStairs()
     {
@@ -65,19 +78,14 @@ public class ModBlockTags extends MiningBlockTags
 			.add(ModBlocks.mythril_block.get());
     }
     
+    @Override
     protected void registerMiningTags()
     {
+        // all the registered blocks are mineable.
+        List<Block> mineables = ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).toList();
+        
         // do nothing; super() generates all the vanilla blocktags, and we don't want that.
-     	registerMineableTags(List.of(ModBlocks.adamantium_block.get(), ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
-     			ModBlocks.raw_adamantium_block.get(), ModBlocks.tin_block.get(), ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get(), 
-     			ModBlocks.raw_tin_block.get(), ModBlocks.mythril_block.get(), ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
-     			ModBlocks.raw_mythril_block.get(), ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), 
-     			ModBlocks.tin_bars.get(), ModBlocks.tin_brick_stairs.get(), ModBlocks.tin_bricks.get(), ModBlocks.tin_door.get(), 
-     			ModBlocks.adamantium_bars.get(), ModBlocks.adamantium_bricks.get(), ModBlocks.adamantium_brick_stairs.get(), ModBlocks.adamantium_door.get(),
-     			ModBlocks.copper_bars.get(), ModBlocks.copper_door.get(), ModBlocks.tin_brick_slab.get(), ModBlocks.adamantium_brick_slab.get(),
-     			ModBlocks.onyx_brick_slab.get(), ModBlocks.mythril_brick_slab.get(),
-     			ModBlocks.mythril_bars.get(), ModBlocks.mythril_brick_stairs.get(), ModBlocks.mythril_bricks.get(), ModBlocks.mythril_door.get(),
-     			ModBlocks.onyx_bars.get(), ModBlocks.onyx_brick_stairs.get(), ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get()), 
+     	registerMineableTags(mineables, 
      			List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get(), ModBlocks.tin_block.get(), ModBlocks.raw_tin_block.get(),
      	     			ModBlocks.tin_bars.get(), ModBlocks.tin_brick_stairs.get(), ModBlocks.tin_bricks.get(), ModBlocks.tin_door.get(), 
      	     			ModBlocks.copper_bars.get(), ModBlocks.copper_door.get(), ModBlocks.tin_brick_slab.get()), // 1 stone
@@ -137,6 +145,7 @@ public class ModBlockTags extends MiningBlockTags
                 .add(ModBlocks.onyx_block.get());
     } // end registerStorageBlockTags
     
+    @Override
     protected void registerOreTags()
     {
     	// register "forge:ores" tags

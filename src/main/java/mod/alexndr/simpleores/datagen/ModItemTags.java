@@ -2,8 +2,8 @@ package mod.alexndr.simpleores.datagen;
 
 import java.util.List;
 
-import mod.alexndr.simplecorelib.datagen.MiningItemTags;
-import mod.alexndr.simplecorelib.helpers.TagUtils;
+import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
+import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;

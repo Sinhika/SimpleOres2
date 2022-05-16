@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "SS ",
+    "   "
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:ingots/copper"
+    }
+  },
+  "result": {
+    "item": "simpleores:copper_pressure_plate"
+  }
+}
