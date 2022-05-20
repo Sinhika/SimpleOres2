@@ -1,8 +1,5 @@
 package mod.alexndr.simpleores.client;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import mod.alexndr.simplecorelib.api.client.ClientUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
@@ -22,7 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 @EventBusSubscriber(modid=SimpleOres.MODID, bus=EventBusSubscriber.Bus.MOD, value=Dist.CLIENT)
 public class ClientModEventSubscriber
 {
-    private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Client Mod Event Subscriber");
+    // private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Client Mod Event Subscriber");
 
     /**
      * We need to register our renderers on the client because rendering code does not exist on the server
@@ -35,10 +32,11 @@ public class ClientModEventSubscriber
     @SubscribeEvent
     public static void onFMLClientSetupEvent(final FMLClientSetupEvent event) 
     {
-        ClientUtils.setupBowModelProperties(ModItems.mythril_bow.get());
-        ClientUtils.setupBowModelProperties(ModItems.onyx_bow.get());
-        LOGGER.debug("bow model properties set.");
-        
+        event.enqueueWork(() -> {
+            ClientUtils.setupBowModelProperties(ModItems.mythril_bow.get());
+            ClientUtils.setupBowModelProperties(ModItems.onyx_bow.get());
+        });
+      
         // doors with see-through windows.
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.adamantium_door.get(), (layer) -> layer 
                 == RenderType.cutout());
