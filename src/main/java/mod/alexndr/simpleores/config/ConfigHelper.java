@@ -38,13 +38,6 @@ public final class ConfigHelper
 
     } // end bakeServer()
 
-    @SuppressWarnings("unused")
-    private static void setValueAndSave(final ModConfig modConfig, final String path, final Object newValue)
-    {
-        modConfig.getConfigData().set(path, newValue);
-        modConfig.save();
-    } // end setValueAndSave()
-
     public static void bakeClient(final ModConfig config)
     {
         SimpleOresConfig.mythrilBowZoom = ConfigHolder.CLIENT.clientMythrilBowZoomFactor.get().floatValue();
