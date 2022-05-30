@@ -130,8 +130,8 @@
 
     "advancements.welcome": "欢迎来到简单矿石的世界！",
     "advancements.copper_ach": "既不是金，也不是铁",
-    "advancements.copper_ach.desc": "从采掘铜矿石开始，迈入简单矿石之旅吧。"
-    "advancements.tin_ach": "鈏",
+    "advancements.copper_ach.desc": "从采掘铜矿石开始，迈入简单矿石之旅吧。",
+   	"advancements.tin_ach": "鈏",
     "advancements.tin_ach.desc": "挖些锡矿石吧",
     "advancements.mythril_ach": "哇哦，漂亮欸！",
     "advancements.mythril_ach.desc": "在地下深处采掘一些秘银矿石",
@@ -152,8 +152,8 @@
     "advancements.mythril_axe_ach.desc": "合成一把秘银斧，这不比那铁的好多了。",
     "advancements.mythril_bow_ach": "神秘之弓",
     "advancements.mythril_bow_ach.desc": "锻造一把蕴含有有神秘力量的弓",
-    "advancements.adamantium_legs__ach": "整装待发",
-    "advancements.adamantium_legs__ach.desc": "穿上精金护腿，在人群中鹤立鸡群！",
+    "advancements.adamantium_legs_ach": "整装待发",
+    "advancements.adamantium_legs_ach.desc": "穿上精金护腿，在人群中鹤立鸡群！",
     "advancements.adamantium_shears_ach": "剪羊毛，剪到天荒地老",
     "advancements.adamantium_shears_ach.desc": "终于，剪刀不再那么容易坏了",
     "advancements.onyx_sword_ach": "见血封喉，大获全胜",
