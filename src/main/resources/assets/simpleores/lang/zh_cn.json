@@ -48,7 +48,13 @@
     "block.simpleores.mythril_door": "秘银门",
     "block.simpleores.onyx_door": "缟玛瑙门",
     "block.simpleores.tin_door": "锡门",
-
+    
+    "block.simpleores.copper_pressure_plate" : "铜压力板",
+    "block.simpleores.tin_pressure_plate" : "锡压力板",
+    "block.simpleores.mythril_pressure_plate" : "秘银压力板",
+    "block.simpleores.adamantium_pressure_plate" : "精金压力板",
+    "block.simpleores.onyx_pressure_plate" : "缟玛瑙压力板",
+    
     "item.simpleores.copper_nugget": "铜粒",
     "item.simpleores.copper_dust" : "铜粉",
     "item.simpleores.crushed_copper_ore" : "铜矿石碎块",
@@ -143,7 +149,7 @@
     "advancements.copper_pick_ach": "获得升级，再一次？",
     "advancements.copper_pick_ach.desc": "我猜这起码比石头要好......",
     "advancements.copper_bucket_ach": "注意：熔岩不耐受",
-    "advancements.copper_bucket_ach.desc": "省点铁，用铜来做个铜吧！",
+    "advancements.copper_bucket_ach.desc": "省点铁，用铜来做个桶吧！",
     "advancements.tin_chestplate_ach": "白色骑士",
     "advancements.tin_chestplate_ach.desc": "看似不切实际，但又何妨一试",
     "advancements.tin_shears_ach": "谁会用这玩意啊？",
