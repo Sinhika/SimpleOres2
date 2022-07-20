@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "copper_armor",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "copper_armor"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "S S",
-          "SSS",
-          "SSS"
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/copper"
           }
         },
+        "pattern": [
+          "S S",
+          "SSS",
+          "SSS"
+        ],
         "result": {
           "item": "simpleores:copper_chestplate"
         }

@@ -4,24 +4,24 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "SSS"
-        ],
         "key": {
           "S": {
             "item": "simpleores:mythril_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "SSS"
+        ],
         "result": {
-          "item": "simpleores:mythril_bars",
-          "count": 16
+          "count": 16,
+          "item": "simpleores:mythril_bars"
         }
       }
     }

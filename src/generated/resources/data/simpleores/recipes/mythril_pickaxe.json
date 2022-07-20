@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "mythril_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "mythril_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/mythril"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SSS",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simpleores:mythril_pickaxe"
         }

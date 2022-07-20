@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top_rh",
-    "textures": {
-        "bottom": "simpleores:block/onyx_door_lower",
-        "top": "simpleores:block/onyx_door_upper"
-    }
-}

@@ -4,21 +4,21 @@
     {
       "conditions": [
         {
-          "flag": "tin_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "tin_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " S",
-          "S "
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/tin"
           }
         },
+        "pattern": [
+          " S",
+          "S "
+        ],
         "result": {
           "item": "simpleores:tin_shears"
         }

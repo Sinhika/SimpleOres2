@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "mythril_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "mythril_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          "ST ",
-          " T "
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/mythril"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          "ST ",
+          " T "
+        ],
         "result": {
           "item": "simpleores:mythril_axe"
         }

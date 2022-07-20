@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,8 +22,6 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import net.minecraft.world.item.Item.Properties;
 
 public class CopperBucket extends BucketItem
 {
@@ -48,8 +45,7 @@ public class CopperBucket extends BucketItem
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
     {
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
-        tooltip.add((new TranslatableComponent("tips.copper_bucket"))
-                        .withStyle(ChatFormatting.GREEN));
+        tooltip.add(Component.translatable("tips.copper_bucket").withStyle(ChatFormatting.GREEN));
     }
 
     @Override

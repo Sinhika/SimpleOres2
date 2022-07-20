@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "onyx_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "onyx_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "tag": "forge:gems/onyx"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simpleores:onyx_hoe"
         }

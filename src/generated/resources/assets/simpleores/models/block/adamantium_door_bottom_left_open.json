@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "simpleores:block/adamantium_door_lower",
+    "top": "simpleores:block/adamantium_door_upper"
+  }
+}

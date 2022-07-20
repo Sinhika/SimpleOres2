@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "tin_armor",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "tin_armor"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/tin"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "simpleores:tin_leggings"
         }

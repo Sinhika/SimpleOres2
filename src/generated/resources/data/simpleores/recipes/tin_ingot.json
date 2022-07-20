@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "item": "simpleores:tin_ingot",
-    "count": 9
+    "count": 9,
+    "item": "simpleores:tin_ingot"
   }
 }

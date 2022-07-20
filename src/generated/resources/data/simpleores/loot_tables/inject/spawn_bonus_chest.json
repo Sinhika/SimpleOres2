@@ -2,18 +2,18 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "name": "main",
-      "rolls": {
-        "type": "minecraft:uniform",
-        "min": 1.0,
-        "max": 1.0
-      },
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.75,
+          "condition": "minecraft:random_chance"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 3,
-          "name": "simpleores:copper_axe"
+          "name": "simpleores:copper_axe",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -28,12 +28,12 @@
           "name": "simpleores:copper_shears"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.75
-        }
-      ]
+      "name": "main",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
     }
   ]
 }

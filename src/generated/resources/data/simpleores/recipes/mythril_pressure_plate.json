@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "   ",
-    "SS ",
-    "   "
-  ],
   "key": {
     "S": {
       "tag": "forge:ingots/mythril"
     }
   },
+  "pattern": [
+    "   ",
+    "SS ",
+    "   "
+  ],
   "result": {
     "item": "simpleores:mythril_pressure_plate"
   }

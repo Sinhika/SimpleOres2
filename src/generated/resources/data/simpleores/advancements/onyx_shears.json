@@ -1,37 +1,37 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "onyx_tools",
-          "type": "simpleores:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simpleores:onyx_shears"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:gems/onyx"
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simpleores:onyx_shears"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simpleores:flag",
+          "flag": "onyx_tools"
+        }
+      ]
     }
   ]
 }

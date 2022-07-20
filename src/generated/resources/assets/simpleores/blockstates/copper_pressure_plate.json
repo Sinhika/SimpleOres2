@@ -6,6 +6,24 @@
     "power=1": {
       "model": "simpleores:block/copper_plate_down"
     },
+    "power=10": {
+      "model": "simpleores:block/copper_plate_down"
+    },
+    "power=11": {
+      "model": "simpleores:block/copper_plate_down"
+    },
+    "power=12": {
+      "model": "simpleores:block/copper_plate_down"
+    },
+    "power=13": {
+      "model": "simpleores:block/copper_plate_down"
+    },
+    "power=14": {
+      "model": "simpleores:block/copper_plate_down"
+    },
+    "power=15": {
+      "model": "simpleores:block/copper_plate_down"
+    },
     "power=2": {
       "model": "simpleores:block/copper_plate_down"
     },
@@ -28,24 +46,6 @@
       "model": "simpleores:block/copper_plate_down"
     },
     "power=9": {
-      "model": "simpleores:block/copper_plate_down"
-    },
-    "power=10": {
-      "model": "simpleores:block/copper_plate_down"
-    },
-    "power=11": {
-      "model": "simpleores:block/copper_plate_down"
-    },
-    "power=12": {
-      "model": "simpleores:block/copper_plate_down"
-    },
-    "power=13": {
-      "model": "simpleores:block/copper_plate_down"
-    },
-    "power=14": {
-      "model": "simpleores:block/copper_plate_down"
-    },
-    "power=15": {
       "model": "simpleores:block/copper_plate_down"
     }
   }

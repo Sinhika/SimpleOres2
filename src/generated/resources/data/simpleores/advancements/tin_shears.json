@@ -1,37 +1,37 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "tin_tools",
-          "type": "simpleores:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simpleores:tin_shears"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:ingots/tin"
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simpleores:tin_shears"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simpleores:flag",
+          "flag": "tin_tools"
+        }
+      ]
     }
   ]
 }

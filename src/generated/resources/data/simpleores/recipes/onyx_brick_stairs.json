@@ -4,25 +4,25 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "S  ",
-          "SS ",
-          "SSS"
-        ],
         "key": {
           "S": {
             "item": "simpleores:onyx_bricks"
           }
         },
+        "pattern": [
+          "S  ",
+          "SS ",
+          "SSS"
+        ],
         "result": {
-          "item": "simpleores:onyx_brick_stairs",
-          "count": 4
+          "count": 4,
+          "item": "simpleores:onyx_brick_stairs"
         }
       }
     }

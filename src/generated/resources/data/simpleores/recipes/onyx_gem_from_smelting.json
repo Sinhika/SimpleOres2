@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.0,
   "ingredient": {
     "item": "simpleores:onyx_ore"
   },
-  "result": "simpleores:onyx_gem",
-  "experience": 1.0,
-  "cookingtime": 200
+  "result": "simpleores:onyx_gem"
 }

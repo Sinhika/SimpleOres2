@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "mythril_armor",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "mythril_armor"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "   ",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/mythril"
           }
         },
+        "pattern": [
+          "   ",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "simpleores:mythril_boots"
         }

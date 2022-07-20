@@ -20,6 +20,41 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        pressurePlateStatesAndModels();
+        doorStatesAndModels();
+    } // end-registerStatesAndModels()
+
+    /**
+     * register this mod's door models and blockstates and/or item models.
+     */
+    private void doorStatesAndModels()
+    {
+        // BLOCKSTATES & BLOCK MODELS
+        this.doorBlockWithRenderType(ModBlocks.adamantium_door.get(), modLoc("block/adamantium_door_lower"), 
+               modLoc("block/adamantium_door_upper"), "cutout");
+        this.doorBlockWithRenderType(ModBlocks.copper_door.get(), modLoc("block/copper_door_lower"), 
+                modLoc("block/copper_door_upper"), "cutout");
+        this.doorBlockWithRenderType(ModBlocks.mythril_door.get(), modLoc("block/mythril_door_lower"), 
+                modLoc("block/mythril_door_upper"), "cutout");
+        this.doorBlockWithRenderType(ModBlocks.onyx_door.get(), modLoc("block/onyx_door_lower"), 
+                modLoc("block/onyx_door_upper"), "cutout");
+        this.doorBlockWithRenderType(ModBlocks.tin_door.get(), modLoc("block/tin_door_lower"), 
+                modLoc("block/tin_door_upper"), "cutout");
+
+        // ITEM MODELS
+        this.itemModels().basicItem(ModBlocks.adamantium_door.get().asItem());
+        this.itemModels().basicItem(ModBlocks.copper_door.get().asItem());
+        this.itemModels().basicItem(ModBlocks.mythril_door.get().asItem());
+        this.itemModels().basicItem(ModBlocks.onyx_door.get().asItem());
+        this.itemModels().basicItem(ModBlocks.tin_door.get().asItem());
+        
+    } // end doorStatesAndModels()
+    
+    /**
+     * register this mods pressure plates models and blockstates and item models.
+     */
+    private void pressurePlateStatesAndModels()
+    {
         // MODELS
         ModelFile copperPlateModel = this.models().pressurePlate("copper_plate", 
                 new ResourceLocation("minecraft", "block/copper_block"));
@@ -56,6 +91,7 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
         this.buildWeightedPressurePlateBlockState(ModBlocks.adamantium_pressure_plate.get(), adamantiumPlateModel, adamantiumPlateModel_down);
         this.buildWeightedPressurePlateBlockState(ModBlocks.onyx_pressure_plate.get(), onyxPlateModel, onyxPlateModel_down);
         
-    } // end-registerStatesAndModels()
-
+    } // end pressurePlateStatesAndModels()
+    
+    
 } // end class

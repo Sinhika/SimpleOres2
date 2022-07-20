@@ -1,37 +1,37 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "mod_bows",
-          "type": "simpleores:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simpleores:onyx_bow"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:gems/onyx"
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simpleores:onyx_bow"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simpleores:flag",
+          "flag": "mod_bows"
+        }
+      ]
     }
   ]
 }

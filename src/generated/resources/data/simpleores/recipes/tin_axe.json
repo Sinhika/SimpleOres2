@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "tin_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "tin_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          "ST ",
-          " T "
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/tin"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          "ST ",
+          " T "
+        ],
         "result": {
           "item": "simpleores:tin_axe"
         }

@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "   ",
-    "SS ",
-    "   "
-  ],
   "key": {
     "S": {
       "tag": "forge:ingots/adamantium"
     }
   },
+  "pattern": [
+    "   ",
+    "SS ",
+    "   "
+  ],
   "result": {
     "item": "simpleores:adamantium_pressure_plate"
   }

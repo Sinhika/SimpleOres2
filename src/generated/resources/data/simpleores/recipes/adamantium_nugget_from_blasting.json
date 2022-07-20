@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.3,
   "ingredient": [
     {
       "item": "simpleores:adamantium_axe"
@@ -29,7 +31,5 @@
       "item": "simpleores:adamantium_sword"
     }
   ],
-  "result": "simpleores:adamantium_nugget",
-  "experience": 0.3,
-  "cookingtime": 100
+  "result": "simpleores:adamantium_nugget"
 }

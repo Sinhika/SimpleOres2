@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 import mod.alexndr.simplecorelib.api.helpers.LootUtils;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
-import mod.alexndr.simpleores.generation.OreGeneration;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.loot.SimpleOresInjectionLookup;
 import net.minecraft.core.BlockPos;
@@ -16,7 +15,6 @@ import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
@@ -24,9 +22,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.Event.Result;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
@@ -92,22 +88,5 @@ public final class ForgeEventSubscriber
 	    }
         event.setResult(Result.DEFAULT);
 	} // end FillBucket()
-	
-	
-    /**
-     * Biome loading triggers ore generation.
-     */
-    @SubscribeEvent(priority=EventPriority.HIGH)
-    public static void onBiomeLoading(BiomeLoadingEvent evt)
-    {
-        if (evt.getCategory() == Biome.BiomeCategory.NETHER) 
-        {
-            OreGeneration.generateNetherOres(evt);
-        }
-        else if (evt.getCategory() != Biome.BiomeCategory.THEEND)
-        {
-            OreGeneration.generateOverworldOres(evt);
-        }
-    } // end onBiomeLoading()
     
 } // end-class

@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.4,
   "ingredient": [
     {
       "item": "simpleores:mythril_axe"
@@ -29,7 +31,5 @@
       "item": "simpleores:mythril_sword"
     }
   ],
-  "result": "simpleores:mythril_nugget",
-  "experience": 0.4,
-  "cookingtime": 200
+  "result": "simpleores:mythril_nugget"
 }

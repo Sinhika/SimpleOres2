@@ -5,8 +5,8 @@ import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
-import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -32,32 +32,32 @@ public final class ModBlocks
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SimpleOres.MODID);
 
     // Ore Blocks
-    public static final RegistryObject<OreBlock> tin_ore = BLOCKS.register("tin_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> tin_ore = BLOCKS.register("tin_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 3.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> deepslate_tin_ore = BLOCKS.register("deepslate_tin_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> deepslate_tin_ore = BLOCKS.register("deepslate_tin_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 3.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> mythril_ore = BLOCKS.register("mythril_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> mythril_ore = BLOCKS.register("mythril_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> deepslate_mythril_ore = BLOCKS.register("deepslate_mythril_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> deepslate_mythril_ore = BLOCKS.register("deepslate_mythril_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 5.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> deepslate_adamantium_ore = BLOCKS.register("deepslate_adamantium_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> deepslate_adamantium_ore = BLOCKS.register("deepslate_adamantium_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 5.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> onyx_ore = BLOCKS.register("onyx_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> onyx_ore = BLOCKS.register("onyx_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 7.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
 

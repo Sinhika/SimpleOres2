@@ -4,25 +4,25 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " SS",
-          " SS",
-          " SS"
-        ],
         "key": {
           "S": {
             "item": "simpleores:adamantium_ingot"
           }
         },
+        "pattern": [
+          " SS",
+          " SS",
+          " SS"
+        ],
         "result": {
-          "item": "simpleores:adamantium_door",
-          "count": 3
+          "count": 3,
+          "item": "simpleores:adamantium_door"
         }
       }
     }

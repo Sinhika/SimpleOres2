@@ -1,37 +1,37 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "adamantium_armor",
-          "type": "simpleores:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simpleores:adamantium_leggings"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
                   "tag": "forge:ingots/adamantium"
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simpleores:adamantium_leggings"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simpleores:flag",
+          "flag": "adamantium_armor"
+        }
+      ]
     }
   ]
 }

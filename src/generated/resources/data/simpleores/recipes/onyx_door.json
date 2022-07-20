@@ -4,25 +4,25 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " SS",
-          " SS",
-          " SS"
-        ],
         "key": {
           "S": {
             "item": "simpleores:onyx_gem"
           }
         },
+        "pattern": [
+          " SS",
+          " SS",
+          " SS"
+        ],
         "result": {
-          "item": "simpleores:onyx_door",
-          "count": 3
+          "count": 3,
+          "item": "simpleores:onyx_door"
         }
       }
     }

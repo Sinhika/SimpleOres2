@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "adamantium_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "adamantium_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          "ST ",
-          " T "
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/adamantium"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          "ST ",
+          " T "
+        ],
         "result": {
           "item": "simpleores:adamantium_axe"
         }

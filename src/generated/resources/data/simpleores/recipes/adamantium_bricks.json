@@ -4,21 +4,21 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS",
-          "SS"
-        ],
         "key": {
           "S": {
             "item": "simpleores:adamantium_ingot"
           }
         },
+        "pattern": [
+          "SS",
+          "SS"
+        ],
         "result": {
           "item": "simpleores:adamantium_bricks"
         }

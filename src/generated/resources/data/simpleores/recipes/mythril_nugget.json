@@ -6,7 +6,7 @@
     }
   ],
   "result": {
-    "item": "simpleores:mythril_nugget",
-    "count": 9
+    "count": 9,
+    "item": "simpleores:mythril_nugget"
   }
 }

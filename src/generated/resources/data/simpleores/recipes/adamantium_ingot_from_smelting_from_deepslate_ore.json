@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
   "ingredient": {
     "item": "simpleores:deepslate_adamantium_ore"
   },
-  "result": "simpleores:adamantium_ingot",
-  "experience": 0.7,
-  "cookingtime": 200
+  "result": "simpleores:adamantium_ingot"
 }

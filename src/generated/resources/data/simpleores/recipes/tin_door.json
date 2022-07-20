@@ -4,25 +4,25 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " SS",
-          " SS",
-          " SS"
-        ],
         "key": {
           "S": {
             "item": "simpleores:tin_ingot"
           }
         },
+        "pattern": [
+          " SS",
+          " SS",
+          " SS"
+        ],
         "result": {
-          "item": "simpleores:tin_door",
-          "count": 3
+          "count": 3,
+          "item": "simpleores:tin_door"
         }
       }
     }

@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.2,
   "ingredient": [
     {
       "item": "simpleores:copper_axe"
@@ -32,7 +34,5 @@
       "item": "simpleores:copper_bucket"
     }
   ],
-  "result": "simpleores:copper_nugget",
-  "experience": 0.2,
-  "cookingtime": 100
+  "result": "simpleores:copper_nugget"
 }

@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "onyx_armor",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "onyx_armor"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "   ",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "tag": "forge:gems/onyx"
           }
         },
+        "pattern": [
+          "   ",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "simpleores:onyx_boots"
         }

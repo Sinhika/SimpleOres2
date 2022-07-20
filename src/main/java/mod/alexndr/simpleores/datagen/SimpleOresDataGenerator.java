@@ -4,9 +4,9 @@ import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.data.event.GatherDataEvent;
 
 /**
  * bundles up the GatherDataEvent handler and all the necessary data providers for
@@ -25,16 +25,14 @@ public class SimpleOresDataGenerator
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator gen = event.getGenerator();
-        if (event.includeServer())
-        {
-            gen.addProvider(new Recipes(gen));
-            gen.addProvider(new SilentsRecipes(gen));
-            gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
-            gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
-            gen.addProvider(new SimpleOresLootTableProvider(gen));
-            gen.addProvider(new SimpleOresLootInjectorProvider(gen));
-            gen.addProvider(new SimpleOresBlockStateProvider(gen, event.getExistingFileHelper()));
-        }
+        gen.addProvider(event.includeServer(), new Recipes(gen));
+        gen.addProvider(event.includeServer(),new SilentsRecipes(gen));
+        gen.addProvider(event.includeServer(),new ModBlockTags(gen, event.getExistingFileHelper()));
+        gen.addProvider(event.includeServer(),new ModItemTags(gen, event.getExistingFileHelper()));
+        gen.addProvider(event.includeServer(),new SimpleOresLootTableProvider(gen));
+        gen.addProvider(event.includeServer(),new SimpleOresLootInjectorProvider(gen));
+        
+        gen.addProvider(event.includeClient(),new SimpleOresBlockStateProvider(gen, event.getExistingFileHelper()));
      } // end gatherData()
 
     

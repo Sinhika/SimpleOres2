@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "   ",
-    "SS ",
-    "   "
-  ],
   "key": {
     "S": {
       "tag": "forge:ingots/tin"
     }
   },
+  "pattern": [
+    "   ",
+    "SS ",
+    "   "
+  ],
   "result": {
     "item": "simpleores:tin_pressure_plate"
   }

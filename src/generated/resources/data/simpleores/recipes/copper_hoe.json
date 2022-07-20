@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "copper_tools",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "copper_tools"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "tag": "forge:ingots/copper"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simpleores:copper_hoe"
         }

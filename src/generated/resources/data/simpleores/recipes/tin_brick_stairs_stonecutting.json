@@ -4,17 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "aesthetics_enabled",
-          "type": "simpleores:flag"
+          "type": "simpleores:flag",
+          "flag": "aesthetics_enabled"
         }
       ],
       "recipe": {
         "type": "minecraft:stonecutting",
+        "count": 1,
         "ingredient": {
           "item": "simpleores:tin_bricks"
         },
-        "result": "simpleores:tin_brick_stairs",
-        "count": 1
+        "result": "simpleores:tin_brick_stairs"
       }
     }
   ]

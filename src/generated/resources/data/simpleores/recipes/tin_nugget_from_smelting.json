@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.2,
   "ingredient": [
     {
       "item": "simpleores:tin_axe"
@@ -29,7 +31,5 @@
       "item": "simpleores:tin_sword"
     }
   ],
-  "result": "simpleores:tin_nugget",
-  "experience": 0.2,
-  "cookingtime": 200
+  "result": "simpleores:tin_nugget"
 }
