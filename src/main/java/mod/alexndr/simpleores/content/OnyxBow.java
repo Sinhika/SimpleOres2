@@ -20,6 +20,8 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.world.item.Item.Properties;
+
 /**
  * Custom bow that does extra damage (intrinsic POWER 2 enchantment) and sets
  * things on fire (intrinsic FLAME enchantment).

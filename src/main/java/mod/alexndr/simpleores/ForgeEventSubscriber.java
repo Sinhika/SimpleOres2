@@ -69,19 +69,19 @@ public final class ForgeEventSubscriber
 	            BlockPos blockpos = rtResult.getBlockPos();
 	            Direction direction = rtResult.getDirection();
 	            BlockPos blockpos1 = blockpos.relative(direction);
-	            if (event.getWorld().mayInteract(event.getPlayer(), blockpos) 
-	                && event.getPlayer().mayUseItemAt(blockpos1, direction, event.getEmptyBucket()))
+	            if (event.getLevel().mayInteract(event.getEntity(), blockpos) 
+	                && event.getEntity().mayUseItemAt(blockpos1, direction, event.getEmptyBucket()))
 	            {
-	                BlockState blockstate1 = event.getWorld().getBlockState(blockpos);
+	                BlockState blockstate1 = event.getLevel().getBlockState(blockpos);
 	                if (blockstate1.getBlock() instanceof LiquidBlock) 
 	                {
 	                    FluidState fluid = ((LiquidBlock) blockstate1.getBlock()).getFluidState(blockstate1);
 	                    if (!fluid.isEmpty() && fluid.is(FluidTags.LAVA)) 
 	                    {
 	                        Item bucketItem = event.getEmptyBucket().getItem();
-	                        event.getPlayer().awardStat(Stats.ITEM_USED.get(bucketItem));
+	                        event.getEntity().awardStat(Stats.ITEM_USED.get(bucketItem));
 	                        SoundEvent soundevent = SoundEvents.LAVA_EXTINGUISH;
-	                        event.getPlayer().playSound(soundevent, 1.0F, 1.0F);
+	                        event.getEntity().playSound(soundevent, 1.0F, 1.0F);
 	                        event.setFilledBucket(ItemStack.EMPTY);
                             event.setResult(Result.ALLOW);
                             return;

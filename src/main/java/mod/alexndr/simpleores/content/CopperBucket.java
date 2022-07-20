@@ -24,6 +24,8 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.world.item.Item.Properties;
+
 public class CopperBucket extends BucketItem
 {
     public CopperBucket(Properties builder)

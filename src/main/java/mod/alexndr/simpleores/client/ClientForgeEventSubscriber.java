@@ -6,7 +6,7 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.FOVModifierEvent;
+import net.minecraftforge.client.event.ComputeFovModifierEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
@@ -25,7 +25,7 @@ public class ClientForgeEventSubscriber
      * @param event
      */
     @SubscribeEvent
-    public static void onFovEvent(FOVModifierEvent event) 
+    public static void onFovEvent(ComputeFovModifierEvent event) 
     {
         ClientUtils.handleFovEvent(event, p -> p instanceof MythrilBow, SimpleOresConfig.mythrilBowZoom);
         ClientUtils.handleFovEvent(event, p -> p instanceof OnyxBow, SimpleOresConfig.onyxBowZoom);

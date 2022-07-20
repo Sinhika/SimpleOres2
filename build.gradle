@@ -1,21 +1,10 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net/' }
-        maven { url = 'https://maven.parchmentmc.org' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.parchmentmc:librarian:1.+'
-    }
-}
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 plugins {
     id 'eclipse'
     id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '5.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
+//apply from: 'https://raw.githubusercontent.com/SizableShrimp/ForgeUpdatesRemapper/main/remapper.gradle'
 
 def getVersionAppendage() {
     if (System.env.BUILD_NUMBER)
@@ -214,3 +203,8 @@ publishing {
         }
     }
 }
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
