@@ -26,7 +26,7 @@ Wanadi & IamKahina (Brazillian Portuguese), El-Limbo (Argentinian Spanish), fear
 burunduk (Ukrainian), Ruukas97 (Danish), yaodaosang(Simplified Chinese), Unknown (Spanish, Traditional Chinese)
 '''
 
-[[dependencies.simpleores]] #optional
+[[dependencies.simpleores]]
     modId="forge"
     mandatory=true
     versionRange="[41.0.98,42)"
@@ -44,5 +44,5 @@ burunduk (Ukrainian), Ruukas97 (Danish), yaodaosang(Simplified Chinese), Unknown
     modId="simplecorelib"
     mandatory=true
     versionRange="[1.19-5.0.1.4,1.19-5.1.0.0)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
