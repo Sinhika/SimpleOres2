@@ -22,10 +22,31 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
     {
         pressurePlateStatesAndModels();
         doorStatesAndModels();
+        barStatesAndModels();
     } // end-registerStatesAndModels()
 
     /**
-     * register this mod's door models and blockstates and/or item models.
+     * generate this mod's bar models and blockstates and item models.
+     */
+    private void barStatesAndModels()
+    {
+        this.buildBarsBlockState(ModBlocks.adamantium_bars.get(), modLoc("block/adamantium_bars"));
+        this.buildBarsBlockState(ModBlocks.copper_bars.get(), modLoc("block/copper_bars"));
+        this.buildBarsBlockState(ModBlocks.mythril_bars.get(), modLoc("block/mythril_bars"));
+        this.buildBarsBlockState(ModBlocks.onyx_bars.get(), modLoc("block/onyx_bars"));
+        this.buildBarsBlockState(ModBlocks.tin_bars.get(), modLoc("block/tin_bars"));
+        
+        // item models
+        this.itemModels().basicItem(ModBlocks.adamantium_bars.get().asItem());
+        this.itemModels().basicItem(ModBlocks.copper_bars.get().asItem());
+        this.itemModels().basicItem(ModBlocks.mythril_bars.get().asItem());
+        this.itemModels().basicItem(ModBlocks.onyx_bars.get().asItem());
+        this.itemModels().basicItem(ModBlocks.tin_bars.get().asItem());
+        
+    } // end barStatesAndModels()
+    
+    /**
+     * generate this mod's door models and blockstates and/or item models.
      */
     private void doorStatesAndModels()
     {
@@ -51,7 +72,7 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
     } // end doorStatesAndModels()
     
     /**
-     * register this mods pressure plates models and blockstates and item models.
+     * generate this mod's pressure plates models and blockstates and item models.
      */
     private void pressurePlateStatesAndModels()
     {

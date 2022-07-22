@@ -1,6 +1,8 @@
 {
    "pack":{
+      "description":"Simple Ores2 resources, some textures updated by Thombias",
       "pack_format": 9,
-      "description":"Simple Ores2 resources, some textures updated by Thombias"
-   }
+        "forge:resource_pack_format": 9,
+       "forge:data_pack_format": 10 
+       }
 }
