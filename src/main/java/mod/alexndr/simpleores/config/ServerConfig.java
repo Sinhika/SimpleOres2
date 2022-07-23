@@ -14,29 +14,13 @@ final class ServerConfig
 {
 
     final ForgeConfigSpec.BooleanValue serverEnableTinOre;
-    final ForgeConfigSpec.IntValue serverTinVeinSize;
-    final ForgeConfigSpec.IntValue serverTinVeinCount;
-    final ForgeConfigSpec.IntValue serverTinBottomHeight;
-    final ForgeConfigSpec.IntValue serverTinMaxHeight;
-    
+     
     final ForgeConfigSpec.BooleanValue serverEnableMythrilOre;
-    final ForgeConfigSpec.IntValue serverMythrilVeinSize;
-    final ForgeConfigSpec.IntValue serverMythrilVeinCount;
-    final ForgeConfigSpec.IntValue serverMythrilBottomHeight;
-    final ForgeConfigSpec.IntValue serverMythrilMaxHeight;
     
     final ForgeConfigSpec.BooleanValue serverEnableAdamantiumOre;
-    final ForgeConfigSpec.IntValue serverAdamantiumVeinSize;
-    final ForgeConfigSpec.IntValue serverAdamantiumVeinCount;
-    final ForgeConfigSpec.IntValue serverAdamantiumBottomHeight;
-    final ForgeConfigSpec.IntValue serverAdamantiumMaxHeight;
     
     final ForgeConfigSpec.BooleanValue serverEnableOnyxOre;
-    final ForgeConfigSpec.IntValue serverOnyxVeinSize;
-    final ForgeConfigSpec.IntValue serverOnyxVeinCount;
-    final ForgeConfigSpec.IntValue serverOnyxBottomHeight;
-    final ForgeConfigSpec.IntValue serverOnyxMaxHeight;
-
+ 
     final ForgeConfigSpec.BooleanValue serverEnableCopperTools;
     final ForgeConfigSpec.BooleanValue serverEnableTinTools;
     final ForgeConfigSpec.BooleanValue serverEnableMythrilTools;

@@ -37,15 +37,15 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
         this.buildBarsBlockState(ModBlocks.tin_bars.get(), modLoc("block/tin_bars"));
         
         // item models
-        this.itemModels().basicItem(ModBlocks.adamantium_bars.get().asItem());
-        this.itemModels().basicItem(ModBlocks.copper_bars.get().asItem());
-        this.itemModels().basicItem(ModBlocks.mythril_bars.get().asItem());
-        this.itemModels().basicItem(ModBlocks.onyx_bars.get().asItem());
-        this.itemModels().basicItem(ModBlocks.tin_bars.get().asItem());
+        this.basicBlockItem(ModBlocks.adamantium_bars.get());
+        this.basicBlockItem(ModBlocks.copper_bars.get());
+        this.basicBlockItem(ModBlocks.mythril_bars.get());
+        this.basicBlockItem(ModBlocks.onyx_bars.get());
+        this.basicBlockItem(ModBlocks.tin_bars.get());
         
     } // end barStatesAndModels()
     
-    /**
+     /**
      * generate this mod's door models and blockstates and/or item models.
      */
     private void doorStatesAndModels()
