@@ -13,14 +13,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
 final class ServerConfig
 {
 
-    final ForgeConfigSpec.BooleanValue serverEnableTinOre;
-     
-    final ForgeConfigSpec.BooleanValue serverEnableMythrilOre;
-    
-    final ForgeConfigSpec.BooleanValue serverEnableAdamantiumOre;
-    
-    final ForgeConfigSpec.BooleanValue serverEnableOnyxOre;
- 
     final ForgeConfigSpec.BooleanValue serverEnableCopperTools;
     final ForgeConfigSpec.BooleanValue serverEnableTinTools;
     final ForgeConfigSpec.BooleanValue serverEnableMythrilTools;
@@ -28,7 +20,6 @@ final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableOnyxTools;
     
     final ForgeConfigSpec.BooleanValue serverEnableCopperBucket;
-    
     final ForgeConfigSpec.BooleanValue serverEnableModBows;
 
     final ForgeConfigSpec.BooleanValue serverEnableCopperArmor;
@@ -51,101 +42,6 @@ final class ServerConfig
                 .define("EnableAestheticsBlocks", true);
 	    builder.pop();
 	    
-	    builder.push("OreGeneration");
-        serverEnableTinOre = builder
-                .comment("Enable tin ore generation?")
-                .translation(SimpleOres.MODID + ".config.enableTinOre")
-                .define("EnableTinOre", true);
-        serverEnableMythrilOre = builder
-                .comment("Enable mythril ore generation?")
-                .translation(SimpleOres.MODID + ".config.enableMythrilOre")
-                .define("EnableMythrilOre", true);
-        serverEnableAdamantiumOre = builder
-                .comment("Enable adamantium ore generation?")
-                .translation(SimpleOres.MODID + ".config.enableAdamantiumOre")
-                .define("EnableAdamantiumOre", true);
-        serverEnableOnyxOre = builder
-                .comment("Enable onyx ore generation?")
-                .translation(SimpleOres.MODID + ".config.enableOnyxOre")
-                .define("EnableOnyxOre", true);
-        
-		builder.push("Tin");
-        serverTinVeinSize = builder
-                .comment("Tin ore vein size")
-                .translation(SimpleOres.MODID + ".config.serverTinVeinSize")
-                .defineInRange("TinVeinSize", 7, 1, Integer.MAX_VALUE);
-        serverTinVeinCount = builder
-                .comment("Tin ore vein count per chunk")
-                .translation(SimpleOres.MODID + ".config.serverTinVeinCount")
-                .defineInRange("TinVeinCount", 20, 1, Integer.MAX_VALUE);
-        serverTinBottomHeight = builder
-                .comment("Tin ore minimum height")
-                .translation(SimpleOres.MODID + ".config.serverTinBottomHeight")
-                .defineInRange("TinBottomHeight", 44, -63, 254);
-        serverTinMaxHeight = builder
-                .comment("Tin ore maximum height")
-                .translation(SimpleOres.MODID + ".config.serverTinMaxHeight")
-                .defineInRange("TinMaxHeight", 84, 1, 255);
-        builder.pop();
-
-        builder.push("Mythril");
-        serverMythrilVeinSize = builder
-                .comment("Mythril ore vein size")
-                .translation(SimpleOres.MODID + ".config.serverMythrilVeinSize")
-                .defineInRange("MythrilVeinSize", 4, 1, Integer.MAX_VALUE);
-        serverMythrilVeinCount = builder
-                .comment("Mythril ore vein count per chunk")
-                .translation(SimpleOres.MODID + ".config.serverMythrilVeinCount")
-                .defineInRange("MythrilVeinCount", 8, 1, Integer.MAX_VALUE);
-        serverMythrilBottomHeight = builder
-                .comment("Mythril ore minimum height")
-                .translation(SimpleOres.MODID + ".config.serverMythrilBottomHeight")
-                .defineInRange("MythrilBottomHeight", -63, -63, 254);
-        serverMythrilMaxHeight = builder
-                .comment("Mythril ore maximum height")
-                .translation(SimpleOres.MODID + ".config.serverMythrilMaxHeight")
-                .defineInRange("MythrilMaxHeight", 32, 1, 255);
-        builder.pop();
-
-        builder.push("Adamantium");
-        serverAdamantiumVeinSize = builder
-                .comment("Adamantium ore vein size")
-                .translation(SimpleOres.MODID + ".config.serverAdamantiumVeinSize")
-                .defineInRange("AdamantiumVeinSize", 4, 1, Integer.MAX_VALUE);
-        serverAdamantiumVeinCount = builder
-                .comment("Adamantium ore vein count per chunk")
-                .translation(SimpleOres.MODID + ".config.serverAdamantiumVeinCount")
-                .defineInRange("AdamantiumVeinCount", 4, 1, Integer.MAX_VALUE);
-        serverAdamantiumBottomHeight = builder
-                .comment("Adamantium ore minimum height")
-                .translation(SimpleOres.MODID + ".config.serverAdamantiumBottomHeight")
-                .defineInRange("AdamantiumBottomHeight", -63, -63, 254);
-        serverAdamantiumMaxHeight = builder
-                .comment("Adamantium ore maximum height")
-                .translation(SimpleOres.MODID + ".config.serverAdamantiumMaxHeight")
-                .defineInRange("AdamantiumMaxHeight", -16, 1, 255);
-        builder.pop();
-
-        builder.push("Onyx");
-        serverOnyxVeinSize = builder
-                .comment("Onyx ore vein size")
-                .translation(SimpleOres.MODID + ".config.serverOnyxVeinSize")
-                .defineInRange("OnyxVeinSize", 4, 1, Integer.MAX_VALUE);
-        serverOnyxVeinCount = builder
-                .comment("Onyx ore vein count per chunk")
-                .translation(SimpleOres.MODID + ".config.serverOnyxVeinCount")
-                .defineInRange("OnyxVeinCount", 5, 1, Integer.MAX_VALUE);
-        serverOnyxBottomHeight = builder
-                .comment("Onyx ore minimum height in rock only (netherrack goes full range)")
-                .translation(SimpleOres.MODID + ".config.serverOnyxBottomHeight")
-                .defineInRange("OnyxBottomHeight", 8, 1, 127);
-        serverOnyxMaxHeight = builder
-                .comment("Onyx ore maximum height in rock only (netherrack goes full range)")
-                .translation(SimpleOres.MODID + ".config.serverOnyxMaxHeight")
-                .defineInRange("OnyxMaxHeight", 64, 1, 128);
-        builder.pop();
-        builder.pop();
-        
         builder.push("Tools");
         serverEnableCopperTools = builder.comment("false disables recipes")
                 .translation(SimpleOres.MODID + ".config.enableCopperTools")

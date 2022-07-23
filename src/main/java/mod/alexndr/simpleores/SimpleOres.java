@@ -29,8 +29,6 @@ public class SimpleOres
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-//        ModFeatures.CONFIGURED_FEATURES.register(modEventBus);
-//        ModFeatures.PLACED_FEATURES.register(modEventBus);
         
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);

@@ -14,10 +14,6 @@ public final class ConfigHelper
     public static void bakeServer(final ModConfig config)
     {
         SimpleOresConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
-        SimpleOresConfig.enableTinOre = ConfigHolder.SERVER.serverEnableTinOre.get();
-        SimpleOresConfig.enableMythrilOre = ConfigHolder.SERVER.serverEnableMythrilOre.get();
-        SimpleOresConfig.enableAdamantiumOre = ConfigHolder.SERVER.serverEnableAdamantiumOre.get();
-        SimpleOresConfig.enableOnyxOre = ConfigHolder.SERVER.serverEnableOnyxOre.get();
         		
         // recipe flags
         SimpleOresConfig.INSTANCE.putFlag("aesthetics_enabled", ConfigHolder.SERVER.serverEnableAesthetics.get());
