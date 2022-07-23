@@ -6,22 +6,19 @@
 			"height" : {
 				"type" : "minecraft:uniform",
 				"min_inclusive" : {
-					"above_bottom" : 1
+					"absolute" : 1
 					},
 				"max_inclusive" : {
-					"below_top" : 1
+					"absolute" : 128
 				}
 			}
 		},
 		{
 			"type" : "minecraft:count",
-			"count" : 5
+			"count" : 50
 		},
 		{
 			"type" : "minecraft:in_square"
-		},
-		{
-			"type" : "minecraft:biome"
 		}
 	]
 }
