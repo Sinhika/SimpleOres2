@@ -1,0 +1,6 @@
+{
+	"type" : "forge:add_features",
+	"biomes" : "#minecraft:is_nether",
+	"features" : [ "simpleores:ore_onyx_all", "simpleores:ore_onyx_in_rock" ],
+	"step" : "underground_ores"
+}
