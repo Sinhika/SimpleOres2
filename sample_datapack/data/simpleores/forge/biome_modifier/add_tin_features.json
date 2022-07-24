@@ -1,0 +1,6 @@
+{
+	"type" : "forge:add_features",
+	"biomes" : "#minecraft:is_overworld",
+	"features" : ["simpleores:ore_tin_intrusion", "simpleores:ore_tin_placer", "simpleores:ore_tin_vein"],
+	"step" : "underground_ores"
+}
