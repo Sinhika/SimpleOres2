@@ -10,7 +10,7 @@
 			},
 			"target" : {
 				"predicate_type" : "minecraft:tag_match",
-				"tag" : "minecraft:netherrack"
+				"tag" : "minecraft:nether_carver_replaceables"
 			}
 		}
 		]
