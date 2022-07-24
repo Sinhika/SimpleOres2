@@ -43,6 +43,6 @@ burunduk (Ukrainian), Ruukas97 (Danish), yaodaosang(Simplified Chinese), Unknown
 [[dependencies.simpleores]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.19-5.0.1.4,1.19-5.1.0.0)"
+    versionRange="[1.19-5.0.1.5,1.19-5.1.0.0)"
     ordering="AFTER"
     side="BOTH"
