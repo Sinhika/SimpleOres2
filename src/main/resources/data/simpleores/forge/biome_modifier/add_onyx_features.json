@@ -1,6 +1,6 @@
 {
 	"type" : "forge:add_features",
-	"biomes" : "#is_nether",
+	"biomes" : "minecraft:nether_wastes",
 	"features" : ["simpleores:ore_onyx_all", "simpleores:ore_onyx_in_rock"],
 	"step" : "underground_decoration"
 }
