@@ -2,6 +2,10 @@
 	"feature" : "simpleores:ore_adamantium",
 	"placement" : [
 		{
+			"type" : "minecraft:count",
+			"count" : 4
+		},
+		{
 			"type" : "minecraft:height_range",
 			"height" : {
 				"type" : "minecraft:uniform",
@@ -9,13 +13,9 @@
 					"above_bottom" : 1
 					},
 				"max_inclusive" : {
-					"absolute" : 20
+					"above_bottom" : 84
 				}
 			}
-		},
-		{
-			"type" : "minecraft:count",
-			"count" : 4
 		},
 		{
 			"type" : "minecraft:in_square"

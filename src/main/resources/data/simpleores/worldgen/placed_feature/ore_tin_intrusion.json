@@ -2,20 +2,20 @@
 	"feature" : "simpleores:ore_tin",
 	"placement" : [
 		{
+			"type" : "minecraft:count",
+			"count" : 10
+		},
+		{
 			"type" : "minecraft:height_range",
 			"height" : {
 				"type" : "minecraft:uniform",
 				"min_inclusive" : {
-					"absolute" : 0
+					"above_bottom" : 64
 				},
 				"max_inclusive" : {
-					"absolute" : 72
+					"above_bottom" : 136
 				}
 			}
-		},
-		{
-			"type" : "minecraft:count",
-			"count" : 10
 		},
 		{
 			"type" : "minecraft:in_square"

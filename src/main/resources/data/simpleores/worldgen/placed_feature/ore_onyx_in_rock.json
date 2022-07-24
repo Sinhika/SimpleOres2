@@ -2,20 +2,20 @@
 	"feature" : "simpleores:ore_onyx_rock",
 	"placement" : [
 		{
+			"type" : "minecraft:count",
+			"count" : 5
+		},
+		{
 			"type" : "minecraft:height_range",
 			"height" : {
 				"type" : "minecraft:uniform",
 				"min_inclusive" : {
-					"absolute" : 8
+					"above_bottom" : 8
 					},
 				"max_inclusive" : {
-					"absolute" : 64
+					"above_bottom" : 64
 				}
 			}
-		},
-		{
-			"type" : "minecraft:count",
-			"count" : 5
 		},
 		{
 			"type" : "minecraft:in_square"
