@@ -1,6 +1,0 @@
-{
-	"type" : "forge:add_features",
-	"biomes" : "#minecraft:is_overworld",
-	"features" : ["simpleores:ore_adamantium_intrusion", "simpleores:ore_adamantium_deposit"],
-	"step" : "underground_ores"
-}
