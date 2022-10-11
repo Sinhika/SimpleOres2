@@ -60,44 +60,44 @@ public final class ForgeEventSubscriber
     } // end LootLoad()
     
     
-	/**
-	 * deal with copper bucket poking lava.
-	 */
-	@SubscribeEvent
-	public static void FillBucket(final FillBucketEvent event)
-	{
-	    if (event.getEmptyBucket().getItem() == ModItems.copper_bucket.get()) 
-	    {
-	        if (event.getTarget().getType() == HitResult.Type.BLOCK) 
-	        {
-	            BlockHitResult rtResult = (BlockHitResult) event.getTarget();
-	            BlockPos blockpos = rtResult.getBlockPos();
-	            Direction direction = rtResult.getDirection();
-	            BlockPos blockpos1 = blockpos.relative(direction);
-	            if (event.getLevel().mayInteract(event.getEntity(), blockpos) 
-	                && event.getEntity().mayUseItemAt(blockpos1, direction, event.getEmptyBucket()))
-	            {
-	                BlockState blockstate1 = event.getLevel().getBlockState(blockpos);
-	                if (blockstate1.getBlock() instanceof LiquidBlock) 
-	                {
-	                    FluidState fluid = ((LiquidBlock) blockstate1.getBlock()).getFluidState(blockstate1);
-	                    if (!fluid.isEmpty() && fluid.is(FluidTags.LAVA)) 
-	                    {
-	                        Item bucketItem = event.getEmptyBucket().getItem();
-	                        event.getEntity().awardStat(Stats.ITEM_USED.get(bucketItem));
-	                        SoundEvent soundevent = SoundEvents.LAVA_EXTINGUISH;
-	                        event.getEntity().playSound(soundevent, 1.0F, 1.0F);
-	                        event.setFilledBucket(ItemStack.EMPTY);
-                            event.setResult(Result.ALLOW);
-                            return;
-                        }
-                    } // end-if
-                } // end-if
-	        } // end-if
-	    }
-        event.setResult(Result.DEFAULT);
-	} // end FillBucket()
-    
+//	/**
+//	 * deal with copper bucket poking lava.
+//	 */
+//	@SubscribeEvent
+//	public static void FillBucket(final FillBucketEvent event)
+//	{
+//	    if (event.getEmptyBucket().getItem() == ModItems.copper_bucket.get()) 
+//	    {
+//	        if (event.getTarget().getType() == HitResult.Type.BLOCK) 
+//	        {
+//	            BlockHitResult rtResult = (BlockHitResult) event.getTarget();
+//	            BlockPos blockpos = rtResult.getBlockPos();
+//	            Direction direction = rtResult.getDirection();
+//	            BlockPos blockpos1 = blockpos.relative(direction);
+//	            if (event.getLevel().mayInteract(event.getEntity(), blockpos) 
+//	                && event.getEntity().mayUseItemAt(blockpos1, direction, event.getEmptyBucket()))
+//	            {
+//	                BlockState blockstate1 = event.getLevel().getBlockState(blockpos);
+//	                if (blockstate1.getBlock() instanceof LiquidBlock) 
+//	                {
+//	                    FluidState fluid = ((LiquidBlock) blockstate1.getBlock()).getFluidState(blockstate1);
+//	                    if (!fluid.isEmpty() && fluid.is(FluidTags.LAVA)) 
+//	                    {
+//	                        Item bucketItem = event.getEmptyBucket().getItem();
+//	                        event.getEntity().awardStat(Stats.ITEM_USED.get(bucketItem));
+//	                        SoundEvent soundevent = SoundEvents.LAVA_EXTINGUISH;
+//	                        event.getEntity().playSound(soundevent, 1.0F, 1.0F);
+//	                        event.setFilledBucket(ItemStack.EMPTY);
+//                            event.setResult(Result.ALLOW);
+//                            return;
+//                        }
+//                    } // end-if
+//                } // end-if
+//	        } // end-if
+//	    }
+//        event.setResult(Result.DEFAULT);
+//	} // end FillBucket()
+//    
 
     /**
      * Intercept villager trades list and modify it.

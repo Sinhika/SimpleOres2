@@ -1,7 +1,7 @@
 package mod.alexndr.simpleores.init;
 
+import cech12.bucketlib.api.item.UniversalBucketItem;
 import mod.alexndr.simpleores.SimpleOres;
-import mod.alexndr.simpleores.content.CopperBucket;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
@@ -15,7 +15,6 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -84,10 +83,13 @@ public final class ModItems
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // buckets - not stackable until fillBucket() gets fixed.
-    public static final RegistryObject<CopperBucket> copper_bucket = ITEMS.register("copper_bucket",
-            () -> new CopperBucket(new Item.Properties().stacksTo(1).tab(ModTabGroups.MOD_ITEM_GROUP)));
-    public static final RegistryObject<CopperBucket> copper_bucket_water = ITEMS.register("copper_bucket_water",
-            () -> new CopperBucket(Fluids.WATER, new Item.Properties().stacksTo(1).tab(ModTabGroups.MOD_ITEM_GROUP)));
+//    public static final RegistryObject<CopperBucket> copper_bucket = ITEMS.register("copper_bucket",
+//            () -> new CopperBucket(new Item.Properties().stacksTo(1).tab(ModTabGroups.MOD_ITEM_GROUP)));
+//    public static final RegistryObject<CopperBucket> copper_bucket_water = ITEMS.register("copper_bucket_water",
+//            () -> new CopperBucket(Fluids.WATER, new Item.Properties().stacksTo(1).tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<UniversalBucketItem> copper_bucket = ITEMS.register("copper_bucket",
+            () -> new UniversalBucketItem(new UniversalBucketItem.Properties().tab(ModTabGroups.MOD_ITEM_GROUP).maxTemperature(1000)));
+            
     
     // TOOLS & WEAPONS
     // bows

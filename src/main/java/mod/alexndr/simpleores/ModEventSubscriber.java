@@ -7,11 +7,13 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import cech12.bucketlib.api.BucketLibApi;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
+import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTabGroups;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +25,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
@@ -41,6 +44,13 @@ public final class ModEventSubscriber
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
+    
+    @SubscribeEvent
+    public static void onSendIMC(InterModEnqueueEvent evt)
+    {
+        BucketLibApi.registerBucket(ModItems.copper_bucket.getId());
+    } // end onSendIMC
+    
     
     /**
      * This method will be called by Forge when it is time for the mod to register

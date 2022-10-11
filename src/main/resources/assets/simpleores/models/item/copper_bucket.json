@@ -1,6 +1,7 @@
 {
-	"parent": "item/generated",
+	"parent": "bucketlib:item/universal_bucket",
 	"textures": {
-		"layer0": "simpleores:item/copper_bucket"
+		"base": "simpleores:item/copper_bucket",
+		"lowerBase": "simpleores:item/copper_bucket_lower"
 	}
 }

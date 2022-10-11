@@ -76,7 +76,8 @@
     
     "item.simpleores.onyx_gem": "Onyx",
     "item.simpleores.copper_bucket": "Copper Bucket",
-    "item.simpleores.copper_bucket_water": "Copper Bucket of Water",
+    "item.simpleores.copper_bucket.entity" : "Copper Bucket of %s",
+    "item.simpleores.copper_bucket.filled" : "Copper %s Bucket",
     "item.simpleores.mythril_rod": "Mythril Rod",
     "item.simpleores.onyx_rod": "Onyx Rod",
 
