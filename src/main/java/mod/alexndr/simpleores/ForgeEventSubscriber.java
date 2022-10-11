@@ -137,40 +137,81 @@ public final class ForgeEventSubscriber
                     new ItemStack(ModItems.tin_chestplate.get()), 12, 10, 0.2F));
             
             // expert trades
-            //trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds());
-            // TODO
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_leggings.get(), 
+                    14, 3, 15, 0.2F));
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_boots.get(), 
+                    8, 3, 15, 0.2F));
+            
             // master trades
-            //trades.get(5).add(new VillagerTrades.EnchantedItemForEmeralds());
-            // TODO
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_helmet.get(), 
+                    8, 3, 30, 0.2F));
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_chestplate.get(), 
+                    16, 3, 30, 0.2F));
             
         } // end if ARMORER
         
         else if (evt.getType() == VillagerProfession.TOOLSMITH)
         {
             Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
-            // novice
             
+            // novice - nothing added.
+
             // apprentice
             trades.get(2).add(new BasicItemListing(new ItemStack(Items.COPPER_INGOT, 4),
                     new ItemStack(Items.EMERALD), 12, 10, 0.05F));
             trades.get(2).add(new BasicItemListing(new ItemStack(ModItems.tin_ingot.get(), 4),
                     new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.copper_axe.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.copper_shovel.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.copper_hoe.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.copper_pickaxe.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.tin_axe.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.tin_shovel.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.tin_hoe.get()), 12, 1, 0.2F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.tin_pickaxe.get()), 12, 1, 0.2F));
             
             // journeyman
             trades.get(3).add(new BasicItemListing(new ItemStack(ModItems.mythril_ingot.get()),
                     new ItemStack(Items.EMERALD), 12, 20, 0.05F));
+            trades.get(3).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_axe.get(), 
+                    2, 3, 10, 0.2F));
+            trades.get(3).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_shovel.get(), 
+                    3, 3, 10, 0.2F));
+            trades.get(3).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_pickaxe.get(), 
+                    3, 3, 10, 0.2F));
+            trades.get(3).add(new BasicItemListing( new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(ModItems.mythril_hoe.get()), 3, 10, 0.2F));
             
             // expert trades
-            // TODO
+            trades.get(4).add(new BasicItemListing(new ItemStack(ModItems.adamantium_ingot.get(), 1),
+                    new ItemStack(Items.EMERALD, 2), 12, 30, 0.05F));
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.adamantium_axe.get(), 
+                    12, 3, 15, 0.2F));
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.adamantium_shovel.get(), 
+                    5, 3, 15, 0.2F));
+
             // master trades
-            // TODO
-            
+            trades.get(5).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.adamantium_pickaxe.get(), 
+                    13, 3, 30, 0.2F));
         } // end-if TOOLSMITH
         else if (evt.getType() == VillagerProfession.WEAPONSMITH)
         {
             Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
-            // novice
             
+            // novice
+            trades.get(1).add(new BasicItemListing( new ItemStack(Items.EMERALD, 3), 
+                    new ItemStack(ModItems.mythril_axe.get()), 12, 1, 0.2F));
+            trades.get(1).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.mythril_sword.get(), 
+                    2, 3, 1, 0.05F));
+           
             // apprentice
             trades.get(2).add(new BasicItemListing(new ItemStack(Items.COPPER_INGOT, 4),
                     new ItemStack(Items.EMERALD), 12, 10, 0.05F));
@@ -182,9 +223,15 @@ public final class ForgeEventSubscriber
                     new ItemStack(Items.EMERALD), 12, 20, 0.05F));
             
             // expert trades
-            // TODO
+            trades.get(4).add(new BasicItemListing(new ItemStack(ModItems.adamantium_ingot.get()),
+                    new ItemStack(Items.EMERALD), 12, 30, 0.05F));
+            trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.adamantium_axe.get(), 
+                    12, 3, 15, 0.2F));
+
             // master trades
-            // TODO
+            trades.get(5).add(new VillagerTrades.EnchantedItemForEmeralds(ModItems.adamantium_sword.get(), 
+                    8, 3, 30, 0.2F));
+
         } // end-if WEAPONSMITH
     } // end onVillagerTrades()
     
