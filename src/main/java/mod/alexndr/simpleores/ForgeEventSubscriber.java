@@ -17,6 +17,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -136,8 +137,10 @@ public final class ForgeEventSubscriber
                     new ItemStack(ModItems.tin_chestplate.get()), 12, 10, 0.2F));
             
             // expert trades
+            //trades.get(4).add(new VillagerTrades.EnchantedItemForEmeralds());
             // TODO
             // master trades
+            //trades.get(5).add(new VillagerTrades.EnchantedItemForEmeralds());
             // TODO
             
         } // end if ARMORER
