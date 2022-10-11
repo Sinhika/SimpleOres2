@@ -1,8 +1,11 @@
 package mod.alexndr.simpleores;
 
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import mod.alexndr.simplecorelib.api.helpers.LootUtils;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModItems;
@@ -13,15 +16,20 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraftforge.common.BasicItemListing;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.Event.Result;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -89,4 +97,104 @@ public final class ForgeEventSubscriber
         event.setResult(Result.DEFAULT);
 	} // end FillBucket()
     
+
+    /**
+     * Intercept villager trades list and modify it.
+     */
+    @SubscribeEvent
+    public static void onVillagerTrades(VillagerTradesEvent evt)
+    {
+        if (evt.getType() == VillagerProfession.ARMORER)
+        {
+            Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
+            // novice trades
+            trades.get(1).add(new BasicItemListing( new ItemStack(Items.EMERALD, 3), 
+                    new ItemStack(ModItems.copper_helmet.get()), 12, 1, 0.2F));
+            trades.get(1).add(new BasicItemListing(new ItemStack(Items.EMERALD, 7),
+                    new ItemStack(ModItems.copper_chestplate.get()), 12, 1, 0.2F));
+            trades.get(1).add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
+                    new ItemStack(ModItems.copper_leggings.get()), 12, 1, 0.2F));
+            trades.get(1).add(new BasicItemListing(new ItemStack(Items.EMERALD, 2),
+                    new ItemStack(ModItems.copper_boots.get()), 12, 1, 0.2F));
+
+            // apprentice trades
+            trades.get(2).add(new BasicItemListing(new ItemStack(Items.COPPER_INGOT, 4),
+                    new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            trades.get(2).add(new BasicItemListing(new ItemStack(ModItems.tin_ingot.get(), 4),
+                    new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            trades.get(2).add(new BasicItemListing( new ItemStack(Items.EMERALD, 3), 
+                    new ItemStack(ModItems.tin_leggings.get()), 12, 5, 0.2F));
+            trades.get(2).add(new BasicItemListing(new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(ModItems.tin_boots.get()), 12, 5, 0.2F));
+            
+            // journeyman trades
+            trades.get(3).add(new BasicItemListing(new ItemStack(ModItems.mythril_ingot.get()),
+                    new ItemStack(Items.EMERALD), 12, 20, 0.05F));
+            trades.get(3).add(new BasicItemListing(new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(ModItems.tin_helmet.get()), 12, 10, 0.2F));
+            trades.get(3).add(new BasicItemListing(new ItemStack(Items.EMERALD, 3),
+                    new ItemStack(ModItems.tin_chestplate.get()), 12, 10, 0.2F));
+            
+            // expert trades
+            // TODO
+            // master trades
+            // TODO
+            
+        } // end if ARMORER
+        
+        else if (evt.getType() == VillagerProfession.TOOLSMITH)
+        {
+            Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
+            // novice
+            
+            // apprentice
+            trades.get(2).add(new BasicItemListing(new ItemStack(Items.COPPER_INGOT, 4),
+                    new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            trades.get(2).add(new BasicItemListing(new ItemStack(ModItems.tin_ingot.get(), 4),
+                    new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            
+            // journeyman
+            trades.get(3).add(new BasicItemListing(new ItemStack(ModItems.mythril_ingot.get()),
+                    new ItemStack(Items.EMERALD), 12, 20, 0.05F));
+            
+            // expert trades
+            // TODO
+            // master trades
+            // TODO
+            
+        } // end-if TOOLSMITH
+        else if (evt.getType() == VillagerProfession.WEAPONSMITH)
+        {
+            Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
+            // novice
+            
+            // apprentice
+            trades.get(2).add(new BasicItemListing(new ItemStack(Items.COPPER_INGOT, 4),
+                    new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            trades.get(2).add(new BasicItemListing(new ItemStack(ModItems.tin_ingot.get(), 4),
+                    new ItemStack(Items.EMERALD), 12, 10, 0.05F));
+            
+            // journeyman
+            trades.get(3).add(new BasicItemListing(new ItemStack(ModItems.mythril_ingot.get()),
+                    new ItemStack(Items.EMERALD), 12, 20, 0.05F));
+            
+            // expert trades
+            // TODO
+            // master trades
+            // TODO
+        } // end-if WEAPONSMITH
+    } // end onVillagerTrades()
+    
+    /**
+     * intercept wandering trader trades list and modify it.
+     * NOTE: currently don't add any trades from SimpleOres to wandering trader.
+     */
+//    @SubscribeEvent
+//    public static void onWandererTrades(WandererTradesEvent evt)
+//    {
+//        List<ItemListing> trades = evt.getGenericTrades();
+//        List<ItemListing> rare_trades = evt.getRareTrades();
+//        
+//    } // end onWandererTrades
+
 } // end-class
