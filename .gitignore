@@ -9,6 +9,7 @@ libs/
 !gradle/wrapper/*.jar
 *.class
 *~
+.*.swp
 .classpath
 build.number
 bin/
