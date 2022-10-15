@@ -2,12 +2,11 @@ package mod.alexndr.simpleores.init;
 
 import cech12.bucketlib.api.item.UniversalBucketItem;
 import mod.alexndr.simpleores.SimpleOres;
+import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresTiers;
-import mod.alexndr.simpleores.config.ConfigHolder;
-import mod.alexndr.simpleores.config.ServerConfig;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;

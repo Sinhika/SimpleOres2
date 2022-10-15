@@ -1,8 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "simpleores:item/copper_bucket",
-        "layer1": "simpleores:item/fluid_water",
-        "layer2": "simpleores:item/copper_bucket_cover"
-	}
-}
