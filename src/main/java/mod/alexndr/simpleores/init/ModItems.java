@@ -6,6 +6,8 @@ import mod.alexndr.simpleores.content.MythrilBow;
 import mod.alexndr.simpleores.content.OnyxBow;
 import mod.alexndr.simpleores.content.SimpleOresArmorMaterial;
 import mod.alexndr.simpleores.content.SimpleOresTiers;
+import mod.alexndr.simpleores.config.ConfigHolder;
+import mod.alexndr.simpleores.config.ServerConfig;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
@@ -88,7 +90,12 @@ public final class ModItems
 //    public static final RegistryObject<CopperBucket> copper_bucket_water = ITEMS.register("copper_bucket_water",
 //            () -> new CopperBucket(Fluids.WATER, new Item.Properties().stacksTo(1).tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<UniversalBucketItem> copper_bucket = ITEMS.register("copper_bucket",
-            () -> new UniversalBucketItem(new UniversalBucketItem.Properties().tab(ModTabGroups.MOD_ITEM_GROUP).maxTemperature(1000)));
+            () -> new UniversalBucketItem(new UniversalBucketItem.Properties()
+                    .tab(ModTabGroups.MOD_ITEM_GROUP)
+                    .upperCrackingTemperature(ConfigHolder.SERVER.serverCopperBucketMeltTemperature)
+                    .burningTemperature(ConfigHolder.SERVER.serverCopperBucketFireTemperature)
+                    .milking(ConfigHolder.SERVER.serverEnableCopperBucketMilking)
+                    ));
             
     
     // TOOLS & WEAPONS

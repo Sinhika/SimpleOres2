@@ -10,7 +10,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
  * @author Cadiboo
  * @author Sinhika
  */
-final class ServerConfig
+public final class ServerConfig
 {
 
     final ForgeConfigSpec.BooleanValue serverEnableCopperTools;
@@ -30,6 +30,9 @@ final class ServerConfig
     
     final ForgeConfigSpec.BooleanValue serverAddModLootToChests;
     final ForgeConfigSpec.BooleanValue serverEnableAesthetics;
+    public final ForgeConfigSpec.IntValue serverCopperBucketMeltTemperature;
+    public final ForgeConfigSpec.IntValue serverCopperBucketFireTemperature;
+    public final ForgeConfigSpec.BooleanValue serverEnableCopperBucketMilking;
 
 	ServerConfig(final ForgeConfigSpec.Builder builder)
 	{
@@ -61,6 +64,17 @@ final class ServerConfig
         serverEnableCopperBucket = builder.comment("false disables recipes")
                  .translation(SimpleOres.MODID + ".config.enableCopperBucket")
                   .define("EnableCopperBucket", true);
+        serverEnableCopperBucketMilking = builder.comment("false disables milking cows with copper bucets")
+                .translation(SimpleOres.MODID + ".config.enableCopperBucketMilking")
+                .define("EnableCopperBucketMilking", true);
+        serverCopperBucketMeltTemperature = builder.comment("liquids at temperature C or higher melt copper buckets")
+                .translation(SimpleOres.MODID + ".config.copperBucketMeltTemperature")
+                .defineInRange("CopperBucketMeltTemperature", 1000, -200, 5000);
+        serverCopperBucketFireTemperature = builder.comment(
+                "Copper is a good heat conductor. Liquids at this temp or higher set you on fire. Leave at 9999 to disable")
+                .translation(SimpleOres.MODID + ".config.copperBucketFireTemperature")
+                .defineInRange("CopperBucketSetYouOnFireTemperature", 9999, 300, 9999);
+        
         serverEnableModBows = builder.comment("false disables recipes")
                 .translation(SimpleOres.MODID + ".config.enableModBows")
                  .define("EnableModBows", true);

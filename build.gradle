@@ -162,14 +162,17 @@ repositories {
     }
 }
 
+jarjar.enable()
+
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${version_forge}"
     implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}") 
-    compileOnly fg.deobf("com.github.cech12:BucketLib:${project.bucketlib_version}:api") 
-    runtimeOnly fg.deobf("com.github.cech12:BucketLib:${project.bucketlib_version}")
+    compileOnly fg.deobf("com.github.cech12:BucketLib:${current_bucketlib_version}:api") 
+    runtimeOnly fg.deobf("com.github.cech12:BucketLib:${current_bucketlib_version}")
+    jarjar ( group: "com.github.cech12", name: "BucketLib", version: ["${from_bucketlib_version}", "${current_bucketlib_version}"] )
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
