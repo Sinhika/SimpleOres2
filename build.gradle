@@ -191,10 +191,20 @@ jar {
     }
 }
 
+task jarJarRelease {
+    doLast {
+        tasks.jarJar {
+            classifier ''
+        }
+    }
+    finalizedBy tasks.jarJar
+}
 
 // Example configuration to allow publishing using the maven-publish task
 // This is the preferred method to reobfuscate your jar file
 jar.finalizedBy('reobfJar') 
+tasks.jarJar.finalizedBy(reobf.maybeCreate('jarJar'))
+
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
 
