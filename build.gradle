@@ -170,7 +170,9 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${version_forge}"
-    implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}") 
+    implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}") {
+        jarJar.pin(it, "${current_bucketlib_version}")
+    } 
     compileOnly fg.deobf("com.github.cech12:BucketLib:${current_bucketlib_version}:api") 
     runtimeOnly fg.deobf("com.github.cech12:BucketLib:${current_bucketlib_version}")
     jarJar ( group: "com.github.cech12", name: "BucketLib", version: ["${from_bucketlib_version}", "${current_bucketlib_version}"] )
@@ -213,6 +215,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'simpleores'
             artifact jar
+            artifact tasks.jarJar
         }
     }
     repositories {
