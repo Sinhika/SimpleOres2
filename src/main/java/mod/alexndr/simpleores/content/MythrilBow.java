@@ -7,12 +7,14 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -82,4 +84,15 @@ public class MythrilBow extends BowItem
         }
         return stack;
     } // end addMythrilEnchantments()
+
+    @Override
+    public boolean isValidRepairItem(ItemStack pStack, ItemStack pRepairCandidate)
+    {
+        return this.getRepairIngredient().test(pRepairCandidate) || super.isValidRepairItem(pStack, pRepairCandidate);
+    }
+    
+    public Ingredient getRepairIngredient()
+    {
+        return Ingredient.of(ModItems.mythril_rod.get());
+    }
 }  // end class MythrilBow
