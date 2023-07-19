@@ -1,10 +1,10 @@
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version [6.0,6.2)'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
-//apply from: 'https://raw.githubusercontent.com/SizableShrimp/ForgeUpdatesRemapper/main/remapper.gradle'
+
 group = mod_group_id
 
 base {
@@ -118,7 +118,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft "net.minecraftforge:forge:${version_forge}"
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}") {
         jarJar.pin(it, "${current_bucketlib_version}")
     } 
@@ -143,7 +143,6 @@ tasks.named('processResources', ProcessResources).configure {
             mod_license: mod_license, 
             version: version,
             mod_authors: mod_authors, 
-            mod_description: mod_description,
             simplecorelib_version : simplecorelib_version,            
             simplecore_range: simplecore_range,
             current_bucketlib_version : current_bucketlib_version,
