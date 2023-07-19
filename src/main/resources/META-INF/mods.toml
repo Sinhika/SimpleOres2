@@ -3,19 +3,20 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[43,)" #mandatory
+loaderVersion="${loader_version_range}" #mandatory
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
-license="LGPL 3"
+license="${mod_license}"
 
 [[mods]]
-modId="simpleores"
-version="${file.jarVersion}"
-displayName="Simple Ores"
+modId="${mod_id}"
+version="${version}"
+displayName="${mod_name}"
 logoFile="simple_ores.png"
-updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.19/update.json"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/SimpleOres2/1.20/update.json"
 displayURL="http://minecraft.curseforge.com/projects/simpleores"
 credits="AleXndrTheGr8st (original mod), Sinhika (maintenance, ports), Paint_Ninja (initial 1.15 port), Thombias (new textures), BeckonCall (new 1.17.1 textures)."
-authors="AleXndrTheGr8st, Sinhika, Paint_Ninja"
+authors="${mod_authors}"
+# The description of the mod. This is a simple multiline text string that is used for display purposes in the mod list.
 description='''
 A simple ore mod, featuring 5 balanced ores: Copper, Tin, Mythril, Adamantium and Onyx. 
 All except Onyx can be found in the overworld, while Onyx can be found only in the Nether.
@@ -26,31 +27,31 @@ Wanadi & IamKahina (Brazillian Portuguese), El-Limbo (Argentinian Spanish), fear
 burunduk (Ukrainian), Ruukas97 (Danish), yaodaosang(Simplified Chinese), Unknown (Spanish, Traditional Chinese)
 '''
 
-[[dependencies.simpleores]]
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
-    versionRange="[43.0.0,44)"
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.simpleores]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,1.19.3)"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="simplecorelib"
+    mandatory=true
+    versionRange="${simplecore_range}"
     ordering="NONE"
     side="BOTH"
     
-[[dependencies.simpleores]]
-    modId="simplecorelib"
-    mandatory=true
-    versionRange="[1.19.2-5.1.0.0, 1.19.2-5.2.0.0)"
-    ordering="AFTER"
-    side="BOTH"
-    
-[[dependencies.simpleores]]
+[[dependencies.${mod_id}]]
     modId="bucketlib"
     mandatory=true
-    versionRange="[1.19-1.0.3.0, 1.19-1.0.3.2]"
+    versionRange="${buckletlib_range}"
     ordering="AFTER"
     side="BOTH"
     
