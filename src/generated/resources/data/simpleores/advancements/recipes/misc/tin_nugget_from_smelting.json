@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:tin_nugget_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "tin_nugget_from_smelting": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:tin_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "tin_nugget_from_smelting",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:tin_nugget_from_smelting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

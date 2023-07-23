@@ -1,0 +1,8 @@
+{
+  "parent": "simplecorelib:block/template_bars_cap_alt",
+  "textures": {
+    "bars": "simpleores:block/onyx_bars",
+    "edge": "simpleores:block/onyx_bars",
+    "particle": "simpleores:block/onyx_bars"
+  }
+}

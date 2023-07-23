@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "adamantium_ingot_from_blasting": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpleores:raw_adamantium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:adamantium_ingot_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "adamantium_ingot_from_blasting",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:adamantium_ingot_from_blasting"
+    ]
+  },
+  "sends_telemetry_event": false
+}
