@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:adamantium_helmet"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

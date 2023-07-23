@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:onyx_shears"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

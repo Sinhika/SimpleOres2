@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "S": {
       "tag": "forge:ingots/mythril"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "simpleores:mythril_pressure_plate"
-  }
+  },
+  "show_notification": true
 }

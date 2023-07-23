@@ -35,5 +35,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "simpleores:inject/spawn_bonus_chest"
 }

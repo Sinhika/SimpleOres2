@@ -26,7 +26,8 @@
           "recipes": [
             "simpleores:mythril_bars"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

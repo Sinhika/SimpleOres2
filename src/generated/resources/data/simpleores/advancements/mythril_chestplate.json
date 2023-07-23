@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:mythril_chestplate"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

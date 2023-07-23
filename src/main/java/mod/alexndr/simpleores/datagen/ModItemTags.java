@@ -1,14 +1,17 @@
 package mod.alexndr.simpleores.datagen;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 /**
@@ -17,15 +20,16 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 public class ModItemTags extends MiningItemTags
 {
 
-    public ModItemTags(DataGenerator generatorIn, @javax.annotation.Nullable ExistingFileHelper existingFileHelper)
+    public ModItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			CompletableFuture<TagLookup<Block>> blockTagProvider, ExistingFileHelper existingFileHelper)
     {
-        super(generatorIn, new ModBlockTags(generatorIn, existingFileHelper), SimpleOres.MODID, existingFileHelper);
+        super(output, lookupProvider, blockTagProvider, SimpleOres.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags()
+    protected void addTags(HolderLookup.Provider lookupProvider)
     {
-    	super.addTags();
+    	super.addTags(lookupProvider);
     	registerNuggetTags();
     	registerIngotTags();
     	registerRawMetalTags();
@@ -35,8 +39,49 @@ public class ModItemTags extends MiningItemTags
     	registerMisc();
     	registerBlockItemTags();
     	registerDoorsSlabsAndStairs();
+    	registerTools();
     }
 
+    
+    private void registerTools()
+    {
+    	this.tag(TagUtils.modTag("minecraft", "axes"))
+    		.add(ModItems.adamantium_axe.get())
+    		.add(ModItems.copper_axe.get())
+    		.add(ModItems.mythril_axe.get())
+    		.add(ModItems.onyx_axe.get())
+    		.add(ModItems.tin_axe.get());
+    	
+    	this.tag(TagUtils.modTag("minecraft", "swords"))
+			.add(ModItems.adamantium_sword.get())
+			.add(ModItems.copper_sword.get())
+			.add(ModItems.mythril_sword.get())
+			.add(ModItems.onyx_sword.get())
+			.add(ModItems.tin_sword.get());
+
+    	this.tag(TagUtils.modTag("minecraft", "pickaxes"))
+			.add(ModItems.adamantium_pickaxe.get())
+			.add(ModItems.copper_pickaxe.get())
+			.add(ModItems.mythril_pickaxe.get())
+			.add(ModItems.onyx_pickaxe.get())
+			.add(ModItems.tin_pickaxe.get());
+
+    	this.tag(TagUtils.modTag("minecraft", "shovels"))
+			.add(ModItems.adamantium_shovel.get())
+			.add(ModItems.copper_shovel.get())
+			.add(ModItems.mythril_shovel.get())
+			.add(ModItems.onyx_shovel.get())
+			.add(ModItems.tin_shovel.get());
+
+    	this.tag(TagUtils.modTag("minecraft", "hoes"))
+			.add(ModItems.adamantium_hoe.get())
+			.add(ModItems.copper_hoe.get())
+			.add(ModItems.mythril_hoe.get())
+			.add(ModItems.onyx_hoe.get())
+			.add(ModItems.tin_hoe.get());
+
+    } // end registerTools()
+    
     
     @Override
 	protected void registerOreTags() 

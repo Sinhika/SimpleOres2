@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "building",
         "key": {
           "S": {
             "item": "simpleores:tin_bricks"
@@ -23,7 +24,8 @@
         "result": {
           "count": 4,
           "item": "simpleores:tin_brick_stairs"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

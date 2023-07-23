@@ -3,7 +3,7 @@ package mod.alexndr.simpleores.datagen;
 import mod.alexndr.simplecorelib.api.datagen.SimpleBlockStateProvider;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -12,9 +12,9 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
 {
 
 
-    public SimpleOresBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper)
+    public SimpleOresBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper)
     {
-        super(gen, SimpleOres.MODID, exFileHelper);
+        super(output, SimpleOres.MODID, exFileHelper);
     }
 
     @Override

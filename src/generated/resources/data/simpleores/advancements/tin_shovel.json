@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:tin_shovel"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

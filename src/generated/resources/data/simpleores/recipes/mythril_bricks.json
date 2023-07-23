@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "building",
         "key": {
           "S": {
             "item": "simpleores:mythril_ingot"
@@ -21,7 +22,8 @@
         ],
         "result": {
           "item": "simpleores:mythril_bricks"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

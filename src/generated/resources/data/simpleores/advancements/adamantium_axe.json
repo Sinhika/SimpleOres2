@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:adamantium_axe"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

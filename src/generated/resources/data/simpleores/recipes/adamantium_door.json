@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "building",
         "key": {
           "S": {
             "item": "simpleores:adamantium_ingot"
@@ -23,7 +24,8 @@
         "result": {
           "count": 3,
           "item": "simpleores:adamantium_door"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

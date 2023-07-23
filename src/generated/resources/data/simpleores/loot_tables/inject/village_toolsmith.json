@@ -54,5 +54,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "simpleores:inject/village_toolsmith"
 }

@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "X": {
             "item": "simpleores:onyx_rod"
@@ -28,7 +29,8 @@
         ],
         "result": {
           "item": "simpleores:onyx_bow"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

@@ -1,7 +1,0 @@
-{
-  "parent": "simplecorelib:block/template_bars_post_ends",
-  "textures": {
-    "edge": "simpleores:block/copper_bars",
-    "particle": "simpleores:block/copper_bars"
-  }
-}

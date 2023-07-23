@@ -26,7 +26,8 @@
           "recipes": [
             "simpleores:mythril_brick_stairs"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

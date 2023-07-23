@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:onyx_bow"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

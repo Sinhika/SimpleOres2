@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:tin_leggings"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

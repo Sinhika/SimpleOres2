@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "S": {
             "tag": "forge:ingots/mythril"
@@ -22,7 +23,8 @@
         ],
         "result": {
           "item": "simpleores:mythril_leggings"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

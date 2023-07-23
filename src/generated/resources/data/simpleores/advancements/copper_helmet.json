@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:copper_helmet"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

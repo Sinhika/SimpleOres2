@@ -1,12 +1,15 @@
 package mod.alexndr.simpleores.datagen;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import mod.alexndr.simplecorelib.api.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.HolderLookup.Provider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -21,13 +24,14 @@ import net.minecraftforge.registries.RegistryObject;
  */
 public class ModBlockTags extends MiningBlockTags
 {
-    public ModBlockTags(DataGenerator generatorIn, @javax.annotation.Nullable ExistingFileHelper existingFileHelper)
+    public ModBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			ExistingFileHelper existingFileHelper)
     {
-        super(generatorIn, SimpleOres.MODID, existingFileHelper);
+        super(output, lookupProvider, SimpleOres.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags()
+    protected void addTags(Provider pProvider)
     {
         registerOreTags();
         registerStorageBlockTags();

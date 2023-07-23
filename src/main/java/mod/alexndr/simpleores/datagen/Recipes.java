@@ -9,8 +9,9 @@ import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import mod.alexndr.simpleores.init.ModTags;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
@@ -30,14 +31,14 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 {
     private RecipeSetBuilder setbuilder;
     
-    public Recipes(DataGenerator generatorIn)
+    public Recipes(PackOutput pOutput)
     {
-        super(generatorIn);
+        super(pOutput);
         setbuilder = new RecipeSetBuilder(SimpleOres.MODID);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -45,6 +46,8 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         registerArmorRecipes(consumer);
         registerFurnaceRecipes(consumer);
         registerAestheticRecipes(consumer);
+        
+        registerSilentsFurnaceRecipes(consumer);
     } // end registerRecipes() 
     
     
@@ -99,14 +102,15 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 has(ModTags.Items.GEMS_ONYX), flag("onyx_armor"));
     } // end registerArmorRecipes()
     
+    
     protected void registerStorageRecipes(Consumer<FinishedRecipe> consumer)
     {
-        ShapelessRecipeBuilder.shapeless(ModItems.copper_nugget.get(), 9)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.copper_nugget.get(), 9)
 	        .requires(Items.COPPER_INGOT)
 	        .unlockedBy("has_item", has(Items.COPPER_INGOT))
 	        .save(consumer);
     
-	    ShapedRecipeBuilder.shaped(Items.COPPER_INGOT)
+	    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COPPER_INGOT)
 	        .define('S', ModItems.copper_nugget.get())
 	        .pattern("SSS")
 	        .pattern("SSS")
@@ -136,7 +140,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         ResourceLocation copper_bucket_name = new ResourceLocation(SimpleOres.MODID, "copper_bucket");
         ConditionalRecipe.builder().addCondition(flag("copper_bucket"))
         .addRecipe(
-            ShapedRecipeBuilder.shaped(ModItems.copper_bucket.get())
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.copper_bucket.get())
                 .define('S', ModTags.Items.INGOTS_COPPER)
                 .pattern("S S")
                 .pattern(" S ")
@@ -215,6 +219,31 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     } // end registerFurnaceRecipes()
 
     
+    private void registerSilentsFurnaceRecipes(Consumer<FinishedRecipe> consumer)
+    {
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.of(ModItems.adamantium_dust.get().asItem()), 
+                ModItems.adamantium_ingot.get(), 
+                has(ModItems.adamantium_dust.get().asItem()), 0.7F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.of(ModItems.crushed_adamantium_ore.get().asItem()), 
+                ModItems.adamantium_ingot.get(), 
+                has(ModItems.crushed_adamantium_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.of(ModItems.mythril_dust.get().asItem()), 
+                ModItems.mythril_ingot.get(), 
+                has(ModItems.mythril_dust.get().asItem()), 0.7F, 200, "_from_dust");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.of(ModItems.crushed_mythril_ore.get().asItem()), 
+                ModItems.mythril_ingot.get(), 
+                has(ModItems.crushed_mythril_ore.get().asItem()), 0.7F, 200, "_from_ore_chunk");
+        setbuilder.buildOre2IngotRecipes(consumer, 
+                Ingredient.of(ModItems.crushed_tin_ore.get().asItem()), 
+                ModItems.tin_ingot.get(), 
+                has(ModItems.crushed_tin_ore.get().asItem()), 0.4F, 200, "_from_ore_chunk");
+    }
+    
+
     /**
      * Builds an ICondition representing FlagCondition...
      *
@@ -224,5 +253,6 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     {
         return impl_flag(SimpleOres.MODID, SimpleOresConfig.INSTANCE, name);
     }
+
 
 } // end subclass Recipes.

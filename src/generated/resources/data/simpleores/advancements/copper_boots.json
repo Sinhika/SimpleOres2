@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:copper_boots"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

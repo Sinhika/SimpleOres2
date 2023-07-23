@@ -24,7 +24,8 @@
           "recipes": [
             "simpleores:adamantium_sword"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

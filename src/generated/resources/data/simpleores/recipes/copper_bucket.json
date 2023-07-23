@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "S": {
             "tag": "forge:ingots/copper"
@@ -21,7 +22,8 @@
         ],
         "result": {
           "item": "simpleores:copper_bucket"
-        }
+        },
+        "show_notification": true
       }
     }
   ]
