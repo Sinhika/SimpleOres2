@@ -1,9 +1,9 @@
 {
   "values": [
-    "simpleores:adamantium_sword",
     "simpleores:copper_sword",
+    "simpleores:tin_sword",
     "simpleores:mythril_sword",
-    "simpleores:onyx_sword",
-    "simpleores:tin_sword"
+    "simpleores:adamantium_sword",
+    "simpleores:onyx_sword"
   ]
 }

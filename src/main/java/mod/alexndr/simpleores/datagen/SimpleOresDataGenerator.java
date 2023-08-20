@@ -5,6 +5,9 @@ import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import mod.alexndr.simplecorelib.api.datagen.SimpleLootTableProvider;
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.core.HolderLookup;
@@ -25,6 +28,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = MOD)
 public class SimpleOresDataGenerator
 {
+    // Directly reference a log4j logger.
+    public static final Logger LOGGER = LogManager.getLogger();
 
     /**
      * GatherDataEvent handler.

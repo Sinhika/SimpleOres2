@@ -1,9 +1,9 @@
 {
   "values": [
-    "simpleores:adamantium_shovel",
     "simpleores:copper_shovel",
+    "simpleores:tin_shovel",
     "simpleores:mythril_shovel",
-    "simpleores:onyx_shovel",
-    "simpleores:tin_shovel"
+    "simpleores:adamantium_shovel",
+    "simpleores:onyx_shovel"
   ]
 }
