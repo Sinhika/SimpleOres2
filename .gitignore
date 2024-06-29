@@ -6,6 +6,9 @@ libs/
 *.launch
 *.log
 *.jar
+*.iml
+*.ipr
+*.iws
 !gradle/wrapper/*.jar
 *.class
 *~
