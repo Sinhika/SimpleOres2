@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 
 import cech12.bucketlib.api.BucketLibApi;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
-import mod.alexndr.simpleores.config.ConfigHelper;
 import mod.alexndr.simpleores.config.ConfigHolder;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModBlocks;
