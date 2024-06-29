@@ -1,56 +1,31 @@
 package mod.alexndr.simpleores;
 
-import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import mod.alexndr.simplecorelib.api.helpers.LootUtils;
-import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModItems;
-import mod.alexndr.simpleores.loot.SimpleOresInjectionLookup;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod.EventBusSubscriber;
 import net.neoforged.neoforge.common.BasicItemListing;
-import net.neoforged.neoforge.event.LootTableLoadEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 /**
  * Subscribe to events from the FORGE EventBus that should be handled on both PHYSICAL sides in this class
  *
  */
-@EventBusSubscriber(modid = SimpleOres.MODID, bus = EventBusSubscriber.Bus.FORGE)
 public final class ForgeEventSubscriber
 {
 	@SuppressWarnings("unused")
     private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Forge Event Subscriber");
-	private static final SimpleOresInjectionLookup lootLookupMap = new SimpleOresInjectionLookup();
-	
-    /**
-     * add mod loot to loot tables. Code heavily based on Botania's LootHandler, which
-     * neatly solves the problem when I couldn't figure it out.
-     */
-    @SubscribeEvent
-    public static void LootLoad(final LootTableLoadEvent event)
-    {
-        if (SimpleOresConfig.addModLootToChests)
-        {
-            LootUtils.LootLoadHandler(SimpleOres.MODID, event, lootLookupMap);
-        } // end-if config allows
-    } // end LootLoad()
-    
-    
 
     /**
      * Intercept villager trades list and modify it.
      */
-    @SubscribeEvent
     public static void onVillagerTrades(VillagerTradesEvent evt)
     {
         if (evt.getType() == VillagerProfession.ARMORER)

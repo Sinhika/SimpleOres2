@@ -28,6 +28,8 @@ public class SimpleOres
 
         // register event listeners.
         modEventBus.addListener(ModEventSubscriber::onRegisterItems);
+        modEventBus.addListener(ModEventSubscriber::onSendIMC);
+        modEventBus.addListener(ForgeEventSubscriber::onVillagerTrades);
 
         // Register Deferred Registers (Does not need to be before Configs)
         ModBlocks.BLOCKS.register(modEventBus);

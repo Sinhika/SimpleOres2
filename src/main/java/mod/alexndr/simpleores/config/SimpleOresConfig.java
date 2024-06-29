@@ -11,13 +11,12 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 @EventBusSubscriber(modid = SimpleOres.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class SimpleOresConfig extends SimpleConfig
 {
-    // public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
     private static final ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
     private final static ModConfigSpec.BooleanValue serverAddModLootToChests;
-    private static final ModConfigSpec.IntValue serverCopperBucketMeltTemperature;
-    private static final ModConfigSpec.IntValue serverCopperBucketFireTemperature;
-    private static final ModConfigSpec.BooleanValue serverEnableCopperBucketMilking;
+    public static final ModConfigSpec.IntValue serverCopperBucketMeltTemperature;
+    public static final ModConfigSpec.IntValue serverCopperBucketFireTemperature;
+    public static final ModConfigSpec.BooleanValue serverEnableCopperBucketMilking;
 
     private static final ModConfigSpec.DoubleValue clientMythrilBowZoomFactor;
     private static final ModConfigSpec.DoubleValue clientOnyxBowZoomFactor;
@@ -54,6 +53,7 @@ public class SimpleOresConfig extends SimpleConfig
     } // end-static block
 
     public static final ModConfigSpec SPEC = builder.build();
+    // public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
 
     public static boolean addModLootToChests;
     public static boolean enableCopperBucketMilking;
@@ -76,4 +76,6 @@ public class SimpleOresConfig extends SimpleConfig
         mythrilBowZoom = clientMythrilBowZoomFactor.get().floatValue();
         onyxBowZoom = clientOnyxBowZoomFactor.get().floatValue();
     }
+
+
 }  // end class SimpleOresConfig
