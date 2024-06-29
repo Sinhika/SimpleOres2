@@ -92,7 +92,7 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     implementation "simplecore-api:SimpleCoreLib:${simplecorelib_version}"
-    localRuntime "com.github.cech12:BucketLib:neoforge:${current_bucketlib_version}:api"
+    localRuntime "com.github.cech12:BucketLib:neoforge:${current_bucketlib_version}"
 
     // TOP
     // localRuntime "mcjty.theoneprobe:theoneprobe:${top_version}"
