@@ -3,6 +3,7 @@ package mod.alexndr.simpleores;
 import mod.alexndr.simpleores.config.SimpleOresClientConfig;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.CreativeTabs;
+import mod.alexndr.simpleores.init.ModArmorMaterials;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.neoforged.bus.EventBus;
@@ -31,17 +32,19 @@ public class SimpleOres
         modEventBus.addListener(ModEventSubscriber::onSendIMC);
         modEventBus.addListener(ForgeEventSubscriber::onVillagerTrades);
 
-        // Register Deferred Registers (Does not need to be before Configs)
+        // Register Configs
+        modContainer.registerConfig(ModConfig.Type.COMMON, SimpleOresConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, SimpleOresClientConfig.SPEC);
+
+        // Register Deferred Registers
+        ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         CreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
-        
-        // Register Configs
-        modContainer.registerConfig(ModConfig.Type.COMMON, SimpleOresConfig.SPEC);
-        modContainer.registerConfig(ModConfig.Type.CLIENT, SimpleOresClientConfig.SPEC);
 
+        
     } // end SimpleOres()
 
 } // end class SimpleOres

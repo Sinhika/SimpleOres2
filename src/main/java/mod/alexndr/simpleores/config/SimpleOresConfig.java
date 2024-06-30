@@ -18,8 +18,11 @@ public class SimpleOresConfig extends SimpleConfig
     public static final ModConfigSpec.IntValue serverCopperBucketFireTemperature;
     public static final ModConfigSpec.BooleanValue serverEnableCopperBucketMilking;
 
-    private static final ModConfigSpec.DoubleValue clientMythrilBowZoomFactor;
-    private static final ModConfigSpec.DoubleValue clientOnyxBowZoomFactor;
+    public static final ModConfigSpec.IntValue serverCopperArmorDurability;
+    public static final ModConfigSpec.IntValue serverTinArmorDurability;
+    public static final ModConfigSpec.IntValue serverMythrilArmorDurability;
+    public static final ModConfigSpec.IntValue serverAdamantiumArmorDurability;
+    public static final ModConfigSpec.IntValue serverOnyxArmorDurability;
 
     static {
         // general
@@ -40,16 +43,24 @@ public class SimpleOresConfig extends SimpleConfig
                 .translation(SimpleOres.MODID + ".config.copperBucketFireTemperature")
                 .defineInRange("CopperBucketSetYouOnFireTemperature", 9999, 300, 9999);
         builder.pop();
+        builder.push("Armor");
+        serverCopperArmorDurability = builder.comment("Base durability for copper armor")
+                .translation(SimpleOres.MODID + ".config.copperArmorDurability")
+                .defineInRange("copperArmorDurability", 8, 1, 99);
+        serverTinArmorDurability = builder.comment("Base durability for tin armor")
+                .translation(SimpleOres.MODID + ".config.tinArmorDurability")
+                .defineInRange("tinArmorDurability", 9, 1, 99);
+        serverMythrilArmorDurability = builder.comment("Base durability for mythril armor")
+                .translation(SimpleOres.MODID + ".config.mythrilArmorDurability")
+                .defineInRange("mythrilArmorDurability", 22, 1, 99);
+        serverAdamantiumArmorDurability = builder.comment("Base durability for adamantium armor")
+                .translation(SimpleOres.MODID + ".config.adamantiumArmorDurability")
+                .defineInRange("adamantiumArmorDurability", 28, 1, 99);
+        serverOnyxArmorDurability = builder.comment("Base durability for onyx armor")
+                .translation(SimpleOres.MODID + ".config.onyxArmorDurability")
+                .defineInRange("onyxArmorDurability", 45, 1, 99);
 
-        builder.push("Client");
-        clientMythrilBowZoomFactor = builder.comment("scaled zoom when drawing mythril bow (vanilla=0.165)")
-                .translation(SimpleOres.MODID + ".config.mythril_bow_zoom_factor")
-                .defineInRange("MythrilBowZoomFactor", 0.2D, 0D, 1.0D);
-        clientOnyxBowZoomFactor = builder.comment("scaled zoom when drawing onyx bow (vanilla=0.165)")
-                .translation(SimpleOres.MODID + ".config.onyx_bow_zoom_factor")
-                .defineInRange("OnyxBowZoomFactor", 0.3D, 0D, 1.0D);
         builder.pop();
-
     } // end-static block
 
     public static final ModConfigSpec SPEC = builder.build();
@@ -60,8 +71,12 @@ public class SimpleOresConfig extends SimpleConfig
     public static int copperBucketMeltTemperature;
     public static int copperBucketFireTemperature;
 
-    public static float mythrilBowZoom;
-    public static float onyxBowZoom;
+    // armor
+    public static int copperArmorDurability;
+    public static int tinArmorDurability;
+    public static int mythrilArmorDurability;
+    public static int adamantiumArmorDurability;
+    public static int onyxArmorDurability;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
@@ -72,10 +87,12 @@ public class SimpleOresConfig extends SimpleConfig
         copperBucketMeltTemperature = serverCopperBucketMeltTemperature.getAsInt();
         copperBucketFireTemperature = serverCopperBucketFireTemperature.getAsInt();
 
-        // client stuff
-        mythrilBowZoom = clientMythrilBowZoomFactor.get().floatValue();
-        onyxBowZoom = clientOnyxBowZoomFactor.get().floatValue();
-    }
+        copperArmorDurability = serverCopperArmorDurability.getAsInt();
+        tinArmorDurability = serverTinArmorDurability.getAsInt();
+        mythrilArmorDurability = serverMythrilArmorDurability.getAsInt();
+        adamantiumArmorDurability = serverAdamantiumArmorDurability.getAsInt();
+        onyxArmorDurability = serverOnyxArmorDurability.getAsInt();
+    } // end onLoad()
 
 
 }  // end class SimpleOresConfig
