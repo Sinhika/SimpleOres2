@@ -1,6 +1,9 @@
 package mod.alexndr.simpleores.init;
 
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
+import mod.alexndr.simpleores.SimpleOres;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -34,6 +37,7 @@ public class ModTags
         public static final TagKey<Block> ORES_TIN = TagUtils.forgeBlockTag("ores/tin");
         public static final TagKey<Block> ORES_MYTHRIL = TagUtils.forgeBlockTag("ores/mythril");
         public static final TagKey<Block> ORES_ADAMANTIUM = TagUtils.forgeBlockTag("ores/adamantium");
+
     } // end subclass Blocks
     
 } // end class ModTags

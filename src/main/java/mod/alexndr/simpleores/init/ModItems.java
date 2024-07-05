@@ -10,6 +10,8 @@ import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 /**
  * Holds a list of all our {@link Item}s.
  * Suppliers that create Items are added to the DeferredRegister.
@@ -70,89 +72,143 @@ public final class ModItems
             () -> new OnyxBow(new Item.Properties().durability(1000)));
 
     // swords: constant dmg 3, eff -2.4
-    public static final DeferredItem<SwordItem> copper_sword = ITEMS.register("copper_sword",
-            () -> new SwordItem(SimpleOresTiers.COPPER, 3, -2.4F,
-                                new Item.Properties()));
-    public static final DeferredItem<SwordItem> tin_sword = ITEMS.register("tin_sword",
-            () -> new SwordItem(SimpleOresTiers.TIN, 3, -2.4F,
-                    new Item.Properties()));
-    public static final DeferredItem<SwordItem> mythril_sword = ITEMS.register("mythril_sword",
-            () -> new SwordItem(SimpleOresTiers.MYTHRIL, 3, -2.4F,
-                    new Item.Properties()));
-    public static final DeferredItem<SwordItem> adamantium_sword = ITEMS.register("adamantium_sword",
-            () -> new SwordItem(SimpleOresTiers.ADAMANTIUM, 3, -2.4F,
-                    new Item.Properties()));
-    public static final DeferredItem<SwordItem> onyx_sword = ITEMS.register("onyx_sword",
-            () -> new SwordItem(SimpleOresTiers.ONYX, 3, -2.4F,
-                    new Item.Properties()));
+    public static final Supplier<SwordItem> copper_sword = ITEMS.register("copper_sword",
+            () -> new SwordItem(SimpleOresTiers.COPPER,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(SimpleOresTiers.COPPER, 3, -2.4f)
+                    )));
+
+    public static final Supplier<SwordItem> tin_sword = ITEMS.register("tin_sword",
+            () -> new SwordItem(SimpleOresTiers.TIN,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(SimpleOresTiers.TIN,  3, -2.4F)
+                    )));
+
+    public static final Supplier<SwordItem> mythril_sword = ITEMS.register("mythril_sword",
+            () -> new SwordItem(SimpleOresTiers.MYTHRIL,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(SimpleOresTiers.MYTHRIL, 3, -2.4F)
+                    )));
+
+    public static final Supplier<SwordItem> adamantium_sword = ITEMS.register("adamantium_sword",
+            () -> new SwordItem(SimpleOresTiers.ADAMANTIUM,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(SimpleOresTiers.ADAMANTIUM, 3, -2.4F)
+                    )));
+
+    public static final Supplier<SwordItem> onyx_sword = ITEMS.register("onyx_sword",
+            () -> new SwordItem(SimpleOresTiers.ONYX,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(SimpleOresTiers.ONYX, 3, -2.4F)
+                    )));
 
     // pickaxes: constant dmg 1, eff: -2.8
     public static final DeferredItem<PickaxeItem> copper_pickaxe = ITEMS.register("copper_pickaxe",
-            () -> new PickaxeItem(SimpleOresTiers.COPPER, 1, -2.8F,
-                    new Item.Properties()));
+            () -> new PickaxeItem(SimpleOresTiers.COPPER,
+                    new Item.Properties().attributes(
+                            PickaxeItem.createAttributes(SimpleOresTiers.COPPER, 1, -2.8F)
+                    )));
     public static final DeferredItem<PickaxeItem> tin_pickaxe = ITEMS.register("tin_pickaxe",
-            () -> new PickaxeItem(SimpleOresTiers.TIN, 1, -2.8F,
-                    new Item.Properties()));
+            () -> new PickaxeItem(SimpleOresTiers.TIN,
+                    new Item.Properties().attributes(
+                    PickaxeItem.createAttributes(SimpleOresTiers.TIN, 1, -2.8F)
+            )));
     public static final DeferredItem<PickaxeItem> mythril_pickaxe = ITEMS.register("mythril_pickaxe",
-            () -> new PickaxeItem(SimpleOresTiers.MYTHRIL, 1, -2.8F,
-                    new Item.Properties()));
+            () -> new PickaxeItem(SimpleOresTiers.MYTHRIL,
+                    new Item.Properties().attributes(
+                            PickaxeItem.createAttributes(SimpleOresTiers.MYTHRIL, 1, -2.8F)
+                    )));
     public static final DeferredItem<PickaxeItem> adamantium_pickaxe = ITEMS.register("adamantium_pickaxe",
-            () -> new PickaxeItem(SimpleOresTiers.ADAMANTIUM, 1, -2.8F,
-                    new Item.Properties()));
+            () -> new PickaxeItem(SimpleOresTiers.ADAMANTIUM,
+                    new Item.Properties().attributes(
+                            PickaxeItem.createAttributes(SimpleOresTiers.ADAMANTIUM, 1, -2.8F)
+                    )));
     public static final DeferredItem<PickaxeItem> onyx_pickaxe = ITEMS.register("onyx_pickaxe",
-            () -> new PickaxeItem(SimpleOresTiers.ONYX, 1, -2.8F,
-                    new Item.Properties()));
+            () -> new PickaxeItem(SimpleOresTiers.ONYX,
+                    new Item.Properties().attributes(
+                            PickaxeItem.createAttributes(SimpleOresTiers.ONYX, 1, -2.8F)
+                    )));
 
     // axes: axe dmg + tier dmg == ~8.0  (9.0 for uber-materials); constant eff: -3.2 (3.1 to 3.0 for uberliness)
     public static final DeferredItem<AxeItem> copper_axe = ITEMS.register("copper_axe",
-            () -> new AxeItem(SimpleOresTiers.COPPER, 7.0F, -3.2F,
-                    new Item.Properties()));
+            () -> new AxeItem(SimpleOresTiers.COPPER,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(SimpleOresTiers.COPPER,  7.0F, -3.2F)
+                    )));
     public static final DeferredItem<AxeItem> tin_axe = ITEMS.register("tin_axe",
-            () -> new AxeItem(SimpleOresTiers.TIN, 7.0F, -3.2F,
-                    new Item.Properties()));
+            () -> new AxeItem(SimpleOresTiers.TIN,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(SimpleOresTiers.TIN,  7.0F, -3.2F)
+                    )));
     public static final DeferredItem<AxeItem> mythril_axe = ITEMS.register("mythril_axe",
-            () -> new AxeItem(SimpleOresTiers.MYTHRIL, 5.0F, -3.2F,
-                    new Item.Properties()));
+            () -> new AxeItem(SimpleOresTiers.MYTHRIL,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(SimpleOresTiers.MYTHRIL,  5.0F, -3.2F)
+                    )));
     public static final DeferredItem<AxeItem> adamantium_axe = ITEMS.register("adamantium_axe",
-            () -> new AxeItem(SimpleOresTiers.ADAMANTIUM, 5.0F, -3.2F,
-                    new Item.Properties()));
+            () -> new AxeItem(SimpleOresTiers.ADAMANTIUM,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(SimpleOresTiers.ADAMANTIUM,  5.0F, -3.2F)
+                    )));
     public static final DeferredItem<AxeItem> onyx_axe = ITEMS.register("onyx_axe",
-            () -> new AxeItem(SimpleOresTiers.ONYX, 4.0F, -3.0F,
-                    new Item.Properties()));
+            () -> new AxeItem(SimpleOresTiers.ONYX,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(SimpleOresTiers.ONYX, 4.0F, -3.0F)
+                    )));
 
     // shovels: constant dmg: 1.5, eff: -3.0
     public static final DeferredItem<ShovelItem> copper_shovel = ITEMS.register("copper_shovel",
-            () -> new ShovelItem(SimpleOresTiers.COPPER, 1.5F, -3.0F,
-                    new Item.Properties()));
+            () -> new ShovelItem(SimpleOresTiers.COPPER,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(SimpleOresTiers.COPPER, 1.5F, -3.0F)
+                    )));
     public static final DeferredItem<ShovelItem> tin_shovel = ITEMS.register("tin_shovel",
-            () -> new ShovelItem(SimpleOresTiers.TIN, 1.5F, -3.0F,
-                    new Item.Properties()));
+            () -> new ShovelItem(SimpleOresTiers.TIN,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(SimpleOresTiers.TIN, 1.5F, -3.0F)
+                    )));
     public static final DeferredItem<ShovelItem> mythril_shovel = ITEMS.register("mythril_shovel",
-            () -> new ShovelItem(SimpleOresTiers.MYTHRIL, 1.5F, -3.0F,
-                    new Item.Properties()));
+            () -> new ShovelItem(SimpleOresTiers.MYTHRIL,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(SimpleOresTiers.MYTHRIL, 1.5F, -3.0F)
+                    )));
     public static final DeferredItem<ShovelItem> adamantium_shovel = ITEMS.register("adamantium_shovel",
-            () -> new ShovelItem(SimpleOresTiers.ADAMANTIUM, 1.5F, -3.0F,
-                    new Item.Properties()));
+            () -> new ShovelItem(SimpleOresTiers.ADAMANTIUM,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(SimpleOresTiers.ADAMANTIUM, 1.5F, -3.0F)
+                    )));
     public static final DeferredItem<ShovelItem> onyx_shovel = ITEMS.register("onyx_shovel",
-            () -> new ShovelItem(SimpleOresTiers.ONYX, 1.5F, -3.0F,
-                    new Item.Properties()));
+            () -> new ShovelItem(SimpleOresTiers.ONYX,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(SimpleOresTiers.ONYX, 1.5F, -3.0F)
+                    )));
 
     // hoes: hoe dmg + tier dmg == 0; Eff: -3 for bad hoe materials, 0 for uber materials, rest in-between.
     public static final DeferredItem<HoeItem> copper_hoe = ITEMS.register("copper_hoe",
-            () -> new HoeItem(SimpleOresTiers.COPPER,-1, -2.0F,
-                    new Item.Properties()){});
+            () -> new HoeItem(SimpleOresTiers.COPPER,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(SimpleOresTiers.COPPER, -1, -2.0F)
+                    )));
     public static final DeferredItem<HoeItem> tin_hoe = ITEMS.register("tin_hoe",
-            () -> new HoeItem(SimpleOresTiers.TIN,-1, -2.0F,
-                    new Item.Properties()){});
+            () -> new HoeItem(SimpleOresTiers.TIN,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(SimpleOresTiers.TIN, -1, -2.0F)
+                    )));
     public static final DeferredItem<HoeItem> mythril_hoe = ITEMS.register("mythril_hoe",
-            () -> new HoeItem(SimpleOresTiers.MYTHRIL,-3, -1.0F,
-                    new Item.Properties()){});
+            () -> new HoeItem(SimpleOresTiers.MYTHRIL,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(SimpleOresTiers.MYTHRIL, -3, -1.0F)
+                    )));
     public static final DeferredItem<HoeItem> adamantium_hoe = ITEMS.register("adamantium_hoe",
-            () -> new HoeItem(SimpleOresTiers.ADAMANTIUM, -3, -1.0F,
-                    new Item.Properties()) {});
+            () -> new HoeItem(SimpleOresTiers.ADAMANTIUM,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(SimpleOresTiers.ADAMANTIUM, -3, -1.0F)
+                    )));
     public static final DeferredItem<HoeItem> onyx_hoe = ITEMS.register("onyx_hoe",
-            () -> new HoeItem(SimpleOresTiers.ONYX, -5, 0.0F,
-                    new Item.Properties()) {});
+            () -> new HoeItem(SimpleOresTiers.ONYX,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(SimpleOresTiers.ONYX, -5, 0.0F)
+                    )));
 
     // shears
     public static final DeferredItem<ShearsItem> copper_shears = ITEMS.register("copper_shears",
