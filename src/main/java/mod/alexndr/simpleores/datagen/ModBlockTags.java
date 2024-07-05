@@ -1,8 +1,5 @@
 package mod.alexndr.simpleores.datagen;
 
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-
 import mod.alexndr.simplecorelib.api.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
@@ -14,6 +11,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.RegistryObject;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * BlockTagsProvider for SimpleOres. Mostly this is proof-of-concept, and guidance for other

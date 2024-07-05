@@ -4,7 +4,6 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.BasicItemListing;
@@ -30,7 +29,7 @@ public final class ForgeEventSubscriber
     {
         if (evt.getType() == VillagerProfession.ARMORER)
         {
-            Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = evt.getTrades();
             // novice trades
             trades.get(1).add(new BasicItemListing( new ItemStack(Items.EMERALD, 3), 
                     new ItemStack(ModItems.copper_helmet.get()), 12, 1, 0.2F));
@@ -75,7 +74,7 @@ public final class ForgeEventSubscriber
         
         else if (evt.getType() == VillagerProfession.TOOLSMITH)
         {
-            Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = evt.getTrades();
             
             // novice - nothing added.
 
@@ -127,7 +126,7 @@ public final class ForgeEventSubscriber
         } // end-if TOOLSMITH
         else if (evt.getType() == VillagerProfession.WEAPONSMITH)
         {
-            Int2ObjectMap<List<ItemListing>> trades = evt.getTrades();
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = evt.getTrades();
             
             // novice
             trades.get(1).add(new BasicItemListing( new ItemStack(Items.EMERALD, 3), 

@@ -1,12 +1,5 @@
 package mod.alexndr.simpleores.datagen;
 
-import static net.neoforged.fml.common.Mod.EventBusSubscriber.Bus.MOD;
-
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import mod.alexndr.simplecorelib.api.datagen.SimpleLootTableProvider;
 import mod.alexndr.simpleores.SimpleOres;
@@ -16,9 +9,16 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod.EventBusSubscriber;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+import static net.neoforged.fml.common.EventBusSubscriber.Bus.MOD;
 
 /**
  * bundles up the GatherDataEvent handler and all the necessary data providers for
@@ -44,18 +44,19 @@ public class SimpleOresDataGenerator
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();		
         
         // server providers
-        gen.addProvider(event.includeServer(), new Recipes(packOutput));
-        
         ModBlockTags blockTags = new ModBlockTags(packOutput, lookupProvider, existingFileHelper);
         gen.addProvider(event.includeServer(), blockTags);
         gen.addProvider(event.includeServer(),
-        	new ModItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), event.getExistingFileHelper()));
-        gen.addProvider(event.includeServer(), 
+                new ModItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), event.getExistingFileHelper()));
+
+        gen.addProvider(event.includeServer(), new Recipes(packOutput));
+        
+        gen.addProvider(event.includeServer(),
         	new SimpleLootTableProvider(packOutput, List.of(
         		new LootTableProvider.SubProviderEntry(SimpleOresLootTableSubprovider::new, LootContextParamSets.BLOCK),
-        		new LootTableProvider.SubProviderEntry(SimpleOresLootInjectorProvider::new, LootContextParamSets.CHEST)
-        		)));
-        
+        		new LootTableProvider.SubProviderEntry(SimpleOresLootInjectorProvider::new, LootContextParamSets.CHEST)),
+                    lookupProvider));
+
         // client providers
         gen.addProvider(event.includeClient(), new SimpleOresBlockStateProvider(packOutput, event.getExistingFileHelper()));
      } // end gatherData()

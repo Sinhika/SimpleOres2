@@ -8,6 +8,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import org.apache.logging.log4j.LogManager;
@@ -17,9 +18,9 @@ public final class ModEventSubscriber
 {
     private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Mod Event Subscriber");
 
-    public static void onSendIMC(InterModEnqueueEvent evt)
+    public static void onSendIMC(RegisterCapabilitiesEvent evt)
     {
-        BucketLibApi.registerBucket(ModItems.copper_bucket.getId());
+        BucketLibApi.registerBucket(evt, ModItems.copper_bucket.getId());
     } // end onSendIMC
     
     
