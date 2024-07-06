@@ -49,7 +49,7 @@ public class SimpleOresDataGenerator
         gen.addProvider(event.includeServer(),
                 new ModItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), event.getExistingFileHelper()));
 
-        gen.addProvider(event.includeServer(), new Recipes(packOutput));
+        gen.addProvider(event.includeServer(), new Recipes(packOutput, lookupProvider));
         
         gen.addProvider(event.includeServer(),
         	new SimpleLootTableProvider(packOutput, List.of(
