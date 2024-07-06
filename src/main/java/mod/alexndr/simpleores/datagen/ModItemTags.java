@@ -10,8 +10,10 @@ import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 /**
@@ -50,34 +52,34 @@ public class ModItemTags extends MiningItemTags
     	super.registerOreTags();
     	
     	// register 'forge:ores' tags.
-        this.tag(TagUtils.forgeTag( "ores"))
-	        .addTag(TagUtils.forgeTag( "ores/tin"))
-	        .addTag(TagUtils.forgeTag( "ores/adamantine"))
-	        .addTag(TagUtils.forgeTag( "ores/adamantite"))
-	        .addTag(TagUtils.forgeTag( "ores/adamantium"))
-	        .addTag(TagUtils.forgeTag( "ores/mithril"))
-	        .addTag(TagUtils.forgeTag( "ores/mythril"))
-	        .addTag(TagUtils.forgeTag( "ores/onyx"));
+        this.tag(Tags.Items.ORES)
+	        .addTag(TagUtils.cTag( "ores/tin"))
+	        .addTag(TagUtils.cTag( "ores/adamantine"))
+	        .addTag(TagUtils.cTag( "ores/adamantite"))
+	        .addTag(TagUtils.cTag( "ores/adamantium"))
+	        .addTag(TagUtils.cTag( "ores/mithril"))
+	        .addTag(TagUtils.cTag( "ores/mythril"))
+	        .addTag(TagUtils.cTag( "ores/onyx"));
 	
-		this.tag(TagUtils.forgeTag( "ores/tin"))
+		this.tag(TagUtils.cTag( "ores/tin"))
 		        .add(ModBlocks.tin_ore.get().asItem())
 		        .add(ModBlocks.deepslate_tin_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/adamantium"))
+		this.tag(TagUtils.cTag( "ores/adamantium"))
 		        .add(ModBlocks.adamantium_ore.get().asItem())
 		        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/adamantine"))
+		this.tag(TagUtils.cTag( "ores/adamantine"))
 	        .add(ModBlocks.adamantium_ore.get().asItem())
 	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/adamantite"))
+		this.tag(TagUtils.cTag( "ores/adamantite"))
 	        .add(ModBlocks.adamantium_ore.get().asItem())
 	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/mythril"))
+		this.tag(TagUtils.cTag( "ores/mythril"))
 		        .add(ModBlocks.mythril_ore.get().asItem())
 		        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/mithril"))
+		this.tag(TagUtils.cTag( "ores/mithril"))
 	        .add(ModBlocks.mythril_ore.get().asItem())
 	        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
-		this.tag(TagUtils.forgeTag( "ores/onyx"))
+		this.tag(TagUtils.cTag( "ores/onyx"))
 		        .add(ModBlocks.onyx_ore.get().asItem());
 		
         // register forge ore_rates tags.
@@ -98,20 +100,20 @@ public class ModItemTags extends MiningItemTags
 
 	private void registerDoorsSlabsAndStairs()
     {
-    	this.tag(TagUtils.modTag("minecraft", "doors"))
+    	this.tag(ItemTags.DOORS)
     		.add(ModBlocks.copper_door.get().asItem())
     		.add(ModBlocks.tin_door.get().asItem())
     		.add(ModBlocks.adamantium_door.get().asItem())
     		.add(ModBlocks.onyx_door.get().asItem())
     		.add(ModBlocks.mythril_door.get().asItem());
     	
-    	this.tag(TagUtils.modTag("minecraft","stairs"))
+    	this.tag(ItemTags.STAIRS)
     		.add(ModBlocks.adamantium_brick_stairs.get().asItem())
     		.add(ModBlocks.tin_brick_stairs.get().asItem())
     		.add(ModBlocks.mythril_brick_stairs.get().asItem())
     		.add(ModBlocks.onyx_brick_stairs.get().asItem());
     	
-    	this.tag(TagUtils.modTag("minecraft","slabs"))
+    	this.tag(ItemTags.STAIRS)
     		.add(ModBlocks.adamantium_brick_slab.get().asItem())
     		.add(ModBlocks.tin_brick_slab.get().asItem())
     		.add(ModBlocks.mythril_brick_slab.get().asItem())
@@ -120,125 +122,122 @@ public class ModItemTags extends MiningItemTags
     
     private void registerBlockItemTags()
     {
-        this.tag(TagUtils.forgeTag("storage_blocks"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/raw_adamantium"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/adamantium"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/adamantine"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/adamantite"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/tin"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/raw_tin"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/mythril"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/mithril"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/raw_mythril"))
-	        .addTag(TagUtils.forgeTag("storage_blocks/onyx"));
+        this.tag(Tags.Items.STORAGE_BLOCKS)
+	        .addTag(TagUtils.cTag("storage_blocks/raw_adamantium"))
+	        .addTag(TagUtils.cTag("storage_blocks/adamantium"))
+	        .addTag(TagUtils.cTag("storage_blocks/adamantine"))
+	        .addTag(TagUtils.cTag("storage_blocks/adamantite"))
+	        .addTag(TagUtils.cTag("storage_blocks/tin"))
+	        .addTag(TagUtils.cTag("storage_blocks/raw_tin"))
+	        .addTag(TagUtils.cTag("storage_blocks/mythril"))
+	        .addTag(TagUtils.cTag("storage_blocks/mithril"))
+	        .addTag(TagUtils.cTag("storage_blocks/raw_mythril"))
+	        .addTag(TagUtils.cTag("storage_blocks/onyx"));
     
-	    this.tag(TagUtils.forgeTag("storage_blocks/raw_adamantium"))
+	    this.tag(TagUtils.cTag("storage_blocks/raw_adamantium"))
 	    	.add(ModBlocks.raw_adamantium_block.get().asItem());
-	    this.tag(TagUtils.forgeTag("storage_blocks/adamantium"))
+	    this.tag(TagUtils.cTag("storage_blocks/adamantium"))
 	            .add(ModBlocks.adamantium_block.get().asItem());
-	    this.tag(TagUtils.forgeTag("storage_blocks/adamantine"))
+	    this.tag(TagUtils.cTag("storage_blocks/adamantine"))
 	            .add(ModBlocks.adamantium_block.get().asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/adamantite"))
+	    this.tag(TagUtils.cTag( "storage_blocks/adamantite"))
 	            .add(ModBlocks.adamantium_block.get().asItem());
-	    this.tag(TagUtils.forgeTag("storage_blocks/raw_tin"))
+	    this.tag(TagUtils.cTag("storage_blocks/raw_tin"))
 			.add(ModBlocks.raw_tin_block.get().asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/tin"))
+	    this.tag(TagUtils.cTag( "storage_blocks/tin"))
 	            .add(ModBlocks.tin_block.get().asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/raw_mythril"))
+	    this.tag(TagUtils.cTag( "storage_blocks/raw_mythril"))
 	    .add(ModBlocks.raw_mythril_block.get().asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/mythril"))
+	    this.tag(TagUtils.cTag( "storage_blocks/mythril"))
 	            .add(ModBlocks.mythril_block.get().asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/mithril"))
+	    this.tag(TagUtils.cTag( "storage_blocks/mithril"))
 	            .add(ModBlocks.mythril_block.get().asItem());
-	    this.tag(TagUtils.forgeTag( "storage_blocks/onyx"))
+	    this.tag(TagUtils.cTag( "storage_blocks/onyx"))
 	            .add(ModBlocks.onyx_block.get().asItem());
 
     } // end registerBlockItemTags()
     
     private void registerNuggetTags()
     {
-        this.tag(TagUtils.forgeTag("nuggets"))
-	    	.addTag(TagUtils.forgeTag("nuggets/copper"))
-			.addTag(TagUtils.forgeTag("nuggets/tin"))
-	    	.addTag(TagUtils.forgeTag("nuggets/adamantine"))
-	    	.addTag(TagUtils.forgeTag("nuggets/adamantite"))
-	    	.addTag(TagUtils.forgeTag("nuggets/adamantium"))
-	    	.addTag(TagUtils.forgeTag("nuggets/mithril"))
-	    	.addTag(TagUtils.forgeTag("nuggets/mythril"));
+        this.tag(Tags.Items.NUGGETS)
+	    	.addTag(TagUtils.cTag("nuggets/copper"))
+			.addTag(TagUtils.cTag("nuggets/tin"))
+	    	.addTag(TagUtils.cTag("nuggets/adamantine"))
+	    	.addTag(TagUtils.cTag("nuggets/adamantite"))
+	    	.addTag(TagUtils.cTag("nuggets/adamantium"))
+	    	.addTag(TagUtils.cTag("nuggets/mithril"))
+	    	.addTag(TagUtils.cTag("nuggets/mythril"));
 
-        this.tag(TagUtils.forgeTag("nuggets/copper"))
+        this.tag(TagUtils.cTag("nuggets/copper"))
     		.add(ModItems.copper_nugget.get());
-        this.tag(TagUtils.forgeTag("nuggets/tin"))
+        this.tag(TagUtils.cTag("nuggets/tin"))
         	.add(ModItems.tin_nugget.get());
-        this.tag(TagUtils.forgeTag("nuggets/adamantine"))
+        this.tag(TagUtils.cTag("nuggets/adamantine"))
     		.add(ModItems.adamantium_nugget.get());
-        this.tag(TagUtils.forgeTag("nuggets/adamantite"))
+        this.tag(TagUtils.cTag("nuggets/adamantite"))
     		.add(ModItems.adamantium_nugget.get());
-        this.tag(TagUtils.forgeTag("nuggets/adamantium"))
+        this.tag(TagUtils.cTag("nuggets/adamantium"))
     		.add(ModItems.adamantium_nugget.get());
-        this.tag(TagUtils.forgeTag("nuggets/mythril"))
+        this.tag(TagUtils.cTag("nuggets/mythril"))
     		.add(ModItems.mythril_nugget.get());
-        this.tag(TagUtils.forgeTag("nuggets/mithril"))
+        this.tag(TagUtils.cTag("nuggets/mithril"))
     		.add(ModItems.mythril_nugget.get());
     } // end registerNuggetTags()
     
     private void registerRawMetalTags()
     {
-        this.tag(TagUtils.forgeTag("raw_metals"))
-	    	.addTag(TagUtils.forgeTag("raw_metals/copper"))
-			.addTag(TagUtils.forgeTag("raw_metals/tin"))
-	    	.addTag(TagUtils.forgeTag("raw_metals/adamantine"))
-	    	.addTag(TagUtils.forgeTag("raw_metals/adamantite"))
-	    	.addTag(TagUtils.forgeTag("raw_metals/adamantium"))
-	    	.addTag(TagUtils.forgeTag("raw_metals/mithril"))
-	    	.addTag(TagUtils.forgeTag("raw_metals/mythril"));
+        this.tag(Tags.Items.RAW_MATERIALS)
+			.addTag(TagUtils.cTag("raw_metals/tin"))
+	    	.addTag(TagUtils.cTag("raw_metals/adamantine"))
+	    	.addTag(TagUtils.cTag("raw_metals/adamantite"))
+	    	.addTag(TagUtils.cTag("raw_metals/adamantium"))
+	    	.addTag(TagUtils.cTag("raw_metals/mithril"))
+	    	.addTag(TagUtils.cTag("raw_metals/mythril"));
         
-        this.tag(TagUtils.forgeTag("raw_metals/copper"))
-    		.add(Items.RAW_COPPER);
-        this.tag(TagUtils.forgeTag("raw_metals/tin"))
+        this.tag(TagUtils.cTag("raw_metals/tin"))
         	.add(ModItems.raw_tin.get());
-        this.tag(TagUtils.forgeTag("raw_metals/adamantine"))
+        this.tag(TagUtils.cTag("raw_metals/adamantine"))
     		.add(ModItems.raw_adamantium.get());
-        this.tag(TagUtils.forgeTag("raw_metals/adamantite"))
+        this.tag(TagUtils.cTag("raw_metals/adamantite"))
     		.add(ModItems.raw_adamantium.get());
-        this.tag(TagUtils.forgeTag("raw_metals/adamantium"))
+        this.tag(TagUtils.cTag("raw_metals/adamantium"))
     		.add(ModItems.raw_adamantium.get());
-        this.tag(TagUtils.forgeTag("raw_metals/mythril"))
+        this.tag(TagUtils.cTag("raw_metals/mythril"))
     		.add(ModItems.raw_mythril.get());
-        this.tag(TagUtils.forgeTag("raw_metals/mithril"))
+        this.tag(TagUtils.cTag("raw_metals/mithril"))
     		.add(ModItems.raw_mythril.get());
     	
     }
     
     private void registerGemTags()
     {
-        this.tag(TagUtils.forgeTag("gems"))
-        	.addTag(TagUtils.forgeTag("gems/onyx"));
-        this.tag(TagUtils.forgeTag("gems/onyx"))
+        this.tag(Tags.Items.GEMS)
+        	.addTag(TagUtils.cTag("gems/onyx"));
+        this.tag(TagUtils.cTag("gems/onyx"))
         	.add(ModItems.onyx_gem.get());
     }
     
     private void registerIngotTags()
     {
-        this.tag(TagUtils.forgeTag("ingots"))
-    		.addTag(TagUtils.forgeTag("ingots/tin"))
-        	.addTag(TagUtils.forgeTag("ingots/adamantine"))
-        	.addTag(TagUtils.forgeTag("ingots/adamantite"))
-        	.addTag(TagUtils.forgeTag("ingots/adamantium"))
-        	.addTag(TagUtils.forgeTag("ingots/mithril"))
-        	.addTag(TagUtils.forgeTag("ingots/mythril"));
+        this.tag(Tags.Items.INGOTS)
+    		.addTag(TagUtils.cTag("ingots/tin"))
+        	.addTag(TagUtils.cTag("ingots/adamantine"))
+        	.addTag(TagUtils.cTag("ingots/adamantite"))
+        	.addTag(TagUtils.cTag("ingots/adamantium"))
+        	.addTag(TagUtils.cTag("ingots/mithril"))
+        	.addTag(TagUtils.cTag("ingots/mythril"));
         
-        this.tag(TagUtils.forgeTag("ingots/tin"))
+        this.tag(TagUtils.cTag("ingots/tin"))
         	.add(ModItems.tin_ingot.get());
-        this.tag(TagUtils.forgeTag("ingots/adamantine"))
+        this.tag(TagUtils.cTag("ingots/adamantine"))
     		.add(ModItems.adamantium_ingot.get());
-        this.tag(TagUtils.forgeTag("ingots/adamantite"))
+        this.tag(TagUtils.cTag("ingots/adamantite"))
     		.add(ModItems.adamantium_ingot.get());
-        this.tag(TagUtils.forgeTag("ingots/adamantium"))
+        this.tag(TagUtils.cTag("ingots/adamantium"))
     		.add(ModItems.adamantium_ingot.get());
-        this.tag(TagUtils.forgeTag("ingots/mythril"))
+        this.tag(TagUtils.cTag("ingots/mythril"))
     		.add(ModItems.mythril_ingot.get());
-        this.tag(TagUtils.forgeTag("ingots/mithril"))
+        this.tag(TagUtils.cTag("ingots/mithril"))
     		.add(ModItems.mythril_ingot.get());
     	
     } // end registerIngotTags()
@@ -246,46 +245,46 @@ public class ModItemTags extends MiningItemTags
     
     private void registerDustTags()
     {
-        this.tag(TagUtils.forgeTag("dusts"))
-                .addTag(TagUtils.forgeTag("dusts/adamantine"))
-                .addTag(TagUtils.forgeTag("dusts/adamantite"))
-                .addTag(TagUtils.forgeTag("dusts/adamantium"))
-                .addTag(TagUtils.forgeTag("dusts/mithril"))
-                .addTag(TagUtils.forgeTag("dusts/mythril"))
-                .addTag(TagUtils.forgeTag("dusts/copper"))
-                .addTag(TagUtils.forgeTag("dusts/tin"));
+        this.tag(Tags.Items.DUSTS)
+                .addTag(TagUtils.cTag("dusts/adamantine"))
+                .addTag(TagUtils.cTag("dusts/adamantite"))
+                .addTag(TagUtils.cTag("dusts/adamantium"))
+                .addTag(TagUtils.cTag("dusts/mithril"))
+                .addTag(TagUtils.cTag("dusts/mythril"))
+                .addTag(TagUtils.cTag("dusts/copper"))
+                .addTag(TagUtils.cTag("dusts/tin"));
         
         
-        this.tag(TagUtils.forgeTag("dusts/adamantium"))
+        this.tag(TagUtils.cTag("dusts/adamantium"))
             .add(ModItems.adamantium_dust.get());
-        this.tag(TagUtils.forgeTag("dusts/adamantine"))
+        this.tag(TagUtils.cTag("dusts/adamantine"))
             .add(ModItems.adamantium_dust.get());
-        this.tag(TagUtils.forgeTag("dusts/adamantite"))
+        this.tag(TagUtils.cTag("dusts/adamantite"))
             .add(ModItems.adamantium_dust.get());
-        this.tag(TagUtils.forgeTag("dusts/mythril"))
+        this.tag(TagUtils.cTag("dusts/mythril"))
             .add(ModItems.mythril_dust.get());
-        this.tag(TagUtils.forgeTag("dusts/mithril"))
+        this.tag(TagUtils.cTag("dusts/mithril"))
             .add(ModItems.mythril_dust.get());
-        this.tag(TagUtils.forgeTag("dusts/copper"))
+        this.tag(TagUtils.cTag("dusts/copper"))
             .add(ModItems.copper_dust.get());
-        this.tag(TagUtils.forgeTag("dusts/tin"))
+        this.tag(TagUtils.cTag("dusts/tin"))
             .add(ModItems.tin_dust.get());
     } // end registerDustTags()
     
     private void registerMisc()
     {
-    	this.tag(TagUtils.forgeTag("rods"))
-    		.addTag(TagUtils.forgeTag("rods/mythril"))
-    		.addTag(TagUtils.forgeTag("rods/mithril"))
-    		.addTag(TagUtils.forgeTag("rods/onyx"));
-    	this.tag(TagUtils.forgeTag("rods/mythril"))
+    	this.tag(Tags.Items.RODS)
+    		.addTag(TagUtils.cTag("rods/mythril"))
+    		.addTag(TagUtils.cTag("rods/mithril"))
+    		.addTag(TagUtils.cTag("rods/onyx"));
+    	this.tag(TagUtils.cTag("rods/mythril"))
     		.add(ModItems.mythril_rod.get());
-    	this.tag(TagUtils.forgeTag("rods/mithril"))
+    	this.tag(TagUtils.cTag("rods/mithril"))
     		.add(ModItems.mythril_rod.get());
-    	this.tag(TagUtils.forgeTag("rods/onyx"))
+    	this.tag(TagUtils.cTag("rods/onyx"))
 			.add(ModItems.onyx_rod.get());
     	
-    	this.tag(TagUtils.forgeTag("shears"))
+    	this.tag(Tags.Items.TOOLS_SHEARS)
     		.add(ModItems.copper_shears.get())
     		.add(ModItems.tin_shears.get())
     		.add(ModItems.mythril_shears.get())

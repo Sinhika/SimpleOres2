@@ -7,10 +7,11 @@ import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.RegistryObject;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -42,7 +43,7 @@ public class ModBlockTags extends MiningBlockTags
     
     private void registerMiscTags()
     {
-        this.tag(TagUtils.modBlockTag("minecraft", "pressure_plates"))
+        this.tag(BlockTags.PRESSURE_PLATES)
             .add(ModBlocks.copper_pressure_plate.get())
             .add(ModBlocks.tin_pressure_plate.get())
             .add(ModBlocks.mythril_pressure_plate.get())
@@ -52,20 +53,20 @@ public class ModBlockTags extends MiningBlockTags
     
     private void registerDoorsSlabsAndStairs()
     {
-    	this.tag(TagUtils.modBlockTag("minecraft", "doors"))
+    	this.tag(BlockTags.DOORS)
     		.add(ModBlocks.copper_door.get())
     		.add(ModBlocks.tin_door.get())
     		.add(ModBlocks.adamantium_door.get())
     		.add(ModBlocks.onyx_door.get())
     		.add(ModBlocks.mythril_door.get());
     	
-    	this.tag(TagUtils.modBlockTag("minecraft","stairs"))
+    	this.tag(BlockTags.STAIRS)
     		.add(ModBlocks.adamantium_brick_stairs.get())
     		.add(ModBlocks.tin_brick_stairs.get())
     		.add(ModBlocks.mythril_brick_stairs.get())
     		.add(ModBlocks.onyx_brick_stairs.get());
     	
-    	this.tag(TagUtils.modBlockTag("minecraft","slabs"))
+    	this.tag(BlockTags.SLABS)
 			.add(ModBlocks.adamantium_brick_slab.get())
 			.add(ModBlocks.tin_brick_slab.get())
 			.add(ModBlocks.mythril_brick_slab.get())
@@ -74,7 +75,7 @@ public class ModBlockTags extends MiningBlockTags
     
     private void registerBeaconTags()
     {
-    	this.tag(TagUtils.modBlockTag("minecraft", "beacon_base_blocks"))
+    	this.tag(BlockTags.BEACON_BASE_BLOCKS)
     		.add(Blocks.COPPER_BLOCK)
 			.add(ModBlocks.adamantium_block.get())
 			.add(ModBlocks.tin_block.get())
@@ -85,7 +86,7 @@ public class ModBlockTags extends MiningBlockTags
     protected void registerMiningTags()
     {
         // all the registered blocks are mineable.
-        List<Block> mineables = ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).toList();
+        List<Block> mineables = (List<Block>) ModBlocks.BLOCKS.getEntries().stream().map((h) -> h.get()).toList();
         
         // do nothing; super() generates all the vanilla blocktags, and we don't want that.
      	registerMineableTags(mineables, 
@@ -111,45 +112,37 @@ public class ModBlockTags extends MiningBlockTags
     
     private void registerStorageBlockTags()
     {
-        this.tag(TagUtils.forgeBlockTag("storage_blocks"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_adamantium"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/adamantite"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/copper"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_copper"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/tin"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_tin"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/mythril"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/mithril"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/raw_mythril"))
-            .addTag(TagUtils.forgeBlockTag("storage_blocks/onyx"));
+        this.tag(Tags.Blocks.STORAGE_BLOCKS)
+            .addTag(TagUtils.cBlockTag("storage_blocks/raw_adamantium"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/adamantium"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/adamantine"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/adamantite"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/tin"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/raw_tin"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/mythril"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/mithril"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/raw_mythril"))
+            .addTag(TagUtils.cBlockTag("storage_blocks/onyx"));
         
-        // because they haven't been added to forge by default yet.
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/copper"))
-        	.add(Blocks.COPPER_BLOCK);
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/raw_copper"))
-    		.add(Blocks.RAW_COPPER_BLOCK);
-        // end-copper
-        this.tag(TagUtils.forgeBlockTag("storage_blocks/raw_adamantium"))
+        this.tag(TagUtils.cBlockTag("storage_blocks/raw_adamantium"))
         	.add(ModBlocks.raw_adamantium_block.get());
-        this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantium"))
+        this.tag(TagUtils.cBlockTag("storage_blocks/adamantium"))
                 .add(ModBlocks.adamantium_block.get());
-        this.tag(TagUtils.forgeBlockTag("storage_blocks/adamantine"))
+        this.tag(TagUtils.cBlockTag("storage_blocks/adamantine"))
                 .add(ModBlocks.adamantium_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/adamantite"))
+        this.tag(TagUtils.cBlockTag( "storage_blocks/adamantite"))
                 .add(ModBlocks.adamantium_block.get());
-        this.tag(TagUtils.forgeBlockTag("storage_blocks/raw_tin"))
+        this.tag(TagUtils.cBlockTag("storage_blocks/raw_tin"))
     		.add(ModBlocks.raw_tin_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/tin"))
+        this.tag(TagUtils.cBlockTag( "storage_blocks/tin"))
                 .add(ModBlocks.tin_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/raw_mythril"))
+        this.tag(TagUtils.cBlockTag( "storage_blocks/raw_mythril"))
         .add(ModBlocks.raw_mythril_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/mythril"))
+        this.tag(TagUtils.cBlockTag( "storage_blocks/mythril"))
                 .add(ModBlocks.mythril_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/mithril"))
+        this.tag(TagUtils.cBlockTag( "storage_blocks/mithril"))
                 .add(ModBlocks.mythril_block.get());
-        this.tag(TagUtils.forgeBlockTag( "storage_blocks/onyx"))
+        this.tag(TagUtils.cBlockTag( "storage_blocks/onyx"))
                 .add(ModBlocks.onyx_block.get());
     } // end registerStorageBlockTags
     
@@ -157,34 +150,34 @@ public class ModBlockTags extends MiningBlockTags
     protected void registerOreTags()
     {
     	// register "forge:ores" tags
-        this.tag(TagUtils.forgeBlockTag( "ores"))
-                .addTag(TagUtils.forgeBlockTag( "ores/tin"))
-                .addTag(TagUtils.forgeBlockTag( "ores/adamantine"))
-                .addTag(TagUtils.forgeBlockTag( "ores/adamantite"))
-                .addTag(TagUtils.forgeBlockTag( "ores/adamantium"))
-                .addTag(TagUtils.forgeBlockTag( "ores/mithril"))
-                .addTag(TagUtils.forgeBlockTag( "ores/mythril"))
-                .addTag(TagUtils.forgeBlockTag( "ores/onyx"));
+        this.tag(Tags.Blocks.ORES)
+                .addTag(TagUtils.cBlockTag( "ores/tin"))
+                .addTag(TagUtils.cBlockTag( "ores/adamantine"))
+                .addTag(TagUtils.cBlockTag( "ores/adamantite"))
+                .addTag(TagUtils.cBlockTag( "ores/adamantium"))
+                .addTag(TagUtils.cBlockTag( "ores/mithril"))
+                .addTag(TagUtils.cBlockTag( "ores/mythril"))
+                .addTag(TagUtils.cBlockTag( "ores/onyx"));
 
-        this.tag(TagUtils.forgeBlockTag( "ores/tin"))
+        this.tag(TagUtils.cBlockTag( "ores/tin"))
                 .add(ModBlocks.tin_ore.get())
                 .add(ModBlocks.deepslate_tin_ore.get());
-        this.tag(TagUtils.forgeBlockTag( "ores/adamantium"))
+        this.tag(TagUtils.cBlockTag( "ores/adamantium"))
                 .add(ModBlocks.adamantium_ore.get())
         		.add(ModBlocks.deepslate_adamantium_ore.get());
-        this.tag(TagUtils.forgeBlockTag( "ores/adamantine"))
+        this.tag(TagUtils.cBlockTag( "ores/adamantine"))
 	        .add(ModBlocks.adamantium_ore.get())
 			.add(ModBlocks.deepslate_adamantium_ore.get());
-        this.tag(TagUtils.forgeBlockTag( "ores/adamantite"))
+        this.tag(TagUtils.cBlockTag( "ores/adamantite"))
 	        .add(ModBlocks.adamantium_ore.get())
 			.add(ModBlocks.deepslate_adamantium_ore.get());
-        this.tag(TagUtils.forgeBlockTag( "ores/mythril"))
+        this.tag(TagUtils.cBlockTag( "ores/mythril"))
                 .add(ModBlocks.mythril_ore.get())
                 .add(ModBlocks.deepslate_mythril_ore.get());
-        this.tag(TagUtils.forgeBlockTag( "ores/mithril"))
+        this.tag(TagUtils.cBlockTag( "ores/mithril"))
 	        .add(ModBlocks.mythril_ore.get())
 	        .add(ModBlocks.deepslate_mythril_ore.get());
-        this.tag(TagUtils.forgeBlockTag( "ores/onyx"))
+        this.tag(TagUtils.cBlockTag( "ores/onyx"))
                 .add(ModBlocks.onyx_ore.get());
         
         // register forge ore_rates tags.
