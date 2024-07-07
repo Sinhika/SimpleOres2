@@ -1,8 +1,0 @@
-{
-  "parent": "simplecorelib:block/template_bars_side",
-  "textures": {
-    "bars": "simpleores:block/mythril_bars",
-    "edge": "simpleores:block/mythril_bars",
-    "particle": "simpleores:block/mythril_bars"
-  }
-}

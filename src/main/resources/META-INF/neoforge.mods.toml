@@ -4,6 +4,7 @@ modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
 loaderVersion="${loader_version_range}" #mandatory
+license="${mod_license}"
 issueTrackerURL="https://github.com/Sinhika/SimpleOres2/issues"
 
 [[mods]]

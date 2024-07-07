@@ -1,8 +1,0 @@
-{
-  "parent": "simplecorelib:block/template_bars_side_alt",
-  "textures": {
-    "bars": "simpleores:block/adamantium_bars",
-    "edge": "simpleores:block/adamantium_bars",
-    "particle": "simpleores:block/adamantium_bars"
-  }
-}

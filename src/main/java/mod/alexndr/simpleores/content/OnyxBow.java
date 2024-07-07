@@ -11,15 +11,18 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Custom bow that does extra damage (intrinsic POWER 2 enchantment) and sets
@@ -36,42 +39,40 @@ public class OnyxBow extends BowItem
     public void releaseUsing(ItemStack stack, Level worldIn, LivingEntity entityLiving, int timeLeft)
     {
         // add the default enchantments for Onyx bow.
-        Map<Enchantment,Integer> oldEnchants = EnchantmentHelper.getEnchantments(stack);
+        ItemEnchantments oldEnchants = EnchantmentHelper.getEnchantmentsForCrafting(stack);
         stack = this.addOnyxEnchantments(oldEnchants, stack);
 
         super.releaseUsing(stack, worldIn, entityLiving, timeLeft);
 
         // remove temporary intrinsic enchantments.
-        EnchantmentHelper.setEnchantments(oldEnchants, stack);
+        EnchantmentHelper.setEnchantments(stack, oldEnchants);
     }
 
-    private ItemStack addOnyxEnchantments(Map<Enchantment,Integer> oldEnch, ItemStack stack)
+    private ItemStack addOnyxEnchantments(ItemEnchantments oldEnch, ItemStack stack)
     {
         if (stack.isEmpty()) return stack;
 
-        Map<Enchantment,Integer> enchMap = new HashMap<>(oldEnch);
+        ItemEnchantments.Mutable enchMap = new ItemEnchantments.Mutable(oldEnch);
 
         // add intrinsic POWER enchantment only if bow does not already have
         // one >= 2.
-        if (! (enchMap.containsKey(Enchantments.POWER_ARROWS) && enchMap.get(Enchantments.POWER_ARROWS) > 1) )
-        {
-            enchMap.put(Enchantments.POWER_ARROWS, 2);
-        }
-
-        if (! enchMap.containsKey(Enchantments.FLAMING_ARROWS)) enchMap.put(Enchantments.FLAMING_ARROWS, 1);
+        enchMap.upgrade(Enchantments.POWER, 2);
+        enchMap.upgrade(Enchantments.FLAME, 1);
 
         // add intrinsic enchantments, if any.
-        if (enchMap.size() > 0) {
-            EnchantmentHelper.setEnchantments(enchMap, stack);
+        ItemEnchantments tmpEnchMap = enchMap.toImmutable();
+        if (!tmpEnchMap.isEmpty()) {
+            EnchantmentHelper.setEnchantments(stack, tmpEnchMap);
         }
         return stack;
     } // end addMythrilEnchantments()
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
+    public void appendHoverText(@NotNull ItemStack stack, Item.@NotNull TooltipContext pContext,
+                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flagIn)
     {
-        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+        super.appendHoverText(stack, pContext, tooltip, flagIn);
         tooltip.add(Component.translatable("tips.damage_tooltip").withStyle(ChatFormatting.GREEN));
         tooltip.add(Component.translatable("tips.flame_tooltip").withStyle(ChatFormatting.GREEN));
     }

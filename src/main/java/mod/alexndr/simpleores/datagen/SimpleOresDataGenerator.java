@@ -53,8 +53,7 @@ public class SimpleOresDataGenerator
         
         gen.addProvider(event.includeServer(),
         	new SimpleLootTableProvider(packOutput, List.of(
-        		new LootTableProvider.SubProviderEntry(SimpleOresLootTableSubprovider::new, LootContextParamSets.BLOCK),
-        		new LootTableProvider.SubProviderEntry(SimpleOresLootInjectorProvider::new, LootContextParamSets.CHEST)),
+        		new LootTableProvider.SubProviderEntry(SimpleOresLootTableSubprovider::new, LootContextParamSets.BLOCK)),
                     lookupProvider));
 
         // client providers

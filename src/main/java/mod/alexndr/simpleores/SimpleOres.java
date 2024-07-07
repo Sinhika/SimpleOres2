@@ -7,9 +7,11 @@ import mod.alexndr.simpleores.init.ModArmorMaterials;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.neoforged.bus.EventBus;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,14 +25,9 @@ public class SimpleOres
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public SimpleOres(EventBus modEventBus, ModContainer modContainer)
+    public SimpleOres(IEventBus modEventBus, ModContainer modContainer)
     {
         LOGGER.info("Hello from Simple Ores!");
-
-        // register event listeners.
-        modEventBus.addListener(ModEventSubscriber::onRegisterItems);
-        modEventBus.addListener(ModEventSubscriber::onSendIMC);
-        modEventBus.addListener(ForgeEventSubscriber::onVillagerTrades);
 
         // Register Configs
         modContainer.registerConfig(ModConfig.Type.COMMON, SimpleOresConfig.SPEC);
@@ -40,11 +37,13 @@ public class SimpleOres
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-        ModBlocks.BLOCKS.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
         CreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
-        
+        // register event listeners.
+        modEventBus.addListener(ModEventSubscriber::onRegisterItems);
+        modEventBus.addListener(ModEventSubscriber::onSendIMC);
+        NeoForge.EVENT_BUS.addListener(ForgeEventSubscriber::onVillagerTrades);
+
     } // end SimpleOres()
 
 } // end class SimpleOres
