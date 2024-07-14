@@ -1,6 +1,7 @@
 package mod.alexndr.simpleores.datagen;
 
 import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
+import mod.alexndr.simplecorelib.api.helpers.NameUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
@@ -108,9 +109,10 @@ public class Recipes extends RecipeProvider
 	        .pattern("SSS")
 	        .pattern("SSS")
 	        .unlockedBy("has_item", has(ModItems.copper_nugget.get()))
-	        .save(pRecipeOutput, new ResourceLocation(SimpleOres.MODID, Items.COPPER_INGOT.toString() + "_from_nuggets"));
+	        .save(pRecipeOutput, new ResourceLocation(
+                    SimpleOres.MODID, NameUtils.fromItem(Items.COPPER_INGOT).getPath() + "_from_nuggets"));
 
-        setbuilder.buildSimpleStorageRecipes(pRecipeOutput, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(), 
+        setbuilder.buildSimpleStorageRecipes(pRecipeOutput, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(),
                 ModItems.tin_nugget.get(), has(ModItems.tin_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(pRecipeOutput, ModItems.raw_tin.get(), 
         		ModBlocks.raw_tin_block.get(), null, has(ModItems.raw_tin.get()));
