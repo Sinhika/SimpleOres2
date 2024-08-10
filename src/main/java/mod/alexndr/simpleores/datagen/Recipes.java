@@ -114,8 +114,8 @@ public class Recipes extends SimpleRecipeProvider
 	        .save(pRecipeOutput, new ResourceLocation(
                     SimpleOres.MODID, NameUtils.fromItem(Items.COPPER_INGOT).getPath() + "_from_nuggets"));
 
-        buildSimpleStorageRecipes(pRecipeOutput, ModItems.tin_ingot.get().asItem(), ModBlocks.tin_block.get().asItem(),
-                ModItems.tin_nugget.get().asItem());
+        buildSimpleStorageRecipes(pRecipeOutput, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(),
+                ModItems.tin_nugget.get());
         buildSimpleStorageRecipes(pRecipeOutput, ModItems.raw_tin.get(),
         		ModBlocks.raw_tin_block.get(), null);
         buildSimpleStorageRecipes(pRecipeOutput, ModItems.mythril_ingot.get(), ModBlocks.mythril_block.get(), 
