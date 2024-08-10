@@ -1,7 +1,6 @@
 package mod.alexndr.simpleores.datagen;
 
 import mod.alexndr.simplecorelib.api.datagen.SimpleRecipeProvider;
-import mod.alexndr.simplecorelib.api.helpers.NameUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
@@ -11,7 +10,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -98,21 +96,9 @@ public class Recipes extends SimpleRecipeProvider
     } // end registerArmorRecipes()
     
     
-    protected void registerStorageRecipes(RecipeOutput pRecipeOutput)
+    protected void registerStorageRecipes(@NotNull RecipeOutput pRecipeOutput)
     {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.copper_nugget.get(), 9)
-	        .requires(Items.COPPER_INGOT)
-	        .unlockedBy("has_item", has(Items.COPPER_INGOT))
-	        .save(pRecipeOutput);
-    
-	    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COPPER_INGOT)
-	        .define('S', ModItems.copper_nugget.get())
-	        .pattern("SSS")
-	        .pattern("SSS")
-	        .pattern("SSS")
-	        .unlockedBy("has_item", has(ModItems.copper_nugget.get()))
-	        .save(pRecipeOutput, new ResourceLocation(
-                    SimpleOres.MODID, NameUtils.fromItem(Items.COPPER_INGOT).getPath() + "_from_nuggets"));
+        buildSimpleStorageRecipes(pRecipeOutput, Items.COPPER_INGOT, Items.COPPER_BLOCK, ModItems.copper_nugget.get());
 
         buildSimpleStorageRecipes(pRecipeOutput, ModItems.tin_ingot.get(), ModBlocks.tin_block.get(),
                 ModItems.tin_nugget.get());
