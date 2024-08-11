@@ -2,12 +2,9 @@ package mod.alexndr.simpleores.config;
 
 import mod.alexndr.simplecorelib.api.config.SimpleConfig;
 import mod.alexndr.simpleores.SimpleOres;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-@EventBusSubscriber(modid = SimpleOres.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class SimpleOresClientConfig extends SimpleConfig
 {
     // public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
@@ -30,11 +27,10 @@ public class SimpleOresClientConfig extends SimpleConfig
 
     public static final ModConfigSpec SPEC = builder.build();
 
-    public static float mythrilBowZoom;
-    public static float onyxBowZoom;
+    public static float mythrilBowZoom = 0.2F;
+    public static float onyxBowZoom = 0.3F;
 
-    @SubscribeEvent
-    static void onLoad(final ModConfigEvent event)
+    public static void onLoad(final ModConfigEvent event)
     {
         // client stuff
         mythrilBowZoom = clientMythrilBowZoomFactor.get().floatValue();

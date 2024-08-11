@@ -58,9 +58,9 @@ public final class ModItems
     public static final DeferredItem<Item> copper_bucket = ITEMS.register("copper_bucket",
             () -> new UniversalBucketItem(
                     new UniversalBucketItem.Properties()
-                    .upperCrackingTemperature(SimpleOresConfig.serverCopperBucketMeltTemperature)
-                    .burningTemperature(SimpleOresConfig.serverCopperBucketFireTemperature)
-                    .milking(SimpleOresConfig.serverEnableCopperBucketMilking)
+                    .upperCrackingTemperature(SimpleOresConfig.serverCopperBucketMeltTemperature::get)
+                    .burningTemperature(SimpleOresConfig.serverCopperBucketFireTemperature::get)
+                    .milking(SimpleOresConfig.serverEnableCopperBucketMilking::get)
                     ));
 
 

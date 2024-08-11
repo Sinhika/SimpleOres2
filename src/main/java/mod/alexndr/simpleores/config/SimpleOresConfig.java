@@ -1,97 +1,91 @@
 package mod.alexndr.simpleores.config;
 
-import mod.alexndr.simplecorelib.SimpleCoreLib;
 import mod.alexndr.simplecorelib.api.config.SimpleConfig;
 import mod.alexndr.simpleores.SimpleOres;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-@EventBusSubscriber(modid = SimpleOres.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class SimpleOresConfig extends SimpleConfig
 {
-    private static final ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
+    private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
     private final static ModConfigSpec.BooleanValue serverAddModLootToChests;
     public static final ModConfigSpec.IntValue serverCopperBucketMeltTemperature;
     public static final ModConfigSpec.IntValue serverCopperBucketFireTemperature;
     public static final ModConfigSpec.BooleanValue serverEnableCopperBucketMilking;
 
-    public static final ModConfigSpec.IntValue serverCopperArmorDurability;
-    public static final ModConfigSpec.IntValue serverTinArmorDurability;
-    public static final ModConfigSpec.IntValue serverMythrilArmorDurability;
-    public static final ModConfigSpec.IntValue serverAdamantiumArmorDurability;
-    public static final ModConfigSpec.IntValue serverOnyxArmorDurability;
+    private static final ModConfigSpec.IntValue serverCopperArmorDurability;
+    private static final ModConfigSpec.IntValue serverTinArmorDurability;
+    private static final ModConfigSpec.IntValue serverMythrilArmorDurability;
+    private static final ModConfigSpec.IntValue serverAdamantiumArmorDurability;
+    private static final ModConfigSpec.IntValue serverOnyxArmorDurability;
 
     static {
         // general
-        builder.push("General");
-        serverAddModLootToChests = builder.comment("Add SimpleOres items to chest loot?")
+        BUILDER.push("General");
+        serverAddModLootToChests = BUILDER.comment("Add SimpleOres items to chest loot?")
                 .translation(SimpleOres.MODID + ".config.addModLootToChests")
                 .define("AddModLootToChests", true);
-        builder.pop();
-        builder.push("Buckets");
-        serverEnableCopperBucketMilking = builder.comment("false disables milking cows with copper buckets")
+        BUILDER.pop();
+        BUILDER.push("Buckets");
+        serverEnableCopperBucketMilking = BUILDER.comment("false disables milking cows with copper buckets")
                 .translation(SimpleOres.MODID + ".config.enableCopperBucketMilking")
                 .define("EnableCopperBucketMilking", true);
-        serverCopperBucketMeltTemperature = builder.comment("liquids at temperature C or higher melt copper buckets")
+        serverCopperBucketMeltTemperature = BUILDER.comment("liquids at temperature C or higher melt copper buckets")
                 .translation(SimpleOres.MODID + ".config.copperBucketMeltTemperature")
                 .defineInRange("CopperBucketMeltTemperature", 1000, -200, 5000);
-        serverCopperBucketFireTemperature = builder.comment(
+        serverCopperBucketFireTemperature = BUILDER.comment(
                         "Copper is a good heat conductor. Liquids at this temp or higher set you on fire. Leave at 9999 to disable")
                 .translation(SimpleOres.MODID + ".config.copperBucketFireTemperature")
                 .defineInRange("CopperBucketSetYouOnFireTemperature", 9999, 300, 9999);
-        builder.pop();
-        builder.push("Armor");
-        serverCopperArmorDurability = builder.comment("Base durability for copper armor")
+        BUILDER.pop();
+        BUILDER.push("Armor");
+        serverCopperArmorDurability = BUILDER.comment("Base durability for copper armor")
                 .translation(SimpleOres.MODID + ".config.copperArmorDurability")
                 .defineInRange("copperArmorDurability", 8, 1, 99);
-        serverTinArmorDurability = builder.comment("Base durability for tin armor")
+        serverTinArmorDurability = BUILDER.comment("Base durability for tin armor")
                 .translation(SimpleOres.MODID + ".config.tinArmorDurability")
                 .defineInRange("tinArmorDurability", 9, 1, 99);
-        serverMythrilArmorDurability = builder.comment("Base durability for mythril armor")
+        serverMythrilArmorDurability = BUILDER.comment("Base durability for mythril armor")
                 .translation(SimpleOres.MODID + ".config.mythrilArmorDurability")
                 .defineInRange("mythrilArmorDurability", 22, 1, 99);
-        serverAdamantiumArmorDurability = builder.comment("Base durability for adamantium armor")
+        serverAdamantiumArmorDurability = BUILDER.comment("Base durability for adamantium armor")
                 .translation(SimpleOres.MODID + ".config.adamantiumArmorDurability")
                 .defineInRange("adamantiumArmorDurability", 28, 1, 99);
-        serverOnyxArmorDurability = builder.comment("Base durability for onyx armor")
+        serverOnyxArmorDurability = BUILDER.comment("Base durability for onyx armor")
                 .translation(SimpleOres.MODID + ".config.onyxArmorDurability")
                 .defineInRange("onyxArmorDurability", 45, 1, 99);
 
-        builder.pop();
+        BUILDER.pop();
     } // end-static block
 
-    public static final ModConfigSpec SPEC = builder.build();
-    // public static SimpleOresConfig INSTANCE = new SimpleOresConfig();
+    public static final ModConfigSpec SPEC = BUILDER.build();
 
-    public static boolean addModLootToChests;
-    public static boolean enableCopperBucketMilking;
-    public static int copperBucketMeltTemperature;
-    public static int copperBucketFireTemperature;
+    public static boolean addModLootToChests = true;
+    public static boolean enableCopperBucketMilking = true;
+    public static int copperBucketMeltTemperature = 1000;
+    public static int copperBucketFireTemperature = 9999;
 
     // armor
-    public static int copperArmorDurability;
-    public static int tinArmorDurability;
-    public static int mythrilArmorDurability;
-    public static int adamantiumArmorDurability;
-    public static int onyxArmorDurability;
+    public static int copperArmorDurability = 8;
+    public static int tinArmorDurability = 9;
+    public static int mythrilArmorDurability = 22;
+    public static int adamantiumArmorDurability = 28;
+    public static int onyxArmorDurability = 45;
 
-    @SubscribeEvent
-    static void onLoad(final ModConfigEvent event)
+    public static void onLoad(final ModConfigEvent event)
     {
         // common/server stuff
-        addModLootToChests = serverAddModLootToChests.getAsBoolean();
-        enableCopperBucketMilking = serverEnableCopperBucketMilking.getAsBoolean();
-        copperBucketMeltTemperature = serverCopperBucketMeltTemperature.getAsInt();
-        copperBucketFireTemperature = serverCopperBucketFireTemperature.getAsInt();
+        addModLootToChests = serverAddModLootToChests.get();
+        enableCopperBucketMilking = serverEnableCopperBucketMilking.get();
+        copperBucketMeltTemperature = serverCopperBucketMeltTemperature.get();
+        copperBucketFireTemperature = serverCopperBucketFireTemperature.get();
 
-        copperArmorDurability = serverCopperArmorDurability.getAsInt();
-        tinArmorDurability = serverTinArmorDurability.getAsInt();
-        mythrilArmorDurability = serverMythrilArmorDurability.getAsInt();
-        adamantiumArmorDurability = serverAdamantiumArmorDurability.getAsInt();
-        onyxArmorDurability = serverOnyxArmorDurability.getAsInt();
+        copperArmorDurability = serverCopperArmorDurability.get();
+        tinArmorDurability = serverTinArmorDurability.get();
+        mythrilArmorDurability = serverMythrilArmorDurability.get();
+        adamantiumArmorDurability = serverAdamantiumArmorDurability.get();
+        onyxArmorDurability = serverOnyxArmorDurability.get();
     } // end onLoad()
 
 

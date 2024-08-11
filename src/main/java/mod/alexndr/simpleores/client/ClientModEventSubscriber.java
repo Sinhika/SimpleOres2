@@ -1,11 +1,7 @@
 package mod.alexndr.simpleores.client;
 
 import mod.alexndr.simplecorelib.api.client.ClientUtils;
-import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModItems;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 /**
@@ -13,7 +9,6 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
  *
  * @author Sinhika
  */
-@EventBusSubscriber(modid=SimpleOres.MODID, bus=EventBusSubscriber.Bus.MOD, value=Dist.CLIENT)
 public class ClientModEventSubscriber
 {
     // private static final Logger LOGGER = LogManager.getLogger(SimpleOres.MODID + " Client Mod Event Subscriber");
@@ -26,8 +21,7 @@ public class ClientModEventSubscriber
      * This method will always be called after the Registry events.
      * This means that all Blocks, Items, TileEntityTypes, etc. will all have been registered already
      */
-    @SubscribeEvent
-    public static void onFMLClientSetupEvent(final FMLClientSetupEvent event) 
+    public static void onFMLClientSetupEvent(final FMLClientSetupEvent event)
     {
         event.enqueueWork(() -> {
             ClientUtils.setupBowModelProperties(ModItems.mythril_bow.get());
