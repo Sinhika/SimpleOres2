@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:tin_nugget_from_blasting_tin_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:tin_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tin_boots"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:tin_nugget_from_blasting_tin_boots"
+    ]
+  }
+}

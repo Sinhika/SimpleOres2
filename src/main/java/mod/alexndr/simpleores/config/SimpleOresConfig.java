@@ -2,6 +2,7 @@ package mod.alexndr.simpleores.config;
 
 import mod.alexndr.simplecorelib.api.config.SimpleConfig;
 import mod.alexndr.simpleores.SimpleOres;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
@@ -73,19 +74,22 @@ public class SimpleOresConfig extends SimpleConfig
     public static int adamantiumArmorDurability = 28;
     public static int onyxArmorDurability = 45;
 
-    public static void onLoad(final ModConfigEvent event)
+    public static void onLoad(final ModConfigEvent.Loading event)
     {
-        // common/server stuff
-        addModLootToChests = serverAddModLootToChests.get();
-        enableCopperBucketMilking = serverEnableCopperBucketMilking.get();
-        copperBucketMeltTemperature = serverCopperBucketMeltTemperature.get();
-        copperBucketFireTemperature = serverCopperBucketFireTemperature.get();
+        if (event.getConfig().getType() == ModConfig.Type.STARTUP)
+        {
+            // common/server stuff
+            addModLootToChests = serverAddModLootToChests.get();
+            enableCopperBucketMilking = serverEnableCopperBucketMilking.get();
+            copperBucketMeltTemperature = serverCopperBucketMeltTemperature.get();
+            copperBucketFireTemperature = serverCopperBucketFireTemperature.get();
 
-        copperArmorDurability = serverCopperArmorDurability.get();
-        tinArmorDurability = serverTinArmorDurability.get();
-        mythrilArmorDurability = serverMythrilArmorDurability.get();
-        adamantiumArmorDurability = serverAdamantiumArmorDurability.get();
-        onyxArmorDurability = serverOnyxArmorDurability.get();
+            copperArmorDurability = serverCopperArmorDurability.get();
+            tinArmorDurability = serverTinArmorDurability.get();
+            mythrilArmorDurability = serverMythrilArmorDurability.get();
+            adamantiumArmorDurability = serverAdamantiumArmorDurability.get();
+            onyxArmorDurability = serverOnyxArmorDurability.get();
+        }
     } // end onLoad()
 
 

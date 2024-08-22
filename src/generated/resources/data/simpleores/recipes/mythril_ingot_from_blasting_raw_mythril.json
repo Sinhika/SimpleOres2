@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "mythril_ingots",
+  "ingredient": {
+    "item": "simpleores:raw_mythril"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleores:mythril_ingot"
+  }
+}

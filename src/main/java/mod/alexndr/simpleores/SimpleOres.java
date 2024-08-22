@@ -52,7 +52,8 @@ public class SimpleOres
                                         ClientForgeEventSubscriber::onFovEvent);
 
         // Register Configs
-        modContainer.registerConfig(ModConfig.Type.COMMON, SimpleOresConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.STARTUP, SimpleOresConfig.SPEC);
+//        modContainer.registerConfig(ModConfig.Type.COMMON, SimpleOresConfig.SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, SimpleOresClientConfig.SPEC);
 
     } // end SimpleOres()

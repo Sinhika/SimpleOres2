@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mythril_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:mythril_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:mythril_ingot_from_smelting_mythril_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mythril_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_ingot_from_smelting_mythril_dust"
+    ]
+  }
+}

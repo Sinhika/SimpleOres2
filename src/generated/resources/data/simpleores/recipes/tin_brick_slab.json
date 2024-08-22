@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "simpleores:tin_bricks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "SSS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "simpleores:tin_brick_slab"
+  }
+}

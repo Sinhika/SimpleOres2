@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "tag": "c:ingots/tin"
+    },
+    "T": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "ST ",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleores:tin_axe"
+  }
+}

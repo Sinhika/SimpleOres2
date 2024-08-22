@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:copper_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:copper_nugget_from_blasting_copper_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_copper_chestplate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:copper_nugget_from_blasting_copper_chestplate"
+    ]
+  }
+}

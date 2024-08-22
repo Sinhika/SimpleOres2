@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mythril_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:mythril_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:mythril_nugget_from_blasting_mythril_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mythril_hoe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_nugget_from_blasting_mythril_hoe"
+    ]
+  }
+}

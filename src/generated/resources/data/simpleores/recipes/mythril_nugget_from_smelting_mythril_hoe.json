@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.4,
+  "group": "mythril_recycling",
+  "ingredient": {
+    "item": "simpleores:mythril_hoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleores:mythril_nugget"
+  }
+}

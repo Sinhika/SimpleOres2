@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "tin_recycling",
+  "ingredient": {
+    "item": "simpleores:tin_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleores:tin_nugget"
+  }
+}

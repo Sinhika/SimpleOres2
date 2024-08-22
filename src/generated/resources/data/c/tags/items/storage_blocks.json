@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#c:storage_blocks/raw_adamantium",
+    "#c:storage_blocks/adamantium",
+    "#c:storage_blocks/adamantine",
+    "#c:storage_blocks/adamantite",
+    "#c:storage_blocks/tin",
+    "#c:storage_blocks/raw_tin",
+    "#c:storage_blocks/mythril",
+    "#c:storage_blocks/mithril",
+    "#c:storage_blocks/raw_mythril",
+    "#c:storage_blocks/onyx"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "tag": "c:ingots/adamantium"
+    },
+    "T": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleores:adamantium_sword"
+  }
+}

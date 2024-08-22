@@ -1,0 +1,7 @@
+{
+  "parent": "simplecorelib:block/template_bars_post_ends",
+  "textures": {
+    "edge": "simpleores:block/onyx_bars",
+    "particle": "simpleores:block/onyx_bars"
+  }
+}

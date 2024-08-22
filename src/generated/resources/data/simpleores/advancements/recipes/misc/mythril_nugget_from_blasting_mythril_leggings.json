@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mythril_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:mythril_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:mythril_nugget_from_blasting_mythril_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mythril_leggings"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_nugget_from_blasting_mythril_leggings"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "tag": "c:ingots/copper"
+    },
+    "T": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "SS ",
+    " T ",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleores:copper_hoe"
+  }
+}

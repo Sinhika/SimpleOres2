@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.3,
+  "group": "adamantium_recycling",
+  "ingredient": {
+    "item": "simpleores:adamantium_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleores:adamantium_nugget"
+  }
+}

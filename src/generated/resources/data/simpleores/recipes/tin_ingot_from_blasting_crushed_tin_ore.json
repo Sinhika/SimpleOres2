@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.4,
+  "group": "tin_ingots",
+  "ingredient": {
+    "item": "simpleores:crushed_tin_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleores:tin_ingot"
+  }
+}

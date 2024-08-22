@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_onyx_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:onyx_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:onyx_gem_from_smelting_onyx_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_onyx_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:onyx_gem_from_smelting_onyx_ore"
+    ]
+  }
+}

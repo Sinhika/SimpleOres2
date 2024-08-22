@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crushed_mythril_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:crushed_mythril_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:mythril_ingot_from_smelting_crushed_mythril_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crushed_mythril_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:mythril_ingot_from_smelting_crushed_mythril_ore"
+    ]
+  }
+}

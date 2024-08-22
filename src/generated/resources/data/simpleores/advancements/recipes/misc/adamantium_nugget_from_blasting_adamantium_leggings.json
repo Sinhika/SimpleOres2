@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adamantium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:adamantium_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:adamantium_nugget_from_blasting_adamantium_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_adamantium_leggings"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:adamantium_nugget_from_blasting_adamantium_leggings"
+    ]
+  }
+}

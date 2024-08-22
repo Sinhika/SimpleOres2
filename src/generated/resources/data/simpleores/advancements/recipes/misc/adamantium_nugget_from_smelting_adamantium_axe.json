@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adamantium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:adamantium_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:adamantium_nugget_from_smelting_adamantium_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_adamantium_axe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:adamantium_nugget_from_smelting_adamantium_axe"
+    ]
+  }
+}

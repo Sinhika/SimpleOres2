@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleores:copper_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleores:copper_nugget_from_smelting_copper_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_copper_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleores:copper_nugget_from_smelting_copper_pickaxe"
+    ]
+  }
+}

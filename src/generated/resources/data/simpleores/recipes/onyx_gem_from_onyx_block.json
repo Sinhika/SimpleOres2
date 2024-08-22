@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "simpleores:onyx_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "simpleores:onyx_gem"
+  }
+}

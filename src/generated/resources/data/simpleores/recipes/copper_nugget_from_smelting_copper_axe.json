@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "copper_recycling",
+  "ingredient": {
+    "item": "simpleores:copper_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleores:copper_nugget"
+  }
+}

@@ -1,13 +1,15 @@
 package mod.alexndr.simpleores;
 
 import de.cech12.bucketlib.api.BucketLibApi;
-import mod.alexndr.simplecorelib.init.ModBlocks;
+import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
-import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -30,24 +32,50 @@ public final class ModEventSubscriber
      */
     public static void onRegisterItems(RegisterEvent event)
     {
-        if (event.getRegistryKey() == Registries.ITEM)
+        // Create the new BlockItem with the block and it's properties
+        // Register the BlockItem
+        event.register(Registries.ITEM, helper ->
         {
-            // Automatically register BlockItems for all our Blocks
+            // Automatically register BlockItems for all our normal Blocks
             ModBlocks.BLOCKS.getEntries().stream()
                     .map(DeferredHolder::get)
-                    // You can do extra filtering here if you don't want some blocks to have an BlockItem automatically registered for them
-                    // .filter(block -> needsItemBlock(block))
+                    // You can do extra filtering here if you don't want some blocks to have an BlockItem
+                    // automatically registered for them
+                    .filter(block -> needsItemBlock(block))
                     // Register the BlockItem for the block
-                    .forEach(block -> {
-                        // Create the new BlockItem with the block and it's properties
-                        // Register the BlockItem
-                        event.register(Registries.ITEM,  helper -> {
-                            helper.register(BuiltInRegistries.BLOCK.getKey(block),
-                                    new BlockItem(block, new Item.Properties()));
-                        });
+                    .forEach(block ->
+                    {
+                        helper.register(BuiltInRegistries.BLOCK.getKey(block),
+                                new BlockItem(block, new Item.Properties()));
+//                        LOGGER.debug("Registered " + BuiltInRegistries.BLOCK.getKey(block));
                     });
             LOGGER.debug("Registered BlockItems");
-        }
+
+            // now register DoubleHigh blocks Items.
+            ModBlocks.BLOCKS.getEntries().stream()
+                    .map(DeferredHolder::get)
+                    // You can do extra filtering here if you don't want some blocks to have an BlockItem
+                    // automatically registered for them
+                    .filter(block -> needsDoubleHighBlock(block))
+                    // Register the BlockItem for the block
+                    .forEach(block ->
+                    {
+                        helper.register(BuiltInRegistries.BLOCK.getKey(block),
+                                new DoubleHighBlockItem(block, new Item.Properties()));
+//                        LOGGER.debug("Registered " + BuiltInRegistries.BLOCK.getKey(block));
+                    });
+            LOGGER.debug("Registered doublehighblockitems");
+        });
     } // end onRegisterItems()
 
+    // DoorItems have to be handled differently, so we filter them out.
+    static boolean needsItemBlock(Block block)
+    {
+        return (! (block instanceof DoorBlock));
+    } // end needsItemBlock()
+
+    static boolean needsDoubleHighBlock(Block block)
+    {
+        return (block instanceof DoorBlock);
+    }
 } // end class ModEventSubscriber
