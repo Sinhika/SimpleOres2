@@ -14,7 +14,6 @@ Thanks also to Paint_Ninja for doing the initial 1.15.2 port, which encourages
 me to get back to tackling all the messy issues involved in porting these
 mods up from 1.12.2
 
-**WARNING: 1.18 is a Work-in-Progress; expect frequent changes!**
 
 1.18 Ore distributions
 -----------------------
@@ -28,22 +27,19 @@ mods up from 1.12.2
     - tantalum: granitic intrusions, placer deposits  
  * Adamantium (old: size 4, count 4, height 1-20)  
  * Onyx (old: size 4, count 5, height 8-64 Nether)  
+ * Ore distribution is controlled by datapacks. Never in the config file again.
 
 TO-DO
 -----
-* update or move the SimpleOres, etc. wiki - in progress.
-* <s>Move SimpleOres Aesthetics items from Aesthetics to Simple Ores (in progress).</s>
-* <s>Add Stonecutter recipes where necessary.</s>
-* <s>add slabs for metal blocks and brick blocks.</s>
-* add textures and ore generation for onyx ore in magma block, basalt, other nether blocks? (Blackstone onyx ore is just sadistic).
-* fix copper buckets vis-a-vis fluids. When I make sense out of fluid containers.
-* added SimpleOres items to villager, trader trade menus.
-* Implement graphical configuration from the menu...when Forge re-implements it.
-* <s>add random chance for injected loot, instead of 100% guaranteed.</s>
-* <s>add dusts for all ores.</s>
-* <s>add support for Silent's Mechanisms: Crusher</s>
-* <s>add support for Silent Gear</s>
-
+ * port to 1.21.1
+ * added SimpleOres items to villager, trader trade menus.
+ * Implement graphical configuration from the menu...when Forge re-implements it.
+ * add random chance for injected loot, instead of 100% guaranteed.
+ * what are trims? Add them.
+ * Moar buckets!
+ * Make material stats fully configurable again, using STARTUP configs.
+ * add textures and ore generation for onyx ore in magma block, basalt, other nether blocks? (Blackstone onyx ore is just sadistic).
+ * update or move the SimpleOres, etc. wiki - in progress.
 
 
 License
