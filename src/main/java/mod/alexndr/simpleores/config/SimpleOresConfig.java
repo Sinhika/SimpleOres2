@@ -68,11 +68,11 @@ public class SimpleOresConfig extends SimpleConfig
     public static int copperBucketFireTemperature = 9999;
 
     // armor
-    public static int copperArmorDurability = 8;
-    public static int tinArmorDurability = 9;
-    public static int mythrilArmorDurability = 22;
-    public static int adamantiumArmorDurability = 28;
-    public static int onyxArmorDurability = 45;
+    public static int copperArmorDurability;
+    public static int tinArmorDurability;
+    public static int mythrilArmorDurability;
+    public static int adamantiumArmorDurability;
+    public static int onyxArmorDurability;
 
     public static void onLoad(final ModConfigEvent.Loading event)
     {

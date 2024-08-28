@@ -62,7 +62,7 @@ public final class ModEventSubscriber
                     {
                         helper.register(BuiltInRegistries.BLOCK.getKey(block),
                                 new DoubleHighBlockItem(block, new Item.Properties()));
-//                        LOGGER.debug("Registered " + BuiltInRegistries.BLOCK.getKey(block));
+//                      LOGGER.debug("Registered " + BuiltInRegistries.BLOCK.getKey(block));
                     });
             LOGGER.debug("Registered doublehighblockitems");
         });
