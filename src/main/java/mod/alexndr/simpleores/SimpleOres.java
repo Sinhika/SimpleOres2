@@ -4,10 +4,7 @@ import mod.alexndr.simpleores.client.ClientForgeEventSubscriber;
 import mod.alexndr.simpleores.client.ClientModEventSubscriber;
 import mod.alexndr.simpleores.config.SimpleOresClientConfig;
 import mod.alexndr.simpleores.config.SimpleOresConfig;
-import mod.alexndr.simpleores.init.CreativeTabs;
-import mod.alexndr.simpleores.init.ModArmorMaterials;
-import mod.alexndr.simpleores.init.ModBlocks;
-import mod.alexndr.simpleores.init.ModItems;
+import mod.alexndr.simpleores.init.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -37,6 +34,7 @@ public class SimpleOres
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         CreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        ModCodecs.GLM.register(modEventBus);
 
         // register event listeners.
         modEventBus.addListener(ModEventSubscriber::onRegisterItems);
@@ -52,7 +50,6 @@ public class SimpleOres
                                         ClientForgeEventSubscriber::onFovEvent);
 
         // Register Configs
-//        modContainer.registerConfig(ModConfig.Type.STARTUP, SimpleOresConfig.SPEC);
         modContainer.registerConfig(ModConfig.Type.STARTUP, SimpleOresConfig.SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, SimpleOresClientConfig.SPEC);
 

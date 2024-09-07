@@ -37,7 +37,7 @@ public class ModItemTags extends MiningItemTags
     	registerRawMetalTags();
     	registerGemTags();
         registerDustTags();
-        registerOreChunkTags();
+    //    registerOreChunkTags();
     	registerMisc();
     	registerBlockItemTags();
     	registerDoorsSlabsAndStairs();

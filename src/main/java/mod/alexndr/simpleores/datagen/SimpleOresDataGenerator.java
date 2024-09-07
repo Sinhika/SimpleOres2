@@ -48,11 +48,16 @@ public class SimpleOresDataGenerator
         gen.addProvider(event.includeServer(), blockTags);
         gen.addProvider(event.includeServer(),
                 new ModItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), event.getExistingFileHelper()));
-
         gen.addProvider(event.includeServer(),
-        	new SimpleLootTableProvider(packOutput, List.of(
-        		new LootTableProvider.SubProviderEntry(SimpleOresLootTableSubprovider::new, LootContextParamSets.BLOCK)),
+        	new SimpleLootTableProvider(packOutput,
+                    List.of(
+        		        new LootTableProvider.SubProviderEntry(SimpleOresLootTableSubprovider::new,
+                                                                LootContextParamSets.BLOCK),
+                        new LootTableProvider.SubProviderEntry(SimpleOresInjector::new,
+                                                                LootContextParamSets.CHEST)
+                    ),
                     lookupProvider));
+        gen.addProvider(event.includeServer(), new SimpleOresLootModifierProvider(packOutput, lookupProvider));
 
         // client providers
         gen.addProvider(event.includeClient(), new SimpleOresBlockStateProvider(packOutput, event.getExistingFileHelper()));

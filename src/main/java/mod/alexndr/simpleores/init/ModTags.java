@@ -1,9 +1,6 @@
 package mod.alexndr.simpleores.init;
 
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
-import mod.alexndr.simpleores.SimpleOres;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -27,9 +24,9 @@ public class ModTags
         public static final TagKey<Item> DUSTS_MYTHRIL = TagUtils.cTag("dusts/mythril");
         public static final TagKey<Item> DUSTS_ADAMANTIUM = TagUtils.cTag("dusts/adamantium");
         
-        public static final TagKey<Item> CHUNKS_TIN = TagUtils.silentsTag("chunks/tin");
-        public static final TagKey<Item> CHUNKS_MYTHRIL = TagUtils.silentsTag("chunks/mythril");
-        public static final TagKey<Item> CHUNKS_ADAMANTIUM = TagUtils.silentsTag("chunks/adamantium");
+//        public static final TagKey<Item> CHUNKS_TIN = TagUtils.silentsTag("chunks/tin");
+//        public static final TagKey<Item> CHUNKS_MYTHRIL = TagUtils.silentsTag("chunks/mythril");
+//        public static final TagKey<Item> CHUNKS_ADAMANTIUM = TagUtils.silentsTag("chunks/adamantium");
      } // end subclass Items
     
     public static class Blocks 
