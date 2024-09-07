@@ -1,0 +1,10 @@
+{
+  "type": "simpleores:chest_loot",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/spawn_bonus_chest"
+    }
+  ],
+  "lootTable": "simpleores:chest/spawn_bonus_chest"
+}

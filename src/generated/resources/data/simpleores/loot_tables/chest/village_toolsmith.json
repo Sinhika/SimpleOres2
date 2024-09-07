@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.5,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:tin_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_bucket"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "simpleores:tin_ingot",
+          "weight": 3
+        }
+      ],
+      "name": "village_toolsmith",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "random_sequence": "simpleores:chest/village_toolsmith"
+}

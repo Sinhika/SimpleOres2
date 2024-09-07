@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.75,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_axe",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_bucket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:copper_shears"
+        }
+      ],
+      "name": "buried_treasure",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "random_sequence": "simpleores:chest/spawn_bonus_chest"
+}

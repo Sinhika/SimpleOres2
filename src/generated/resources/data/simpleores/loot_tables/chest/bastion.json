@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "chance": 0.25,
+          "condition": "minecraft:random_chance"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_bow"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpleores:onyx_shears"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "simpleores:onyx_gem",
+          "weight": 3
+        }
+      ],
+      "name": "bastion",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+    }
+  ],
+  "random_sequence": "simpleores:chest/bastion"
+}
