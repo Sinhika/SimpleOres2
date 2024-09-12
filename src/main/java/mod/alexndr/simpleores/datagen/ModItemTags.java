@@ -113,7 +113,7 @@ public class ModItemTags extends MiningItemTags
     		.add(ModBlocks.mythril_brick_stairs.get().asItem())
     		.add(ModBlocks.onyx_brick_stairs.get().asItem());
     	
-    	this.tag(ItemTags.STAIRS)
+    	this.tag(ItemTags.SLABS)
     		.add(ModBlocks.adamantium_brick_slab.get().asItem())
     		.add(ModBlocks.tin_brick_slab.get().asItem())
     		.add(ModBlocks.mythril_brick_slab.get().asItem())

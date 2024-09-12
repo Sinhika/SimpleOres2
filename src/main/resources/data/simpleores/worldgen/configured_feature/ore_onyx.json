@@ -10,7 +10,7 @@
 			},
 			"target" : {
 				"predicate_type" : "minecraft:tag_match",
-				"tag" : "minecraft:nether_carver_replaceables"
+				"tag" : "minecraft:base_stone_nether"
 			}
 		}
 		]

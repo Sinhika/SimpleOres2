@@ -3,6 +3,7 @@ package mod.alexndr.simpleores.init;
 import mod.alexndr.simplecorelib.api.content.MultifunctionPressurePlateBlock;
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -30,28 +31,28 @@ public final class ModBlocks
 
     // Ore Blocks
     public static final DeferredBlock<DropExperienceBlock> tin_ore = BLOCKS.register("tin_ore",
-            () -> new DropExperienceBlock(ConstantInt.of(1), BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+            () -> new DropExperienceBlock(UniformInt.of(1,3), BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 3.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<DropExperienceBlock> deepslate_tin_ore = BLOCKS.register("deepslate_tin_ore",
-            () -> new DropExperienceBlock(ConstantInt.of(1),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+            () -> new DropExperienceBlock(UniformInt.of(1,3),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 3.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final DeferredBlock<DropExperienceBlock> mythril_ore = BLOCKS.register("mythril_ore",
-            () -> new DropExperienceBlock(ConstantInt.of(1),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+            () -> new DropExperienceBlock(ConstantInt.of(0),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 4.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
     public static final DeferredBlock<DropExperienceBlock> deepslate_mythril_ore = BLOCKS.register("deepslate_mythril_ore",
-            () -> new DropExperienceBlock(ConstantInt.of(1),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+            () -> new DropExperienceBlock(ConstantInt.of(0),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 4.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final DeferredBlock<DropExperienceBlock> adamantium_ore = BLOCKS.register("adamantium_ore",
-            () -> new DropExperienceBlock(ConstantInt.of(1),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+            () -> new DropExperienceBlock(ConstantInt.of(0),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 5.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
     public static final DeferredBlock<DropExperienceBlock> deepslate_adamantium_ore = BLOCKS.register("deepslate_adamantium_ore",
-            () -> new DropExperienceBlock(ConstantInt.of(1),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+            () -> new DropExperienceBlock(ConstantInt.of(0),BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 5.0F, 3.0F).sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()));
     public static final DeferredBlock<DropExperienceBlock> onyx_ore = BLOCKS.register("onyx_ore",
