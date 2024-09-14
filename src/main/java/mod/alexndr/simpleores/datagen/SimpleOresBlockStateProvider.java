@@ -5,6 +5,7 @@ import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -23,6 +24,20 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
         pressurePlateStatesAndModels();
         doorStatesAndModels();
         barStatesAndModels();
+
+        // block models
+        ModelFile basaltOnyxModel = this.models().cubeColumn("basalt_onyx_ore",
+                new ResourceLocation(SimpleOres.MODID, "block/onyx_ore_basalt_side"),
+                mcLoc("block/basalt_top"));
+
+        // item models
+        this.itemModels().cubeColumn("basalt_onyx_ore",
+                new ResourceLocation(SimpleOres.MODID, "block/onyx_ore_basalt_side"),
+                mcLoc("block/basalt_top"));
+
+        // blockstates
+        this.simpleBlock(ModBlocks.basalt_onyx_ore.get(), new ConfiguredModel(basaltOnyxModel));
+
     } // end-registerStatesAndModels()
 
     /**

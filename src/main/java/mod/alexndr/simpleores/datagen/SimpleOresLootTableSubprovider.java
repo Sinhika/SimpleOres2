@@ -55,7 +55,8 @@ public class SimpleOresLootTableSubprovider extends SimpleBlockLootSubProvider
         dropMultiItemsWithFortune(ModBlocks.deepslate_adamantium_ore.get(), ModItems.raw_adamantium.get(), 1, 1);
         
         dropMultiItemsWithFortune(ModBlocks.onyx_ore.get(), ModItems.onyx_gem.get(), 1, 1);
-        
+        dropMultiItemsWithFortune(ModBlocks.basalt_onyx_ore.get(), ModItems.onyx_gem.get(), 1, 1);
+
         // pressure plates
         dropSelf(ModBlocks.copper_pressure_plate.get());
         dropSelf(ModBlocks.tin_pressure_plate.get());

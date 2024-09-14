@@ -103,7 +103,8 @@ public class ModBlockTags extends MiningBlockTags
      					ModBlocks.mythril_bars.get(), ModBlocks.mythril_brick_stairs.get(), ModBlocks.mythril_bricks.get(), 
      					ModBlocks.mythril_door.get()), // 2 - iron
      			
-     			List.of(ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), ModBlocks.onyx_bars.get(), ModBlocks.onyx_brick_stairs.get(), 
+     			List.of(ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), ModBlocks.onyx_bars.get(),
+                        ModBlocks.basalt_onyx_ore.get(), ModBlocks.onyx_brick_stairs.get(),
      					ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get(), ModBlocks.onyx_brick_slab.get()), // 3 - diamond
      			
      			List.of()); // 4 - netherite
@@ -178,13 +179,14 @@ public class ModBlockTags extends MiningBlockTags
 	        .add(ModBlocks.mythril_ore.get())
 	        .add(ModBlocks.deepslate_mythril_ore.get());
         this.tag(TagUtils.cBlockTag( "ores/onyx"))
+                .add(ModBlocks.basalt_onyx_ore.get())
                 .add(ModBlocks.onyx_ore.get());
         
         // register forge ore_rates tags.
         this.registerOreRateTags( List.of(), // sparse 
         		List.of(ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
         				ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
-        				ModBlocks.onyx_ore.get()), // singular 
+        				ModBlocks.onyx_ore.get(), ModBlocks.basalt_onyx_ore.get()), // singular
         		List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get())); // dense
         
         // register forge:ores_in_ground tags

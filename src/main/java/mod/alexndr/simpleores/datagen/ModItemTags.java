@@ -80,13 +80,14 @@ public class ModItemTags extends MiningItemTags
 	        .add(ModBlocks.mythril_ore.get().asItem())
 	        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
 		this.tag(TagUtils.cTag( "ores/onyx"))
-		        .add(ModBlocks.onyx_ore.get().asItem());
+				.add(ModBlocks.basalt_onyx_ore.asItem())
+		        .add(ModBlocks.onyx_ore.asItem());
 		
         // register forge ore_rates tags.
         this.registerOreRateTags( List.of(), // sparse 
         		List.of(ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
         				ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
-        				ModBlocks.onyx_ore.get()), // singular 
+        				ModBlocks.onyx_ore.get(), ModBlocks.basalt_onyx_ore.get()), // singular
         		List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get())); // dense
         
         // register forge:ores_in_ground tags

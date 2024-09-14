@@ -4,6 +4,7 @@
     "simpleores:deepslate_adamantium_ore",
     "simpleores:mythril_ore",
     "simpleores:deepslate_mythril_ore",
-    "simpleores:onyx_ore"
+    "simpleores:onyx_ore",
+    "simpleores:basalt_onyx_ore"
   ]
 }
