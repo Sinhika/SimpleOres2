@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/blackstone_top",
+    "side": "simpleores:block/onyx_ore_blackstone_side"
+  }
+}

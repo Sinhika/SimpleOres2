@@ -30,13 +30,22 @@ public class SimpleOresBlockStateProvider extends SimpleBlockStateProvider
                 new ResourceLocation(SimpleOres.MODID, "block/onyx_ore_basalt_side"),
                 mcLoc("block/basalt_top"));
 
+        ModelFile blackstoneOnyxModel = this.models().cubeColumn("blackstone_onyx_ore",
+                new ResourceLocation(SimpleOres.MODID, "block/onyx_ore_blackstone_side"),
+                mcLoc("block/blackstone_top"));
+
         // item models
         this.itemModels().cubeColumn("basalt_onyx_ore",
                 new ResourceLocation(SimpleOres.MODID, "block/onyx_ore_basalt_side"),
                 mcLoc("block/basalt_top"));
 
+        this.itemModels().cubeColumn("blackstone_onyx_ore",
+                new ResourceLocation(SimpleOres.MODID, "block/onyx_ore_blackstone_side"),
+                mcLoc("block/blackstone_top"));
+
         // blockstates
         this.simpleBlock(ModBlocks.basalt_onyx_ore.get(), new ConfiguredModel(basaltOnyxModel));
+        this.simpleBlock(ModBlocks.blackstone_onyx_ore.get(), new ConfiguredModel(blackstoneOnyxModel));
 
     } // end-registerStatesAndModels()
 

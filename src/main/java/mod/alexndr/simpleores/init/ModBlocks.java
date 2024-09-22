@@ -63,6 +63,10 @@ public final class ModBlocks
             () -> new DropExperienceBlock(ConstantInt.of(1), BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
                     .strength( 7.0F, 3.0F)
                     .requiresCorrectToolForDrops()));
+    public static final DeferredBlock<DropExperienceBlock> blackstone_onyx_ore = BLOCKS.register("blackstone_onyx_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(1), BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+                    .strength( 7.0F, 3.0F)
+                    .requiresCorrectToolForDrops()));
 
     // Raw_metal blocks
     public static final DeferredBlock<Block> raw_tin_block = BLOCKS.register("raw_tin_block",
