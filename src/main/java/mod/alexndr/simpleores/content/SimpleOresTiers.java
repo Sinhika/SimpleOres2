@@ -1,14 +1,11 @@
 package mod.alexndr.simpleores.content;
 
-import mod.alexndr.simpleores.SimpleOres;
+import mod.alexndr.simpleores.config.SimpleOresConfig;
 import mod.alexndr.simpleores.init.ModItems;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.SimpleTier;
 
 /**
@@ -31,26 +28,36 @@ public final class SimpleOresTiers
 	
 	public static final Tier COPPER = new SimpleTier(
 			BlockTags.INCORRECT_FOR_STONE_TOOL,
-			185, 4.0f, 1.0f, 8, ()->Ingredient.of(Items.COPPER_INGOT)
+			SimpleOresConfig.copperToolRecord.uses(), SimpleOresConfig.copperToolRecord.speedBonus(),
+			SimpleOresConfig.copperToolRecord.attackDamageBonus(), SimpleOresConfig.copperToolRecord.enchantability(),
+			()->Ingredient.of(Items.COPPER_INGOT)
 	);
 
 	public static final Tier TIN = new SimpleTier(
 			BlockTags.INCORRECT_FOR_STONE_TOOL,
-			220, 3.5F, 1.0F, 8, ()->Ingredient.of( ModItems.tin_ingot.get())
+			SimpleOresConfig.tinToolRecord.uses(), SimpleOresConfig.tinToolRecord.speedBonus(),
+			SimpleOresConfig.tinToolRecord.attackDamageBonus(), SimpleOresConfig.tinToolRecord.enchantability(),
+			()->Ingredient.of( ModItems.tin_ingot.get())
 	);
 
 	public static final Tier MYTHRIL = new SimpleTier(
 			BlockTags.INCORRECT_FOR_IRON_TOOL,
-			800, 8.0F, 3.0F, 12,  ()->Ingredient.of( ModItems.mythril_ingot.get())
+			SimpleOresConfig.mythrilToolRecord.uses(), SimpleOresConfig.mythrilToolRecord.speedBonus(),
+			SimpleOresConfig.mythrilToolRecord.attackDamageBonus(), SimpleOresConfig.mythrilToolRecord.enchantability(),
+			()->Ingredient.of( ModItems.mythril_ingot.get())
 	);
 
 	public static final Tier ADAMANTIUM = new SimpleTier(
 			BlockTags.INCORRECT_FOR_IRON_TOOL,
-			1150, 14.0F, 3.0F, 3, ()->Ingredient.of( ModItems.adamantium_ingot.get())
+			SimpleOresConfig.adamantiumToolRecord.uses(), SimpleOresConfig.adamantiumToolRecord.speedBonus(),
+			SimpleOresConfig.adamantiumToolRecord.attackDamageBonus(), SimpleOresConfig.adamantiumToolRecord.enchantability(),
+			()->Ingredient.of( ModItems.adamantium_ingot.get())
 	);
 
 	public static final Tier ONYX = new SimpleTier(
-			BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3280, 10.0F, 5.0F, 15,
+			BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+			SimpleOresConfig.onyxToolRecord.uses(), SimpleOresConfig.onyxToolRecord.speedBonus(),
+			SimpleOresConfig.onyxToolRecord.attackDamageBonus(), SimpleOresConfig.onyxToolRecord.enchantability(),
 			()->Ingredient.of( ModItems.onyx_gem.get())
 	);
 

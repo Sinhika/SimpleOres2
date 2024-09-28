@@ -232,7 +232,7 @@ public class SimpleOresConfig extends SimpleConfig
     public static ArmorProperties copperArmorRecord;
     public static ArmorProperties tinArmorRecord;
     public static ArmorProperties mythrilArmorRecord;
-    public static ArmorProperties admantiumArmorRecord;
+    public static ArmorProperties adamantiumArmorRecord;
     public static ArmorProperties onyxArmorRecord;
 
     public static ToolProperties copperToolRecord;
@@ -262,7 +262,7 @@ public class SimpleOresConfig extends SimpleConfig
             mythrilArmorRecord = new ArmorProperties(serverMythrilArmorDurability.get(), serverMythrilBaseDefense.get(),
                     serverMythrilEnchantability.get(), (float) serverMythrilToughness.getAsDouble(),
                     (float) serverMythrilKnockback.getAsDouble());
-            admantiumArmorRecord = new ArmorProperties(serverAdamantiumArmorDurability.get(), serverAdamantiumBaseDefense.get(),
+            adamantiumArmorRecord = new ArmorProperties(serverAdamantiumArmorDurability.get(), serverAdamantiumBaseDefense.get(),
                     serverAdamantiumEnchantability.get(), (float) serverAdamantiumToughness.getAsDouble(),
                     (float) serverAdamantiumKnockback.getAsDouble());
             onyxArmorRecord = new ArmorProperties(serverOnyxArmorDurability.get(), serverOnyxBaseDefense.get(),

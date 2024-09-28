@@ -232,90 +232,90 @@ public final class ModItems
     public static final DeferredItem<ArmorItem> copper_helmet = ITEMS.register("copper_helmet",
             () -> new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(
-                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.copperArmorDurability))));
+                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.copperArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> copper_leggings = ITEMS.register("copper_leggings",
             () -> new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.copperArmorDurability))));
+                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.copperArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> copper_chestplate = ITEMS.register("copper_chestplate",
             () -> new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(
-                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.copperArmorDurability))));
+                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.copperArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> copper_boots = ITEMS.register("copper_boots",
             () -> new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.copperArmorDurability))));
+                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.copperArmorRecord.durabilityFactor()))));
 
     // tin
     public static final DeferredItem<ArmorItem> tin_helmet = ITEMS.register("tin_helmet",
             () -> new ArmorItem(ModArmorMaterials.TIN, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(
-                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.tinArmorDurability))));
+                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.tinArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> tin_leggings = ITEMS.register("tin_leggings",
             () -> new ArmorItem(ModArmorMaterials.TIN, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.tinArmorDurability))));
+                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.tinArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> tin_chestplate = ITEMS.register("tin_chestplate",
             () -> new ArmorItem(ModArmorMaterials.TIN, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(
-                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.tinArmorDurability))));
+                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.tinArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> tin_boots = ITEMS.register("tin_boots",
             () -> new ArmorItem(ModArmorMaterials.TIN, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.tinArmorDurability))));
+                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.tinArmorRecord.durabilityFactor()))));
 
     // mythril
     public static final DeferredItem<ArmorItem> mythril_helmet = ITEMS.register("mythril_helmet",
             () -> new ArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(
-                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.mythrilArmorDurability))));
+                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.mythrilArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> mythril_leggings = ITEMS.register("mythril_leggings",
             () -> new ArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.mythrilArmorDurability))));
+                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.mythrilArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> mythril_chestplate = ITEMS.register("mythril_chestplate",
             () -> new ArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(
-                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.mythrilArmorDurability))));
+                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.mythrilArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> mythril_boots = ITEMS.register("mythril_boots",
             () -> new ArmorItem(ModArmorMaterials.MYTHRIL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.mythrilArmorDurability))));
+                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.mythrilArmorRecord.durabilityFactor()))));
 
     // adamantium
     public static final DeferredItem<ArmorItem> adamantium_helmet = ITEMS.register("adamantium_helmet",
             () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(
-                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.adamantiumArmorDurability))));
+                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.adamantiumArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> adamantium_leggings = ITEMS.register("adamantium_leggings",
             () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.adamantiumArmorDurability))));
+                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.adamantiumArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> adamantium_chestplate = ITEMS.register("adamantium_chestplate",
             () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(
-                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.adamantiumArmorDurability))));
+                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.adamantiumArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> adamantium_boots = ITEMS.register("adamantium_boots",
             () -> new ArmorItem(ModArmorMaterials.ADAMANTIUM, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.adamantiumArmorDurability))));
+                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.adamantiumArmorRecord.durabilityFactor()))));
 
     // onyx
     public static final DeferredItem<ArmorItem> onyx_helmet = ITEMS.register("onyx_helmet",
             () -> new ArmorItem(ModArmorMaterials.ONYX, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(
-                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.onyxArmorDurability))));
+                            ArmorItem.Type.HELMET.getDurability(SimpleOresConfig.onyxArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> onyx_leggings = ITEMS.register("onyx_leggings",
             () -> new ArmorItem(ModArmorMaterials.ONYX, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.onyxArmorDurability))));
+                            ArmorItem.Type.LEGGINGS.getDurability(SimpleOresConfig.onyxArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> onyx_chestplate = ITEMS.register("onyx_chestplate",
             () -> new ArmorItem(ModArmorMaterials.ONYX, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(
-                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.onyxArmorDurability))));
+                            ArmorItem.Type.CHESTPLATE.getDurability(SimpleOresConfig.onyxArmorRecord.durabilityFactor()))));
     public static final DeferredItem<ArmorItem> onyx_boots = ITEMS.register("onyx_boots",
             () -> new ArmorItem(ModArmorMaterials.ONYX, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(
-                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.onyxArmorDurability))));
+                            ArmorItem.Type.BOOTS.getDurability(SimpleOresConfig.onyxArmorRecord.durabilityFactor()))));
     
 } // end class
