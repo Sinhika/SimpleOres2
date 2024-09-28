@@ -4,6 +4,7 @@ import mod.alexndr.simplecorelib.api.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
+import mod.alexndr.simpleores.init.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
@@ -104,7 +105,7 @@ public class ModBlockTags extends MiningBlockTags
      					ModBlocks.mythril_door.get()), // 2 - iron
      			
      			List.of(ModBlocks.onyx_block.get(), ModBlocks.onyx_ore.get(), ModBlocks.onyx_bars.get(),
-                        ModBlocks.basalt_onyx_ore.get(), ModBlocks.onyx_brick_stairs.get(),
+                        ModBlocks.basalt_onyx_ore.get(), ModBlocks.blackstone_onyx_ore.get(),ModBlocks.onyx_brick_stairs.get(),
      					ModBlocks.onyx_bricks.get(), ModBlocks.onyx_door.get(), ModBlocks.onyx_brick_slab.get()), // 3 - diamond
      			
      			List.of()); // 4 - netherite
@@ -152,33 +153,32 @@ public class ModBlockTags extends MiningBlockTags
     {
     	// register "forge:ores" tags
         this.tag(Tags.Blocks.ORES)
-                .addTag(TagUtils.cBlockTag( "ores/tin"))
+                .addTag(ModTags.Blocks.ORES_TIN)
                 .addTag(TagUtils.cBlockTag( "ores/adamantine"))
                 .addTag(TagUtils.cBlockTag( "ores/adamantite"))
-                .addTag(TagUtils.cBlockTag( "ores/adamantium"))
+                .addTag(ModTags.Blocks.ORES_ADAMANTIUM)
                 .addTag(TagUtils.cBlockTag( "ores/mithril"))
-                .addTag(TagUtils.cBlockTag( "ores/mythril"))
-                .addTag(TagUtils.cBlockTag( "ores/onyx"));
+                .addTag(ModTags.Blocks.ORES_MYTHRIL)
+                .addTag(ModTags.Blocks.ORES_ONYX);
 
-        this.tag(TagUtils.cBlockTag( "ores/tin"))
+        this.tag(ModTags.Blocks.ORES_TIN)
                 .add(ModBlocks.tin_ore.get())
                 .add(ModBlocks.deepslate_tin_ore.get());
-        this.tag(TagUtils.cBlockTag( "ores/adamantium"))
+        this.tag(ModTags.Blocks.ORES_ADAMANTIUM)
                 .add(ModBlocks.adamantium_ore.get())
         		.add(ModBlocks.deepslate_adamantium_ore.get());
         this.tag(TagUtils.cBlockTag( "ores/adamantine"))
-	        .add(ModBlocks.adamantium_ore.get())
-			.add(ModBlocks.deepslate_adamantium_ore.get());
+                .addTag(ModTags.Blocks.ORES_ADAMANTIUM);
         this.tag(TagUtils.cBlockTag( "ores/adamantite"))
-	        .add(ModBlocks.adamantium_ore.get())
-			.add(ModBlocks.deepslate_adamantium_ore.get());
-        this.tag(TagUtils.cBlockTag( "ores/mythril"))
+                .addTag(ModTags.Blocks.ORES_ADAMANTIUM);
+        this.tag(ModTags.Blocks.ORES_MYTHRIL)
                 .add(ModBlocks.mythril_ore.get())
                 .add(ModBlocks.deepslate_mythril_ore.get());
         this.tag(TagUtils.cBlockTag( "ores/mithril"))
-	        .add(ModBlocks.mythril_ore.get())
-	        .add(ModBlocks.deepslate_mythril_ore.get());
-        this.tag(TagUtils.cBlockTag( "ores/onyx"))
+                .addTag(ModTags.Blocks.ORES_MYTHRIL);
+
+        this.tag(ModTags.Blocks.ORES_ONYX)
+                .add(ModBlocks.blackstone_onyx_ore.get())
                 .add(ModBlocks.basalt_onyx_ore.get())
                 .add(ModBlocks.onyx_ore.get());
         
@@ -186,7 +186,8 @@ public class ModBlockTags extends MiningBlockTags
         this.registerOreRateTags( List.of(), // sparse 
         		List.of(ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
         				ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
-        				ModBlocks.onyx_ore.get(), ModBlocks.basalt_onyx_ore.get()), // singular
+        				ModBlocks.onyx_ore.get(), ModBlocks.basalt_onyx_ore.get(),
+                        ModBlocks.blackstone_onyx_ore.get()), // singular
         		List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get())); // dense
         
         // register forge:ores_in_ground tags

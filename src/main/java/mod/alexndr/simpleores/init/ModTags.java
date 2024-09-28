@@ -19,7 +19,8 @@ public class ModTags
         public static final TagKey<Item> ORES_TIN = TagUtils.cTag("ores/tin");
         public static final TagKey<Item> ORES_MYTHRIL = TagUtils.cTag("ores/mythril");
         public static final TagKey<Item> ORES_ADAMANTIUM = TagUtils.cTag("ores/adamantium");
-        
+        public static final TagKey<Item> ORES_ONYX = TagUtils.cTag("ores/onyx");
+
         public static final TagKey<Item> DUSTS_TIN = TagUtils.cTag("dusts/tin");
         public static final TagKey<Item> DUSTS_MYTHRIL = TagUtils.cTag("dusts/mythril");
         public static final TagKey<Item> DUSTS_ADAMANTIUM = TagUtils.cTag("dusts/adamantium");
@@ -34,6 +35,7 @@ public class ModTags
         public static final TagKey<Block> ORES_TIN = TagUtils.cBlockTag("ores/tin");
         public static final TagKey<Block> ORES_MYTHRIL = TagUtils.cBlockTag("ores/mythril");
         public static final TagKey<Block> ORES_ADAMANTIUM = TagUtils.cBlockTag("ores/adamantium");
+        public static final TagKey<Block> ORES_ONYX = TagUtils.cBlockTag("ores/onyx");
 
     } // end subclass Blocks
     

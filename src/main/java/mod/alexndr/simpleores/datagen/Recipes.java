@@ -155,9 +155,10 @@ public class Recipes extends SimpleRecipeProvider
                 List.of(ModItems.raw_tin.get(), ModBlocks.tin_ore.get().asItem(),
                         ModBlocks.deepslate_tin_ore.get().asItem()),
                 ModItems.tin_ingot.get(), 0.4F, 200, "tin_ingots");
-        buildOre2IngotRecipes(pRecipeOutput, List.of(ModBlocks.onyx_ore.get().asItem()),
+        buildOre2IngotRecipes(pRecipeOutput, List.of(ModBlocks.onyx_ore.get().asItem(),
+                        ModBlocks.basalt_onyx_ore.asItem(), ModBlocks.blackstone_onyx_ore.asItem()),
                 ModItems.onyx_gem.get(), 1.0F, 200, "onyx_gems");
-        
+
         buildVanillaRecyclingRecipes(pRecipeOutput,
                 List.of(ModItems.adamantium_axe.get(), ModItems.adamantium_boots.get(),
                         ModItems.adamantium_chestplate.get(),

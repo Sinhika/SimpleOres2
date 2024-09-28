@@ -1,0 +1,9 @@
+{
+	"parent": "bucketlib:item/universal_bucket",
+	"textures": {
+		"base": "simpleores:item/copper_bucket",
+		"lowerBase": "simpleores:item/copper_bucket_lower",
+		"crackedBase" : "simpleores:item/copper_bucket_melting_base",
+		"crackedLowerBase" : "simpleores:item/copper_bucket_melting_lower"
+	}
+}

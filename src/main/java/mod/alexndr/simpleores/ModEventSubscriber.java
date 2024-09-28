@@ -23,6 +23,7 @@ public final class ModEventSubscriber
     public static void onSendIMC(RegisterCapabilitiesEvent evt)
     {
         BucketLibApi.registerBucket(evt, ModItems.copper_bucket.getId());
+        BucketLibApi.registerBucket(evt, ModItems.test_bucket.getId());
     } // end onSendIMC
     
     

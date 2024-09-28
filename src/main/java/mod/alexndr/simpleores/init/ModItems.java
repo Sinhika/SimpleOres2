@@ -63,6 +63,9 @@ public final class ModItems
                     .milking(SimpleOresConfig.serverEnableCopperBucketMilking::get)
                     ));
 
+    // texture test bucket has no special properties
+    public static final DeferredItem<Item> test_bucket = ITEMS.register("test_bucket",
+            () -> new UniversalBucketItem(new UniversalBucketItem.Properties()));
 
     // TOOLS & WEAPONS
     // bows

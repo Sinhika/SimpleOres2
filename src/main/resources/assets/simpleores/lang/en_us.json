@@ -18,6 +18,7 @@
     "block.simpleores.raw_adamantium_block" : "Block of Raw Adamantium",
     "block.simpleores.onyx_ore": "Onyx Ore",
     "block.simpleores.basalt_onyx_ore": "Basalt Onyx Ore",
+    "block.simpleores.blackstone_onyx_ore" : "Blackstone Onyx Ore",
     "block.simpleores.onyx_block": "Block of Onyx",
 
     "block.simpleores.copper_bricks": "Copper Bricks",
@@ -79,6 +80,9 @@
     "item.simpleores.copper_bucket": "Copper Bucket",
     "item.simpleores.copper_bucket.entity" : "Copper Bucket of %s",
     "item.simpleores.copper_bucket.filled" : "Copper %s Bucket",
+    "item.simpleores.test_bucket": "Texture Test Bucket",
+    "item.simpleores.test_bucket.entity" : "Texture Test Bucket of %s",
+    "item.simpleores.test_bucket.filled" : "Texture Test %s Bucket",
     "item.simpleores.mythril_rod": "Mythril Rod",
     "item.simpleores.onyx_rod": "Onyx Rod",
 

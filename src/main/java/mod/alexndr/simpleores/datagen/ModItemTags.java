@@ -8,6 +8,7 @@ import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import mod.alexndr.simpleores.SimpleOres;
 import mod.alexndr.simpleores.init.ModBlocks;
 import mod.alexndr.simpleores.init.ModItems;
+import mod.alexndr.simpleores.init.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.ItemTags;
@@ -61,25 +62,23 @@ public class ModItemTags extends MiningItemTags
 	        .addTag(TagUtils.cTag( "ores/mythril"))
 	        .addTag(TagUtils.cTag( "ores/onyx"));
 	
-		this.tag(TagUtils.cTag( "ores/tin"))
+		this.tag(ModTags.Items.ORES_TIN)
 		        .add(ModBlocks.tin_ore.get().asItem())
 		        .add(ModBlocks.deepslate_tin_ore.get().asItem());
-		this.tag(TagUtils.cTag( "ores/adamantium"))
+		this.tag(ModTags.Items.ORES_ADAMANTIUM)
 		        .add(ModBlocks.adamantium_ore.get().asItem())
 		        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
 		this.tag(TagUtils.cTag( "ores/adamantine"))
-	        .add(ModBlocks.adamantium_ore.get().asItem())
-	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
+				.addTag(ModTags.Items.ORES_ADAMANTIUM);
 		this.tag(TagUtils.cTag( "ores/adamantite"))
-	        .add(ModBlocks.adamantium_ore.get().asItem())
-	        .add(ModBlocks.deepslate_adamantium_ore.get().asItem());
-		this.tag(TagUtils.cTag( "ores/mythril"))
+				.addTag(ModTags.Items.ORES_ADAMANTIUM);
+		this.tag(ModTags.Items.ORES_MYTHRIL)
 		        .add(ModBlocks.mythril_ore.get().asItem())
 		        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
 		this.tag(TagUtils.cTag( "ores/mithril"))
-	        .add(ModBlocks.mythril_ore.get().asItem())
-	        .add(ModBlocks.deepslate_mythril_ore.get().asItem());
-		this.tag(TagUtils.cTag( "ores/onyx"))
+				.addTag(ModTags.Items.ORES_MYTHRIL);
+		this.tag(ModTags.Items.ORES_ONYX)
+				.add(ModBlocks.blackstone_onyx_ore.asItem())
 				.add(ModBlocks.basalt_onyx_ore.asItem())
 		        .add(ModBlocks.onyx_ore.asItem());
 		
@@ -87,7 +86,8 @@ public class ModItemTags extends MiningItemTags
         this.registerOreRateTags( List.of(), // sparse 
         		List.of(ModBlocks.adamantium_ore.get(), ModBlocks.deepslate_adamantium_ore.get(),
         				ModBlocks.mythril_ore.get(), ModBlocks.deepslate_mythril_ore.get(),
-        				ModBlocks.onyx_ore.get(), ModBlocks.basalt_onyx_ore.get()), // singular
+        				ModBlocks.onyx_ore.get(), ModBlocks.basalt_onyx_ore.get(),
+						ModBlocks.blackstone_onyx_ore.get()), // singular
         		List.of(ModBlocks.tin_ore.get(), ModBlocks.deepslate_tin_ore.get())); // dense
         
         // register forge:ores_in_ground tags
@@ -188,24 +188,24 @@ public class ModItemTags extends MiningItemTags
     private void registerRawMetalTags()
     {
         this.tag(Tags.Items.RAW_MATERIALS)
-			.addTag(TagUtils.cTag("raw_metals/tin"))
-	    	.addTag(TagUtils.cTag("raw_metals/adamantine"))
-	    	.addTag(TagUtils.cTag("raw_metals/adamantite"))
-	    	.addTag(TagUtils.cTag("raw_metals/adamantium"))
-	    	.addTag(TagUtils.cTag("raw_metals/mithril"))
-	    	.addTag(TagUtils.cTag("raw_metals/mythril"));
+			.addTag(TagUtils.cTag("raw_materials/tin"))
+	    	.addTag(TagUtils.cTag("raw_materials/adamantine"))
+	    	.addTag(TagUtils.cTag("raw_materials/adamantite"))
+	    	.addTag(TagUtils.cTag("raw_materials/adamantium"))
+	    	.addTag(TagUtils.cTag("raw_materials/mithril"))
+	    	.addTag(TagUtils.cTag("raw_materials/mythril"));
         
-        this.tag(TagUtils.cTag("raw_metals/tin"))
+        this.tag(TagUtils.cTag("raw_materials/tin"))
         	.add(ModItems.raw_tin.get());
-        this.tag(TagUtils.cTag("raw_metals/adamantine"))
+        this.tag(TagUtils.cTag("raw_materials/adamantine"))
     		.add(ModItems.raw_adamantium.get());
-        this.tag(TagUtils.cTag("raw_metals/adamantite"))
+        this.tag(TagUtils.cTag("raw_materials/adamantite"))
     		.add(ModItems.raw_adamantium.get());
-        this.tag(TagUtils.cTag("raw_metals/adamantium"))
+        this.tag(TagUtils.cTag("raw_materials/adamantium"))
     		.add(ModItems.raw_adamantium.get());
-        this.tag(TagUtils.cTag("raw_metals/mythril"))
+        this.tag(TagUtils.cTag("raw_materials/mythril"))
     		.add(ModItems.raw_mythril.get());
-        this.tag(TagUtils.cTag("raw_metals/mithril"))
+        this.tag(TagUtils.cTag("raw_materials/mithril"))
     		.add(ModItems.raw_mythril.get());
     	
     }
