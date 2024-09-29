@@ -5,6 +5,7 @@
     "simpleores:mythril_ore",
     "simpleores:deepslate_mythril_ore",
     "simpleores:onyx_ore",
-    "simpleores:basalt_onyx_ore"
+    "simpleores:basalt_onyx_ore",
+    "simpleores:blackstone_onyx_ore"
   ]
 }

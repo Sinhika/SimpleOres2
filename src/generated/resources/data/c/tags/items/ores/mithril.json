@@ -1,6 +1,5 @@
 {
   "values": [
-    "simpleores:mythril_ore",
-    "simpleores:deepslate_mythril_ore"
+    "#c:ores/mythril"
   ]
 }

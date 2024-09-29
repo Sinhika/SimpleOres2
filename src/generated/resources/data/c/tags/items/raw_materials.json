@@ -1,10 +1,10 @@
 {
   "values": [
-    "#c:raw_metals/tin",
-    "#c:raw_metals/adamantine",
-    "#c:raw_metals/adamantite",
-    "#c:raw_metals/adamantium",
-    "#c:raw_metals/mithril",
-    "#c:raw_metals/mythril"
+    "#c:raw_materials/tin",
+    "#c:raw_materials/adamantine",
+    "#c:raw_materials/adamantite",
+    "#c:raw_materials/adamantium",
+    "#c:raw_materials/mithril",
+    "#c:raw_materials/mythril"
   ]
 }

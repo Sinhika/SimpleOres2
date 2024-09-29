@@ -1,6 +1,5 @@
 {
   "values": [
-    "simpleores:adamantium_ore",
-    "simpleores:deepslate_adamantium_ore"
+    "#c:ores/adamantium"
   ]
 }
