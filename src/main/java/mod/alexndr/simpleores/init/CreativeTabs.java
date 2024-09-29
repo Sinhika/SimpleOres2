@@ -36,7 +36,13 @@ public final class CreativeTabs
 									.map(ItemStack::new)
 									.toList());
 						if (!SimpleOresConfig.ShowTestBucket) {
-							acceptableItems.remove(new ItemStack(ModItems.test_bucket.get()));
+							ItemStack found_item = null;
+							for (var foo : acceptableItems) {
+								if (foo.getItem() == ModItems.test_bucket.get()) {
+									found_item = foo;
+								}
+							}
+							acceptableItems.remove(found_item);
 						}
 						output.acceptAll(acceptableItems);
 					}).build());
