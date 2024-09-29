@@ -6,11 +6,11 @@
 		"targets" : [
 		{
 			"state" : {
-				"Name" : "simpleores:onyx_ore"
+				"Name" : "simpleores:basalt_onyx_ore"
 			},
 			"target" : {
 				"predicate_type" : "minecraft:block_match",
-				"block" : "minecraft:netherrack"
+				"block" : "minecraft:basalt"
 			}
 		}
 		]

@@ -10,7 +10,7 @@
 			},
 			"target" : {
 				"predicate_type" : "minecraft:block_match",
-				"block" : "minecraft:netherrack"
+				"block" : "minecraft:blackstone"
 			}
 		}
 		]

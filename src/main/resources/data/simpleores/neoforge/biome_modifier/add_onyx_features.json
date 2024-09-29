@@ -1,6 +1,10 @@
 {
 	"type" : "neoforge:add_features",
-	"biomes" : "#minecraft:is_nether",
-	"features" : "simpleores:ore_onyx_all",
+	"biomes" : "minecraft:basalt_deltas",
+	"features" : [
+		"simpleores:ore_onyx_basalt",
+		"simpleores:ore_onyx_blackstone",
+		"simpleores:ore_onyx_all"
+	],
 	"step" : "underground_decoration"
 }
