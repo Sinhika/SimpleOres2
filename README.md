@@ -32,13 +32,9 @@ mods up from 1.12.2
 TO-DO
 -----
  * port to 1.21.1
- * added SimpleOres items to villager, trader trade menus.
  * Implement graphical configuration from the menu...when Forge re-implements it.
- * add random chance for injected loot, instead of 100% guaranteed.
  * what are trims? Add them.
  * Moar buckets!
- * Make material stats fully configurable again, using STARTUP configs.
- * add textures and ore generation for onyx ore in magma block, basalt, other nether blocks? (Blackstone onyx ore is just sadistic).
  * update or move the SimpleOres, etc. wiki - in progress.
 
 
