@@ -1,6 +1,6 @@
 package mod.alexndr.simpleores.init;
 
-import mod.alexndr.simplecorelib.api.content.MultifunctionPressurePlateBlock;
+import mod.alexndr.simplecorelib.api.content.block.MultifunctionPressurePlateBlock;
 import mod.alexndr.simpleores.SimpleOres;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
